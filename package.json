@@ -1,11 +1,11 @@
 {
-  "name": "yellowcake",
-  "HomePage": "https://yellowcake.netlify.com/",
+  "name": "FFWD",
+  "HomePage": "https://ffwd-site.netlify.com/",
   "description": "An opinionated starter project for creating lightning-fast websites with Gatsby v2 and Netlify CMS v2",
   "version": "2.0.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/thriveweb/yellowcake"
+    "url": "https://github.com/saulofilho/ffwd-site"
   },
   "dependencies": {
     "@reach/router": "^1.2.1",
@@ -43,8 +43,10 @@
     "react-dom": "^16.11.0",
     "react-feather": "^2.0.3",
     "react-helmet": "^5.2.1",
+    "react-id-swiper": "^3.0.0",
     "react-markdown": "^4.2.2",
-    "react-photoswipe": "^1.3.0"
+    "react-photoswipe": "^1.3.0",
+    "swiper": "^5.3.6"
   },
   "keywords": [
     "gatsby"
