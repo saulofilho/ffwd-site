@@ -22,6 +22,7 @@ export const HomePageTemplate = ({ title, subtitle, featuredImage, body }) => (
       </div>
     </section> */}
     <HeroSlider 
+      large
       backgroundImage={featuredImage}
     />
   </main>
