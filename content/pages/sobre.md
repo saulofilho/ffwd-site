@@ -1,7 +1,7 @@
 ---
-template: ComponentsPage
+template: SobrePage
 slug: components
-title: Components Page
+title: Sobre Page
 featuredImage: 'https://ucarecdn.com/df0dc650-6938-412f-aefb-2019d2349e13/'
 subtitle: This is the components page subtitle.
 section1: >-
@@ -17,13 +17,15 @@ section1: >-
   vel est ut proin dis auctor. Suscipit sceler isque orci magna interdum vel
   bibendum duis netus a consectetur dui magnis ac aliquet sem posuere tincidunt
   vestibulum.
+featuredImage2: 'https://ucarecdn.com/c3be9e8e-6628-4ae2-8a60-67c4649da790/'
+subtitle2: two.
 section2: |-
   ## You can use videos, images and text.
 
   <iframe width="560" height="315"
   src="https://www.youtube.com/embed/Js00yn142ic" frameborder="0"
   allow="autoplay; encrypted-media" allowfullscreen></iframe>
-featuredImage2: 'https://ucarecdn.com/c3be9e8e-6628-4ae2-8a60-67c4649da790/'
+
 video: 'https://ucarecdn.com/e6979298-66d6-4245-b496-6e5a5d507135/'
 videoPoster: 'https://ucarecdn.com/69ba14a8-6481-4671-abb6-0e6f0d9c3e46/'
 videoTitle: 'Also background videos, with poster image & title overlay.'

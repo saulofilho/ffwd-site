@@ -3,7 +3,7 @@ import CMS from 'netlify-cms-app'
 import './cms-utils'
 
 import { HomePageTemplate } from '../templates/HomePage'
-import { ComponentsPageTemplate } from '../templates/ComponentsPage'
+import { ComponentsPageTemplate } from '../templates/SobrePage'
 import { ContactPageTemplate } from '../templates/ContactPage'
 import { DefaultPageTemplate } from '../templates/DefaultPage'
 import { BlogIndexTemplate } from '../templates/BlogIndex'

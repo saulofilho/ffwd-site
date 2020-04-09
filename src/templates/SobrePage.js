@@ -14,7 +14,9 @@ import Popup from '../components/Popup'
 export const ComponentsPageTemplate = ({
   title,
   subtitle,
+  subtitle2,
   featuredImage,
+  featuredImage2,
   section1,
   section2,
   video,
@@ -36,12 +38,18 @@ export const ComponentsPageTemplate = ({
       </div>
     </section>
 
-    <section className="section">
+    {/* <section className="section">
       <div className="container">
         <h2>Our gallery component</h2>
         <Gallery images={gallery} />
       </div>
-    </section>
+    </section> */}
+    
+    <PageHeader
+      title={title}
+      subtitle={subtitle2}
+      backgroundImage={featuredImage2}
+    />
 
     <section className="section">
       <div className="container">
@@ -49,31 +57,32 @@ export const ComponentsPageTemplate = ({
       </div>
     </section>
 
-    <section className="BackgroundVideo-section section">
+
+    {/* <section className="BackgroundVideo-section section">
       <BackgroundVideo poster={videoPoster} videoTitle={videoTitle}>
         {video && <source src={video} type="video/mp4" />}
       </BackgroundVideo>
-    </section>
+    </section> */}
 
-    <section className="section">
+    {/* <section className="section">
       <div className="container">
         <Accordion items={accordion} />
       </div>
-    </section>
+    </section> */}
 
-    <section className="section">
+    {/* <section className="section">
       <div className="container">
         <Popup>
           <Content source={section1} />
         </Popup>
       </div>
-    </section>
-    <div>teste</div>
+    </section> */}
+
     <Footer></Footer>
   </main>
 )
 
-const ComponentsPage = ({ data: { page } }) => (
+const SobrePage = ({ data: { page } }) => (
   <Layout
     meta={page.frontmatter.meta || false}
     title={page.frontmatter.title || false}
@@ -82,10 +91,10 @@ const ComponentsPage = ({ data: { page } }) => (
   </Layout>
 )
 
-export default ComponentsPage
+export default SobrePage
 
 export const pageQuery = graphql`
-  query ComponentsPage($id: String!) {
+  query SobrePage($id: String!) {
     page: markdownRemark(id: { eq: $id }) {
       ...Meta
       ...Gallery
@@ -94,7 +103,9 @@ export const pageQuery = graphql`
         title
         template
         subtitle
+        subtitle2
         featuredImage
+        featuredImage2
         section1
         section2
         video
