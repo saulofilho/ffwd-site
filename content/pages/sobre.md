@@ -17,6 +17,7 @@ section1: >-
   vel est ut proin dis auctor. Suscipit sceler isque orci magna interdum vel
   bibendum duis netus a consectetur dui magnis ac aliquet sem posuere tincidunt
   vestibulum.
+title2: PLOW
 featuredImage2: 'https://ucarecdn.com/c3be9e8e-6628-4ae2-8a60-67c4649da790/'
 subtitle2: two.
 section2: |-

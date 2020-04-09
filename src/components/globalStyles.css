@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:200,400,600&display=swap');
+
 :root {
   --primary: lightblue;
   --secondary: #000;
@@ -5,7 +8,8 @@
   --midGrey: #cacaca;
   --darkGrey: #272727;
   --danger: #ff3d3d;
-  --font-primary: 'Open Sans', sans-serif;
+  --font-primary: 'Anton', sans-serif;
+  --font-second: 'IBM Plex Sans', sans-serif;;
   --font-system: system-ui; /* postcssPresetEnv */
   --borderRadius: 3px;
 }
