@@ -26,13 +26,19 @@ if (
 CMS.registerPreviewTemplate('home-page', ({ entry }) => (
   <HomePageTemplate {...entry.toJS().data} />
 ))
-CMS.registerPreviewTemplate('components-page', ({ entry }) => (
+CMS.registerPreviewTemplate('sobre-page', ({ entry }) => (
   <ComponentsPageTemplate {...entry.toJS().data} />
 ))
-CMS.registerPreviewTemplate('contact-page', ({ entry }) => (
+CMS.registerPreviewTemplate('projetos-page', ({ entry }) => (
+  <ComponentsPageTemplate {...entry.toJS().data} />
+))
+CMS.registerPreviewTemplate('pessoas-page', ({ entry }) => (
+  <ComponentsPageTemplate {...entry.toJS().data} />
+))
+CMS.registerPreviewTemplate('contato-page', ({ entry }) => (
   <ContactPageTemplate {...entry.toJS().data} />
 ))
-CMS.registerPreviewTemplate('infoPages', ({ entry }) => (
+CMS.registerPreviewTemplate('deletePages', ({ entry }) => (
   <DefaultPageTemplate {...entry.toJS().data} />
 ))
 CMS.registerPreviewTemplate('blog-page', ({ entry }) => (

@@ -6,7 +6,7 @@ featuredImage: 'https://ucarecdn.com/06cf09de-fc17-4cdb-9258-b479a9e700ef/'
 subtitle: 'Welcome to the ultimate Gatsby and Netlify starter project.'
 meta:
   description: This is a meta description.
-  title: The Ultimate Gatsby Starter
+  title: FFWD
 ---
 Yellowcake is an opinionated starter project created by [Thrive Digital](https://thriveweb.com.au/) a [Gold Coast Web Design](https://thriveweb.com.au/) studio. to help you create lightening fast websites with [Gatsby](https://gatsbyjs.org) and [Netlify CMS](https://netlifycms.org).
 

@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import Footer from '../components/Footer'
 
 import PageHeader from '../components/PageHeader'
 import Content from '../components/Content.js'
@@ -67,6 +68,8 @@ export const ComponentsPageTemplate = ({
         </Popup>
       </div>
     </section>
+    <div>teste</div>
+    <Footer></Footer>
   </main>
 )
 
