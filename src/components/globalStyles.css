@@ -1,5 +1,5 @@
 :root {
-  --primary: #00c2bd;
+  --primary: lightblue;
   --secondary: #000;
   --lightGrey: whitesmoke;
   --midGrey: #cacaca;
@@ -31,6 +31,7 @@ html {
   font-size: 62.5%;
   min-height: 100%;
   background: var(--lightGrey);
+  height: 100%;
 }
 
 body {
@@ -44,6 +45,7 @@ body {
   letter-spacing: 0.01em;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  height: 100%;
 }
 
 a {

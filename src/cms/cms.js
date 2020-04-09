@@ -38,7 +38,7 @@ CMS.registerPreviewTemplate('pessoas-page', ({ entry }) => (
 CMS.registerPreviewTemplate('contato-page', ({ entry }) => (
   <ContactPageTemplate {...entry.toJS().data} />
 ))
-CMS.registerPreviewTemplate('deletePages', ({ entry }) => (
+CMS.registerPreviewTemplate('editablePages', ({ entry }) => (
   <DefaultPageTemplate {...entry.toJS().data} />
 ))
 CMS.registerPreviewTemplate('blog-page', ({ entry }) => (

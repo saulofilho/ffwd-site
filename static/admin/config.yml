@@ -311,11 +311,11 @@ collections: # A list of collections the CMS should be able to edit
                   required: false,
                 }
 
-  - name: deletePages
-    label: Delete Pages
+  - name: editablePages
+    label: Editable Pages
     editor:
       preview: true
-    folder: content/deletePages
+    folder: content/editablePages
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     create: true # Allow users to create new documents in this collection
     fields:
