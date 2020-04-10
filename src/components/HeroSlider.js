@@ -53,7 +53,7 @@ const HeroSlider = ({
           data-swiper-parallax={parallaxAmount}
           data-swiper-parallax-opacity={parallaxOpacity}
         >
-<img src={backgroundImage} alt=""/>
+          <img src={backgroundImage} alt=""/>
         </div>
         {/* <div className="">
           <h1 className="">Slide 2</h1>

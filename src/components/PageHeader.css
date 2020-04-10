@@ -14,10 +14,11 @@
 }
 
 .PageHeader--Title {
-  font-size: 16rem;
+  font-size: 8rem;
   margin-bottom: 0;
   font-family: var(--font-primary);
   text-transform: uppercase;
+  line-height: 150px;
 }
 
 .PageHeader--Subtitle {

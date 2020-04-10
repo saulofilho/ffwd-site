@@ -8,7 +8,7 @@
 
 .Nav--Container {
   display: flex;
-  align-items: end;
+  align-items: flex-end;
   height: auto;
   justify-content: space-between;
   padding-top: 60px;
