@@ -4,9 +4,9 @@ import { Location } from '@reach/router'
 import qs from 'qs'
 import ProjetosSlider from '../components/ProjetosSlider';
 
-import PageHeader from '../components/PageHeader'
-import ProjetosCarousel from '../components/ProjetosCarousel'
-import PostCategoriesNav from '../components/PostCategoriesNav'
+// import PageHeader from '../components/PageHeader'
+// import ProjetosCarousel from '../components/ProjetosCarousel'
+// import PostCategoriesNav from '../components/PostCategoriesNav'
 import Layout from '../components/Layout'
 
 /**
@@ -47,6 +47,7 @@ export const ProjetosIndexTemplate = ({
 }) => (
   <Location>
     {({ location }) => {
+      console.log(cases)
       let filteredPosts =
         cases && !!cases.length
           ? byCategory(byDate(cases), title, contentType)
@@ -63,7 +64,7 @@ export const ProjetosIndexTemplate = ({
       }
 
       return (
-        <main className="Blog">
+        <main className="Cases">
           {/* <PageHeader
             title={title}
             subtitle={subtitle}

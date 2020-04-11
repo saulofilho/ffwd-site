@@ -47,12 +47,12 @@ module.exports = {
         name: 'ffwd',
         short_name: 'ffwd',
         start_url: '/',
-        background_color: '#00C2BD',
-        theme_color: '#00C2BD',
+        background_color: '#fff',
+        theme_color: '#fff',
         // Enables "Add to Homescreen" prompt and disables browser UI (including back button)
         // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
         display: 'standalone',
-        icon: `${__dirname}/static/images/logo.svg` // This path is relative to the root of the site.
+        icon: `${__dirname}/static/images/logo-white.png` // This path is relative to the root of the site.
       }
     },
 

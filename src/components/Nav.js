@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Location } from '@reach/router'
 import { Link } from 'gatsby'
 import { Menu, X } from 'react-feather'
-import Logo from './Logo'
+import LogoWhite from './LogoWhite'
 
 import './Nav.css'
 
@@ -10,7 +10,7 @@ export class Navigation extends Component {
   state = {
     active: false,
     activeSubNav: false,
-    currentPath: false
+    currentPath: false,
   }
 
   componentDidMount = () =>
@@ -46,7 +46,7 @@ export class Navigation extends Component {
       <nav className={`Nav ${active ? 'Nav-active' : ''}`}>
         <div className="Nav--Container container">
           <Link to="/" onClick={this.handleLinkClick}>
-            <Logo />
+            <LogoWhite />
           </Link>
           <div className="Nav--Links">
             <NavLink to="/sobre/">Sobre</NavLink>

@@ -31,14 +31,20 @@ const ProjetosSlider = ({
     <>
       <Swiper {...HeroSliderConfigs} getSwiper={setParallaxSwiper}>
         {cases.map(img => (
-          <div className="hero-slide">
+          <div 
+            key={img.excerpt}
+            className="cases-slide"
+          >
             <div
-              className="slide-image"
+              className="cases-slide-image"
               data-swiper-parallax={parallaxAmount}
               data-swiper-parallax-opacity={parallaxOpacity}
             >
-              <p>{img.title}</p>
               <img src={img.featuredImage} alt="" />
+              <div className="cases-text">
+                <p>{img.title}</p>
+                <p>{img.excerpt}</p>
+              </div>
             </div>
           </div>
         ))}
