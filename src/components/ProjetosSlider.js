@@ -21,7 +21,7 @@ const HeroSliderConfigs = {
 };
 
 const ProjetosSlider = ({
-  posts
+  cases
 }) => {
 
   const [parallaxSwiper, setParallaxSwiper] = useState(null);
@@ -30,7 +30,7 @@ const ProjetosSlider = ({
   return (
     <>
       <Swiper {...HeroSliderConfigs} getSwiper={setParallaxSwiper}>
-        {posts.map(img => (
+        {cases.map(img => (
           <div className="hero-slide">
             <div
               className="slide-image"

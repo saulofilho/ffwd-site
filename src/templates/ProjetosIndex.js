@@ -10,29 +10,29 @@ import PostCategoriesNav from '../components/PostCategoriesNav'
 import Layout from '../components/Layout'
 
 /**
- * Filter posts by date. Feature dates will be fitered
+ * Filter cases by date. Feature dates will be fitered
  * When used, make sure you run a cronejob each day to show schaduled content. See docs
  *
- * @param {posts} object
+ * @param {cases} object
  */
-export const byDate = posts => {
+export const byDate = cases => {
   const now = Date.now()
-  return posts.filter(post => Date.parse(post.date) <= now)
+  return cases.filter(post => Date.parse(post.date) <= now)
 }
 
 /**
- * filter posts by category.
+ * filter cases by category.
  *
- * @param {posts} object
+ * @param {cases} object
  * @param {title} string
  * @param {contentType} string
  */
-export const byCategory = (posts, title, contentType) => {
+export const byCategory = (cases, title, contentType) => {
   const isCategory = contentType === 'postCategories'
   const byCategory = post =>
     post.categories &&
     post.categories.filter(cat => cat.category === title).length
-  return isCategory ? posts.filter(byCategory) : posts
+  return isCategory ? cases.filter(byCategory) : cases
 }
 
 // Export Template for use in CMS preview
@@ -40,7 +40,7 @@ export const ProjetosIndexTemplate = ({
   title,
   subtitle,
   featuredImage,
-  posts = [],
+  cases = [],
   postCategories = [],
   enableSearch = true,
   contentType
@@ -48,8 +48,8 @@ export const ProjetosIndexTemplate = ({
   <Location>
     {({ location }) => {
       let filteredPosts =
-        posts && !!posts.length
-          ? byCategory(byDate(posts), title, contentType)
+        cases && !!cases.length
+          ? byCategory(byDate(cases), title, contentType)
           : []
 
       let queryObj = location.search.replace('?', '')
@@ -78,16 +78,16 @@ export const ProjetosIndexTemplate = ({
             </section>
           )}
 
-          {!!posts.length && (
+          {!!cases.length && (
             <section className="section">
               <div className="container">
-                <ProjetosCarousel posts={filteredPosts} />
+                <ProjetosCarousel cases={filteredPosts} />
               </div>
             </section>
           )} */}
           
             <ProjetosSlider
-              posts={posts}
+              cases={cases}
             />
 
         </main>
@@ -97,7 +97,7 @@ export const ProjetosIndexTemplate = ({
 )
 
 // Export Default ProjetosIndex for front-end
-const ProjetosIndex = ({ data: { page, posts, postCategories } }) => (
+const ProjetosIndex = ({ data: { page, cases, postCategories } }) => (
   <Layout
     meta={page.frontmatter.meta || false}
     title={page.frontmatter.title || false}
@@ -106,7 +106,7 @@ const ProjetosIndex = ({ data: { page, posts, postCategories } }) => (
       {...page}
       {...page.fields}
       {...page.frontmatter}
-      posts={posts.edges.map(post => ({
+      cases={cases.edges.map(post => ({
         ...post.node,
         ...post.node.frontmatter,
         ...post.node.fields
@@ -142,8 +142,8 @@ export const pageQuery = graphql`
       }
     }
 
-    posts: allMarkdownRemark(
-      filter: { fields: { contentType: { eq: "posts" } } }
+    cases: allMarkdownRemark(
+      filter: { fields: { contentType: { eq: "cases" } } }
       sort: { order: DESC, fields: [frontmatter___date] }
     ) {
       edges {
