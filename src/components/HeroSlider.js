@@ -23,7 +23,7 @@ const HeroSliderConfigs = {
 const HeroSlider = ({
   backgroundImage,
 }) => {
-  console.log("bg")
+
   const [parallaxSwiper, setParallaxSwiper] = useState(null);
   const parallaxAmount = parallaxSwiper ? parallaxSwiper.width * 0.95 : 0;
   const parallaxOpacity = 0.5;

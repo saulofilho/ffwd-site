@@ -8,7 +8,7 @@
 
 .Nav--Container {
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
   height: auto;
   justify-content: space-between;
   padding-top: 60px;
@@ -16,14 +16,14 @@
 
 .Nav--Links {
   display: flex;
-  align-items: center;
+  align-items: left;
   justify-content: center;
   flex-direction: column;
 }
 
-.Nav--Links > * + * {
+/* .Nav--Links > * + * {
   margin-left: 1rem;
-}
+} */
 
 .Nav .Logo {
   margin-right: 3rem;

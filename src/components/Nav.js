@@ -49,10 +49,11 @@ export class Navigation extends Component {
             <Logo />
           </Link>
           <div className="Nav--Links">
-            <NavLink to="/components/">Sobre</NavLink>
-            <NavLink to="/default/">Projetos</NavLink>
-            <NavLink to="/default/">Pessoas</NavLink>
-            <div
+            <NavLink to="/sobre/">Sobre</NavLink>
+            <NavLink to="/projetos/">Projetos</NavLink>
+            <NavLink to="/pessoas/">Pessoas</NavLink>
+            <NavLink to="/blog/">Blog</NavLink>
+            {/* <div
               className={`Nav--Group ${
                 this.state.activeSubNav === 'posts' ? 'active' : ''
               }`}
@@ -83,14 +84,14 @@ export class Navigation extends Component {
                   ))}
                 </div>
               </span>
-            </div>
-            <NavLink to="/contact/">Contato</NavLink>
+            </div> */}
+            <NavLink to="/contato/">Contato</NavLink>
           </div>
           <button
             className="Button-blank Nav--MenuButton"
             onClick={this.handleMenuToggle}
           >
-            {active ? <X /> : <Menu color='#fff' />}
+            {active ? <X color='#fff' /> : <Menu color='#fff' />}
           </button>
         </div>
       </nav>

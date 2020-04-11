@@ -7,6 +7,7 @@ import { ComponentsPageTemplate } from '../templates/SobrePage'
 import { ContactPageTemplate } from '../templates/ContactPage'
 import { DefaultPageTemplate } from '../templates/DefaultPage'
 import { BlogIndexTemplate } from '../templates/BlogIndex'
+import { ProjetosIndexTemplate } from '../templates/ProjetosIndex'
 import { SinglePostTemplate } from '../templates/SinglePost'
 import uploadcare from 'netlify-cms-media-library-uploadcare'
 
@@ -30,7 +31,7 @@ CMS.registerPreviewTemplate('sobre-page', ({ entry }) => (
   <ComponentsPageTemplate {...entry.toJS().data} />
 ))
 CMS.registerPreviewTemplate('projetos-page', ({ entry }) => (
-  <ComponentsPageTemplate {...entry.toJS().data} />
+  <ProjetosIndexTemplate {...entry.toJS().data} />
 ))
 CMS.registerPreviewTemplate('pessoas-page', ({ entry }) => (
   <ComponentsPageTemplate {...entry.toJS().data} />

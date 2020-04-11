@@ -1,7 +1,7 @@
 import React from 'react'
 
-import PostCard from '../components/PostCard'
-import './PostSection.css'
+import PostCard from './PostCard'
+import './ProjetosCarousel.css'
 
 class PostSection extends React.Component {
   static defaultProps = {

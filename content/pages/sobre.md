@@ -1,6 +1,6 @@
 ---
 template: SobrePage
-slug: components
+slug: sobre
 title: Sobre Page
 featuredImage: 'https://ucarecdn.com/df0dc650-6938-412f-aefb-2019d2349e13/'
 subtitle: This is the components page subtitle.
@@ -51,6 +51,6 @@ gallery:
     title: Yellow Ice Cream
 meta:
   description: This is a meta description.
-  title: Components Page
+  title: Sobre Page
 ---
 
