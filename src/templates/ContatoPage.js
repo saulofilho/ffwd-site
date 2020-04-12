@@ -69,7 +69,7 @@ const ContatoPage = ({ data: { page } }) => (
     title={page.frontmatter.title || false}
   >
     <ContactPageTemplate {...page.frontmatter} body={page.html} />
-    {console.log("contato:", page.html)}
+    {console.log("contato:", page)}
   </Layout>
 )
 

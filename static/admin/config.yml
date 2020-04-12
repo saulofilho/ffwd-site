@@ -242,7 +242,7 @@ collections: # A list of collections the CMS should be able to edit
               label: Template,
               name: template,
               widget: hidden,
-              default: ProjetosPage,
+              default: ProjetosIndex,
             }
           - { label: Slug, name: slug, widget: hidden, default: 'projetos' }
           - { label: Title, name: title, widget: string }

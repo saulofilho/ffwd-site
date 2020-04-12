@@ -1,17 +1,10 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { graphql } from 'gatsby'
 import { Location } from '@reach/router'
 import qs from 'qs'
-// import ProjetosSlider from '../components/ProjetosSlider';
-
-import Content from '../components/Content'
-import Swiper from 'react-id-swiper';
-import 'swiper/css/swiper.css';
-import '../components/ProjetosSlider.css';
-
 // import PageHeader from '../components/PageHeader'
-// import ProjetosCarousel from '../components/ProjetosCarousel'
 // import PostCategoriesNav from '../components/PostCategoriesNav'
+import PostSectionTwo from '../components/PostSectionTwo'
 import Layout from '../components/Layout'
 
 /**
@@ -40,63 +33,8 @@ export const byCategory = (cases, title, contentType) => {
   return isCategory ? cases.filter(byCategory) : cases
 }
 
-const HeroSliderConfigs = {
-  slidesPerView: 1,
-  effect: 'fade',
-  loop: true,
-  centeredSlides: true,
-  grabCursor: false,
-  hashNavigation: {
-    watchState: true,
-  },
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-};
-
-const ProjetosSlider = ({
-  cases
-}) => {
-
-  const [parallaxSwiper, setParallaxSwiper] = useState(null);
-  const parallaxAmount = parallaxSwiper ? parallaxSwiper.width * 0.95 : 0;
-  const parallaxOpacity = 0.5;
-  return (
-    <>
-      <Swiper {...HeroSliderConfigs} getSwiper={setParallaxSwiper}>
-        {cases.map(img => (
-          <div 
-            key={img.title}
-            className="cases-slide"
-          >
-            <div
-              className="cases-slide-image"
-              data-swiper-parallax={parallaxAmount}
-              data-swiper-parallax-opacity={parallaxOpacity}
-            >
-              <img src={img.featuredImage} alt="" />
-              <div className="teste">
-          </div>
-              {/* <div className="cases-text">
-                <p>{img.title}</p>
-                <p>{img.excerpt}</p>
-              </div> */}
-            </div>
-          </div>
-        ))}
-      </Swiper>
-    </>
-  );
-};
-
 // Export Template for use in CMS preview
 export const ProjetosIndexTemplate = ({
-  body,
   title,
   subtitle,
   featuredImage,
@@ -107,7 +45,6 @@ export const ProjetosIndexTemplate = ({
 }) => (
   <Location>
     {({ location }) => {
-      // console.log(cases)
       let filteredPosts =
         cases && !!cases.length
           ? byCategory(byDate(cases), title, contentType)
@@ -124,14 +61,14 @@ export const ProjetosIndexTemplate = ({
       }
 
       return (
-        <main className="Cases">
+        <main className="Blog">
           {/* <PageHeader
             title={title}
             subtitle={subtitle}
             backgroundImage={featuredImage}
-          /> */}
+          />
 
-          {/* {!!postCategories.length && (
+          {!!postCategories.length && (
             <section className="section thin">
               <div className="container">
                 <PostCategoriesNav enableSearch categories={postCategories} />
@@ -139,21 +76,13 @@ export const ProjetosIndexTemplate = ({
             </section>
           )} */}
 
-          {/* {!!cases.length && (
+          {!!cases.length && (
             <section className="section">
               <div className="container">
-                <ProjetosSlider cases={filteredPosts} />
+                <PostSectionTwo posts={filteredPosts} />
               </div>
             </section>
-          )} */}
-
-          <ProjetosSlider cases={filteredPosts} />
-
-          <div className="cade">
-
-          <Content source={body} />
-          </div>
-
+          )}
         </main>
       )
     }}
@@ -170,7 +99,6 @@ const ProjetosIndex = ({ data: { page, cases, postCategories } }) => (
       {...page}
       {...page.fields}
       {...page.frontmatter}
-      body={page.html}
       cases={cases.edges.map(post => ({
         ...post.node,
         ...post.node.frontmatter,
@@ -182,7 +110,6 @@ const ProjetosIndex = ({ data: { page, cases, postCategories } }) => (
         ...post.node.fields
       }))}
     />
-    {console.log("page:", page.html)}
   </Layout>
 )
 
@@ -196,7 +123,6 @@ export const pageQuery = graphql`
   query ProjetosIndex($id: String!) {
     page: markdownRemark(id: { eq: $id }) {
       ...Meta
-      html
       fields {
         contentType
       }

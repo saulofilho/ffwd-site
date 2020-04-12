@@ -48,3 +48,6 @@ CMS.registerPreviewTemplate('blog-page', ({ entry }) => (
 CMS.registerPreviewTemplate('posts', ({ entry }) => (
   <SinglePostTemplate {...entry.toJS().data} />
 ))
+CMS.registerPreviewTemplate('cases', ({ entry }) => (
+  <SinglePostTemplate {...entry.toJS().data} />
+))
