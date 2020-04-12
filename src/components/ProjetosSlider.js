@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
-import 'swiper/css/swiper.css';
 import Swiper from 'react-id-swiper';
+import 'swiper/css/swiper.css';
 import './ProjetosSlider.css';
+
+import Content from './Content'
 
 const HeroSliderConfigs = {
   slidesPerView: 1,
   effect: 'fade',
   loop: true,
+  centeredSlides: true,
+  grabCursor: false,
   hashNavigation: {
     watchState: true,
   },
@@ -21,7 +25,8 @@ const HeroSliderConfigs = {
 };
 
 const ProjetosSlider = ({
-  cases
+  cases,
+  body
 }) => {
 
   const [parallaxSwiper, setParallaxSwiper] = useState(null);
@@ -41,10 +46,14 @@ const ProjetosSlider = ({
               data-swiper-parallax-opacity={parallaxOpacity}
             >
               <img src={img.featuredImage} alt="" />
-              <div className="cases-text">
+              <div className="teste">
+            <Content source={img.excerpt}>
+            </Content>
+          </div>
+              {/* <div className="cases-text">
                 <p>{img.title}</p>
                 <p>{img.excerpt}</p>
-              </div>
+              </div> */}
             </div>
           </div>
         ))}

@@ -1,7 +1,7 @@
 ---
-template: ContactPage
-slug: contact
-title: Contact Page
+template: ContatoPage
+slug: contato
+title: Contato Page
 featuredImage: https://ucarecdn.com/e22a858a-b420-47af-99f6-ed54b6860333/
 subtitle: This is the contact page subtitle.
 address: '404 James St, Burleigh Heads QLD 4220'
@@ -13,7 +13,7 @@ locations:
     mapLink: ''
 meta:
   description: This is a meta description.
-  title: Contact Page
+  title: Contato Page
 ---
 
 # Example contact form

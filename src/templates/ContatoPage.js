@@ -63,19 +63,20 @@ export const ContactPageTemplate = ({
   </main>
 )
 
-const ContactPage = ({ data: { page } }) => (
+const ContatoPage = ({ data: { page } }) => (
   <Layout
     meta={page.frontmatter.meta || false}
     title={page.frontmatter.title || false}
   >
     <ContactPageTemplate {...page.frontmatter} body={page.html} />
+    {console.log("contato:", page.html)}
   </Layout>
 )
 
-export default ContactPage
+export default ContatoPage
 
 export const pageQuery = graphql`
-  query ContactPage($id: String!) {
+  query ContatoPage($id: String!) {
     page: markdownRemark(id: { eq: $id }) {
       ...Meta
       html

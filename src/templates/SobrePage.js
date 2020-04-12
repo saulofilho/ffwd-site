@@ -77,7 +77,7 @@ export const ComponentsPageTemplate = ({
       </div>
     </section> */}
 
-    <Footer></Footer>
+    <Footer />
   </main>
 )
 

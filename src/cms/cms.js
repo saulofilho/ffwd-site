@@ -4,7 +4,7 @@ import './cms-utils'
 
 import { HomePageTemplate } from '../templates/HomePage'
 import { ComponentsPageTemplate } from '../templates/SobrePage'
-import { ContactPageTemplate } from '../templates/ContactPage'
+import { ContactPageTemplate } from '../templates/ContatoPage'
 import { DefaultPageTemplate } from '../templates/DefaultPage'
 import { BlogIndexTemplate } from '../templates/BlogIndex'
 import { ProjetosIndexTemplate } from '../templates/ProjetosIndex'
