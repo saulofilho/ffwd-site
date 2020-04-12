@@ -8,8 +8,10 @@ import { ContactPageTemplate } from '../templates/ContatoPage'
 import { DefaultPageTemplate } from '../templates/DefaultPage'
 import { BlogIndexTemplate } from '../templates/BlogIndex'
 import { ProjetosIndexTemplate } from '../templates/ProjetosIndex'
+import { VagasIndexTemplate } from '../templates/VagasIndex'
 import { SinglePostTemplate } from '../templates/SinglePost'
 import { CasePostTemplate } from '../templates/CasePost'
+import { VagaPostTemplate } from '../templates/VagaPost'
 import uploadcare from 'netlify-cms-media-library-uploadcare'
 
 CMS.registerMediaLibrary(uploadcare)
@@ -34,6 +36,9 @@ CMS.registerPreviewTemplate('sobre-page', ({ entry }) => (
 CMS.registerPreviewTemplate('projetos-page', ({ entry }) => (
   <ProjetosIndexTemplate {...entry.toJS().data} />
 ))
+CMS.registerPreviewTemplate('vagas-page', ({ entry }) => (
+  <VagasIndexTemplate {...entry.toJS().data} />
+))
 CMS.registerPreviewTemplate('pessoas-page', ({ entry }) => (
   <ComponentsPageTemplate {...entry.toJS().data} />
 ))
@@ -51,4 +56,7 @@ CMS.registerPreviewTemplate('posts', ({ entry }) => (
 ))
 CMS.registerPreviewTemplate('cases', ({ entry }) => (
   <CasePostTemplate {...entry.toJS().data} />
+))
+CMS.registerPreviewTemplate('vagas', ({ entry }) => (
+  <VagaPostTemplate {...entry.toJS().data} />
 ))
