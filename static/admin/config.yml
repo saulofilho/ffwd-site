@@ -499,11 +499,11 @@ collections: # A list of collections the CMS should be able to edit
             }
           - { label: Noindex, name: noindex, widget: boolean, required: false }
 
-  - name: vagas
-    label: Vagas
+  - name: vaga
+    label: Vaga
     editor:
       preview: true
-    folder: content/vagas
+    folder: content/vaga
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have

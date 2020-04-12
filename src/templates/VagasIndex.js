@@ -9,29 +9,29 @@ import Layout from '../components/Layout'
 import './ProjetosIndex.css'
 
 /**
- * Filter vagas by date. Feature dates will be fitered
+ * Filter vaga by date. Feature dates will be fitered
  * When used, make sure you run a cronejob each day to show schaduled content. See docs
  *
- * @param {vagas} object
+ * @param {vaga} object
  */
-export const byDate = vagas => {
+export const byDate = vaga => {
   const now = Date.now()
-  return vagas.filter(post => Date.parse(post.date) <= now)
+  return vaga.filter(post => Date.parse(post.date) <= now)
 }
 
 /**
- * filter vagas by category.
+ * filter vaga by category.
  *
- * @param {vagas} object
+ * @param {vaga} object
  * @param {title} string
  * @param {contentType} string
  */
-export const byCategory = (vagas, title, contentType) => {
+export const byCategory = (vaga, title, contentType) => {
   const isCategory = contentType === 'postCategories'
   const byCategory = post =>
     post.categories &&
     post.categories.filter(cat => cat.category === title).length
-  return isCategory ? vagas.filter(byCategory) : vagas
+  return isCategory ? vaga.filter(byCategory) : vaga
 }
 
 // Export Template for use in CMS preview
@@ -39,7 +39,7 @@ export const VagasIndexTemplate = ({
   title,
   subtitle,
   featuredImage,
-  vagas = [],
+  vaga = [],
   postCategories = [],
   enableSearch = true,
   contentType
@@ -47,8 +47,8 @@ export const VagasIndexTemplate = ({
   <Location>
     {({ location }) => {
       let filteredPosts =
-        vagas && !!vagas.length
-          ? byCategory(byDate(vagas), title, contentType)
+        vaga && !!vaga.length
+          ? byCategory(byDate(vaga), title, contentType)
           : []
 
       let queryObj = location.search.replace('?', '')
@@ -77,10 +77,10 @@ export const VagasIndexTemplate = ({
             </section>
           )} */}
           <div className="projeto-hero">
-            <h1>teste</h1>
+            <h1>{title}</h1>
           </div>
 
-          {!!vagas.length && (
+          {!!vaga.length && (
             <section className="projeto-section">
               <VagaSection posts={filteredPosts} />
             </section>
@@ -92,7 +92,7 @@ export const VagasIndexTemplate = ({
 )
 
 // Export Default VagasIndex for front-end
-const VagasIndex = ({ data: { page, vagas, postCategories } }) => (
+const VagasIndex = ({ data: { page, vaga, postCategories } }) => (
   <Layout
     meta={page.frontmatter.meta || false}
     title={page.frontmatter.title || false}
@@ -101,7 +101,7 @@ const VagasIndex = ({ data: { page, vagas, postCategories } }) => (
       {...page}
       {...page.fields}
       {...page.frontmatter}
-      vagas={vagas.edges.map(post => ({
+      vaga={vaga.edges.map(post => ({
         ...post.node,
         ...post.node.frontmatter,
         ...post.node.fields
@@ -137,8 +137,8 @@ export const pageQuery = graphql`
       }
     }
 
-    vagas: allMarkdownRemark(
-      filter: { fields: { contentType: { eq: "vagas" } } }
+    vaga: allMarkdownRemark(
+      filter: { fields: { contentType: { eq: "vaga" } } }
       sort: { order: DESC, fields: [frontmatter___date] }
     ) {
       edges {
