@@ -9,6 +9,7 @@ import { DefaultPageTemplate } from '../templates/DefaultPage'
 import { BlogIndexTemplate } from '../templates/BlogIndex'
 import { ProjetosIndexTemplate } from '../templates/ProjetosIndex'
 import { SinglePostTemplate } from '../templates/SinglePost'
+import { CasePostTemplate } from '../templates/CasePost'
 import uploadcare from 'netlify-cms-media-library-uploadcare'
 
 CMS.registerMediaLibrary(uploadcare)
@@ -49,5 +50,5 @@ CMS.registerPreviewTemplate('posts', ({ entry }) => (
   <SinglePostTemplate {...entry.toJS().data} />
 ))
 CMS.registerPreviewTemplate('cases', ({ entry }) => (
-  <SinglePostTemplate {...entry.toJS().data} />
+  <CasePostTemplate {...entry.toJS().data} />
 ))

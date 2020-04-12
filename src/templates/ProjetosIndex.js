@@ -4,8 +4,9 @@ import { Location } from '@reach/router'
 import qs from 'qs'
 // import PageHeader from '../components/PageHeader'
 // import PostCategoriesNav from '../components/PostCategoriesNav'
-import PostSectionTwo from '../components/PostSectionTwo'
+import CaseSection from '../components/CaseSection'
 import Layout from '../components/Layout'
+import './ProjetosIndex.css'
 
 /**
  * Filter cases by date. Feature dates will be fitered
@@ -61,7 +62,7 @@ export const ProjetosIndexTemplate = ({
       }
 
       return (
-        <main className="Blog">
+        <main className="projeto">
           {/* <PageHeader
             title={title}
             subtitle={subtitle}
@@ -75,12 +76,13 @@ export const ProjetosIndexTemplate = ({
               </div>
             </section>
           )} */}
+          <div className="projeto-hero">
+            <h1>teste</h1>
+          </div>
 
           {!!cases.length && (
-            <section className="section">
-              <div className="container">
-                <PostSectionTwo posts={filteredPosts} />
-              </div>
+            <section className="projeto-section">
+              <CaseSection posts={filteredPosts} />
             </section>
           )}
         </main>

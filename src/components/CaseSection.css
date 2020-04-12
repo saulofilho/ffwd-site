@@ -1,0 +1,62 @@
+.CaseSection {
+  width: 100%;
+  height: 100vh;
+}
+
+.CaseSection--Grid {
+  display: flex;
+  flex-direction: column;
+}
+
+.CaseSection button {
+  margin-top: 1rem;
+  margin-top: 5rem;
+  background: white;
+  border: 2px solid black;
+  padding: 1rem 2rem;
+  cursor: pointer;
+}
+
+.CaseSection button:hover {
+  background: black;
+  border: 2px solid white;
+  color: white;
+}
+
+.CaseSection--Grid > * {
+  width: calc(33.33% - 2rem);
+  margin-bottom: 4rem;
+}
+
+@supports (display: grid) {
+  .CaseSection--Grid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .CaseSection--Grid > * {
+    width: auto;
+    margin: 0;
+  }
+}
+
+.CaseSection--Title {
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto 4rem auto;
+  line-height: 1.2;
+}
+
+@media screen and (max-width: 888px) {
+  .CaseSection--Grid > * {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @supports (display: grid) {
+    .CaseSection--Grid {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

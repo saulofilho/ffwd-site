@@ -17,7 +17,7 @@ media_library:
 
 collections: # A list of collections the CMS should be able to edit
   - name: 'pages'
-    label: 'Page'
+    label: 'Pages'
     delete: false # Prevent users from deleting documents in this collection
     editor:
       preview: true
@@ -313,7 +313,7 @@ collections: # A list of collections the CMS should be able to edit
                 }
 
   - name: editablePages
-    label: Editable Pages
+    label: Empty Pages
     editor:
       preview: true
     folder: content/editablePages
@@ -351,7 +351,7 @@ collections: # A list of collections the CMS should be able to edit
           - { label: Noindex, name: noindex, widget: boolean, required: false }
 
   - name: posts
-    label: Post
+    label: Blog Posts
     editor:
       preview: true
     folder: content/posts
@@ -413,7 +413,7 @@ collections: # A list of collections the CMS should be able to edit
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
-      - { label: Template, name: template, widget: hidden, default: SinglePost }
+      - { label: Template, name: template, widget: hidden, default: CasePost }
       - { label: Title, name: title, widget: string }
       - label: 'Status'
         name: 'status'
