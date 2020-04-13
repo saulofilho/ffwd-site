@@ -2,45 +2,45 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { Location } from '@reach/router'
 import qs from 'qs'
+import PessoasPageCarousel from '../components/PessoasPageCarousel';
 // import PageHeader from '../components/PageHeader'
 // import PostCategoriesNav from '../components/PostCategoriesNav'
-import CaseSection from '../components/CaseSection'
+import PessoasSection from '../components/PessoasSection'
 import Layout from '../components/Layout'
-import './ProjetosIndex.css'
+import './PessoasPage.css'
 
 /**
- * Filter cases by date. Feature dates will be fitered
+ * Filter vaga by date. Feature dates will be fitered
  * When used, make sure you run a cronejob each day to show schaduled content. See docs
  *
- * @param {cases} object
+ * @param {vaga} object
  */
-export const byDate = cases => {
+export const byDate = vaga => {
   const now = Date.now()
-  return cases.filter(post => Date.parse(post.date) <= now)
+  return vaga.filter(post => Date.parse(post.date) <= now)
 }
 
-
 /**
- * filter cases by category.
+ * filter vaga by category.
  *
- * @param {cases} object
+ * @param {vaga} object
  * @param {title} string
  * @param {contentType} string
  */
-export const byCategory = (cases, title, contentType) => {
+export const byCategory = (vaga, title, contentType) => {
   const isCategory = contentType === 'postCategories'
   const byCategory = post =>
     post.categories &&
     post.categories.filter(cat => cat.category === title).length
-  return isCategory ? cases.filter(byCategory) : cases
+  return isCategory ? vaga.filter(byCategory) : vaga
 }
 
 // Export Template for use in CMS preview
-export const ProjetosIndexTemplate = ({
+export const VagasIndexTemplate = ({
   title,
   subtitle,
   featuredImage,
-  cases = [],
+  vaga = [],
   postCategories = [],
   enableSearch = true,
   contentType
@@ -48,8 +48,8 @@ export const ProjetosIndexTemplate = ({
   <Location>
     {({ location }) => {
       let filteredPosts =
-        cases && !!cases.length
-          ? byCategory(byDate(cases), title, contentType)
+        vaga && !!vaga.length
+          ? byCategory(byDate(vaga), title, contentType)
           : []
 
       let queryObj = location.search.replace('?', '')
@@ -63,8 +63,8 @@ export const ProjetosIndexTemplate = ({
       }
 
       return (
-        <main className="projeto">
-          {/* <PageHeader
+        <main className="pessoas">
+          {/* <Pagvagas
             title={title}
             subtitle={subtitle}
             backgroundImage={featuredImage}
@@ -77,13 +77,16 @@ export const ProjetosIndexTemplate = ({
               </div>
             </section>
           )} */}
-          <div className="projeto-hero">
-            <h1>teste</h1>
+          <div className="pessoas-hero">
+            <h1>{title}</h1>
           </div>
 
-          {!!cases.length && (
-            <section className="projeto-section">
-              <CaseSection posts={filteredPosts} />
+          {!!vaga.length && (
+            <section className="pessoas-section">
+              <PessoasSection posts={filteredPosts} />
+              <PessoasPageCarousel
+                posts={filteredPosts}
+              />
             </section>
           )}
         </main>
@@ -92,17 +95,17 @@ export const ProjetosIndexTemplate = ({
   </Location>
 )
 
-// Export Default ProjetosIndex for front-end
-const ProjetosIndex = ({ data: { page, cases, postCategories } }) => (
+// Export Default PessoasPage for front-end
+const PessoasPage = ({ data: { page, vaga, postCategories } }) => (
   <Layout
     meta={page.frontmatter.meta || false}
     title={page.frontmatter.title || false}
   >
-    <ProjetosIndexTemplate
+    <VagasIndexTemplate
       {...page}
       {...page.fields}
       {...page.frontmatter}
-      cases={cases.edges.map(post => ({
+      vaga={vaga.edges.map(post => ({
         ...post.node,
         ...post.node.frontmatter,
         ...post.node.fields
@@ -116,14 +119,14 @@ const ProjetosIndex = ({ data: { page, cases, postCategories } }) => (
   </Layout>
 )
 
-export default ProjetosIndex
+export default PessoasPage
 
 export const pageQuery = graphql`
-  ## Query for ProjetosIndex data
+  ## Query for PessoasPage data
   ## Use GraphiQL interface (http://localhost:8000/___graphql)
   ## $id is processed via gatsby-node.js
   ## query name must be unique to this file
-  query ProjetosIndex($id: String!) {
+  query PessoasPage($id: String!) {
     page: markdownRemark(id: { eq: $id }) {
       ...Meta
       fields {
@@ -138,8 +141,8 @@ export const pageQuery = graphql`
       }
     }
 
-    cases: allMarkdownRemark(
-      filter: { fields: { contentType: { eq: "cases" } } }
+    vaga: allMarkdownRemark(
+      filter: { fields: { contentType: { eq: "vaga" } } }
       sort: { order: DESC, fields: [frontmatter___date] }
     ) {
       edges {

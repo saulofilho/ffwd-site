@@ -1,9 +1,14 @@
-.Nav {
+.navbar {
   background: transparent;
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 2;
+  transition: top 0.3s;
+}
+
+.navbar--hidden {
+  top: -300px;
 }
 
 .Nav--Container {
@@ -104,6 +109,13 @@
   width: 15rem;
 }
 
+.Nav-active {
+  background: #fff;
+  opacity: 1;
+  height: 100%;
+  width: 100%;
+}
+
 @media (max-width: 600px) {
   .Nav--Container {
     display: flex;
@@ -149,6 +161,7 @@
   .Nav .NavLink {
     font-size: 2.5rem;
     font-weight: 300;
+    color: #000;
   }
 
   .Nav .NavLink:nth-of-type(2) {

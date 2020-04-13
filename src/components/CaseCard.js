@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import Image from './Image'
 import './CaseCard.css'
 
 const CaseCard = ({
@@ -16,7 +15,7 @@ const CaseCard = ({
   <Link to={slug} className={`CaseCard ${className}`}>
     {featuredImage && (
       <div className="CaseCard--Image relative">
-        <img background src={featuredImage} alt={title} />
+        <img src={featuredImage} alt={title} />
       </div>
     )}
     <div className="CaseCard--Content">

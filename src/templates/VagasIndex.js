@@ -6,7 +6,7 @@ import qs from 'qs'
 // import PostCategoriesNav from '../components/PostCategoriesNav'
 import VagaSection from '../components/VagaSection'
 import Layout from '../components/Layout'
-import './ProjetosIndex.css'
+import './VagasIndex.css'
 
 /**
  * Filter vaga by date. Feature dates will be fitered
@@ -62,8 +62,8 @@ export const VagasIndexTemplate = ({
       }
 
       return (
-        <main className="projeto">
-          {/* <PageHeader
+        <main className="vagas">
+          {/* <Pagvagas
             title={title}
             subtitle={subtitle}
             backgroundImage={featuredImage}
@@ -76,12 +76,12 @@ export const VagasIndexTemplate = ({
               </div>
             </section>
           )} */}
-          <div className="projeto-hero">
+          <div className="vagas-hero">
             <h1>{title}</h1>
           </div>
 
           {!!vaga.length && (
-            <section className="projeto-section">
+            <section className="vagas-section">
               <VagaSection posts={filteredPosts} />
             </section>
           )}

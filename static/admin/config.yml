@@ -445,7 +445,7 @@ collections: # A list of collections the CMS should be able to edit
           - { label: Noindex, name: noindex, widget: boolean, required: false }
 
   - name: cases
-    label: Cases
+    label: Cases Posts
     editor:
       preview: true
     folder: content/cases
@@ -500,7 +500,7 @@ collections: # A list of collections the CMS should be able to edit
           - { label: Noindex, name: noindex, widget: boolean, required: false }
 
   - name: vaga
-    label: Vaga
+    label: Vaga Posts
     editor:
       preview: true
     folder: content/vaga

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import classnames from "classnames";
 import { Location } from '@reach/router'
 import { Link } from 'gatsby'
 import { Menu, X } from 'react-feather'
@@ -11,10 +12,31 @@ export class Navigation extends Component {
     active: false,
     activeSubNav: false,
     currentPath: false,
+    prevScrollpos: window.pageYOffset,
+    visible: true
   }
 
-  componentDidMount = () =>
-    this.setState({ currentPath: this.props.location.pathname })
+  componentDidMount = () => {
+    this.setState({ currentPath: this.props.location.pathname });
+    window.addEventListener("scroll", this.handleScroll);
+  }
+
+  componentWillUnmount = () => {
+    window.removeEventListener("scroll", this.handleScroll);
+  }
+
+
+  handleScroll = () => {
+    const { prevScrollpos } = this.state;
+
+    const currentScrollPos = window.pageYOffset;
+    const visible = prevScrollpos > currentScrollPos;
+
+    this.setState({
+      prevScrollpos: currentScrollPos,
+      visible
+    });
+  };
 
   handleMenuToggle = () => this.setState({ active: !this.state.active })
 
@@ -43,7 +65,11 @@ export class Navigation extends Component {
       )
 
     return (
-      <nav className={`Nav ${active ? 'Nav-active' : ''}`}>
+      <nav 
+      className={classnames("navbar", {
+        "navbar--hidden": !this.state.visible
+      })}
+      >
         <div className="Nav--Container container">
           <Link to="/" onClick={this.handleLinkClick}>
             <LogoWhite />
@@ -91,7 +117,7 @@ export class Navigation extends Component {
             className="Button-blank Nav--MenuButton"
             onClick={this.handleMenuToggle}
           >
-            {active ? <X color='#fff' /> : <Menu color='#fff' />}
+            {active ? <X color='#000' /> : <Menu color='#fff' />}
           </button>
         </div>
       </nav>

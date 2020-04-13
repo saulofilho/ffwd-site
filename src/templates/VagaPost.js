@@ -26,7 +26,7 @@ export const VagaPostTemplate = ({
           <ChevronLeft /> Voltar
         </Link>
         <div className="VagaPost--Content relative">
-          <div className="VagasPost--Meta">
+          <div className="VagaPost--Meta">
             {date && (
               <time
                 className="VagaPost--Meta--Date"
@@ -130,7 +130,7 @@ export const pageQuery = graphql`
     }
 
     allPosts: allMarkdownRemark(
-      filter: { fields: { contentType: { eq: "Vagas" } } }
+      filter: { fields: { contentType: { eq: "vaga" } } }
       sort: { order: DESC, fields: [frontmatter___date] }
     ) {
       edges {
