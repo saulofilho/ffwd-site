@@ -88,10 +88,11 @@ export const CasePostTemplate = ({
 )
 
 // Export Default CasePost for front-end
-const CasePost = ({ data: { post, allPosts } }) => {
+const CasePost = ({ data: { post, allPosts }, location }) => {
   const thisEdge = allPosts.edges.find(edge => edge.node.id === post.id)
   return (
     <Layout
+      location={location}
       meta={post.frontmatter.meta || false}
       title={post.frontmatter.title || false}
     >

@@ -36,7 +36,7 @@ export const byCategory = (vaga, title, contentType) => {
 }
 
 // Export Template for use in CMS preview
-export const VagasIndexTemplate = ({
+export const PessoasPageTemplate = ({
   title,
   subtitle,
   featuredImage,
@@ -76,10 +76,11 @@ export const VagasIndexTemplate = ({
                 <PostCategoriesNav enableSearch categories={postCategories} />
               </div>
             </section>
-          )} */}
+          )} 
           <div className="pessoas-hero">
             <h1>{title}</h1>
           </div>
+          */}
 
           {!!vaga.length && (
             <section className="pessoas-section">
@@ -96,12 +97,13 @@ export const VagasIndexTemplate = ({
 )
 
 // Export Default PessoasPage for front-end
-const PessoasPage = ({ data: { page, vaga, postCategories } }) => (
+const PessoasPage = ({ data: { page, vaga, postCategories }, location }) => (
   <Layout
+    location={location}
     meta={page.frontmatter.meta || false}
     title={page.frontmatter.title || false}
   >
-    <VagasIndexTemplate
+    <PessoasPageTemplate
       {...page}
       {...page.fields}
       {...page.frontmatter}

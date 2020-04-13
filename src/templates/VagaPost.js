@@ -88,10 +88,11 @@ export const VagaPostTemplate = ({
 )
 
 // Export Default VagaPost for front-end
-const VagaPost = ({ data: { post, allPosts } }) => {
+const VagaPost = ({ data: { post, allPosts }, location }) => {
   const thisEdge = allPosts.edges.find(edge => edge.node.id === post.id)
   return (
     <Layout
+      location={location}
       meta={post.frontmatter.meta || false}
       title={post.frontmatter.title || false}
     >

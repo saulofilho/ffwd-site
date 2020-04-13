@@ -9,7 +9,6 @@ import { DefaultPageTemplate } from '../templates/DefaultPage'
 import { BlogIndexTemplate } from '../templates/BlogIndex'
 import { ProjetosIndexTemplate } from '../templates/ProjetosIndex'
 import { PessoasPageTemplate } from '../templates/PessoasPage'
-import { VagasIndexTemplate } from '../templates/VagasIndex'
 import { SinglePostTemplate } from '../templates/SinglePost'
 import { CasePostTemplate } from '../templates/CasePost'
 import { VagaPostTemplate } from '../templates/VagaPost'
@@ -36,9 +35,6 @@ CMS.registerPreviewTemplate('sobre-page', ({ entry }) => (
 ))
 CMS.registerPreviewTemplate('projetos-page', ({ entry }) => (
   <ProjetosIndexTemplate {...entry.toJS().data} />
-))
-CMS.registerPreviewTemplate('vagas-page', ({ entry }) => (
-  <VagasIndexTemplate {...entry.toJS().data} />
 ))
 CMS.registerPreviewTemplate('pessoas-page', ({ entry }) => (
   <PessoasPageTemplate {...entry.toJS().data} />

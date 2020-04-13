@@ -3,9 +3,8 @@ import classnames from "classnames";
 import { Location } from '@reach/router'
 import { Link } from 'gatsby'
 import { Menu, X } from 'react-feather'
-import Logo from './Logo'
 
-import './Nav.css'
+import './NavHome.css'
 
 export class Navigation extends Component {
   state = {
@@ -54,7 +53,7 @@ export class Navigation extends Component {
       NavLink = ({ to, className, children, ...props }) => (
         <Link
           to={to}
-          className={`NavLink ${
+          className={`NavLinkHome ${
             to === this.state.currentPath ? 'active' : ''
           } ${className}`}
           onClick={this.handleLinkClick}
@@ -78,7 +77,12 @@ export class Navigation extends Component {
       >
         <div className="Nav--Container container">
           <Link to="/" onClick={this.handleLinkClick}>
-            <Logo />
+            <div
+              className="Logo"
+              style={{
+                backgroundImage: `url(/images/logo-white.png)`
+              }}
+            />
           </Link>
           <div className="Nav--Links">
             <NavLink to="/sobre/">Sobre</NavLink>
@@ -123,7 +127,7 @@ export class Navigation extends Component {
             className="Button-blank Nav--MenuButton"
             onClick={this.handleMenuToggle}
           >
-            {active ? <X color='#000' /> : <Menu color='#000' />}
+            {active ? <X color='#000' /> : <Menu color='#fff' />}
           </button>
         </div>
       </nav>

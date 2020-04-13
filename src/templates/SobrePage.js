@@ -81,8 +81,9 @@ export const ComponentsPageTemplate = ({
   </main>
 )
 
-const SobrePage = ({ data: { page } }) => (
+const SobrePage = ({ data: { page }, location }) => (
   <Layout
+    location={location}
     meta={page.frontmatter.meta || false}
     title={page.frontmatter.title || false}
   >

@@ -63,8 +63,9 @@ export const ContactPageTemplate = ({
   </main>
 )
 
-const ContatoPage = ({ data: { page } }) => (
+const ContatoPage = ({ data: { page }, location }) => (
   <Layout
+    location={location}
     meta={page.frontmatter.meta || false}
     title={page.frontmatter.title || false}
   >

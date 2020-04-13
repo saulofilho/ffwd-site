@@ -21,7 +21,7 @@ const HeroSliderConfigs = {
 };
 
 const HeroSlider = ({
-  backgroundImage,
+  filteredPosts,
 }) => {
 
   const [parallaxSwiper, setParallaxSwiper] = useState(null);
@@ -29,15 +29,18 @@ const HeroSlider = ({
   const parallaxOpacity = 0.5;
   return (
     <Swiper {...HeroSliderConfigs} getSwiper={setParallaxSwiper}>
-      <div className="hero-slide">
-        <div
-          className="slide-image"
-          data-swiper-parallax={parallaxAmount}
-          data-swiper-parallax-opacity={parallaxOpacity}
-        >
-          <img src={backgroundImage} alt=""/>
+      {filteredPosts.map(img => (
+        <div className="hero-slide">
+          <div
+            className="slide-image"
+            data-swiper-parallax={parallaxAmount}
+            data-swiper-parallax-opacity={parallaxOpacity}
+          >
+            {/* <p className="home-car-title">{img.title}</p> */}
+            <img src={img.featuredImage} alt="" />
+          </div>
         </div>
-      </div>
+      ))}
     </Swiper>
   );
 };

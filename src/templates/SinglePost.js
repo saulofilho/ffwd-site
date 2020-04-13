@@ -88,10 +88,11 @@ export const SinglePostTemplate = ({
 )
 
 // Export Default SinglePost for front-end
-const SinglePost = ({ data: { post, allPosts } }) => {
+const SinglePost = ({ data: { post, allPosts }, location }) => {
   const thisEdge = allPosts.edges.find(edge => edge.node.id === post.id)
   return (
     <Layout
+      location={location}
       meta={post.frontmatter.meta || false}
       title={post.frontmatter.title || false}
     >

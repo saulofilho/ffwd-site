@@ -29,8 +29,9 @@ export const DefaultPageTemplate = ({
   </main>
 )
 
-const DefaultPage = ({ data: { page } }) => (
+const DefaultPage = ({ data: { page }, location }) => (
   <Layout
+    location={location}
     meta={page.frontmatter.meta || false}
     title={page.frontmatter.title || false}
   >

@@ -91,8 +91,9 @@ export const BlogIndexTemplate = ({
 )
 
 // Export Default BlogIndex for front-end
-const BlogIndex = ({ data: { page, posts, postCategories } }) => (
+const BlogIndex = ({ data: { page, posts, postCategories }, location }) => (
   <Layout
+    location={location}
     meta={page.frontmatter.meta || false}
     title={page.frontmatter.title || false}
   >

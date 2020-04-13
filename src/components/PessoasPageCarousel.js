@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import 'swiper/css/swiper.css';
 import Swiper from 'react-id-swiper';
-import './HeroSlider.css';
+import './PessoasPageCarousel.css';
+import CaseSection from './CaseSection'
 
 // const HeroSliderConfigs = {
 //   slidesPerView: 1,
@@ -31,13 +32,26 @@ const PessoasPageCarousel = ({
       clickable: true
     }
   };
-  const VerticalSwiperParams = {
+
+  // const VerticalSwiperParams = {
+  //   direction: 'vertical',
+  //   pagination: {
+  //     el: 'swiper-pagination-v',
+  //     clickable: true
+  //   }
+  // };
+
+  const params = {
     direction: 'vertical',
-    pagination: {
-      el: 'swiper-pagination-v',
+    slidesPerView: 'auto',
+    freeMode: true,
+    scrollbar: {
+      el: '.swiper-scrollbar',
+      hide: true,
       clickable: true
-    }
-  };
+    },
+    mousewheel: true
+  }
 
   // const [parallaxSwiper, setParallaxSwiper] = useState(null);
   // const parallaxAmount = parallaxSwiper ? parallaxSwiper.width * 0.95 : 0;
@@ -62,24 +76,34 @@ const PessoasPageCarousel = ({
         ))}
       </Swiper> */}
       <Swiper {...HorizontalSwiperParams}>
-        <div style={{background: "red"}}>
-          <h1>as pessoas</h1>
-          <Swiper {...VerticalSwiperParams}>
+        <div>
+          <Swiper {...params}>
+            <div className="pessoas-car-hero" style={{background: "green", height: "100%"}}>
+              as pessoas
+            </div>
             <div style={{background: "yellow"}}>as pessoas #1</div>
             <div style={{background: "orange"}}>as pessoas #2</div>
           </Swiper>
         </div>
-        <div style={{background: "blue"}}>
-          <h1>cultura</h1>
-          <Swiper {...VerticalSwiperParams}>
+        <div>
+          <Swiper {...params}>
+            <div className="pessoas-car-hero" style={{background: "green", height: "100%"}}>
+              cultura
+            </div>
             <div>cultura #1</div>
             <div>cultura #2</div>
           </Swiper>
         </div>
-        <div style={{background: "green"}}>
-          <h1>vagas</h1>
-          <Swiper {...VerticalSwiperParams}>
-            <div>consumir api</div>
+        <div>
+          <Swiper {...params}>
+          <div className="pessoas-car-hero" style={{background: "green", height: "100%"}}>
+            vagas
+          </div>
+          {posts.map(img => (
+            <a className="pessoas-car-img" href={img.slug}>
+              <img src={img.featuredImage} alt=""/>
+            </a>
+            ))}
           </Swiper>
         </div>
       </Swiper>

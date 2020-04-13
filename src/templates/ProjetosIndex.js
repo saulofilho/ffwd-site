@@ -93,8 +93,9 @@ export const ProjetosIndexTemplate = ({
 )
 
 // Export Default ProjetosIndex for front-end
-const ProjetosIndex = ({ data: { page, cases, postCategories } }) => (
+const ProjetosIndex = ({ data: { page, cases, postCategories }, location }) => (
   <Layout
+    location={location}
     meta={page.frontmatter.meta || false}
     title={page.frontmatter.title || false}
   >

@@ -15,8 +15,10 @@ export default ({ children }) => (
         }
       }
     `}
-    render={data => (
-      <Layout>
+    render={(data, location) => (
+      <Layout
+        location={location}  
+      >
         <Helmet>
           <title>404 – Page Not Found</title>
         </Helmet>
