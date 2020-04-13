@@ -83,7 +83,7 @@ export const VagasIndexTemplate = ({
 
           {!!vaga.length && (
             <section className="pessoas-section">
-              <PessoasSection posts={filteredPosts} />
+              {/* <PessoasSection posts={filteredPosts} /> */}
               <PessoasPageCarousel
                 posts={filteredPosts}
               />

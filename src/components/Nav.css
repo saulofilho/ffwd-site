@@ -110,13 +110,15 @@
 }
 
 .Nav-active {
-  background: #fff;
-  opacity: 1;
   height: 100%;
   width: 100%;
 }
 
 @media (max-width: 600px) {
+  .Nav-active {
+    background: #fff;
+  }
+  
   .Nav--Container {
     display: flex;
   }
@@ -142,6 +144,7 @@
     bottom: 0;
     background: transparent;
     animation: Nav--Links 0.2s ease;
+    background: #fff;
   }
 
   .Nav--Links > * + * {

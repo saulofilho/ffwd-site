@@ -12,7 +12,7 @@ export class Navigation extends Component {
     active: false,
     activeSubNav: false,
     currentPath: false,
-    prevScrollpos: window.pageYOffset,
+    prevScrollpos: 0,
     visible: true
   }
 
@@ -66,9 +66,15 @@ export class Navigation extends Component {
 
     return (
       <nav 
-      className={classnames("navbar", {
-        "navbar--hidden": !this.state.visible
-      })}
+      className={
+        classnames
+          ("navbar", 
+            {
+              "navbar--hidden": !this.state.visible
+            },
+              `Nav ${active ? 'Nav-active' : ''}`
+          )
+        }
       >
         <div className="Nav--Container container">
           <Link to="/" onClick={this.handleLinkClick}>
