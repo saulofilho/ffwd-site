@@ -100,7 +100,7 @@ const PessoasPageCarousel = ({
             vagas
           </div>
           {posts.map(img => (
-            <a className="pessoas-car-img" href={img.slug}>
+            <a className="pessoas-car-img" href={img.slug} key={img.featuredImage}>
               <img src={img.featuredImage} alt=""/>
             </a>
             ))}

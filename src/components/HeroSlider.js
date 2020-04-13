@@ -30,7 +30,7 @@ const HeroSlider = ({
   return (
     <Swiper {...HeroSliderConfigs} getSwiper={setParallaxSwiper}>
       {filteredPosts.map(img => (
-        <div className="hero-slide">
+        <div className="hero-slide" key={img.featuredImage}>>
           <div
             className="slide-image"
             data-swiper-parallax={parallaxAmount}
