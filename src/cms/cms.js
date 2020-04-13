@@ -54,6 +54,6 @@ CMS.registerPreviewTemplate('posts', ({ entry }) => (
 CMS.registerPreviewTemplate('cases', ({ entry }) => (
   <CasePostTemplate {...entry.toJS().data} />
 ))
-CMS.registerPreviewTemplate('vagas', ({ entry }) => (
+CMS.registerPreviewTemplate('vaga', ({ entry }) => (
   <VagaPostTemplate {...entry.toJS().data} />
 ))
