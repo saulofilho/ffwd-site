@@ -4,6 +4,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import Meta from './Meta'
 import Nav from './Nav'
 import NavHome from './NavHome'
+import Footer from './Footer'
 
 import 'modern-normalize/modern-normalize.css'
 import './globalStyles.css'
@@ -72,9 +73,13 @@ export default ({ children, meta, title, location }) => {
               {...data.settingsYaml}
             />
 
+            {/* header */}
             {location.pathname === '/' ? <NavHome subNav={subNav} /> : <Nav subNav={subNav} /> }
             
             <Fragment>{children}</Fragment>
+            
+            {/* footer */}
+            {location.pathname === '/' ? <></> : <Footer /> }
             
           </Fragment>
         )

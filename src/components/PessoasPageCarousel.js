@@ -27,10 +27,17 @@ const PessoasPageCarousel = ({
 }) => {
 
   const HorizontalSwiperParams = {
+    slidesPerView: 1,
+    loop: true,
+    effect: 'fade',
     pagination: {
       el: '.swiper-pagination.swiper-pagination-h',
       clickable: true
-    }
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
   };
 
   // const VerticalSwiperParams = {
@@ -41,7 +48,8 @@ const PessoasPageCarousel = ({
   //   }
   // };
 
-  const params = {
+  const VerticalSwiperParams = {
+    slidesPerView: 1,
     direction: 'vertical',
     slidesPerView: 'auto',
     freeMode: true,
@@ -53,31 +61,11 @@ const PessoasPageCarousel = ({
     mousewheel: true
   }
 
-  // const [parallaxSwiper, setParallaxSwiper] = useState(null);
-  // const parallaxAmount = parallaxSwiper ? parallaxSwiper.width * 0.95 : 0;
-  // const parallaxOpacity = 0.5;
   return (
     <>
-      {/* <Swiper {...HeroSliderConfigs} getSwiper={setParallaxSwiper}>
-        {posts.map(img => (
-          <div 
-            key={img.title}
-            className="pessoas-slide"
-          >
-            <div
-              className="pessoas-slide-image"
-              data-swiper-parallax={parallaxAmount}
-              data-swiper-parallax-opacity={parallaxOpacity}
-            >
-              <img src={img.featuredImage} alt="" />
-              <a href={img.slug}>teste</a>
-            </div>
-          </div>
-        ))}
-      </Swiper> */}
       <Swiper {...HorizontalSwiperParams}>
         <div>
-          <Swiper {...params}>
+          <Swiper {...VerticalSwiperParams}>
             <div className="pessoas-car-hero" style={{background: "green", height: "100%"}}>
               as pessoas
             </div>
@@ -86,7 +74,7 @@ const PessoasPageCarousel = ({
           </Swiper>
         </div>
         <div>
-          <Swiper {...params}>
+          <Swiper {...VerticalSwiperParams}>
             <div className="pessoas-car-hero" style={{background: "green", height: "100%"}}>
               cultura
             </div>
@@ -95,7 +83,7 @@ const PessoasPageCarousel = ({
           </Swiper>
         </div>
         <div>
-          <Swiper {...params}>
+          <Swiper {...VerticalSwiperParams}>
           <div className="pessoas-car-hero" style={{background: "green", height: "100%"}}>
             vagas
           </div>
