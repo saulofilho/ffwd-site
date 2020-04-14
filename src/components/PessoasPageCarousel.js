@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import 'swiper/css/swiper.css';
 import Swiper from 'react-id-swiper';
 import './PessoasPageCarousel.css';
@@ -27,7 +27,6 @@ const PessoasPageCarousel = ({
   const VerticalSwiperParams = {
     slidesPerView: 1,
     direction: 'vertical',
-    slidesPerView: 'auto',
     freeMode: true,
     scrollbar: {
       el: '.swiper-scrollbar',
@@ -42,16 +41,16 @@ const PessoasPageCarousel = ({
       <Swiper {...HorizontalSwiperParams}>
         <div>
           <Swiper {...VerticalSwiperParams}>
-            <div className="pessoas-car-hero" style={{background: "green", height: "100%"}}>
+            <div className="pessoas-car-hero">
               as pessoas
             </div>
-            <div style={{background: "yellow"}}>as pessoas #1</div>
-            <div style={{background: "orange"}}>as pessoas #2</div>
+            <div>as pessoas #1</div>
+            <div>as pessoas #2</div>
           </Swiper>
         </div>
         <div>
           <Swiper {...VerticalSwiperParams}>
-            <div className="pessoas-car-hero" style={{background: "green", height: "100%"}}>
+            <div className="pessoas-car-hero">
               cultura
             </div>
             <div>cultura #1</div>
@@ -60,7 +59,7 @@ const PessoasPageCarousel = ({
         </div>
         <div>
           <Swiper {...VerticalSwiperParams}>
-          <div className="pessoas-car-hero" style={{background: "green", height: "100%"}}>
+          <div className="pessoas-car-hero">
             vagas
           </div>
           {posts.map(img => (

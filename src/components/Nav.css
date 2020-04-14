@@ -40,6 +40,7 @@
 }
 
 .NavLink {
+  font-family: var(--font-second);
   padding: 0.5rem 1rem;
   display: block;
   font-weight: 500;

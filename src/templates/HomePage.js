@@ -4,7 +4,6 @@ import { Location } from '@reach/router'
 import qs from 'qs'
 
 import HeroSlider from '../components/HeroSlider'
-import CaseSection from '../components/CaseSection'
 import Layout from '../components/Layout'
 import './HomePage.css'
 

@@ -110,17 +110,18 @@ class Image extends React.Component {
               }}
             >
               {!background && (
-                <img
-                  className={`LazyImage ${
-                    className + this.state.isIntersecting ? ' faded' : ''
-                  }`}
-                  src={this.state.isIntersecting ? fullSrc : ''}
-                  srcSet={this.state.isIntersecting ? secSet : ''}
-                  sizes={'100vw'}
-                  onClick={onClick}
-                  title={title}
-                  alt={alt}
-                />
+                <button onClick={onClick}>
+                  <img
+                    className={`LazyImage ${
+                      className + this.state.isIntersecting ? ' faded' : ''
+                    }`}
+                    src={this.state.isIntersecting ? fullSrc : ''}
+                    srcSet={this.state.isIntersecting ? secSet : ''}
+                    sizes={'100vw'}
+                    title={title}
+                    alt={alt}
+                  />
+                </button>
               )}
               {background && (
                 <div
@@ -142,15 +143,16 @@ class Image extends React.Component {
               />
             )}
             {!background && (
-              <img
-                className={`${className}`}
-                src={fullSrc}
-                srcSet={secSet}
-                sizes={'100vw'}
-                onClick={onClick}
-                title={title}
-                alt={alt}
-              />
+              <button onClick={onClick}>
+                <img
+                  className={`${className}`}
+                  src={fullSrc}
+                  srcSet={secSet}
+                  sizes={'100vw'}
+                  title={title}
+                  alt={alt}
+                />
+              </button>
             )}
           </Fragment>
         )}

@@ -60,6 +60,7 @@ export class Navigation extends Component {
           {...props}
         >
           {children}
+          {console.log(subNav)}
         </Link>
       )
 

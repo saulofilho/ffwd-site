@@ -24,7 +24,7 @@
   bottom: 0;
   right: 0;
   margin: auto;
-  height: 40px;
+  height: 30px;
   margin-bottom: 80px;
   display: flex;
   align-items: center;
@@ -42,7 +42,7 @@
 .swiper-pagination-fraction, 
 .swiper-pagination-custom, 
 .swiper-container-horizontal > .swiper-pagination-bullets {
-  width: 300px;
+  width: 50%;
 }
 .slide-image {
   height: 100%;

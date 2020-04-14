@@ -4,31 +4,47 @@
   display: flex;
   flex-direction: column;
 }
-.sobre-car-vert-nos-somos,
-.sobre-car-vert-servicos {
+.sobre-car-vert-nos-somos {
   height: 100vh;
   width: 100%;
   background: #fff;
 }
+.sobre-car-vert-servicos {
+  height: 100vh;
+  width: 100%;
+  background: grey;
+}
 .sobre-car-vert-one {
   height: 100vh;
   width: 100%;
-  background: orange;
+  background-image: url(/images/quem_somos_01.png);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .sobre-car-vert-two {
   height: 100vh;
   width: 100%;
-  background: lightblue;
+  background-image: url(/images/quem_somos_03.png);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .sobre-car-vert-three {
   height: 100vh;
   width: 100%;
-  background: lightgreen;
+  background-image: url(/images/quem_somos_02.png);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .sobre-car-vert-four {
   height: 100vh;
   width: 100%;
-  background: yellow;
+  background-image: url(/images/quem_somos_03.png);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .swiper-scrollbar {
   display: none;

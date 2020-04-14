@@ -50,7 +50,6 @@ html {
 }
 
 body {
-  font-family: var(--font-system);
   position: relative;
   color: var(--secondary);
   font-size: 1.6em;
@@ -246,4 +245,59 @@ blockquote {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* container default style */
+.invert-color {
+  color: #fff;
+}
+.default-flex {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  word-wrap: break-word;
+}
+.default-text-header {
+  font-family: var(--font-second);
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
+.default-text-title {
+  font-family: var(--font-primary);
+  font-size: 3em;
+  text-transform: uppercase;
+  word-wrap: break-word;
+  line-height: 1;
+}
+.default-text-line {
+  font-family: var(--font-second);
+  font-size: 3rem;
+  text-transform: uppercase;
+  word-wrap: break-word;
+  line-height: 1;
+  padding-top: 50px;
+}
+.default-text-sub {
+  font-family: var(--font-second);
+  font-size: 1.6rem;
+  font-weight: bold;
+  word-wrap: break-word;
+  line-height: 1.4;
+  padding-top: 50px;
+}
+.default-btn {
+  padding-top: 50px;
+}
+.default-btn button {
+  font-family: var(--font-second);
+  font-size: 2rem;
+  word-wrap: break-word;
+  color: #fff;
+  background: #000;
+  padding: 15px 25px;
+  border: 1px solid #fff;
 }
