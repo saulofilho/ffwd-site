@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import 'swiper/css/swiper.css';
 import Swiper from 'react-id-swiper';
-import './PessoasPageCarousel.css';
+import './SobrePageCarousel.css';
 
-const PessoasPageCarousel = ({
+const SobrePageCarousel = ({
   posts,
 }) => {
 
@@ -42,32 +42,24 @@ const PessoasPageCarousel = ({
       <Swiper {...HorizontalSwiperParams}>
         <div>
           <Swiper {...VerticalSwiperParams}>
-            <div className="pessoas-car-hero" style={{background: "green", height: "100%"}}>
-              as pessoas
+            <div className="sobre-car-vert-nos-somos">
+              nos somos
             </div>
-            <div style={{background: "yellow"}}>as pessoas #1</div>
-            <div style={{background: "orange"}}>as pessoas #2</div>
+            <div className="sobre-car-vert-one">nos somos</div>
+            <div className="sobre-car-vert-two">nos somos</div>
+            <div className="sobre-car-vert-three">nos somos</div>
+            <div className="sobre-car-vert-four">nos somos</div>
           </Swiper>
         </div>
         <div>
           <Swiper {...VerticalSwiperParams}>
-            <div className="pessoas-car-hero" style={{background: "green", height: "100%"}}>
-              cultura
+            <div className="sobre-car-vert-servicos">
+              servicos
             </div>
-            <div>cultura #1</div>
-            <div>cultura #2</div>
-          </Swiper>
-        </div>
-        <div>
-          <Swiper {...VerticalSwiperParams}>
-          <div className="pessoas-car-hero" style={{background: "green", height: "100%"}}>
-            vagas
-          </div>
-          {posts.map(img => (
-            <a className="pessoas-car-img" href={img.slug} key={img.featuredImage}>
-              <img src={img.featuredImage} alt=""/>
-            </a>
-            ))}
+            <div className="sobre-car-vert-one">servicos</div>
+            <div className="sobre-car-vert-two">servicos</div>
+            <div className="sobre-car-vert-three">servicos</div>
+            <div className="sobre-car-vert-four">servicos</div>
           </Swiper>
         </div>
       </Swiper>
@@ -75,4 +67,4 @@ const PessoasPageCarousel = ({
   );
 };
 
-export default PessoasPageCarousel;
+export default SobrePageCarousel;
