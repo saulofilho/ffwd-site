@@ -8,6 +8,10 @@ import Layout from '../components/Layout'
 import './CasePost.css'
 
 export const CasePostTemplate = ({
+  containerOne = [],
+  about,
+  header,
+  hero,
   title,
   date,
   body,
@@ -60,6 +64,16 @@ export const CasePostTemplate = ({
           )}
 
           <div className="CasePost--InnerContent">
+          <p>{header} header</p>
+          <p>{about} about</p>
+          <p>{hero} hero</p>
+          
+          {containerOne.map(item => (
+            <>
+              <p>{item.titleOne} item</p>
+              <img src={item.imageOne} alt=""/>
+            </>
+          ))}
             <Content source={body} />
           </div>
 
@@ -120,9 +134,15 @@ export const pageQuery = graphql`
       html
       id
       frontmatter {
-        title
+        containerOne {
+          imageOne
+          titleOne
+        }
         template
-        subtitle
+        about
+        header
+        title
+        hero
         date(formatString: "MMMM Do, YYYY")
         categories {
           category
@@ -143,7 +163,15 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
+            containerOne {
+              imageOne
+              titleOne
+            }
+            template
+            about
+            header
             title
+            hero
           }
         }
         previous {

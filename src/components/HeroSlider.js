@@ -40,8 +40,9 @@ const HeroSlider = ({
             <div className="home-car-texts container">
               <p className="home-car-title default-text-header">{img.header}</p>
               <p className="home-car-title default-text-title">{img.title}</p>
-              <p className="home-car-subtitle">{img.excerpt}</p>
-              <a href={img.slug}>xxxx</a>
+              <p className="home-car-subtitle">{img.about}</p>
+              
+              <a href={img.slug}>conheca</a>
             </div>
             {/* <button className="next">next</button> */}
           </div>

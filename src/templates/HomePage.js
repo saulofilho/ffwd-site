@@ -36,11 +36,9 @@ export const byCategory = (cases, title, contentType) => {
 
 // Export Template for use in CMS preview
 export const HomePageTemplate = ({
+  hero,
   title,
-  subtitle,
-  featuredImage,
   cases = [],
-  postCategories = [],
   enableSearch = true,
   contentType
 }) => (
@@ -113,7 +111,14 @@ export const pageQuery = graphql`
         contentType
       }
       frontmatter {
+        containerOne {
+          imageOne
+          titleOne
+        }
+        about
+        header
         title
+        hero
         excerpt
         template
         subtitle
@@ -132,8 +137,14 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
+            containerOne {
+              imageOne
+              titleOne
+            }
+            about
             header
             title
+            hero
             date
             categories {
               category

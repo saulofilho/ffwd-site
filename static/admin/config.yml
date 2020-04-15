@@ -415,24 +415,42 @@ collections: # A list of collections the CMS should be able to edit
     fields: # The fields each document in this collection have
       - { label: Template, name: template, widget: hidden, default: CasePost }
       - { label: About, name: about, widget: text }
-      - { label: Header, name: header, widget: string }
+      - { label: Header Title, name: header, widget: string }
       - { label: Title, name: title, widget: string }
-      - { label: Hero, name: hero, widget: text }
-      - { label: Date / Order, name: date, widget: date }
-      - label: 'ContainerOne'
+      - {
+        label: Home Carousel Featured Image,
+        name: featuredImage,
+        widget: image,
+        required: false,
+      }
+      - { label: Case Hero Text, name: hero, widget: text }
+      - label: 'Container One'
         name: 'containerOne'
         widget: 'list'
         fields:
           - { name: imageOne, label: ImageOne, widget: image }
           - { name: alt, label: Alt, widget: string }
           - { name: titleOne, label: TitleOne, widget: string, required: false }
-      - {
-          label: Featured Image,
-          name: featuredImage,
-          widget: image,
-          required: false,
-        }
+          - { name: textOne, label: Text One, widget: text, required: false }
+      - label: 'Container Two'
+        name: 'containerTwo'
+        widget: 'list'
+        fields:
+          - { name: imageTwo, label: ImageTwo, widget: image }
+          - { name: alt, label: Alt, widget: string }
+          - { name: titleTwo, label: TitleTwo, widget: string, required: false }
+          - { name: textTwo, label: Text Two, widget: text, required: false }
+      - label: 'Container Three'
+        name: 'containerThree'
+        widget: 'list'
+        fields:
+          - { name: imageThree, label: ImageThree, widget: image }
+          - { name: alt, label: Alt, widget: string }
+          - { name: titleThree, label: TitleThree, widget: string, required: false }
+          - { name: textThree, label: Text Three, widget: text, required: false }
+      - { label: Excerpt, name: excerpt, widget: text }
       - { label: Content, name: body, widget: markdown }
+      - { label: Date / Order, name: date, widget: date }
       - label: 'Status'
         name: 'status'
         widget: 'select'
