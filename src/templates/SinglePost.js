@@ -103,7 +103,6 @@ const SinglePost = ({ data: { post, allPosts }, location }) => {
         nextPostURL={_get(thisEdge, 'next.fields.slug')}
         prevPostURL={_get(thisEdge, 'previous.fields.slug')}
       />
-      {console.log("single", post)}
     </Layout>
   )
 }

@@ -70,7 +70,6 @@ const ContatoPage = ({ data: { page }, location }) => (
     title={page.frontmatter.title || false}
   >
     <ContactPageTemplate {...page.frontmatter} body={page.html} />
-    {console.log("contato:", page)}
   </Layout>
 )
 

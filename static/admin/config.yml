@@ -414,22 +414,30 @@ collections: # A list of collections the CMS should be able to edit
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
       - { label: Template, name: template, widget: hidden, default: CasePost }
+      - { label: About, name: about, widget: text }
       - { label: Header, name: header, widget: string }
       - { label: Title, name: title, widget: string }
-      - label: 'Status'
-        name: 'status'
-        widget: 'select'
-        options: ['Published', 'Featured', 'Draft']
-        default: 'Published'
+      - { label: Hero, name: hero, widget: text }
       - { label: Date / Order, name: date, widget: date }
+      - label: 'ContainerOne'
+        name: 'containerOne'
+        widget: 'list'
+        fields:
+          - { name: imageOne, label: ImageOne, widget: image }
+          - { name: alt, label: Alt, widget: string }
+          - { name: titleOne, label: TitleOne, widget: string, required: false }
       - {
           label: Featured Image,
           name: featuredImage,
           widget: image,
           required: false,
         }
-      - { label: Excerpt, name: excerpt, widget: text }
       - { label: Content, name: body, widget: markdown }
+      - label: 'Status'
+        name: 'status'
+        widget: 'select'
+        options: ['Published', 'Featured', 'Draft']
+        default: 'Published'
       - label: 'Categories'
         name: 'categories'
         widget: 'list'
@@ -462,7 +470,7 @@ collections: # A list of collections the CMS should be able to edit
           - { label: Noindex, name: noindex, widget: boolean, required: false }
 
   - name: vaga
-    label: Vaga Posts
+    label: Vagas Posts
     editor:
       preview: true
     folder: content/vaga
