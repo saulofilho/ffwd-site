@@ -132,6 +132,7 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
+            header
             title
             date
             categories {

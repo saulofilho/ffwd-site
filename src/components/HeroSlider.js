@@ -38,8 +38,11 @@ const HeroSlider = ({
           >
             <img src={img.featuredImage} alt="" />
             <div className="home-car-texts container">
-              <p className="home-car-title">{img.title}</p>
+              <p className="home-car-title default-text-header">{img.header}</p>
+              <p className="home-car-title default-text-title">{img.title}</p>
               <p className="home-car-subtitle">{img.excerpt}</p>
+              <a href={img.slug}>xxxx</a>
+              {console.log('img header', img)}
             </div>
             {/* <button className="next">next</button> */}
           </div>
