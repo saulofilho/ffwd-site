@@ -13,33 +13,22 @@ export const CasePostTemplate = ({
   header,
   hero,
   title,
-  date,
   body,
   nextPostURL,
   prevPostURL,
   categories = []
 }) => (
-  <main>
-    <article
-      className="CasePost section light"
-      itemScope
-      itemType="http://schema.org/BlogPosting"
-    >
-      <div className="container skinny">
-        <Link className="CasePost--BackButton" to="/blog/">
-          <ChevronLeft /> Voltar
-        </Link>
-        <div className="CasePost--Content relative">
+    <main className="CasePostPage">
+      <article
+        className="home-case"
+        itemScope
+        itemType="http://schema.org/BlogPosting"
+      >
+        <div className="single-case">
+          <Link className="CasePost--BackButton" to="/blog/">
+            <ChevronLeft /> Voltar
+          </Link>
           <div className="CasePost--Meta">
-            {date && (
-              <time
-                className="CasePost--Meta--Date"
-                itemProp="dateCreated pubdate datePublished"
-                date={date}
-              >
-                {date}
-              </time>
-            )}
             {categories && (
               <Fragment>
                 <span>|</span>
@@ -56,27 +45,47 @@ export const CasePostTemplate = ({
               </Fragment>
             )}
           </div>
-
-          {title && (
-            <h1 className="CasePost--Title" itemProp="title">
-              {title}
-            </h1>
-          )}
-
           <div className="CasePost--InnerContent">
-          <p>{header} header</p>
-          <p>{about} about</p>
-          <p>{hero} hero</p>
-          
-          {containerOne.map(item => (
-            <>
-              <p>{item.titleOne} item</p>
-              <img src={item.imageOne} alt=""/>
-            </>
-          ))}
-            <Content source={body} />
+            <div className="case-hero container">
+              <p className="default-text-header">{header} header</p>
+              {title && (
+                <h1 className="default-text-title" itemProp="title">
+                  {title}
+                </h1>
+              )}
+              <p className="default-text-sub">{hero}</p>
+              <div className="btn-scroll">
+                <a href="#containerOne">
+                  scroll
+                  + svg
+                  </a>
+              </div>
+            </div>
+            <div className="containerOne" id="containerOne">
+              {containerOne.map(item => (
+                <>
+                  <div className="case-imgs">
+                    <img src={item.imageOne} alt="" />
+                  </div>
+                  <div className="case-texts container">
+                    <p className="default-text-h2">{item.titleOne}</p>
+                    {console.log("veremos", body)}
+                    <Content source={body} />
+                  </div>
+                </>
+              ))}
+            </div>
+            <div className="containerTwo" id="containerTwo">
+              {containerOne.map(item => (
+                <>
+                  <div className="case-imgs">
+                    <img src={item.imageOne} alt="" />
+                  </div>
+                  <p className="default-text-h2">{item.titleOne}</p>
+                </>
+              ))}
+            </div>
           </div>
-
           <div className="CasePost--Pagination">
             {prevPostURL && (
               <Link
@@ -96,10 +105,9 @@ export const CasePostTemplate = ({
             )}
           </div>
         </div>
-      </div>
-    </article>
-  </main>
-)
+      </article>
+    </main>
+  )
 
 // Export Default CasePost for front-end
 const CasePost = ({ data: { post, allPosts }, location }) => {
