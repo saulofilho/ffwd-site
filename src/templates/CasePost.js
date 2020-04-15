@@ -9,6 +9,8 @@ import './CasePost.css'
 
 export const CasePostTemplate = ({
   containerOne = [],
+  containerTwo = [],
+  containerThree = [],
   about,
   header,
   hero,
@@ -69,21 +71,39 @@ export const CasePostTemplate = ({
                   </div>
                   <div className="case-texts container">
                     <p className="default-text-h2">{item.titleOne}</p>
-                    {console.log("veremos", body)}
-                    <Content source={body} />
+                    <Content source={item.textOne} />
                   </div>
                 </>
               ))}
             </div>
             <div className="containerTwo" id="containerTwo">
-              {containerOne.map(item => (
+              {containerTwo.map(item => (
                 <>
                   <div className="case-imgs">
-                    <img src={item.imageOne} alt="" />
+                    <img src={item.imageTwo} alt="" />
                   </div>
-                  <p className="default-text-h2">{item.titleOne}</p>
+                  <div className="case-texts container">
+                    <p className="default-text-h2">{item.titleTwo}</p>
+                    <Content source={item.textTwo} />
+                  </div>
                 </>
               ))}
+            </div>
+            <div className="containerThree" id="containerThree">
+              {containerThree.map(item => (
+                <>
+                  <div className="case-imgs">
+                    <img src={item.imageThree} alt="" />
+                  </div>
+                  <div className="case-texts container">
+                    <p className="default-text-h2">{item.titleThree}</p>
+                    <Content source={item.textThree} />
+                  </div>
+                </>
+              ))}
+            </div>
+            <div className="resultados container">
+              <Content source={body} />
             </div>
           </div>
           <div className="CasePost--Pagination">
@@ -145,6 +165,17 @@ export const pageQuery = graphql`
         containerOne {
           imageOne
           titleOne
+          textOne
+        }
+        containerTwo {
+          imageTwo
+          titleTwo
+          textTwo
+        }
+        containerThree {
+          imageThree
+          titleThree
+          textThree
         }
         template
         about
@@ -174,6 +205,17 @@ export const pageQuery = graphql`
             containerOne {
               imageOne
               titleOne
+              textOne
+            }
+            containerTwo {
+              imageTwo
+              titleTwo
+              textTwo
+            }
+            containerThree {
+              imageThree
+              titleThree
+              textThree
             }
             template
             about

@@ -79,3 +79,10 @@
 .CasePost--Pagination--Link.next {
   margin-left: auto;
 }
+strong {
+  color: #000;
+  font-family: var(--font-primary);
+}
+.resultados {
+  height: 100vh;
+}

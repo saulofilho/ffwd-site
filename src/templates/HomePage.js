@@ -111,10 +111,6 @@ export const pageQuery = graphql`
         contentType
       }
       frontmatter {
-        containerOne {
-          imageOne
-          titleOne
-        }
         about
         header
         title
@@ -137,10 +133,6 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            containerOne {
-              imageOne
-              titleOne
-            }
             about
             header
             title
