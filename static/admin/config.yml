@@ -421,7 +421,7 @@ collections: # A list of collections the CMS should be able to edit
         label: Home Carousel Featured Image,
         name: featuredImage,
         widget: image,
-        required: false,
+        required: true,
       }
       - { label: Case Hero Text, name: hero, widget: text }
       - label: 'Container One'
@@ -431,7 +431,7 @@ collections: # A list of collections the CMS should be able to edit
           - { name: imageOne, label: ImageOne, widget: image }
           - { name: alt, label: Alt, widget: string }
           - { name: titleOne, label: TitleOne, widget: string, required: false }
-          - { name: textOne, label: Text One, widget: text, required: false }
+          - { name: textOne, label: Text One, widget: markdown, required: false }
       - label: 'Container Two'
         name: 'containerTwo'
         widget: 'list'
@@ -439,7 +439,7 @@ collections: # A list of collections the CMS should be able to edit
           - { name: imageTwo, label: ImageTwo, widget: image }
           - { name: alt, label: Alt, widget: string }
           - { name: titleTwo, label: TitleTwo, widget: string, required: false }
-          - { name: textTwo, label: Text Two, widget: text, required: false }
+          - { name: textTwo, label: Text Two, widget: markdown, required: false }
       - label: 'Container Three'
         name: 'containerThree'
         widget: 'list'
@@ -447,7 +447,7 @@ collections: # A list of collections the CMS should be able to edit
           - { name: imageThree, label: ImageThree, widget: image }
           - { name: alt, label: Alt, widget: string }
           - { name: titleThree, label: TitleThree, widget: string, required: false }
-          - { name: textThree, label: Text Three, widget: text, required: false }
+          - { name: textThree, label: Text Three, widget: markdown, required: false }
       - { label: Excerpt, name: excerpt, widget: text }
       - { label: Content, name: body, widget: markdown }
       - { label: Date / Order, name: date, widget: date }
