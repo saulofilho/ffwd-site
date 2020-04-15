@@ -428,7 +428,7 @@ collections: # A list of collections the CMS should be able to edit
         name: 'containerOne'
         widget: 'list'
         fields:
-          - { name: imageOne, label: ImageOne, widget: image }
+          - { name: imageOne, label: ImageOne, widget: image, required: false }
           - { name: alt, label: Alt, widget: string }
           - { name: titleOne, label: TitleOne, widget: string, required: false }
           - { name: textOne, label: Text One, widget: markdown, required: false }
@@ -436,7 +436,7 @@ collections: # A list of collections the CMS should be able to edit
         name: 'containerTwo'
         widget: 'list'
         fields:
-          - { name: imageTwo, label: ImageTwo, widget: image }
+          - { name: imageTwo, label: ImageTwo, widget: image, required: false }
           - { name: alt, label: Alt, widget: string }
           - { name: titleTwo, label: TitleTwo, widget: string, required: false }
           - { name: textTwo, label: Text Two, widget: markdown, required: false }
@@ -444,7 +444,7 @@ collections: # A list of collections the CMS should be able to edit
         name: 'containerThree'
         widget: 'list'
         fields:
-          - { name: imageThree, label: ImageThree, widget: image }
+          - { name: imageThree, label: ImageThree, widget: image, required: false }
           - { name: alt, label: Alt, widget: string }
           - { name: titleThree, label: TitleThree, widget: string, required: false }
           - { name: textThree, label: Text Three, widget: markdown, required: false }
