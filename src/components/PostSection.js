@@ -29,7 +29,7 @@ class PostSection extends React.Component {
 
     return (
       <div className="PostSection">
-        {title && <h2 className="PostSection--Title">{title}</h2>}
+        {title && <p className="PostSection--Title">{title}</p>}
         {!!visiblePosts.length && (
           <div className="PostSection--Grid">
             {visiblePosts.map((post, index) => (
@@ -39,11 +39,20 @@ class PostSection extends React.Component {
         )}
         {showLoadMore && visiblePosts.length < posts.length && (
           <div className="taCenter">
-            <button className="button" onClick={this.increaseLimit}>
-              {loadMoreTitle}
-            </button>
+            <div className="default-btn padding-btn">
+              <button className="btn-load-more" onClick={this.increaseLimit}>
+                {loadMoreTitle}
+              </button>
+            </div>
           </div>
         )}
+        <div className="anchor-up">
+          <a href="#blog-hero">
+            ↑
+            <br/>
+            subir
+          </a>
+        </div>
       </div>
     )
   }

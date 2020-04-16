@@ -62,7 +62,7 @@ export const BlogIndexTemplate = ({
         }
 
         return (
-          <main className="Blog">
+          <main className="Blog" id="blog-hero">
             <div className="case-hero container">
               <p className="default-text-header">news + views</p>
               <p className="default-text-title" itemProp="title">
@@ -76,16 +76,15 @@ export const BlogIndexTemplate = ({
                   </div>
                 </section>
               )}
-              <div className="btn-scroll">
-                <a href="#containerOne">
-                  scroll
-                  + svg
-                  </a>
+              <div className="anchor-down">
+                <a href="#posts-section">
+                  ↓
+                </a>
               </div>
             </div>
 
             {!!posts.length && (
-              <section className="section">
+              <section className="posts-section" id="posts-section">
                 <div className="container">
                   <PostSection posts={filteredPosts} />
                 </div>

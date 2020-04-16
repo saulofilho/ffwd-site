@@ -359,21 +359,32 @@ collections: # A list of collections the CMS should be able to edit
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
       - { label: Template, name: template, widget: hidden, default: SinglePost }
-      - { label: Title, name: title, widget: string }
-      - label: 'Status'
-        name: 'status'
-        widget: 'select'
-        options: ['Published', 'Featured', 'Draft']
-        default: 'Published'
-      - { label: Date / Order, name: date, widget: date }
+      - { label: About, name: about, widget: text, required: false }
+      - { label: Header Title, name: header, widget: string, required: false }
+      - { label: Title, name: title, widget: string, required: false }
       - {
           label: Featured Image,
           name: featuredImage,
           widget: image,
           required: false,
         }
+      - label: 'Container One'
+        name: 'containerOne'
+        widget: 'list'
+        required: false
+        fields:
+        - { name: imageOne, label: Image One, widget: image, required: false }
+        - { name: alt, label: Alt, widget: string, required: false }
+        - { name: titleOne, label: Title One, widget: string, required: false }
+        - { name: textOne, label: Text One, widget: markdown, required: false }  
       - { label: Excerpt, name: excerpt, widget: text }
       - { label: Content, name: body, widget: markdown }
+      - label: 'Status'
+        name: 'status'
+        widget: 'select'
+        options: ['Published', 'Featured', 'Draft']
+        default: 'Published'
+      - { label: Date / Order, name: date, widget: date }
       - label: 'Categories'
         name: 'categories'
         widget: 'list'
