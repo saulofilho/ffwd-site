@@ -141,9 +141,6 @@ export const pageQuery = graphql`
       html
       id
       frontmatter {
-        containerOne {
-          textOne
-        }
         featuredImage
         header
         title
@@ -169,9 +166,6 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            containerOne {
-              textOne
-            }
             featuredImage
             title
             header
