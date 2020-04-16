@@ -41,6 +41,5 @@ containerThree:
 excerpt: case two
 date: 2020-04-16T11:22:32.465Z
 status: Published
-categories: []
 ---
 xxx
