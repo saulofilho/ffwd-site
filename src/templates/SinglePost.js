@@ -26,6 +26,15 @@ export const SinglePostTemplate = ({
       >
         <div className="single-post">
           <div className="SinglePost--Meta">
+          {date && (
+                <time
+                  className="default-text-header container"
+                  itemProp="dateCreated pubdate datePublished"
+                  date={date}
+                >
+                  {date}
+                </time>
+              )}
             {categories && (
               <Fragment>
                 <span>|</span>
@@ -49,15 +58,7 @@ export const SinglePostTemplate = ({
               </Link>
             </div>
             <div className="post-hero">
-              {date && (
-                <time
-                  className="default-text-header container"
-                  itemProp="dateCreated pubdate datePublished"
-                  date={date}
-                >
-                  {date}
-                </time>
-              )}
+
               <p className="post-text-header container">{header}</p>
               {title && (
                 <p className="post-text-title container" itemProp="title">
