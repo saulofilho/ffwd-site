@@ -67,14 +67,12 @@ export const BlogIndexTemplate = ({
               <p className="default-text-title" itemProp="title">
                 blog
                 </p>
-              {!!postCategories.length && (
-                <section className="search-blog">
-                  <PostCategoriesNav enableSearch categories={postCategories} />
-                  <div className="default-btn search-btn">
-                    <button>search</button>
-                  </div>
-                </section>
-              )}
+              <section className="search-blog">
+                <PostCategoriesNav enableSearch categories={postCategories} />
+                <div className="default-btn search-btn">
+                  <button>search</button>
+                </div>
+              </section>
               <div className="anchor-down">
                 <a href="#posts-section">
                   ↓
