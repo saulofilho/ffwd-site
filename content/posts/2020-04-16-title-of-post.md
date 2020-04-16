@@ -17,6 +17,4 @@ containerOne:
 excerpt: xxx
 status: Published
 date: 2020-04-16T21:22:22.620Z
-categories:
-  - category: News
 ---
