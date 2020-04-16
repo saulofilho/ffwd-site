@@ -15,19 +15,18 @@ const PostCard = ({
   ...props
 }) => (
   <div className="single-post">
-    <Link to={slug} className={`PostCard ${className}`}>
-      <div className="PostCard--Content">
-        <p className="PostCard--Date">{date}</p>
-        {title && <p className="PostCard--Title">{title}</p>}
-        <div className="PostCard--Category">
-          {categories && categories.map(cat => cat.category).join(', ')}
+    <Link to={slug}>
+      <div className={`PostCard ${className}`}>
+        <div className="PostCard--Content">
+          <p className="PostCard--Date">{date}</p>
+          {title && <p className="PostCard--Title">{title}</p>}
         </div>
+        {featuredImage && (
+          <div className="PostCard--Image relative">
+            <Image background src={featuredImage} alt={title} />
+          </div>
+        )}
       </div>
-      {featuredImage && (
-        <div className="PostCard--Image relative">
-          <Image background src={featuredImage} alt={title} />
-        </div>
-      )}
     </Link>
   </div>
 )

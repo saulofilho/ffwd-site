@@ -27,9 +27,9 @@ export const CasePostTemplate = ({
         itemType="http://schema.org/BlogPosting"
       >
         <div className="single-case">
-          <Link className="CasePost--BackButton" to="/blog/">
+          {/* <Link className="CasePost--BackButton" to="/blog/">
             <ChevronLeft /> Voltar
-          </Link>
+          </Link> */}
           <div className="CasePost--Meta">
             {categories && (
               <Fragment>
@@ -49,7 +49,7 @@ export const CasePostTemplate = ({
           </div>
           <div className="CasePost--InnerContent">
             <div className="case-hero container">
-              <p className="default-text-header">{header} header</p>
+              <p className="default-text-header">{header}</p>
               {title && (
                 <p className="default-text-title" itemProp="title">
                   {title}

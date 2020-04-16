@@ -359,7 +359,6 @@ collections: # A list of collections the CMS should be able to edit
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
       - { label: Template, name: template, widget: hidden, default: SinglePost }
-      - { label: About, name: about, widget: text, required: false }
       - { label: Header Title, name: header, widget: string, required: false }
       - { label: Title, name: title, widget: string, required: false }
       - {
@@ -373,12 +372,9 @@ collections: # A list of collections the CMS should be able to edit
         widget: 'list'
         required: false
         fields:
-        - { name: imageOne, label: Image One, widget: image, required: false }
         - { name: alt, label: Alt, widget: string, required: false }
-        - { name: titleOne, label: Title One, widget: string, required: false }
         - { name: textOne, label: Text One, widget: markdown, required: false }  
       - { label: Excerpt, name: excerpt, widget: text }
-      - { label: Content, name: body, widget: markdown }
       - label: 'Status'
         name: 'status'
         widget: 'select'

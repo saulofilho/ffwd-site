@@ -8,6 +8,9 @@ import Layout from '../components/Layout'
 import './SinglePost.css'
 
 export const SinglePostTemplate = ({
+  containerOne = [],
+  featuredImage,
+  header,
   title,
   date,
   body,
@@ -15,27 +18,14 @@ export const SinglePostTemplate = ({
   prevPostURL,
   categories = []
 }) => (
-  <main>
-    <article
-      className="SinglePost section light"
-      itemScope
-      itemType="http://schema.org/BlogPosting"
-    >
-      <div className="container skinny">
-        <Link className="SinglePost--BackButton" to="/blog/">
-          <ChevronLeft /> Voltar
-        </Link>
-        <div className="SinglePost--Content relative">
+    <main className="BlogPostPage">
+      <article
+        className="home-post"
+        itemScope
+        itemType="http://schema.org/BlogPosting"
+      >
+        <div className="single-post">
           <div className="SinglePost--Meta">
-            {date && (
-              <time
-                className="SinglePost--Meta--Date"
-                itemProp="dateCreated pubdate datePublished"
-                date={date}
-              >
-                {date}
-              </time>
-            )}
             {categories && (
               <Fragment>
                 <span>|</span>
@@ -52,40 +42,70 @@ export const SinglePostTemplate = ({
               </Fragment>
             )}
           </div>
-
-          {title && (
-            <h1 className="SinglePost--Title" itemProp="title">
-              {title}
-            </h1>
-          )}
-
           <div className="SinglePost--InnerContent">
-            <Content source={body} />
+            <div className="anchor-back container">
+              <Link className="SinglePost--BackButton" to="/blog/">
+                back <ChevronLeft />
+              </Link>
+            </div>
+            <div className="post-hero">
+              {date && (
+                <time
+                  className="default-text-header container"
+                  itemProp="dateCreated pubdate datePublished"
+                  date={date}
+                >
+                  {date}
+                </time>
+              )}
+              <p className="post-text-header container">{header}</p>
+              {title && (
+                <p className="post-text-title container" itemProp="title">
+                  {title}
+                </p>
+              )}
+              <div className="post-img">
+                <img src={featuredImage} alt="" />
+              </div>
+            </div>
+            <div className="containerOne" id="containerOne">
+              {containerOne.map(item => (
+                <>
+                  <div className="post-texts container">
+                    <Content source={item.textOne} />
+                  </div>
+                </>
+              ))}
+            </div>
           </div>
-
           <div className="SinglePost--Pagination">
-            {prevPostURL && (
-              <Link
-                className="SinglePost--Pagination--Link prev"
-                to={prevPostURL}
-              >
-                Previous Post
-              </Link>
-            )}
-            {nextPostURL && (
-              <Link
-                className="SinglePost--Pagination--Link next"
-                to={nextPostURL}
-              >
-                Next Post
-              </Link>
-            )}
+            <div className="container">
+              {prevPostURL && (
+                <Link
+                  className="SinglePost--Pagination--Link prev"
+                  to={prevPostURL}
+                >
+                  previous news ←
+                </Link>
+              )}
+              {nextPostURL && (
+                <>
+                  <div className="next">
+                    <Link
+                      className="SinglePost--Pagination--Link next"
+                      to={nextPostURL}
+                    >
+                      next news →
+                </Link>
+                  </div>
+                </>
+              )}
+            </div>
           </div>
         </div>
-      </div>
-    </article>
-  </main>
-)
+      </article>
+    </main>
+  )
 
 // Export Default SinglePost for front-end
 const SinglePost = ({ data: { post, allPosts }, location }) => {
@@ -120,10 +140,15 @@ export const pageQuery = graphql`
       html
       id
       frontmatter {
+        containerOne {
+          textOne
+        }
+        featuredImage
+        header
         title
         template
         subtitle
-        date(formatString: "MMMM Do, YYYY")
+        date(formatString: "D. MM.  YYYY")
         categories {
           category
         }
@@ -143,7 +168,12 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
+            containerOne {
+              textOne
+            }
+            featuredImage
             title
+            header
           }
         }
         previous {
