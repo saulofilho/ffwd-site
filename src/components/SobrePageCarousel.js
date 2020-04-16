@@ -10,7 +10,7 @@ const SobrePageCarousel = ({
   const HorizontalSwiperParams = {
     slidesPerView: 1,
     loop: true,
-    grabCursor: true,
+    grabCursor: false,
     effect: 'fade',
     hashNavigation: {
       watchState: true,
@@ -27,7 +27,7 @@ const SobrePageCarousel = ({
 
   const VerticalSwiperParams = {
     direction: 'vertical',
-    grabCursor: true,
+    grabCursor: false,
     freeMode: true,
     scrollbar: {
       el: '.swiper-scrollbar',
@@ -50,7 +50,7 @@ const SobrePageCarousel = ({
                   Você pode pensar que somos uma agência de marketing digital.
                   Mas nós somos mais do que isso.
                 </p>
-                <div className="default-btn container">
+                <div className="default-btn container padding-btn">
                   <button>
                     we make great launches
                   </button>
@@ -64,7 +64,7 @@ const SobrePageCarousel = ({
                 <p className="invert-color default-text-sub container">
                   Nascemos digital e evoluímos. Combinamos estratégia, criatividade e inovação para criar experiências completas em todos os pontos de contato das marcas com seus consumidores.
                 </p>
-                <div className="default-btn container">
+                <div className="default-btn container padding-btn">
                   <button>
                     Conheca nossos cases
                   </button>
@@ -91,7 +91,7 @@ o favoritismo pelo que é tradicional.
                   É estar conectado com o mundo, com as mudanças. É colocar os consumidores no centro das decisões.
 Propomos um novo pensamento, uma nova forma de enxergar oportunidades, de solucionar problemas, de conquistar o mundo. 
                 </p>
-                <div className="default-btn container">
+                <div className="default-btn container padding-btn">
                   <button>
                     Nossos Servicos
                   </button>
@@ -109,7 +109,7 @@ Propomos um novo pensamento, uma nova forma de enxergar oportunidades, de soluci
                 <p className="default-text-line container">
                   nos fazemos grandes lancamentos
                 </p>
-                <div className="default-btn container">
+                <div className="default-btn container padding-btn">
                   <button>
                     Great Launches
                   </button>

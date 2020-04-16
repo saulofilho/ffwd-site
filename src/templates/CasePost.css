@@ -19,10 +19,9 @@
 .containerOne,
 .containerTwo,
 .containerThree {
-  height: 100vh;
-}
-.btn-scroll a {
-  color: red;
+  height: 100%;
+  width: 100%;
+  padding-bottom: 100px;
 }
 .case-imgs {
   height: auto;
@@ -32,6 +31,15 @@
   width: 100%;
   height: 300px;
   object-fit: cover;
+}
+.btn-scroll {
+  height: auto;
+  width: 100%;
+  color: #000;
+  padding-top: 100px;
+}
+.btn-scroll a {
+  color: #000;
 }
 .CasePost--BackButton {
   color: white;
@@ -64,25 +72,27 @@
   height: 100%;
 }
 .CasePost--Pagination {
-  margin: 4rem 0 0 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background: #000;
+  height: 100vh;
 }
 .CasePost--Pagination--Link {
   text-transform: uppercase;
-  font-size: 1.2rem;
-  font-weight: 600;
+  font-family: var(--font-primary);
+  font-size: 3rem;
   text-decoration: none;
-  color: red;
+  color: #fff;
 }
-.CasePost--Pagination--Link.next {
+.next {
   margin-left: auto;
+  display: flex;
 }
 strong {
   color: #000;
   font-family: var(--font-primary);
 }
 .resultados {
-  height: 100vh;
+  height: 100%;
 }

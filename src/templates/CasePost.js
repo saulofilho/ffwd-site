@@ -51,9 +51,9 @@ export const CasePostTemplate = ({
             <div className="case-hero container">
               <p className="default-text-header">{header} header</p>
               {title && (
-                <h1 className="default-text-title" itemProp="title">
+                <p className="default-text-title" itemProp="title">
                   {title}
-                </h1>
+                </p>
               )}
               <p className="default-text-sub">{hero}</p>
               <div className="btn-scroll">
@@ -107,22 +107,28 @@ export const CasePostTemplate = ({
             </div>
           </div>
           <div className="CasePost--Pagination">
-            {prevPostURL && (
-              <Link
-                className="CasePost--Pagination--Link prev"
-                to={prevPostURL}
-              >
-                Previous Post
-              </Link>
-            )}
-            {nextPostURL && (
-              <Link
-                className="CasePost--Pagination--Link next"
-                to={nextPostURL}
-              >
-                Next Post
-              </Link>
-            )}
+            <div className="container">
+              {prevPostURL && (
+                <Link
+                  className="CasePost--Pagination--Link prev"
+                  to={prevPostURL}
+                >
+                  ANTERIOR ‹
+                </Link>
+              )}
+              {nextPostURL && (
+                <>
+                  <div className="next">
+                    <Link
+                      className="CasePost--Pagination--Link next"
+                      to={nextPostURL}
+                    >
+                      › PRÓXIMO
+                    </Link>
+                  </div>
+                </>
+              )}
+            </div>
           </div>
         </div>
       </article>
