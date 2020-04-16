@@ -138,9 +138,6 @@ export const pageQuery = graphql`
             title
             hero
             date
-            categories {
-              category
-            }
             featuredImage
           }
         }

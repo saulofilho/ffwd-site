@@ -372,8 +372,8 @@ collections: # A list of collections the CMS should be able to edit
         widget: 'list'
         required: false
         fields:
-          - { name: alt, label: Alt, widget: string, required: false }
-          - { name: textOne, label: Text One, widget: markdown, required: false }  
+        - { name: alt, label: Alt, widget: string, required: false }
+        - { name: textOne, label: Text One, widget: markdown, required: false }  
       - { label: Excerpt, name: excerpt, widget: text }
       - label: 'Status'
         name: 'status'

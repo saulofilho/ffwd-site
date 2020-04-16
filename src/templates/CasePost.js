@@ -189,9 +189,6 @@ export const pageQuery = graphql`
         title
         hero
         date(formatString: "MMMM Do, YYYY")
-        categories {
-          category
-        }
       }
     }
 

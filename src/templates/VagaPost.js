@@ -124,9 +124,6 @@ export const pageQuery = graphql`
         template
         subtitle
         date(formatString: "MMMM Do, YYYY")
-        categories {
-          category
-        }
       }
     }
 

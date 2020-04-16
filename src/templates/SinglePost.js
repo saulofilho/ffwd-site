@@ -149,10 +149,7 @@ export const pageQuery = graphql`
         title
         template
         subtitle
-        date(formatString: "D. MM.  YYYY")
-        categories {
-          category
-        }
+        date(formatString: "MMMM Do, YYYY")
       }
     }
 
@@ -169,9 +166,6 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            containerOne {
-              textOne
-            }
             featuredImage
             title
             header
