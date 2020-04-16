@@ -15,8 +15,8 @@ const PostCard = ({
   ...props
 }) => (
   <div className="single-post">
-    <Link to={slug} className={`PostCard ${className}`}>
-      <div >
+    <Link to={slug}>
+      <div className={`PostCard ${className}`}>
         <div className="PostCard--Content">
           <p className="PostCard--Date">{date}</p>
           {title && <p className="PostCard--Title">{title}</p>}
