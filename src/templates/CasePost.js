@@ -26,13 +26,9 @@ export const CasePostTemplate = ({
         itemType="http://schema.org/BlogPosting"
       >
         <div className="single-case">
-          {/* <Link className="CasePost--BackButton" to="/blog/">
-            <ChevronLeft /> Voltar
-          </Link> */}
           <div className="CasePost--Meta">
             {categories && (
               <Fragment>
-                <span>|</span>
                 {categories.map((cat, index) => (
                   <span
                     key={cat.category}

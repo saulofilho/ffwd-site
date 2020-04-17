@@ -4,7 +4,7 @@ import { Location } from '@reach/router'
 import { Link } from 'gatsby'
 import { Menu, X } from 'react-feather'
 
-import './NavHome.css'
+import './Nav.css'
 
 export class Navigation extends Component {
   state = {
@@ -86,10 +86,10 @@ export class Navigation extends Component {
             />
           </Link>
           <div className="Nav--Links">
-            <NavLink to="/sobre/">Sobre</NavLink>
-            <NavLink to="/projetos/">Projetos</NavLink>
-            <NavLink to="/pessoas/">Pessoas</NavLink>
-            <NavLink to="/blog/">Blog</NavLink>
+            <NavLink to="/sobre/">sobre</NavLink>
+            <NavLink to="/projetos/">projetos</NavLink>
+            <NavLink to="/pessoas/">pessoas</NavLink>
+            <NavLink to="/blog/">blog</NavLink>
             {/* <div
               className={`Nav--Group ${
                 this.state.activeSubNav === 'posts' ? 'active' : ''
@@ -122,7 +122,13 @@ export class Navigation extends Component {
                 </div>
               </span>
             </div> */}
-            <NavLink to="/contato/">Contato</NavLink>
+            <NavLink to="/contato/">contato</NavLink>
+            <button
+            className="Button-blank Nav--MenuButton"
+            onClick={this.handleMenuToggle}
+          >
+            X
+          </button>
           </div>
           <button
             className="Button-blank Nav--MenuButton"

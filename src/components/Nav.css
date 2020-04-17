@@ -16,7 +16,7 @@
   align-items: flex-start;
   height: auto;
   justify-content: space-between;
-  padding-top: 60px;
+  padding-top: 30px;
 }
 
 .Nav--Links {
@@ -41,7 +41,6 @@
 
 .NavLink {
   font-family: var(--font-second);
-  padding: 0.5rem 1rem;
   display: block;
   font-weight: 500;
   transition: color 0.2s, border-bottom-color 0.2s;
@@ -50,14 +49,29 @@
   border-bottom: 2px solid;
   border-bottom-color: transparent;
 }
-
+.NavLinkHome {
+  font-family: var(--font-second);
+  display: block;
+  font-weight: 500;
+  transition: color 0.2s, border-bottom-color 0.2s;
+  text-decoration: none;
+  border-bottom: 2px solid;
+  border-bottom-color: transparent;
+  color: #fff;
+}
 .NavLink:hover,
 .NavLink.active,
 .NavLink:focus {
   color: #000;
   border-bottom-color: currentColor;
+  padding-left: 10px;
 }
-
+.NavLinkHome:hover,
+.NavLinkHome.active,
+.NavLinkHome:focus {
+  color: #fff;
+  border-bottom-color: currentColor;
+}
 .Nav--Group {
   position: relative;
   cursor: pointer;
@@ -148,10 +162,10 @@
     background: #fff;
   }
 
-  .Nav--Links > * + * {
+  /* .Nav--Links > * + * {
     margin-left: 0;
     margin-top: 1rem;
-  }
+  } */
 
   .Nav-active .Nav--Links {
     display: flex;
@@ -162,10 +176,25 @@
     animation-fill-mode: both;
   }
 
-  .Nav .NavLink {
-    font-size: 2.5rem;
-    font-weight: 300;
+  .Nav .NavLink,
+  .Nav .NavLinkHome {
+    font-family: var(--font-primary);
+    text-transform: uppercase;
+    display: block;
+    font-weight: 500;
+    transition: color 0.2s, border-bottom-color 0.2s;
     color: #000;
+    text-decoration: none;
+    border-bottom: 1px solid #000;
+    width: 100%;
+    padding-left: 50px;
+    font-size: 4rem;
+  }
+  .NavLink:first-child {
+    border-top: 1px solid #000;
+  }
+  .NavLinkHome:first-child {
+    border-top: 1px solid #000;
   }
 
   .Nav .NavLink:nth-of-type(2) {

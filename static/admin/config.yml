@@ -34,45 +34,45 @@ collections: # A list of collections the CMS should be able to edit
             }
           - { label: Slug, name: slug, widget: hidden, default: 'contato' }
           - { label: Title, name: title, widget: string }
-          - {
-              label: Featured Image,
-              name: featuredImage,
-              widget: image,
-              options:
-                { media_library: { config: { imageShrink: 2600x2600 } } },
-            }
-          - { label: Subtitle, name: subtitle, widget: markdown }
-          - { label: Body, name: body, widget: markdown }
-          - { label: Address, name: address, widget: text }
-          - { label: Phone, name: phone, widget: string }
-          - { label: Email Address, name: email, widget: string }
-          - name: locations
-            label: locations
-            widget: list
-            fields:
-              - {
-                  name: mapLink,
-                  label: mapLink,
-                  widget: string,
-                  required: false,
-                  default: '',
-                }
-              - {
-                  name: lat,
-                  label: latitude,
-                  widget: string,
-                  required: false,
-                  delete: false,
-                  default: '',
-                }
-              - {
-                  name: lng,
-                  label: longitude,
-                  widget: string,
-                  required: false,
-                  delete: false,
-                  default: '',
-                }
+          # - {
+          #     label: Featured Image,
+          #     name: featuredImage,
+          #     widget: image,
+          #     options:
+          #       { media_library: { config: { imageShrink: 2600x2600 } } },
+          #   }
+          # - { label: Subtitle, name: subtitle, widget: markdown }
+          # - { label: Body, name: body, widget: markdown }
+          # - { label: Address, name: address, widget: text }
+          # - { label: Phone, name: phone, widget: string }
+          # - { label: Email Address, name: email, widget: string }
+          # - name: locations
+          #   label: locations
+          #   widget: list
+          #   fields:
+          #     - {
+          #         name: mapLink,
+          #         label: mapLink,
+          #         widget: string,
+          #         required: false,
+          #         default: '',
+          #       }
+          #     - {
+          #         name: lat,
+          #         label: latitude,
+          #         widget: string,
+          #         required: false,
+          #         delete: false,
+          #         default: '',
+          #       }
+          #     - {
+          #         name: lng,
+          #         label: longitude,
+          #         widget: string,
+          #         required: false,
+          #         delete: false,
+          #         default: '',
+          #       }
           - label: 'Meta'
             required: false
             name: 'meta'
@@ -148,7 +148,7 @@ collections: # A list of collections the CMS should be able to edit
               default: SobrePage,
             }
           - { label: Slug, name: slug, widget: hidden, default: 'sobre' }
-          # - { label: Title, name: title, widget: string }
+          - { label: Title, name: title, widget: string }
           # - { label: Featured Images, name: featuredImage, widget: image }
           # - { label: Subtitle, name: subtitle, widget: markdown }
           # - { label: Section 1, name: section1, widget: markdown }

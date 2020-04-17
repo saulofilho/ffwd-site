@@ -119,6 +119,12 @@ export class Navigation extends Component {
               </span>
             </div> */}
             <NavLink to="/contato/">contato</NavLink>
+            <button
+            className="Button-blank Nav--MenuButton"
+            onClick={this.handleMenuToggle}
+          >
+            X
+          </button>
           </div>
           <button
             className="Button-blank Nav--MenuButton"

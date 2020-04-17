@@ -74,7 +74,7 @@ export default ({ children, meta, title, location }) => {
             />
 
             {/* header */}
-            {location.pathname === '/' ? <NavHome subNav={subNav} /> : <Nav subNav={subNav} /> }
+            {location.pathname === '/' || location.pathname.split('/')[1] === 'contato' ? <NavHome subNav={subNav} /> : <Nav subNav={subNav} /> }
             
             <Fragment>{children}</Fragment>
             
