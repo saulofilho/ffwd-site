@@ -1,7 +1,6 @@
 import React, { Fragment } from 'react'
 import _get from 'lodash/get'
 import { Link, graphql } from 'gatsby'
-import { ChevronLeft } from 'react-feather'
 
 import Content from '../components/Content'
 import Layout from '../components/Layout'
@@ -25,39 +24,38 @@ export const SinglePostTemplate = ({
         itemType="http://schema.org/BlogPosting"
       >
         <div className="single-post">
-          <div className="SinglePost--Meta">
-          {date && (
-                <time
-                  className="default-text-header container"
-                  itemProp="dateCreated pubdate datePublished"
-                  date={date}
-                >
-                  {date}
-                </time>
-              )}
-            {categories && (
-              <Fragment>
-                {categories.map((cat, index) => (
-                  <span
-                    key={cat.category}
-                    className="SinglePost--Meta--Category"
-                  >
-                    {cat.category}
-                    {/* Add a comma on all but last category */}
-                    {index !== categories.length - 1 ? ',' : ''}
-                  </span>
-                ))}
-              </Fragment>
-            )}
-          </div>
           <div className="SinglePost--InnerContent">
-            <div className="anchor-back container">
-              <Link className="SinglePost--BackButton" to="/blog/">
-                back <ChevronLeft />
-              </Link>
-            </div>
             <div className="post-hero">
-
+              <div className="anchor-back container">
+                <Link className="SinglePost--BackButton" to="/blog/">
+                  back ←
+                </Link>
+              </div>
+              <div className="SinglePost--Meta container">
+                {date && (
+                  <time
+                    className="default-text-header container"
+                    itemProp="dateCreated pubdate datePublished"
+                    date={date}
+                  >
+                    {date}
+                  </time>
+                )}
+                {categories && (
+                  <Fragment>
+                    {categories.map((cat, index) => (
+                      <span
+                        key={cat.category}
+                        className="SinglePost--Meta--Category"
+                      >
+                        {cat.category}
+                        {/* Add a comma on all but last category */}
+                        {index !== categories.length - 1 ? ',' : ''}
+                      </span>
+                    ))}
+                  </Fragment>
+                )}
+              </div>
               <p className="post-text-header container">{header}</p>
               {title && (
                 <p className="post-text-title container" itemProp="title">
@@ -92,7 +90,7 @@ export const SinglePostTemplate = ({
                 <>
                   <div className="next">
                     <Link
-                      className="SinglePost--Pagination--Link next"
+                      className="SinglePost--Pagination--Link"
                       to={nextPostURL}
                     >
                       next news →
@@ -148,7 +146,7 @@ export const pageQuery = graphql`
         title
         template
         subtitle
-        date(formatString: "MMMM Do, YYYY")
+        date(formatString: "D.MM.Y")
       }
     }
 

@@ -64,7 +64,6 @@
 .NavLink:focus {
   color: #000;
   border-bottom-color: currentColor;
-  padding-left: 10px;
 }
 .NavLinkHome:hover,
 .NavLinkHome.active,

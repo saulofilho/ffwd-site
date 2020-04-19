@@ -44,47 +44,57 @@ export const ProjetosIndexTemplate = ({
   enableSearch = true,
   contentType
 }) => (
-  <Location>
-    {({ location }) => {
-      let filteredPosts =
-        cases && !!cases.length
-          ? byCategory(byDate(cases), title, contentType)
-          : []
+    <Location>
+      {({ location }) => {
+        let filteredPosts =
+          cases && !!cases.length
+            ? byCategory(byDate(cases), title, contentType)
+            : []
 
-      let queryObj = location.search.replace('?', '')
-      queryObj = qs.parse(queryObj)
+        let queryObj = location.search.replace('?', '')
+        queryObj = qs.parse(queryObj)
 
-      if (enableSearch && queryObj.s) {
-        const searchTerm = queryObj.s.toLowerCase()
-        filteredPosts = filteredPosts.filter(post =>
-          post.frontmatter.title.toLowerCase().includes(searchTerm)
-        )
-      }
+        if (enableSearch && queryObj.s) {
+          const searchTerm = queryObj.s.toLowerCase()
+          filteredPosts = filteredPosts.filter(post =>
+            post.frontmatter.title.toLowerCase().includes(searchTerm)
+          )
+        }
 
-      return (
-        <main className="projeto">
-          {/* 
-          {!!postCategories.length && (
-            <section className="section thin">
-              <div className="container">
-                <PostCategoriesNav enableSearch categories={postCategories} />
+        return (
+          <main className="projeto">
+            <div className="sobre-car-vert-nos-somos">
+              <div className="default-flex">
+                <p className="default-text-header container">projetos</p>
+                <p className="default-text-title container">nossos cases</p>
+                <p className="default-text-sub container">
+                  Somos uma agência mais que digital, com foco em experiências
+                  e resultados.
+                  Nesses mais de 10 anos de marketing, criatividade e tecnologia
+                  pensamos e executamos ações completas.
+                  <br />
+                  <br />
+                  Veja nossos cases:
+                </p>
+                <div className="container">
+                  <div className="anchor-down">
+                    <a href="#projeto-section">
+                      ↓
+                </a>
+                  </div>
+                </div>
               </div>
-            </section>
-          )} */}
-          <div className="projeto-hero">
-            <h1>teste</h1>
-          </div>
-
-          {!!cases.length && (
-            <section className="projeto-section">
-              <CaseSection posts={filteredPosts} />
-            </section>
-          )}
-        </main>
-      )
-    }}
-  </Location>
-)
+            </div>
+            {!!cases.length && (
+              <section className="projeto-section" id="projeto-section">
+                <CaseSection posts={filteredPosts} />
+              </section>
+            )}
+          </main>
+        )
+      }}
+    </Location>
+  )
 
 // Export Default ProjetosIndex for front-end
 const ProjetosIndex = ({ data: { page, cases, postCategories }, location }) => (

@@ -24,7 +24,7 @@
 }
 .post-img img {
   width: 100%;
-  height: 500px;
+  height: 100vh;
   object-fit: cover;
 }
 .post-text-header {
@@ -68,12 +68,7 @@
   transform: translateX(-0.25em);
 }
 .SinglePost--Meta {
-  font-size: 1rem;
-  margin: 0 0 2rem 0;
-  text-align: center;
-}
-.SinglePost--Meta > * + * {
-  margin-left: 0.75em;
+  padding-top: 50px;
 }
 .SinglePost--Pagination {
   display: flex;
@@ -88,8 +83,4 @@
   font-size: 1.5rem;
   text-decoration: none;
   color: #000;
-}
-
-.SinglePost--Pagination--Link.next {
-  margin-left: auto;
 }
