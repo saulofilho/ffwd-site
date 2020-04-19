@@ -37,10 +37,7 @@ export const byCategory = (cases, title, contentType) => {
 // Export Template for use in CMS preview
 export const ProjetosIndexTemplate = ({
   title,
-  subtitle,
-  featuredImage,
   cases = [],
-  postCategories = [],
   enableSearch = true,
   contentType
 }) => (
@@ -135,6 +132,8 @@ export const pageQuery = graphql`
         contentType
       }
       frontmatter {
+        NossosCasesAbout
+        NossosCasesTitle
         title
         excerpt
         template
@@ -154,6 +153,8 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
+            NossosCasesAbout
+            NossosCasesTitle
             title
             date
             featuredImage

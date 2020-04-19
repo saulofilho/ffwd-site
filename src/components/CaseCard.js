@@ -5,6 +5,8 @@ import './CaseCard.css'
 
 const CaseCard = ({
   featuredImage,
+  NossosCasesAbout,
+  NossosCasesTitle,
   title,
   excerpt,
   slug,
@@ -15,8 +17,8 @@ const CaseCard = ({
   <Link to={slug} className={`CaseCard ${className}`}>
     {featuredImage && (
       <div className="CaseCard--Image relative">
-        <p className="CaseCard--Title container">{title}</p>
-        <p className="CaseCard--Title container">{excerpt}</p>
+        <p className="CaseCard--Title container">{NossosCasesTitle}</p>
+        <p className="CaseCard--Title container">{NossosCasesAbout}</p>
         <img src={featuredImage} alt={title} />
       </div>
     )}
