@@ -4,6 +4,8 @@ about: Para atrair a atenção do público masculino durante o grande prêmio de
   Fórmula 1 do Brasil, a F/FWD desenvolveu uma ação que mudou como uma marca de
   moda se posicionava no ambiente digital, ganhando novos fãs e agitando as
   redes.
+NossosCasesTitle: game 3d
+NossosCasesAbout: Ação interativa para gerar engajamento
 header: 01. individual
 title: fórmula individual
 featuredImage: https://ucarecdn.com/18a62fc6-369d-4084-b77e-7873e307e45d/
