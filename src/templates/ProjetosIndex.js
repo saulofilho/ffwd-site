@@ -80,7 +80,7 @@ export const ProjetosIndexTemplate = ({
                   <div className="anchor-down">
                     <a href="#projeto-section">
                       ↓
-                </a>
+                    </a>
                   </div>
                 </div>
               </div>

@@ -51,12 +51,11 @@ export const CasePostTemplate = ({
                 </p>
               )}
               <p className="default-text-sub">{hero}</p>
-              <div className="btn-scroll">
-                <a href="#containerOne">
-                  scroll
-                  + svg
+                <div className="anchor-down">
+                  <a href="#containerOne">
+                    ↓
                   </a>
-              </div>
+                </div>
             </div>
             <div className="containerOne" id="containerOne">
               {containerOne.map(item => (

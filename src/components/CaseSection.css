@@ -10,20 +10,6 @@
   width: 100%;
 }
 
-.CaseSection button {
-  margin-top: 1rem;
-  margin-top: 5rem;
-  background: white;
-  border: 2px solid black;
-  padding: 1rem 2rem;
-  cursor: pointer;
-}
-
-.CaseSection button:hover {
-  background: black;
-  border: 2px solid white;
-  color: white;
-}
 
 .CaseSection--Grid > * {
   width: calc(33.33% - 2rem);
@@ -43,10 +29,10 @@
 }
 
 .CaseSection--Title {
-  width: 100%;
-  max-width: 200px;
-  margin: 0 auto 4rem auto;
-  line-height: 1.2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: red;
 }
 
 @media screen and (max-width: 888px) {
