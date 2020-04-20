@@ -336,13 +336,21 @@ const PessoasPageCarousel = ({
             {posts.map(img => (
               <div className="vagas-index">
                 <div className="default-flex">
+                  <div className="default-text-header container invert-color">
+                    {img.header}
+                  </div>
                   <div className="default-text-title container invert-color">
                     {img.title}
                   </div>
+                  <div className="default-text-sub container invert-color">
+                    {img.about}
+                  </div>
+                  <div className="container pessoas-car-img">
+                    <a href={img.slug} key={img.featuredImage}>
+                      <p className="default-text-subinvert-color">Apply.</p>
+                    </a>
+                  </div>
                 </div>
-                <a className="pessoas-car-img" href={img.slug} key={img.featuredImage}>
-                  <p className="apply">Apply.</p>
-                </a>
               </div>
             ))}
           </Swiper>

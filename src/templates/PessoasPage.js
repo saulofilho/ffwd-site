@@ -35,10 +35,7 @@ export const byCategory = (vaga, title, contentType) => {
 // Export Template for use in CMS preview
 export const PessoasPageTemplate = ({
   title,
-  subtitle,
-  featuredImage,
   vaga = [],
-  postCategories = [],
   enableSearch = true,
   contentType
 }) => (
@@ -116,8 +113,10 @@ export const pageQuery = graphql`
         title
         excerpt
         template
-        subtitle
-        featuredImage
+        header
+        about
+        overview
+        LikeToSee
       }
     }
 
@@ -134,7 +133,10 @@ export const pageQuery = graphql`
           frontmatter {
             title
             date
-            featuredImage
+            header
+            about
+            overview
+            LikeToSee
           }
         }
       }
