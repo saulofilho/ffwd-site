@@ -40,10 +40,7 @@ containerThree:
       milhares de usuários criaram diferentes carros em busca do melhor tempo,
       enquanto navegavam pelas pistas do mundo, patrocinadas pela Fórmula
       Individual.
-excerpt: case two
+excerpt: ""
 date: 2020-04-16T11:22:32.465Z
 status: Published
 ---
-**GAME 3D**
-
-Ação interativa para gerar engajamento
