@@ -22,6 +22,8 @@ containerTwo:
     alt: zzz
     titleTwo: zzzz
     textTwo: zzzzzzz
+containerThree:
+  - titleThree: teste container 3
 date: 2020-04-20T18:35:53.533Z
 status: Published
 ---
