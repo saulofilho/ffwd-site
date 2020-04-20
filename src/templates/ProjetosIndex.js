@@ -87,6 +87,14 @@ export const ProjetosIndexTemplate = ({
                 <CaseSection posts={filteredPosts} />
               </section>
             )}
+            <div className="sobre-car-vert-nos-somos">
+              <div className="default-flex">
+                <p className="default-text-title container">nossos clientes</p>
+                <div className="nossos-clientes-logos container">
+                  nossos clientes logos
+                </div>
+              </div>
+            </div>
           </main>
         )
       }}

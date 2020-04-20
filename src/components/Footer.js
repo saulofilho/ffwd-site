@@ -38,7 +38,11 @@ export default () => (
           </div>
         </div>
         <div className="all-right">
-          <p>©{new Date().getFullYear()}FFWD INC.</p>
+          <p>
+            <strong>
+              ©{new Date().getFullYear()}FFWD INC.
+            </strong>
+          </p>
           <p>All right reserve</p>
         </div>
       </div>

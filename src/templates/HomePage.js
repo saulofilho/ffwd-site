@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import { Location } from '@reach/router'
 import qs from 'qs'
 
-import HeroSlider from '../components/HeroSlider'
+import HomeCarousel from '../components/HomeCarousel'
 import Layout from '../components/Layout'
 import './HomePage.css'
 
@@ -63,7 +63,7 @@ export const HomePageTemplate = ({
         <main className="homePage">
           {!!cases.length && (
             <section className="homePage-section">
-              <HeroSlider filteredPosts={filteredPosts} />
+              <HomeCarousel filteredPosts={filteredPosts} />
             </section>
           )}
         </main>

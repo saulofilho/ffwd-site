@@ -487,6 +487,7 @@ collections: # A list of collections the CMS should be able to edit
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
       - { label: Template, name: template, widget: hidden, default: VagaPost }
+      - { label: Header, name: header, widget: string, required: false }
       - { label: Title, name: title, widget: string, required: false }
       - { label: About, name: about, widget: text, required: false }
       - { label: Overview, name: overview, widget: text, required: false }

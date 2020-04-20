@@ -35,19 +35,21 @@ footer {
 }
 .escritorio {
   width: auto;
+  color: #fff;
 }
 .social a {
   text-decoration: none;
   margin-top: 25px;
-  color: #989898;
+  color: #fff;
 }
 .social a:hover {
-  color: #fff;
+  color: #989898;
 }
 .phone {
   padding-top: 80px;
   padding-bottom: 70px;
   line-height: 10px;
+  color: #fff;
 }
 .all-right {
   color: #989898;

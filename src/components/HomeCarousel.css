@@ -30,6 +30,15 @@
   align-items: center;
   justify-content: center;
 }
+/* .swiper-pagination::after {
+  content: "";
+  width: 100px;
+  height: 100px;
+  background: url(/images/home-right.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
 .swiper-pagination-bullet {
   --swiper-theme-color: #989898;
   background: #989898;

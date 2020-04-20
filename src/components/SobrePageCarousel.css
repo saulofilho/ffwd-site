@@ -34,6 +34,9 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+.sobre-car-vert-four .btn-subir {
+  font-weight: bolder;
+}
 .sobre-car-vert-four {
   height: 100vh;
   width: 100%;
