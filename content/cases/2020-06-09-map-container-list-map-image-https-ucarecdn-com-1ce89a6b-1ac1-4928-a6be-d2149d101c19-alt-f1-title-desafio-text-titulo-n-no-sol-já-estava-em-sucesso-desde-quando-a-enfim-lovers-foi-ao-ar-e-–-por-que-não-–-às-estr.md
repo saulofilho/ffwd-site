@@ -1,6 +1,6 @@
 ---
 template: CasePost
-HomeTitle: fórmula individual
+HomeTitle: formula individual
 HomeDescription: Para atrair a atenção do público masculino durante o grande
   prêmio de Fórmula 1 do Brasil.
 HomeImage: https://ucarecdn.com/670f1d52-3ddd-4f1a-813e-5e5e24a0969e/
