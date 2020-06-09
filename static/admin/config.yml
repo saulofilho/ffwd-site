@@ -304,7 +304,7 @@ collections: # A list of collections the CMS should be able to edit
         widget: image,
         required: true,
       }
-      - { label: Projetos Page Title, name: ProjetosTitle, widget: title, required: false }
+      - { label: Projetos Page Title, name: ProjetosTitle, widget: string, required: false }
       - { label: Projetos Page Description, name: ProjetosDescription, widget: text, required: false }
       - { label: Client Title, name: ClientTitle, widget: string, required: false }
       - { label: Case Title, name: CaseTitle, widget: string, required: false }
@@ -366,7 +366,6 @@ collections: # A list of collections the CMS should be able to edit
         options: ['Published', 'Featured', 'Draft']
         default: 'Published'
       - { label: Date / Order, name: date, widget: date }
-      - { label: Excerpt, name: excerpt, widget: text }
       - label: 'Meta'
         required: false
         name: 'meta'

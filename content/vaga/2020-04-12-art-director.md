@@ -46,8 +46,6 @@ LikeToSee: >-
 
   Please include a link to your online portfolio to be considered. Huge is committed to creating an inclusive employee experience for all Hugers. We firmly believe that our work isn’t at its best unless all of our employees, regardless of race, gender, religion, sexual orientation, age, or disability have equal opportunities to do great work.
 status: Published
-excerpt: excerpt text
-featuredImage: https://ucarecdn.com/f9659b94-2c79-4e52-9b71-370960bb85bd/
 date: 2020-04-12T21:25:32.495Z
 ---
 this is the content

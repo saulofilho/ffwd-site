@@ -57,16 +57,15 @@ export const SinglePostTemplate = ({
                 )}
               </div>
               <p className="post-text-header container">{header}</p>
-              {title && (
                 <p className="post-text-title container" itemProp="title">
-                  {title}
+                  titulo
                 </p>
-              )}
               <div className="post-img">
-                <img src={featuredImage} alt="" />
+                {/* <img src={featuredImage} alt="" /> */}
+                imgs
               </div>
             </div>
-            <div className="containerOne" id="containerOne">
+            {/* <div className="containerOne" id="containerOne">
               {containerOne.map(item => (
                 <>
                   <div className="post-texts container">
@@ -74,7 +73,7 @@ export const SinglePostTemplate = ({
                   </div>
                 </>
               ))}
-            </div>
+            </div> */}
           </div>
           <div className="SinglePost--Pagination">
             <div className="container">
@@ -162,6 +161,7 @@ export const pageQuery = graphql`
             featuredImage
             title
             header
+            template
           }
         }
         previous {
