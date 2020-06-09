@@ -6,7 +6,7 @@ import './CaseCard.css'
 const CaseCard = ({
   featuredImage,
   NossosCasesAbout,
-  NossosCasesTitle,
+  HomeTitle,
   title,
   slug,
   className = ''
@@ -21,7 +21,7 @@ const CaseCard = ({
       >
         <div className="case-card-flex">
           <div className="case-card-top">
-            <p className="default-text-title container">{NossosCasesTitle}</p>
+            <p className="default-text-title container">{HomeTitle}</p>
             <p className="default-text-sub container">{NossosCasesAbout}</p>
           </div>
           <div className="case-card-down">

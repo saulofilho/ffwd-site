@@ -36,8 +36,6 @@ export const byCategory = (posts, title, contentType) => {
 // Export Template for use in CMS preview
 export const BlogIndexTemplate = ({
   title,
-  subtitle,
-  featuredImage,
   posts = [],
   postCategories = [],
   enableSearch = true,
@@ -133,10 +131,7 @@ export const pageQuery = graphql`
       }
       frontmatter {
         title
-        excerpt
         template
-        subtitle
-        featuredImage
       }
     }
 
@@ -146,7 +141,6 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
-          excerpt
           fields {
             slug
           }

@@ -140,13 +140,8 @@ export const pageQuery = graphql`
         contentType
       }
       frontmatter {
-        NossosCasesAbout
-        NossosCasesTitle
         title
-        excerpt
         template
-        subtitle
-        featuredImage
       }
     }
 
@@ -161,8 +156,6 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            NossosCasesAbout
-            NossosCasesTitle
             title
             date
             featuredImage

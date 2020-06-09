@@ -86,7 +86,6 @@ export const pageQuery = graphql`
       frontmatter {
         title
         template
-        subtitle
         header
         about
         overview

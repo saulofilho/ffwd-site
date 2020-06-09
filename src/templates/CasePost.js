@@ -7,12 +7,7 @@ import Layout from '../components/Layout'
 import './CasePost.css'
 
 export const CasePostTemplate = ({
-  containerOne = [],
-  containerTwo = [],
-  containerThree = [],
-  about,
   header,
-  hero,
   title,
   body,
   nextPostURL,
@@ -50,27 +45,27 @@ export const CasePostTemplate = ({
                   {title}
                 </p>
               )}
-              <p className="default-text-sub">{hero}</p>
+              <p className="default-text-sub">antigo hero</p>
                 <div className="anchor-down">
                   <a href="#containerOne">
                     ↓
                   </a>
                 </div>
             </div>
-            <div className="containerOne" id="containerOne">
-              {containerOne.map(item => (
+            {/* <div className="containerOne" id="containerOne">
+              {container.map(item => (
                 <>
                   <div className="case-imgs">
-                    <img src={item.imageOne} alt="" />
+                    <img src={item.image} alt="" />
                   </div>
                   <div className="case-texts container">
-                    <p className="default-text-h2">{item.titleOne}</p>
-                    <Content source={item.textOne} />
+                    <p className="default-text-h2">{item.title}</p>
+                    <Content source={item.text} />
                   </div>
                 </>
               ))}
-            </div>
-            <div className="containerTwo" id="containerTwo">
+            </div> */}
+            {/* <div className="containerTwo" id="containerTwo">
               {containerTwo.map(item => (
                 <>
                   <div className="case-imgs">
@@ -95,7 +90,7 @@ export const CasePostTemplate = ({
                   </div>
                 </>
               ))}
-            </div>
+            </div> */}
             <div className="resultados container">
               <Content source={body} />
             </div>
@@ -162,26 +157,8 @@ export const pageQuery = graphql`
       html
       id
       frontmatter {
-        containerOne {
-          imageOne
-          titleOne
-          textOne
-        }
-        containerTwo {
-          imageTwo
-          titleTwo
-          textTwo
-        }
-        containerThree {
-          imageThree
-          titleThree
-          textThree
-        }
         template
-        about
-        header
         title
-        hero
         date(formatString: "MMMM Do, YYYY")
       }
     }
@@ -199,26 +176,8 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            containerOne {
-              imageOne
-              titleOne
-              textOne
-            }
-            containerTwo {
-              imageTwo
-              titleTwo
-              textTwo
-            }
-            containerThree {
-              imageThree
-              titleThree
-              textThree
-            }
             template
-            about
-            header
             title
-            hero
           }
         }
         previous {

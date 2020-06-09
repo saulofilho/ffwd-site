@@ -120,11 +120,6 @@ export const pageQuery = graphql`
       frontmatter {
         title
         template
-        subtitle
-        featuredImage
-        address
-        phone
-        email
       }
     }
   }

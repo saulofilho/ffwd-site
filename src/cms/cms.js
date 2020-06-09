@@ -5,7 +5,6 @@ import './cms-utils'
 import { HomePageTemplate } from '../templates/HomePage'
 import { ComponentsPageTemplate } from '../templates/SobrePage'
 import { ContactPageTemplate } from '../templates/ContatoPage'
-import { DefaultPageTemplate } from '../templates/DefaultPage'
 import { BlogIndexTemplate } from '../templates/BlogIndex'
 import { ProjetosIndexTemplate } from '../templates/ProjetosIndex'
 import { PessoasPageTemplate } from '../templates/PessoasPage'
@@ -41,9 +40,6 @@ CMS.registerPreviewTemplate('pessoas-page', ({ entry }) => (
 ))
 CMS.registerPreviewTemplate('contato-page', ({ entry }) => (
   <ContactPageTemplate {...entry.toJS().data} />
-))
-CMS.registerPreviewTemplate('editablePages', ({ entry }) => (
-  <DefaultPageTemplate {...entry.toJS().data} />
 ))
 CMS.registerPreviewTemplate('blog-page', ({ entry }) => (
   <BlogIndexTemplate {...entry.toJS().data} />

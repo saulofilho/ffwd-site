@@ -138,14 +138,10 @@ export const pageQuery = graphql`
       html
       id
       frontmatter {
-        containerOne {
-          textOne
-        }
         featuredImage
         header
         title
         template
-        subtitle
         date(formatString: "D.MM.Y")
       }
     }

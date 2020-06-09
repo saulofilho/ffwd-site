@@ -30,24 +30,9 @@ export const pageQuery = graphql`
   query SobrePage($id: String!) {
     page: markdownRemark(id: { eq: $id }) {
       ...Meta
-      ...Gallery
       html
       frontmatter {
         title
-        template
-        subtitle
-        subtitle2
-        featuredImage
-        featuredImage2
-        section1
-        section2
-        video
-        videoPoster
-        videoTitle
-        accordion {
-          title
-          description
-        }
       }
     }
   }
