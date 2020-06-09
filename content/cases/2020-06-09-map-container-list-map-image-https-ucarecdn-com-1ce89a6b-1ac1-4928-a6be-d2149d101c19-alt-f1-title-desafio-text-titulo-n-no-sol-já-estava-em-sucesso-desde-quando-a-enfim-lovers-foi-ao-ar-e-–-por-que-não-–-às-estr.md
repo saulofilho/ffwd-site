@@ -16,11 +16,10 @@ container:
   - image: https://ucarecdn.com/1ce89a6b-1ac1-4928-a6be-d2149d101c19/
     alt: f1
     title: desafio
-    text: >-
+    text: |-
       # titulo
 
-
-      O Sol já estava em sucesso desde quando a Enfim Lovers foi ao ar e – por que não? – às estrelas, já que essa ação foi idealizada para engajar ainda mais o público-alvo da marca ao seu lifestyle místico e vibe boa, através de um teste on-line para descobrir a combinação astrológica do participante e o seu amor/crush!
+      x
   - image: https://ucarecdn.com/f3092109-8d6a-4fa7-af24-afb47cf9219a/
     alt: f1img2
     text: >-
