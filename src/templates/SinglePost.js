@@ -142,7 +142,7 @@ export const pageQuery = graphql`
         header
         title
         template
-        date(formatString: "D.MM.Y")
+        date(formatString: "MMMM Do, YYYY")
       }
     }
 
