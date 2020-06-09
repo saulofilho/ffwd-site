@@ -296,7 +296,7 @@ collections: # A list of collections the CMS should be able to edit
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
       - { label: Template, name: template, widget: hidden, default: CasePost }
-      - { label: Home Title, name: HomeTitle, widget: string, required: false }
+      - { label: Home Title, name: title, widget: string, required: false }
       - { label: Home Description, name: HomeDescription, widget: text, required: false }
       - {
         label: Home Image,
