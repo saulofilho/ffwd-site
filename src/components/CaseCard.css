@@ -1,6 +1,6 @@
 .CaseCard {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   overflow: hidden;
   position: relative;
 }
@@ -11,10 +11,18 @@
 } */
 .CaseCard--Image {
   width: 100%;
-  height: 100vh;
+  height: 320px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+.CaseCard--Image::before {
+  content: "";
+  background: #000;
+  opacity: 0.4;
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 .CaseCard--Title {
   color: #fff;
@@ -24,10 +32,11 @@
 }
 .case-card-flex {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-flow: column;
   justify-content: space-around;
+  position: relative;
 }
 .case-card-down .default-text-sub {
   text-transform: uppercase;

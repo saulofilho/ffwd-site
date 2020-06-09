@@ -4,25 +4,24 @@ import { Link } from 'gatsby'
 import './CaseCard.css'
 
 const CaseCard = ({
-  featuredImage,
-  NossosCasesAbout,
-  HomeTitle,
-  title,
+  HomeImage,
+  ProjetosTitle,
+  ProjetosDescription,
   slug,
   className = ''
 }) => (
   <Link to={slug} className={`CaseCard ${className}`}>
-    {featuredImage && (
+    {HomeImage && (
       <div 
         className="CaseCard--Image relative"
         style={{
-          backgroundImage: `url(${featuredImage})`
+          backgroundImage: `url(${HomeImage})`
         }}
       >
         <div className="case-card-flex">
           <div className="case-card-top">
-            <p className="default-text-title container">{HomeTitle}</p>
-            <p className="default-text-sub container">{NossosCasesAbout}</p>
+            <p className="default-text-title container">{ProjetosTitle}</p>
+            <p className="default-text-sub container">{ProjetosDescription}</p>
           </div>
           <div className="case-card-down">
             <p className="default-text-sub container">ver mais</p>

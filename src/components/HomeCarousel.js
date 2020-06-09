@@ -29,19 +29,19 @@ const HomeCarousel = ({
   const parallaxOpacity = 0.5;
   return (
     <Swiper {...HeroSliderConfigs} getSwiper={setParallaxSwiper}>
-      {filteredPosts.map(img => (
-        <div className="home-slide" key={img.featuredImage}>
-          <a href={img.slug}>
+      {filteredPosts.map(project => (
+        <div className="home-slide" key={project.slug}>
+          <a href={project.slug}>
             <div
               className="home-slide-image"
               data-swiper-parallax={parallaxAmount}
               data-swiper-parallax-opacity={parallaxOpacity}
             >
-              <img src={img.featuredImage} alt="" />
+              <img src={project.HomeImage} alt="" />
               <div className="home-car-texts container">
-                <p className="home-car-title default-text-header">{img.header}</p>
-                <p className="home-car-title default-text-title">{img.title}</p>
-                <p className="home-car-subtitle">{img.about}</p>
+                <p className="home-car-title default-text-header">{project.ClientTitle}</p>
+                <p className="home-car-title default-text-title">{project.CaseTitle}</p>
+                <p className="home-car-subtitle">{project.CaseAbout}</p>
               </div>
               {/* <button className="next">next</button> */}
             </div>

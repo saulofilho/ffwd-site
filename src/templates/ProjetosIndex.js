@@ -36,27 +36,16 @@ export const byCategory = (cases, title, contentType) => {
 
 // Export Template for use in CMS preview
 export const ProjetosIndexTemplate = ({
-  HomeTitle,
   cases = [],
-  enableSearch = true,
   contentType
 }) => (
     <Location>
       {({ location }) => {
-        let filteredPosts =
-          cases && !!cases.length
-            ? byCategory(byDate(cases), HomeTitle, contentType)
-            : []
+      let filteredPosts = cases
 
-        let queryObj = location.search.replace('?', '')
-        queryObj = qs.parse(queryObj)
-
-        if (enableSearch && queryObj.s) {
-          const searchTerm = queryObj.s.toLowerCase()
-          filteredPosts = filteredPosts.filter(post =>
-            post.frontmatter.HomeTitle.toLowerCase().includes(searchTerm)
-          )
-        }
+      filteredPosts = filteredPosts.filter(post =>
+        post.frontmatter.title.toLowerCase()
+      )
 
         return (
           <main className="projeto">
@@ -102,22 +91,17 @@ export const ProjetosIndexTemplate = ({
   )
 
 // Export Default ProjetosIndex for front-end
-const ProjetosIndex = ({ data: { page, cases, postCategories }, location }) => (
+const ProjetosIndex = ({ data: { page, cases }, location }) => (
   <Layout
     location={location}
     meta={page.frontmatter.meta || false}
-    HomeTitle={page.frontmatter.HomeTitle || false}
+    title={page.frontmatter.title || false}
   >
     <ProjetosIndexTemplate
       {...page}
       {...page.fields}
       {...page.frontmatter}
       cases={cases.edges.map(post => ({
-        ...post.node,
-        ...post.node.frontmatter,
-        ...post.node.fields
-      }))}
-      postCategories={postCategories.edges.map(post => ({
         ...post.node,
         ...post.node.frontmatter,
         ...post.node.fields
@@ -143,7 +127,6 @@ export const pageQuery = graphql`
         template
       }
     }
-
     cases: allMarkdownRemark(
       filter: { fields: { contentType: { eq: "cases" } } }
       sort: { order: DESC, fields: [frontmatter___date] }
@@ -155,22 +138,11 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            date
-          }
-        }
-      }
-    }
-    postCategories: allMarkdownRemark(
-      filter: { fields: { contentType: { eq: "postCategories" } } }
-      sort: { order: ASC, fields: [frontmatter___title] }
-    ) {
-      edges {
-        node {
-          fields {
-            slug
-          }
-          frontmatter {
             title
+            date
+            HomeImage
+            ProjetosTitle
+            ProjetosDescription
           }
         }
       }

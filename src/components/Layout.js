@@ -79,7 +79,8 @@ export default ({ children, meta, title, location }) => {
             <Fragment>{children}</Fragment>
             
             {/* footer */}
-            {location.pathname === '/' || location.pathname.split('/')[1] === 'cases' ? <></> : <Footer /> }
+            {location.pathname === '/' ? <></> : <Footer /> }
+            {/* {location.pathname === '/' || location.pathname.split('/')[1] === 'cases' ? <></> : <Footer /> } */}
 
             
           </Fragment>

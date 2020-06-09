@@ -7,7 +7,7 @@ import Layout from '../components/Layout'
 import './SinglePost.css'
 
 export const SinglePostTemplate = ({
-  containerOne = [],
+  container = [],
   featuredImage,
   header,
   title,
@@ -31,14 +31,14 @@ export const SinglePostTemplate = ({
                   back ←
                 </Link>
               </div>
-              <div className="SinglePost--Meta container">
-                  {/* <time
+              {/* <div className="SinglePost--Meta container">
+                  <time
                     className="default-text-header container"
                     itemProp="dateCreated pubdate datePublished"
                     date={date}
                   >
                     {date}
-                  </time> */}
+                  </time>
                 {categories && (
                   <Fragment>
                     {categories.map((cat, index) => (
@@ -47,13 +47,12 @@ export const SinglePostTemplate = ({
                         className="SinglePost--Meta--Category"
                       >
                         {cat.category}
-                        {/* Add a comma on all but last category */}
                         {index !== categories.length - 1 ? ',' : ''}
                       </span>
                     ))}
                   </Fragment>
                 )}
-              </div>
+              </div> */}
               <p className="post-text-header container">{header}</p>
                 <p className="post-text-title container" itemProp="title">
                   titulo

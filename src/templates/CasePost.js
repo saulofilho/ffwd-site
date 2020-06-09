@@ -7,10 +7,18 @@ import Layout from '../components/Layout'
 import './CasePost.css'
 
 export const CasePostTemplate = ({
+  container = [],
+  title,
+  HomeDescription,
+  HomeImage,
+  ProjetosTitle,
+  ProjetosDescription,
+  ClientTitle,
+  CaseTitle,
+  CaseAbout,
   body,
   nextPostURL,
   prevPostURL,
-  categories = []
 }) => (
     <main className="CasePostPage">
       <article
@@ -19,36 +27,20 @@ export const CasePostTemplate = ({
         itemType="http://schema.org/BlogPosting"
       >
         <div className="single-case">
-          <div className="CasePost--Meta">
-            {categories && (
-              <Fragment>
-                {categories.map((cat, index) => (
-                  <span
-                    key={cat.category}
-                    className="CasePost--Meta--Category"
-                  >
-                    {cat.category}
-                    {/* Add a comma on all but last category */}
-                    {index !== categories.length - 1 ? ',' : ''}
-                  </span>
-                ))}
-              </Fragment>
-            )}
-          </div>
           <div className="CasePost--InnerContent">
             <div className="case-hero container">
-              <p className="default-text-header">antigo header</p>
+                <p className="default-text-header">{ClientTitle}</p>
                 <p className="default-text-title" itemProp="title">
-                  home title
+                  {CaseTitle}
                 </p>
-              <p className="default-text-sub">antigo hero</p>
+              <p className="default-text-sub">{CaseAbout}</p>
                 <div className="anchor-down">
                   <a href="#containerOne">
                     ↓
                   </a>
                 </div>
             </div>
-            {/* <div className="containerOne" id="containerOne">
+            <div className="containerOne" id="containerOne">
               {container.map(item => (
                 <>
                   <div className="case-imgs">
@@ -60,7 +52,7 @@ export const CasePostTemplate = ({
                   </div>
                 </>
               ))}
-            </div> */}
+            </div>
             <div className="resultados container">
               <Content source={body} />
             </div>
@@ -127,6 +119,19 @@ export const pageQuery = graphql`
       html
       id
       frontmatter {
+        container {
+          image
+          title
+          text
+        }
+        title
+        HomeDescription
+        HomeImage
+        ProjetosTitle
+        ProjetosDescription
+        ClientTitle
+        CaseTitle
+        CaseAbout
         template
         date(formatString: "MMMM Do, YYYY")
       }
@@ -145,7 +150,7 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            template
+            title
           }
         }
         previous {
