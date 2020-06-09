@@ -32,15 +32,13 @@ export const SinglePostTemplate = ({
                 </Link>
               </div>
               <div className="SinglePost--Meta container">
-                {date && (
-                  <time
+                  {/* <time
                     className="default-text-header container"
                     itemProp="dateCreated pubdate datePublished"
                     date={date}
                   >
                     {date}
-                  </time>
-                )}
+                  </time> */}
                 {categories && (
                   <Fragment>
                     {categories.map((cat, index) => (
