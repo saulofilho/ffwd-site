@@ -40,7 +40,7 @@ gallery:
     title: Yellow Ice Cream
 subtitle: This is the components page subtitle.
 template: SobrePage
-title: Sobre Page teste
+title: Sobre Page
 title2: PLOW
 subtitle2: two.
 video: https://ucarecdn.com/e6979298-66d6-4245-b496-6e5a5d507135/
