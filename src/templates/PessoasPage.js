@@ -111,7 +111,6 @@ export const pageQuery = graphql`
       }
       frontmatter {
         title
-        excerpt
         template
         header
         about
@@ -126,7 +125,6 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
-          excerpt
           fields {
             slug
           }
