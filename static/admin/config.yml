@@ -300,7 +300,7 @@ collections: # A list of collections the CMS should be able to edit
       - { label: Home Description, name: HomeDescription, widget: text, required: false }
       - {
         label: Home Image,
-        name: Home Image,
+        name: HomeImage,
         widget: image,
         required: true,
       }

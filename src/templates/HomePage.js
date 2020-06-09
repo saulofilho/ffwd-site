@@ -63,7 +63,6 @@ export const pageQuery = graphql`
         contentType
       }
       frontmatter {
-        title
         template
       }
     }
@@ -73,16 +72,11 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
-          excerpt
           fields {
             slug
           }
           frontmatter {
-            about
-            header
-            title
             date
-            featuredImage
           }
         }
       }

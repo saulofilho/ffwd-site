@@ -7,8 +7,6 @@ import Layout from '../components/Layout'
 import './CasePost.css'
 
 export const CasePostTemplate = ({
-  header,
-  title,
   body,
   nextPostURL,
   prevPostURL,
@@ -39,12 +37,10 @@ export const CasePostTemplate = ({
           </div>
           <div className="CasePost--InnerContent">
             <div className="case-hero container">
-              <p className="default-text-header">{header}</p>
-              {title && (
+              <p className="default-text-header">antigo header</p>
                 <p className="default-text-title" itemProp="title">
-                  {title}
+                  home title
                 </p>
-              )}
               <p className="default-text-sub">antigo hero</p>
                 <div className="anchor-down">
                   <a href="#containerOne">
@@ -61,32 +57,6 @@ export const CasePostTemplate = ({
                   <div className="case-texts container">
                     <p className="default-text-h2">{item.title}</p>
                     <Content source={item.text} />
-                  </div>
-                </>
-              ))}
-            </div> */}
-            {/* <div className="containerTwo" id="containerTwo">
-              {containerTwo.map(item => (
-                <>
-                  <div className="case-imgs">
-                    <img src={item.imageTwo} alt="" />
-                  </div>
-                  <div className="case-texts container">
-                    <p className="default-text-h2">{item.titleTwo}</p>
-                    <Content source={item.textTwo} />
-                  </div>
-                </>
-              ))}
-            </div>
-            <div className="containerThree" id="containerThree">
-              {containerThree.map(item => (
-                <>
-                  <div className="case-imgs">
-                    <img src={item.imageThree} alt="" />
-                  </div>
-                  <div className="case-texts container">
-                    <p className="default-text-h2">{item.titleThree}</p>
-                    <Content source={item.textThree} />
                   </div>
                 </>
               ))}
@@ -158,7 +128,6 @@ export const pageQuery = graphql`
       id
       frontmatter {
         template
-        title
         date(formatString: "MMMM Do, YYYY")
       }
     }
@@ -177,7 +146,6 @@ export const pageQuery = graphql`
           }
           frontmatter {
             template
-            title
           }
         }
         previous {

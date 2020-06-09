@@ -36,7 +36,7 @@ export const byCategory = (cases, title, contentType) => {
 
 // Export Template for use in CMS preview
 export const ProjetosIndexTemplate = ({
-  title,
+  HomeTitle,
   cases = [],
   enableSearch = true,
   contentType
@@ -45,7 +45,7 @@ export const ProjetosIndexTemplate = ({
       {({ location }) => {
         let filteredPosts =
           cases && !!cases.length
-            ? byCategory(byDate(cases), title, contentType)
+            ? byCategory(byDate(cases), HomeTitle, contentType)
             : []
 
         let queryObj = location.search.replace('?', '')
@@ -54,7 +54,7 @@ export const ProjetosIndexTemplate = ({
         if (enableSearch && queryObj.s) {
           const searchTerm = queryObj.s.toLowerCase()
           filteredPosts = filteredPosts.filter(post =>
-            post.frontmatter.title.toLowerCase().includes(searchTerm)
+            post.frontmatter.HomeTitle.toLowerCase().includes(searchTerm)
           )
         }
 
@@ -106,7 +106,7 @@ const ProjetosIndex = ({ data: { page, cases, postCategories }, location }) => (
   <Layout
     location={location}
     meta={page.frontmatter.meta || false}
-    title={page.frontmatter.title || false}
+    HomeTitle={page.frontmatter.HomeTitle || false}
   >
     <ProjetosIndexTemplate
       {...page}
@@ -140,7 +140,6 @@ export const pageQuery = graphql`
         contentType
       }
       frontmatter {
-        title
         template
       }
     }
@@ -156,9 +155,7 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            title
             date
-            featuredImage
           }
         }
       }
