@@ -319,11 +319,13 @@ collections: # A list of collections the CMS should be able to edit
         types:
         - label: 'Add Image'
           name: 'AddImage'
+          widget: 'object'
           fields:
             - { name: image, label: image, widget: image, required: false }
             - { name: alt, label: Alt, widget: string, required: false }
         - label: 'Add Text'
           name: 'AddText'
+          widget: 'object'
           fields:
             - { name: text, label: text, widget: markdown, required: false }
       - { label: Extra Content, name: body, widget: markdown, required: false }
