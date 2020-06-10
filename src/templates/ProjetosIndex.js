@@ -117,7 +117,6 @@ export const pageQuery = graphql`
           frontmatter {
             title
             date
-            HomeImage
             ProjetosTitle
             ProjetosDescription
           }
