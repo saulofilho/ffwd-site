@@ -8,11 +8,6 @@ import './CasePost.css'
 
 export const CasePostTemplate = ({
   container = [],
-  title,
-  HomeDescription,
-  HomeImage,
-  ProjetosTitle,
-  ProjetosDescription,
   ClientTitle,
   CaseTitle,
   CaseAbout,
@@ -123,10 +118,6 @@ export const pageQuery = graphql`
           text
         }
         title
-        HomeDescription
-        HomeImage
-        ProjetosTitle
-        ProjetosDescription
         ClientTitle
         CaseTitle
         CaseAbout
