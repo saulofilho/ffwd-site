@@ -40,7 +40,7 @@ export const CasePostTemplate = ({
                   </a>
                 </div>
             </div>
-            <div className="containerOne" id="containerOne">
+            {/* <div className="containerOne" id="containerOne">
               {container.map(item => (
                 <>
                 {console.log('cont', container)}
@@ -52,7 +52,7 @@ export const CasePostTemplate = ({
                   </div>
                 </>
               ))}
-            </div>
+            </div> */}
             <div className="resultados container">
               <Content source={body} />
             </div>
