@@ -257,6 +257,7 @@ collections: # A list of collections the CMS should be able to edit
       - { label: Slug Title, name: title, widget: string, required: false }
       - { label: Post Title, name: PostTitle, widget: string, required: false }
       - { label: Post Text, name: PostText, widget: text, required: false }
+      - { label: Post About Desktop, name: PostAboutDesktop, widget: text, required: false }
       - {
           label: Featured Image,
           name: featuredImage,
@@ -310,16 +311,20 @@ collections: # A list of collections the CMS should be able to edit
       - { label: Projetos Page Description, name: ProjetosDescription, widget: text, required: false }
       - { label: Client Title, name: ClientTitle, widget: string, required: false }
       - { label: Case Title, name: CaseTitle, widget: string, required: false }
-      - { label: Case About, name: CaseAbout, widget: text }
-      - label: 'Case Container'
-        name: 'container'
+      - { label: Case About, name: CaseAbout, widget: text, required: false }
+      - label: 'Case Image'
+        name: 'CaseImage'
         widget: 'list'
         required: false
         fields:
-          - { name: image, label: Image One, widget: image, required: false }
+          - { name: image, label: image, widget: image, required: false }
           - { name: alt, label: Alt, widget: string, required: false }
-          - { name: title, label: Title, widget: string, required: false }
-          - { name: text, label: Text, widget: markdown, required: false }
+      - label: 'Case Text'
+        name: 'CaseText'
+        widget: 'list'
+        required: false
+        fields:
+          - { name: text, label: text, widget: markdown, required: false }
       - { label: Extra Content, name: body, widget: markdown, required: false }
       - label: 'Status'
         name: 'status'
