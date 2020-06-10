@@ -117,6 +117,11 @@ export const pageQuery = graphql`
           image
           text
         }
+        title
+        HomeDescription
+        HomeImage
+        ProjetosTitle
+        ProjetosDescription
         ClientTitle
         CaseTitle
         CaseAbout
