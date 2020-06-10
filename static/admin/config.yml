@@ -255,7 +255,7 @@ collections: # A list of collections the CMS should be able to edit
       - { label: Template, name: template, widget: hidden, default: SinglePost }
       - { label: Date / Order, name: date, widget: date }
       - { label: Title, name: title, widget: string, required: false }
-      - { label: Text, name: text, widget: string, required: false }
+      - { label: Text, name: text, widget: text, required: false }
       - {
           label: Featured Image,
           name: featuredImage,
