@@ -8,6 +8,11 @@ import './CasePost.css'
 
 export const CasePostTemplate = ({
   container = [],
+  title,
+  HomeDescription,
+  HomeImage,
+  ProjetosTitle,
+  ProjetosDescription,
   ClientTitle,
   CaseTitle,
   CaseAbout,
