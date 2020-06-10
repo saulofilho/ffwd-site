@@ -115,7 +115,7 @@ export const pageQuery = graphql`
       id
       frontmatter {
         container {
-          text
+          alt
         }
         title
         ClientTitle
