@@ -136,7 +136,6 @@ export const pageQuery = graphql`
         date(formatString: "MMMM Do, YYYY")
       }
     }
-
     allPosts: allMarkdownRemark(
       filter: { fields: { contentType: { eq: "cases" } } }
       sort: { order: DESC, fields: [frontmatter___date] }

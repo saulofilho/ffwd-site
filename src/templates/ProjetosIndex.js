@@ -2,46 +2,23 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { Location } from '@reach/router'
 import qs from 'qs'
-// import PostCategoriesNav from '../components/PostCategoriesNav'
+
 import CaseSection from '../components/CaseSection'
 import Layout from '../components/Layout'
 import './ProjetosIndex.css'
 
-/**
- * Filter cases by date. Feature dates will be fitered
- * When used, make sure you run a cronejob each day to show schaduled content. See docs
- *
- * @param {cases} object
- */
 export const byDate = cases => {
   const now = Date.now()
   return cases.filter(post => Date.parse(post.date) <= now)
 }
 
-
-/**
- * filter cases by category.
- *
- * @param {cases} object
- * @param {title} string
- * @param {contentType} string
- */
-export const byCategory = (cases, title, contentType) => {
-  const isCategory = contentType === 'postCategories'
-  const byCategory = post =>
-    post.categories &&
-    post.categories.filter(cat => cat.category === title).length
-  return isCategory ? cases.filter(byCategory) : cases
-}
-
-// Export Template for use in CMS preview
 export const ProjetosIndexTemplate = ({
   cases = [],
   contentType
 }) => (
     <Location>
       {({ location }) => {
-      let filteredPosts = cases
+      let filteredPosts = byDate(cases)
 
       filteredPosts = filteredPosts.filter(post =>
         post.frontmatter.title.toLowerCase()

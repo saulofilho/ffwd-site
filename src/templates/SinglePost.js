@@ -7,15 +7,12 @@ import Layout from '../components/Layout'
 import './SinglePost.css'
 
 export const SinglePostTemplate = ({
-  container = [],
-  featuredImage,
   header,
   title,
   date,
   body,
   nextPostURL,
   prevPostURL,
-  categories = []
 }) => (
     <main className="BlogPostPage">
       <article
@@ -135,13 +132,11 @@ export const pageQuery = graphql`
       id
       frontmatter {
         featuredImage
-        header
         title
         template
         date(formatString: "MMMM Do, YYYY")
       }
     }
-
     allPosts: allMarkdownRemark(
       filter: { fields: { contentType: { eq: "posts" } } }
       sort: { order: DESC, fields: [frontmatter___date] }
@@ -155,10 +150,7 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            featuredImage
             title
-            header
-            template
           }
         }
         previous {

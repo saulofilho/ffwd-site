@@ -6,33 +6,11 @@ import PessoasPageCarousel from '../components/PessoasPageCarousel'
 import Layout from '../components/Layout'
 import './PessoasPage.css'
 
-/**
- * Filter vaga by date. Feature dates will be fitered
- * When used, make sure you run a cronejob each day to show schaduled content. See docs
- *
- * @param {vaga} object
- */
 export const byDate = vaga => {
   const now = Date.now()
   return vaga.filter(post => Date.parse(post.date) <= now)
 }
 
-/**
- * filter vaga by category.
- *
- * @param {vaga} object
- * @param {title} string
- * @param {contentType} string
- */
-export const byCategory = (vaga, title, contentType) => {
-  const isCategory = contentType === 'postCategories'
-  const byCategory = post =>
-    post.categories &&
-    post.categories.filter(cat => cat.category === title).length
-  return isCategory ? vaga.filter(byCategory) : vaga
-}
-
-// Export Template for use in CMS preview
 export const PessoasPageTemplate = ({
   title,
   vaga = [],
@@ -41,20 +19,11 @@ export const PessoasPageTemplate = ({
 }) => (
     <Location>
       {({ location }) => {
-        let filteredPosts =
-          vaga && !!vaga.length
-            ? byCategory(byDate(vaga), title, contentType)
-            : []
+      let filteredPosts = byDate(vaga)
 
-        let queryObj = location.search.replace('?', '')
-        queryObj = qs.parse(queryObj)
-
-        if (enableSearch && queryObj.s) {
-          const searchTerm = queryObj.s.toLowerCase()
-          filteredPosts = filteredPosts.filter(post =>
-            post.frontmatter.title.toLowerCase().includes(searchTerm)
-          )
-        }
+      filteredPosts = filteredPosts.filter(post =>
+        post.frontmatter.title.toLowerCase()
+      )
 
         return (
           <main className="pessoas">
