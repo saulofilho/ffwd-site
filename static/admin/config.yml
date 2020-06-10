@@ -254,8 +254,9 @@ collections: # A list of collections the CMS should be able to edit
     fields: # The fields each document in this collection have
       - { label: Template, name: template, widget: hidden, default: SinglePost }
       - { label: Date / Order, name: date, widget: date }
-      - { label: Title, name: title, widget: string, required: false }
-      - { label: Text, name: text, widget: text, required: false }
+      - { label: Slug Title, name: title, widget: string, required: false }
+      - { label: Post Title, name: PostTitle, widget: string, required: false }
+      - { label: Post Text, name: PostText, widget: text, required: false }
       - {
           label: Featured Image,
           name: featuredImage,
@@ -296,6 +297,7 @@ collections: # A list of collections the CMS should be able to edit
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
       - { label: Template, name: template, widget: hidden, default: CasePost }
+      - { label: Date / Order, name: date, widget: date, required: false }
       - { label: Home Title, name: title, widget: string, required: false }
       - { label: Home Description, name: HomeDescription, widget: text, required: false }
       - {
@@ -319,7 +321,6 @@ collections: # A list of collections the CMS should be able to edit
           - { name: title, label: Title, widget: string, required: false }
           - { name: text, label: Text, widget: markdown, required: false }
       - { label: Extra Content, name: body, widget: markdown, required: false }
-      - { label: Date / Order, name: date, widget: date, required: false }
       - label: 'Status'
         name: 'status'
         widget: 'select'
@@ -355,17 +356,17 @@ collections: # A list of collections the CMS should be able to edit
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
       - { label: Template, name: template, widget: hidden, default: VagaPost }
+      - { label: Date / Order, name: date, widget: date }
       - { label: Header Title, name: header, widget: string, required: false }
       - { label: Vaga Title, name: title, widget: string, required: false }
       - { label: Vaga About, name: about, widget: text, required: false }
       - { label: Vaga Overview, name: overview, widget: markdown, required: false }
-      - { label: LikeToSee, name: LikeToSee, widget: markdown, required: false }
+      - { label: Vaga Like To See, name: LikeToSee, widget: markdown, required: false }
       - label: 'Status'
         name: 'status'
         widget: 'select'
         options: ['Published', 'Featured', 'Draft']
         default: 'Published'
-      - { label: Date / Order, name: date, widget: date }
       - label: 'Meta'
         required: false
         name: 'meta'

@@ -136,7 +136,6 @@ export const pageQuery = graphql`
         featuredImage
       }
     }
-
     posts: allMarkdownRemark(
       filter: { fields: { contentType: { eq: "posts" } } }
       sort: { order: DESC, fields: [frontmatter___date] }
