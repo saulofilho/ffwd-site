@@ -7,7 +7,7 @@ import Layout from '../components/Layout'
 import './CasePost.css'
 
 export const CasePostTemplate = ({
-  container = [],
+  CaseImage = [],
   title,
   HomeDescription,
   HomeImage,
@@ -41,7 +41,7 @@ export const CasePostTemplate = ({
                 </div>
             </div>
             <div className="containerOne" id="containerOne">
-              {container.map(item => (
+              {CaseImage.map(item => (
                 <>
                   <div className="case-imgs">
                     <img src={item.image} alt="" />
@@ -119,9 +119,10 @@ export const pageQuery = graphql`
       html
       id
       frontmatter {
-        container {
+        CaseImage {
           image
-          title
+        }
+        CaseText {
           text
         }
         title

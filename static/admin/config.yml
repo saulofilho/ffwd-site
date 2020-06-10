@@ -319,7 +319,6 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - { name: image, label: image, widget: image, required: false }
           - { name: alt, label: Alt, widget: string, required: false }
-      - label: 'Case Text'
         name: 'CaseText'
         widget: 'list'
         required: false
