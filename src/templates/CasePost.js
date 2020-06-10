@@ -35,19 +35,20 @@ export const CasePostTemplate = ({
                   </a>
                 </div>
             </div>
-            {/* <div className="containerOne" id="containerOne">
+            <div className="containerOne" id="containerOne">
               {container.map(item => (
                 <>
                 {console.log('cont', container)}
                   <div className="case-imgs">
-                    <img src={item.image} alt="" />
+                    {item.image === null ? <></> : <img src={item.image} alt={item.alt} /> }
                   </div>
                   <div className="case-texts container">
-                    <Content source={item.text} />
+                    {item.text === null ? <></> : <Content source={item.text} /> }
+                    
                   </div>
                 </>
               ))}
-            </div> */}
+            </div>
             <div className="resultados container">
               <Content source={body} />
             </div>
@@ -116,6 +117,7 @@ export const pageQuery = graphql`
         container {
           image
           text
+          alt
         }
         title
         ClientTitle

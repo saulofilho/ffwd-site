@@ -297,7 +297,7 @@ collections: # A list of collections the CMS should be able to edit
     editor:
       preview: true
     folder: content/cases
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    slug: '{{slug}}'
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
       - { label: Template, name: template, widget: hidden, default: CasePost }
@@ -363,7 +363,7 @@ collections: # A list of collections the CMS should be able to edit
     editor:
       preview: true
     folder: content/vaga
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    slug: '{{slug}}'
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
       - { label: Template, name: template, widget: hidden, default: VagaPost }
