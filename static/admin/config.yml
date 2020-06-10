@@ -312,14 +312,18 @@ collections: # A list of collections the CMS should be able to edit
       - { label: Client Title, name: ClientTitle, widget: string, required: false }
       - { label: Case Title, name: CaseTitle, widget: string, required: false }
       - { label: Case About, name: CaseAbout, widget: text, required: false }
-      - label: 'Case Image'
-        name: 'CaseImage'
+      - label: 'Case Container'
+        name: 'container'
         widget: 'list'
         required: false
-        fields:
-          - { name: image, label: Image One, widget: image, required: false }
-          - { name: alt, label: Alt, widget: string, required: false }
-          - { name: text, label: Text, widget: markdown, required: false }
+        types:
+        - label: 'Add Image'
+          name: 'AddImage'
+          widget: image
+          fields:
+            - { name: alt, label: Alt, widget: string, required: false }
+            - { name: title, label: Title, widget: string, required: false }
+        - { label: 'Add Text', name: 'AddText', widget: markdown, required: false }
       - { label: Extra Content, name: body, widget: markdown, required: false }
       - label: 'Status'
         name: 'status'
