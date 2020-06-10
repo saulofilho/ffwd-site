@@ -12,7 +12,7 @@ module.exports = {
       resolve: 'gatsby-plugin-google-tagmanager',
       options: {
         /*id: 'GTM-add_your_tag_here',*/
-        id: 'GTM-P4RNF8D',
+        id: '',
         includeInDevelopment: false
       }
     },
@@ -24,6 +24,7 @@ module.exports = {
             // Use cacheFirst since these don't need to be revalidated (same RegExp
             // and same reason as above)
             urlPattern: /(\.js$|\.css$|static\/)/,
+            // urlPattern: /(\.js$|\.css$\/)/,
             handler: `cacheFirst`
           },
           {
