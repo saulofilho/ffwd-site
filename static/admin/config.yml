@@ -16,6 +16,7 @@ backend:
 #     clearable: true
 
 media_folder: static/images
+public_folder: /images
 
 collections: # A list of collections the CMS should be able to edit
   - name: 'pages'

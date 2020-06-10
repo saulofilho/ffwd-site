@@ -8,11 +8,6 @@ import './CasePost.css'
 
 export const CasePostTemplate = ({
   container = [],
-  title,
-  HomeDescription,
-  HomeImage,
-  ProjetosTitle,
-  ProjetosDescription,
   ClientTitle,
   CaseTitle,
   CaseAbout,
@@ -40,7 +35,7 @@ export const CasePostTemplate = ({
                   </a>
                 </div>
             </div>
-            {/* <div className="containerOne" id="containerOne">
+            <div className="containerOne" id="containerOne">
               {container.map(item => (
                 <>
                 {console.log('cont', container)}
@@ -48,12 +43,11 @@ export const CasePostTemplate = ({
                     <img src={item.image} alt="" />
                   </div>
                   <div className="case-texts container">
-                    <p className="default-text-h2">{item.title}</p>
                     <Content source={item.text} />
                   </div>
                 </>
               ))}
-            </div> */}
+            </div>
             <div className="resultados container">
               <Content source={body} />
             </div>
@@ -87,7 +81,6 @@ export const CasePostTemplate = ({
     </main>
   )
 
-// Export Default CasePost for front-end
 const CasePost = ({ data: { post, allPosts }, location }) => {
   const thisEdge = allPosts.edges.find(edge => edge.node.id === post.id)
   return (
@@ -122,12 +115,8 @@ export const pageQuery = graphql`
       frontmatter {
         container {
           image
+          text
         }
-        title
-        HomeDescription
-        HomeImage
-        ProjetosTitle
-        ProjetosDescription
         ClientTitle
         CaseTitle
         CaseAbout
