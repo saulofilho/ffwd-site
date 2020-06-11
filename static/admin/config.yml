@@ -297,8 +297,8 @@ collections: # A list of collections the CMS should be able to edit
     editor:
       preview: true
     folder: content/cases
-    media_folder: static/images
-    public_folder: /images
+    media_folder: ''
+    public_folder: ''
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
       - { label: Template, name: template, widget: hidden, default: CasePost }
