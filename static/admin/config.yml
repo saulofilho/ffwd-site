@@ -297,6 +297,10 @@ collections: # A list of collections the CMS should be able to edit
     editor:
       preview: true
     folder: content/cases
+    label_singular: 'Cases'
+    path: '{{slug}}/index'
+    media_folder: ''
+    public_folder: ''
     slug: '{{slug}}'
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
