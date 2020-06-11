@@ -3,8 +3,8 @@ backend:
   repo: saulofilho/ffwd-site
   branch: master # Branch to update (optional; defaults to master)
 
-media_folder: "static/images"
-public_folder: "../../images"
+media_folder: static/images
+public_folder: /images
 
 # display_url: https://gatsbro.netlify.com # This url will display in the top-right of the CMS
 # media_library:
