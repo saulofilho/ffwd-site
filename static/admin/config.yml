@@ -4,7 +4,7 @@ backend:
   branch: master # Branch to update (optional; defaults to master)
 
 media_folder: static/images
-public_folder: /images
+public_folder: '../../images'
 
 # display_url: https://gatsbro.netlify.com # This url will display in the top-right of the CMS
 # media_library:
@@ -297,7 +297,6 @@ collections: # A list of collections the CMS should be able to edit
     editor:
       preview: true
     folder: content/cases
-    public_folder: '../../images'
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
       - { label: Template, name: template, widget: hidden, default: CasePost }
