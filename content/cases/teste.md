@@ -28,6 +28,77 @@ container:
   - type: AddImage
     image: ../../images/image-1-1.png
     alt: x
+  - type: AddText
+    text: >-
+      <iframe width="560" height="315"
+      src="https://www.youtube.com/embed/Fe2eHypip0Q" frameborder="0"
+      allow="accelerometer; autoplay; encrypted-media; gyroscope;
+      picture-in-picture" allowfullscreen></iframe>
+
+
+      ## solução
+
+
+      No ano em que completou 50 anos, o Grupo Malwee realizou uma ação para valorizar o compromisso social. 
+
+
+      A campanha foi ativada com um vídeo emocional, mostrando a importância de fazer o bem. 
+
+
+      Após, desdobrou-se em um site aberto e colaborativo, onde cada usuário podia compartilhar suas #atitudesdobem e inspirar os demais a fazerem o mesmo. Dando força a corrente de pequenos gestos de bondade, a cada semana da campanha foram lançados vídeos-cápsula para reforçar a ideia de fazer o bem ao próximo. 
+
+
+      O projeto culminou na venda de um kit de produtos, cuja venda foi toda revertida para projetos sociais.
+
+
+
+
+      ## o filme
+  - type: AddImage
+    image: ../../images/group-8.png
+    alt: filme
+  - type: AddText
+    text: >-
+      ## RESULTADOS
+
+
+      # 22 MI
+
+
+      #### VIEWS VIRAIS DA CAMPANHA*
+
+
+      \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\__
+
+
+      # 60 MI
+
+
+      #### IMPRESSÕES TOTAIS
+
+
+      \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\__
+
+
+      # +27 MI
+
+
+      #### VIEWS TOTAIS
+
+
+      \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\__
+
+
+      # +1 MI
+
+
+      #### MIDÍA ESPONTÂNEA*
+
+
+      \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\__
+
+
+      \*Whatsapp não contabilizado
 status: Published
 ---
 # teste
