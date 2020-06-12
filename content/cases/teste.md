@@ -29,13 +29,12 @@ container:
     image: ../../images/image-1-1.png
     alt: x
   - type: AddText
-    text: >-
-      <iframe width="560" height="315"
+    text: <iframe width="560" height="315"
       src="https://www.youtube.com/embed/Fe2eHypip0Q" frameborder="0"
       allow="accelerometer; autoplay; encrypted-media; gyroscope;
       picture-in-picture" allowfullscreen></iframe>
-
-
+  - type: AddText
+    text: >-
       ## solução
 
 
@@ -51,60 +50,36 @@ container:
       O projeto culminou na venda de um kit de produtos, cuja venda foi toda revertida para projetos sociais.
 
 
-
-
       ## o filme
   - type: AddImage
     image: ../../images/group-8.png
     alt: filme
-  - type: AddText
-    text: >-
-      ## RESULTADOS
-
-
-      # 22 MI
-
-
-      #### VIEWS VIRAIS DA CAMPANHA*
-
-
-      \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\__
-
-
-      # 60 MI
-
-
-      #### IMPRESSÕES TOTAIS
-
-
-      \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\__
-
-
-      # +27 MI
-
-
-      #### VIEWS TOTAIS
-
-
-      \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\__
-
-
-      # +1 MI
-
-
-      #### MIDÍA ESPONTÂNEA*
-
-
-      \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\__
-
-
-      \*Whatsapp não contabilizado
 status: Published
 ---
-# teste
+## RESULTADOS
 
-###### aass
+# 22 MI
 
-# tette
+#### VIEWS VIRAIS DA CAMPANHA*
 
-###### asas
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\__
+
+# 60 MI
+
+#### IMPRESSÕES TOTAIS
+
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\__
+
+# +27 MI
+
+#### VIEWS TOTAIS
+
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\__
+
+# +1 MI
+
+#### MIDÍA ESPONTÂNEA*
+
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\__
+
+\*Whatsapp não contabilizado
