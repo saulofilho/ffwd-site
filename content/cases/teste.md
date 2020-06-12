@@ -1,13 +1,14 @@
 ---
 template: CasePost
 date: 2020-06-12T13:25:19.723Z
-title: teste
-HomeDescription: teste
+title: malwee 50 anos
+HomeDescription: Branding, conceito, design, tecnologia, conteúdo e performance.
+  Confira como foi este lançamento de sucesso.
 HomeImage: ../../images/image9-1.png
 ProjetosTitle: teste
 ProjetosDescription: teste
-ClientTitle: tste
-CaseTitle: teste
+ClientTitle: 01. grupo malwee
+CaseTitle: malwee 50 anos
 CaseAbout: teste
 container:
   - type: AddImage
