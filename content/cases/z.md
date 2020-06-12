@@ -13,6 +13,8 @@ container:
   - type: AddImage
     image: ../../images/capa-2-1.png
     alt: z
+  - type: AddText
+    text: xxxxxxxxxxxxx
 status: Published
 ---
 z
