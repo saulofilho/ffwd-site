@@ -28,6 +28,9 @@ container:
   - type: AddImage
     image: ../../images/image-1-1.png
     alt: x
+  - type: AddImage
+    image: ../../images/rectangle-23.png
+    alt: blk
   - type: AddText
     text: <iframe width="560" height="315"
       src="https://www.youtube.com/embed/Fe2eHypip0Q" frameborder="0"
