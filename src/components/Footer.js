@@ -1,6 +1,6 @@
 import React from 'react'
 import './Footer.css'
-import logo from '../../static/images/logo-rodape.png'
+import logo from '../../static/images/logo-white-vertical.png'
 
 export default () => (
   <div>

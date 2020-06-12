@@ -1,8 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import { Location } from '@reach/router'
-import qs from 'qs'
-
 import CaseSection from '../components/CaseSection'
 import Layout from '../components/Layout'
 import './ProjetosIndex.css'
@@ -110,13 +108,13 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
-          excerpt
           fields {
             slug
           }
           frontmatter {
             title
             date
+            HomeImage
             ProjetosTitle
             ProjetosDescription
           }

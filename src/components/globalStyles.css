@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i&display=swap');
-
 :root {
   --primary: #fff;
   --secondary: #000;
@@ -13,34 +12,28 @@
   --font-system: system-ui; /* postcssPresetEnv */
   --borderRadius: 3px;
 }
-
 * {
   margin: 0;
   padding: 0;
   outline: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
-
 *:focus {
   outline: 0;
 }
-
 ::-webkit-scrollbar {
   width: 0.4rem;
 }
-
 ::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 3px var(--grey);
 }
-
 ::-webkit-scrollbar-thumb {
   background-color: #cacaca;
 }
-
 ::selection {
   background: #cacaca;
 }
-
 html {
   box-sizing: border-box;
   font-size: 62.5%;
@@ -48,42 +41,28 @@ html {
   height: 100%;
   scroll-behavior: smooth;
 }
-
 body {
-  position: relative;
   color: var(--secondary);
   font-size: 1.6em;
   font-weight: 400;
   letter-spacing: 0.01em;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
-  height: 100%;
 }
-
 a {
   color: var(--primary);
   text-decoration: none;
 }
-
 strong {
   font-weight: bolder;
 }
-
-p {
-  margin-top: 0;
-  margin-bottom: 1em;
+h1 {
+  font-family: var(--font-primary);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 64px;
+  line-height: 70px;
 }
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-  margin-bottom: 0.5em;
-}
-
 pre {
   background: var(--lightGrey);
   line-height: 1.45;
@@ -199,8 +178,9 @@ blockquote {
 }
 
 .container {
-  max-width: 1111px;
-  width: 80%;
+  max-width: 1022px;
+  width: 100%;
+  height: 100%;
   margin: 0 auto;
 }
 .container.skinny {
@@ -264,16 +244,22 @@ blockquote {
 }
 .default-text-header {
   font-family: var(--font-second);
-  font-size: 1.3rem;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  line-height: 16px;
   text-transform: uppercase;
-  padding-bottom: 30px;
+  padding-top: 184px;
 }
 .default-text-title {
   font-family: var(--font-primary);
-  font-size: 6rem;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 64px;
+  line-height: 70px;
   text-transform: uppercase;
   word-wrap: break-word;
-  line-height: 1;
 }
 .default-text-line {
   font-family: var(--font-second);

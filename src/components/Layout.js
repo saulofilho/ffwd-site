@@ -3,7 +3,6 @@ import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 import Meta from './Meta'
 import Nav from './Nav'
-import NavHome from './NavHome'
 import Footer from './Footer'
 
 import 'modern-normalize/modern-normalize.css'
@@ -74,8 +73,8 @@ export default ({ children, meta, title, location }) => {
             />
 
             {/* header */}
-            {location.pathname === '/' || location.pathname.split('/')[1] === 'contato' ? <NavHome subNav={subNav} /> : <Nav subNav={subNav} /> }
-            
+            <Nav subNav={subNav} />
+
             <Fragment>{children}</Fragment>
             
             {/* footer */}

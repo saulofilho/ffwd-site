@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import { Location } from '@reach/router'
-import qs from 'qs'
+
 import PessoasPageCarousel from '../components/PessoasPageCarousel'
 import Layout from '../components/Layout'
 import './PessoasPage.css'

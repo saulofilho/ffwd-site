@@ -10,15 +10,14 @@
 .navbar--hidden {
   top: -300px;
 }
-
 .Nav--Container {
   display: flex;
   align-items: flex-start;
   height: auto;
   justify-content: space-between;
-  padding-top: 30px;
+  margin: 24px 40px 0;
+  align-items: center;
 }
-
 .Nav--Links {
   display: flex;
   align-items: left;

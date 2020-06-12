@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { useState, useEffect } from 'react'
 import classnames from "classnames";
 import { Location } from '@reach/router'
 import { Link } from 'gatsby'
@@ -7,86 +7,78 @@ import Logo from './Logo'
 
 import './Nav.css'
 
-export class Navigation extends Component {
-  state = {
-    active: false,
-    activeSubNav: false,
-    currentPath: false,
-    prevScrollpos: 0,
-    visible: true
-  }
+export const Navigation = (props) => {
+  const [active, setActive] = useState(false);
+  const [activeSubNav, setActiveSubNav] = useState(false);
+  const [currentPath, setCurrentPath] = useState(false);
+  const [prevScrollpos, setPrevScrollpos] = useState(0);
+  const [visible, setVisible] = useState(true);
 
-  componentDidMount = () => {
-    this.setState({ currentPath: this.props.location.pathname });
-    window.addEventListener("scroll", this.handleScroll);
-  }
+  useEffect(() => {
+    setCurrentPath({ currentPath: props.location.pathname })
+    window.addEventListener("scroll", handleScroll);
 
-  componentWillUnmount = () => {
-    window.removeEventListener("scroll", this.handleScroll);
-  }
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    }
+  }, [])
 
-
-  handleScroll = () => {
-    const { prevScrollpos } = this.state;
-
+  const handleScroll = () => {
     const currentScrollPos = window.pageYOffset;
     const visible = prevScrollpos > currentScrollPos;
 
-    this.setState({
+    setPrevScrollpos({
       prevScrollpos: currentScrollPos,
       visible
-    });
+    })
   };
 
-  handleMenuToggle = () => this.setState({ active: !this.state.active })
+  const handleMenuToggle = () => setActive({ active: !active })
 
   // Only close nav if it is open
-  handleLinkClick = () => this.state.active && this.handleMenuToggle()
+  const handleLinkClick = () => setActive(active) && handleMenuToggle()
 
-  toggleSubNav = subNav =>
-    this.setState({
-      activeSubNav: this.state.activeSubNav === subNav ? false : subNav
+  const toggleSubNav = subNav =>
+    setActiveSubNav({
+      activeSubNav: activeSubNav === subNav ? false : subNav
     })
 
-  render() {
-    const { active } = this.state,
-      { subNav } = this.props,
-      NavLink = ({ to, className, children, ...props }) => (
-        <Link
-          to={to}
-          className={`NavLink ${
-            to === this.state.currentPath ? 'active' : ''
+  const { subNav } = props,
+    NavLink = ({ to, className, children, ...props }) => (
+      <Link
+        to={to}
+        className={`NavLink ${
+          to === currentPath ? 'active' : ''
           } ${className}`}
-          onClick={this.handleLinkClick}
-          {...props}
-        >
-          {children}
-          {/* {console.log(subNav)} */}
-        </Link>
-      )
+        onClick={handleLinkClick}
+        {...props}
+      >
+        {children}
+      </Link>
+    )
 
-    return (
-      <nav 
+  return (
+    <nav
       className={
         classnames
-          ("navbar", 
+          ("navbar",
             {
-              "navbar--hidden": !this.state.visible
+              "navbar--hidden": !visible
             },
-              `Nav ${active ? 'Nav-active' : ''}`
+            `Nav ${active ? 'Nav-active' : ''}`
           )
-        }
-      >
-        <div className="Nav--Container container">
-          <Link to="/" onClick={this.handleLinkClick}>
-            <Logo />
-          </Link>
-          <div className="Nav--Links">
-            <NavLink to="/sobre/">sobre</NavLink>
-            <NavLink to="/projetos/">projetos</NavLink>
-            <NavLink to="/pessoas/">pessoas</NavLink>
-            <NavLink to="/blog/">blog</NavLink>
-            {/* <div
+      }
+    >
+      <div className="Nav--Container">
+        <Link to="/" onClick={handleLinkClick}>
+          <Logo />
+        </Link>
+        <div className="Nav--Links">
+          <NavLink to="/sobre/">sobre</NavLink>
+          <NavLink to="/projetos/">projetos</NavLink>
+          <NavLink to="/pessoas/">pessoas</NavLink>
+          <NavLink to="/blog/">blog</NavLink>
+          {/* <div
               className={`Nav--Group ${
                 this.state.activeSubNav === 'posts' ? 'active' : ''
               }`}
@@ -118,24 +110,36 @@ export class Navigation extends Component {
                 </div>
               </span>
             </div> */}
-            <NavLink to="/contato/">contato</NavLink>
-            <button
+          <NavLink to="/contato/">contato</NavLink>
+          <button
             className="Button-blank Nav--MenuButton"
-            onClick={this.handleMenuToggle}
+            onClick={handleMenuToggle}
           >
             X
           </button>
-          </div>
-          <button
-            className="Button-blank Nav--MenuButton"
-            onClick={this.handleMenuToggle}
-          >
-            {active ? <X color='#000' /> : <Menu color='#000' />}
-          </button>
         </div>
-      </nav>
-    )
-  }
+        {
+          props.location.pathname === '/' || 
+          props.location.pathname.split('/')[1] === 'contato' || 
+          props.location.pathname.split('/')[1] === 'vaga'
+            ?
+            <button
+              className="Button-blank Nav--MenuButton"
+              onClick={handleMenuToggle}
+            >
+              {active ? <X color='#000' /> : <img src={`/images/menu-ham-white.png`} alt="logo-black" />}
+            </button>
+            :
+            <button
+              className="Button-blank Nav--MenuButton"
+              onClick={handleMenuToggle}
+            >
+              {active ? <X color='#000' /> : <img src={`/images/menu-ham-black.png`} alt="logo-black" />}
+            </button>
+        }
+      </div>
+    </nav>
+  )
 }
 
 export default ({ subNav }) => (

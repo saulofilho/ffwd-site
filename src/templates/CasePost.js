@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import _get from 'lodash/get'
 import { Link, graphql } from 'gatsby'
 
@@ -35,18 +35,18 @@ export const CasePostTemplate = ({
                   </a>
                 </div>
             </div>
-            <div className="containerOne" id="containerOne">
-              {container.map(item => (
-                <>
-                {console.log('cont', container)}
+            <div className="containerCasePost" id="containerCasePost">
+              {container.map((item, index) => (
+                <div
+                  key={item.text + index}
+                >
                   <div className="case-imgs">
                     {item.image === null ? <></> : <img src={item.image} alt={item.alt} /> }
                   </div>
                   <div className="case-texts container">
                     {item.text === null ? <></> : <Content source={item.text} /> }
-                    
                   </div>
-                </>
+                </div>
               ))}
             </div>
             <div className="resultados container">
@@ -115,6 +115,7 @@ export const pageQuery = graphql`
       id
       frontmatter {
         container {
+          text
           image
           alt
         }

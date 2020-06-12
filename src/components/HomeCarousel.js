@@ -39,9 +39,9 @@ const HomeCarousel = ({
             >
               <img src={project.HomeImage} alt="" />
               <div className="home-car-texts container">
-                <p className="home-car-title default-text-header">{project.ClientTitle}</p>
-                <p className="home-car-title default-text-title">{project.CaseTitle}</p>
-                <p className="home-car-subtitle">{project.CaseAbout}</p>
+                <p className="default-text-header">{project.ClientTitle}</p>
+                <h1 className="default-text-title">{project.title}</h1>
+                <p className="">{project.CaseAbout}</p>
               </div>
               {/* <button className="next">next</button> */}
             </div>

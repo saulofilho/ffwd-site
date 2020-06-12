@@ -1,8 +1,8 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import _get from 'lodash/get'
 import { Link, graphql } from 'gatsby'
 
-import Content from '../components/Content'
+// import Content from '../components/Content'
 import Layout from '../components/Layout'
 import './SinglePost.css'
 
@@ -28,28 +28,6 @@ export const SinglePostTemplate = ({
                   back ←
                 </Link>
               </div>
-              {/* <div className="SinglePost--Meta container">
-                  <time
-                    className="default-text-header container"
-                    itemProp="dateCreated pubdate datePublished"
-                    date={date}
-                  >
-                    {date}
-                  </time>
-                {categories && (
-                  <Fragment>
-                    {categories.map((cat, index) => (
-                      <span
-                        key={cat.category}
-                        className="SinglePost--Meta--Category"
-                      >
-                        {cat.category}
-                        {index !== categories.length - 1 ? ',' : ''}
-                      </span>
-                    ))}
-                  </Fragment>
-                )}
-              </div> */}
               <p className="post-text-header container">{header}</p>
                 <p className="post-text-title container" itemProp="title">
                   titulo
