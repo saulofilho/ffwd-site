@@ -8,9 +8,8 @@
   --darkGrey: #272727;
   --danger: #ff3d3d;
   --font-primary: 'Anton', sans-serif;
-  --font-second: 'IBM Plex Sans', sans-serif;;
+  --font-secondary: 'IBM Plex Sans', sans-serif;;
   --font-system: system-ui; /* postcssPresetEnv */
-  --borderRadius: 3px;
 }
 * {
   margin: 0;
@@ -18,6 +17,9 @@
   outline: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-overflow-scrolling: touch;
+  text-rendering: optimizeLegibility;
 }
 *:focus {
   outline: 0;
@@ -40,6 +42,7 @@ html {
   background: #fff;
   height: 100%;
   scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
 }
 body {
   color: var(--secondary);
@@ -54,7 +57,7 @@ a {
   text-decoration: none;
 }
 strong {
-  font-weight: bolder;
+  font-weight: 600;
 }
 h1 {
   font-family: var(--font-primary);
@@ -62,6 +65,60 @@ h1 {
   font-weight: normal;
   font-size: 64px;
   line-height: 70px;
+}
+h2 {
+  font-family: var(--font-primary);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 46px;
+  text-transform: uppercase;
+}
+h3 {
+  font-family: var(--font-primary);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+h4 {
+  font-family: var(--font-secondary);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+}
+.default-text-header {
+  font-family: var(--font-secondary);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  line-height: 16px;
+  text-transform: uppercase;
+  margin: 184px 24px 0;
+}
+.default-text-title {
+  font-family: var(--font-primary);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 64px;
+  line-height: 70px;
+  text-transform: uppercase;
+  word-wrap: break-word;
+  margin: 16px 24px 0;
+  width: 70%;
+}
+.default-text-about {
+  font-family: var(--font-secondary);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  word-wrap: break-word;
+  margin: 24px 24px 0;
+  width: 70%;
 }
 pre {
   background: var(--lightGrey);
@@ -151,18 +208,7 @@ blockquote {
   padding: 5rem 0;
   border-bottom: 1px solid #f1f1f1;
 }
-.section:last-child {
-  border: 0;
-}
-.section.thick {
-  padding: 10rem 0;
-}
-.section.thin {
-  padding: 3.5rem 0;
-}
-.section.noPadding {
-  padding: 0;
-}
+
 
 @media (max-width: 600px) {
   .section {
@@ -175,19 +221,6 @@ blockquote {
   .section.thin {
     padding: 1.5rem 0;
   }
-}
-
-.container {
-  max-width: 1022px;
-  width: 100%;
-  height: 100%;
-  margin: 0 auto;
-}
-.container.skinny {
-  max-width: 888px;
-}
-.container.skinnier {
-  max-width: 555px;
 }
 
 /* Buttons */
@@ -236,60 +269,16 @@ blockquote {
   display: flex;
   flex-flow: column;
   justify-content: center;
-  align-items: center;
   height: 100%;
   width: 100%;
   overflow: hidden;
   word-wrap: break-word;
 }
-.default-text-header {
-  font-family: var(--font-second);
-  font-style: normal;
-  font-weight: normal;
-  font-size: 10px;
-  letter-spacing: 0.04em;
-  line-height: 16px;
-  text-transform: uppercase;
-  padding-top: 184px;
-}
-.default-text-title {
-  font-family: var(--font-primary);
-  font-style: normal;
-  font-weight: normal;
-  font-size: 64px;
-  line-height: 70px;
-  text-transform: uppercase;
-  word-wrap: break-word;
-}
-.default-text-line {
-  font-family: var(--font-second);
-  font-size: 3rem;
-  text-transform: uppercase;
-  word-wrap: break-word;
-  line-height: 1;
-  padding-top: 50px;
-}
-.default-text-sub {
-  font-family: var(--font-second);
-  font-size: 1.8rem;
-  word-wrap: break-word;
-  line-height: 1.4;
-  padding-top: 30px;
-}
-.default-text-h2 {
-  font-family: var(--font-primary);
-  font-size: 2.5rem;
-  font-weight: bold;
-  word-wrap: break-word;
-  text-transform: uppercase;
-  line-height: 1.4;
-  padding-top: 50px;
-}
 .padding-btn {
   padding-top: 50px;
 }
 .default-btn button {
-  font-family: var(--font-second);
+  font-family: var(--font-secondary);
   font-size: 2rem;
   word-wrap: break-word;
   color: #fff;

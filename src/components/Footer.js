@@ -3,12 +3,15 @@ import './Footer.css'
 import logo from '../../static/images/logo-white-vertical.png'
 
 export default () => (
-  <div>
     <footer>
-      <div className="container footer-custom">
-        <img src={logo} alt="" />
+      <div className="footer-custom">
+        <div className="logo-footer">
+          <img src={logo} alt="logo-white-vertical" />
+        </div>
         <div className="phone">
-          <p><strong>+55 48 3364 5570</strong></p>
+          <p>
+            <strong>+55 48 3364 5570</strong>
+          </p>
           <p>go@ffwd.rocks</p>
         </div>
         <div className="endereco">
@@ -17,6 +20,7 @@ export default () => (
               <strong>Escritorio</strong>
             </p>
             <p>
+              <br />
               Rua Niberto Haase, 100 - Sala 301
               <br />
               Santa Mônica, Florianópolis, SC
@@ -29,8 +33,7 @@ export default () => (
               <strong>Social</strong>
             </p>
             <p>
-              <br/>
-              <br/>
+              <br />
               <a href="facebook">Facebook</a>
             </p>
             <p><a href="insta">Instagramk</a></p>
@@ -47,5 +50,4 @@ export default () => (
         </div>
       </div>
     </footer>
-  </div>
 )

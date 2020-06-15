@@ -13,11 +13,7 @@ const HeroSliderConfigs = {
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
-  },
-  navigation: {
-    nextEl: '.swiper-button-next .btn-next-home',
-    prevEl: '.swiper-button-prev .btn-prev-home',
-  },
+  }
 };
 
 const HomeCarousel = ({
@@ -37,13 +33,18 @@ const HomeCarousel = ({
               data-swiper-parallax={parallaxAmount}
               data-swiper-parallax-opacity={parallaxOpacity}
             >
-              <img src={project.HomeImage} alt="" />
+              <div 
+                className="teste"
+                style={{
+                  backgroundImage: `url(${project.HomeImage} )`
+                }}
+              />
+              {/* <img src={project.HomeImage} alt="" /> */}
               <div className="home-car-texts container">
                 <p className="default-text-header">{project.ClientTitle}</p>
                 <h1 className="default-text-title">{project.title}</h1>
-                <p className="">{project.CaseAbout}</p>
+                <p className="default-text-about">{project.HomeDescription}</p>
               </div>
-              {/* <button className="next">next</button> */}
             </div>
           </a>
         </div>

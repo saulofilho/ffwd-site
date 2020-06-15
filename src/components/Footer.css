@@ -1,24 +1,15 @@
 footer {
   background: #000;
   color: #fff;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 16px;
-  height: 463px;
-  font-family: var(--font-second);
-}
-.endereco strong {
-  font-weight: 600;
-  color: #fff;
-  font-family: var(--font-second);
+  height: auto;
+  overflow: hidden;
 }
 .footer-custom {
   display: flex;
   flex-direction: column;
+  margin: 60px 24px;
 }
 .footer-custom img {
-  width: 150px;
   max-width: 100%;
 }
 .endereco {
@@ -27,33 +18,44 @@ footer {
 .social {
   display: flex;
   flex-direction: column;
-  margin-left: -10px;
-  line-height: 8px;
-  width: auto;
-  padding-left: 40px;
+  margin-left: 10%;
+  margin-top: 60px;
 }
 .escritorio {
-  width: auto;
-  color: #fff;
+  margin-top: 60px;
 }
-.social a {
+.escritorio p {
+  font-family: var(--font-secondary);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+}
+.social a, 
+.social p {
   text-decoration: none;
-  margin-top: 25px;
-  color: #fff;
+  font-family: var(--font-secondary);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
 }
 .social a:hover {
   color: #989898;
 }
 .phone {
-  padding-top: 80px;
-  padding-bottom: 70px;
-  line-height: 10px;
-  color: #fff;
+  font-family: var(--font-secondary);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  margin-top: 60px;
 }
 .all-right {
-  color: #989898;
-  display: flex;
-  flex-direction: column;
-  line-height: 2px;
-  padding-top: 80px;
+  font-family: var(--font-secondary);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  margin-top: 60px;
 }

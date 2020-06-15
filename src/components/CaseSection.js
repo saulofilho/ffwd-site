@@ -23,7 +23,7 @@ class CaseSection extends React.Component {
       visiblePosts = posts.slice(0, limit || posts.length)
 
     return (
-      <div className="CaseSection">
+      <>
         {!!visiblePosts.length && (
           <div className="CaseSection--Grid">
             {visiblePosts.map((post, index) => (
@@ -31,7 +31,7 @@ class CaseSection extends React.Component {
             ))}
           </div>
         )}
-      </div>
+      </>
     )
   }
 }

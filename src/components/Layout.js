@@ -81,7 +81,6 @@ export default ({ children, meta, title, location }) => {
             {location.pathname === '/' ? <></> : <Footer /> }
             {/* {location.pathname === '/' || location.pathname.split('/')[1] === 'cases' ? <></> : <Footer /> } */}
 
-            
           </Fragment>
         )
       }}

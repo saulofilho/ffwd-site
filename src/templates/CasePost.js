@@ -1,10 +1,10 @@
 import React from 'react'
 import _get from 'lodash/get'
 import { Link, graphql } from 'gatsby'
-
 import Content from '../components/Content'
 import Layout from '../components/Layout'
 import './CasePost.css'
+import arrowDown from '../../static/images/ico-seta-down.png'
 
 export const CasePostTemplate = ({
   container = [],
@@ -24,16 +24,20 @@ export const CasePostTemplate = ({
         <div className="single-case">
           <div className="CasePost--InnerContent">
             <div className="case-hero container">
-                <p className="default-text-header">{ClientTitle}</p>
-                <p className="default-text-title" itemProp="title">
-                  {CaseTitle}
-                </p>
-              <p className="default-text-sub">{CaseAbout}</p>
-                <div className="anchor-down">
-                  <a href="#containerOne">
-                    ↓
-                  </a>
-                </div>
+              <p className="default-text-header">
+                {ClientTitle}
+              </p>
+              <p className="default-text-title" itemProp="title">
+                {CaseTitle}
+              </p>
+              <p className="default-text-about">
+                {CaseAbout}
+              </p>
+              <div className="anchor-down">
+                <a href="#containerCasePost">
+                  <img src={arrowDown} alt="" />
+                </a>
+              </div>
             </div>
             <div className="containerCasePost" id="containerCasePost">
               {container.map((item, index) => (
@@ -44,13 +48,16 @@ export const CasePostTemplate = ({
                     {item.image === null ? <></> : <img src={item.image} alt={item.alt} /> }
                   </div>
                   <div className="case-texts container">
-                    {item.text === null ? <></> : <Content source={item.text} /> }
+                    {item.text === null ? <></> : <Content className="case-content" source={item.text} /> }
                   </div>
                 </div>
               ))}
             </div>
             <div className="resultados container">
-              <Content source={body} />
+              <Content 
+                className="case-content"
+                source={body} 
+              />
             </div>
           </div>
           <div className="CasePost--Pagination">

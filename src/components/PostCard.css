@@ -18,13 +18,13 @@
   height: 400px;
 }
 .PostCard--Title {
-  font-family: var(--font-second);
+  font-family: var(--font-secondary);
   font-weight: bold;
   color: #fff;
   font-size: 18px;
 }
 .PostCard--Date {
-  font-family: var(--font-second);
+  font-family: var(--font-secondary);
   color: #fff;
   font-size: 10px;
 }

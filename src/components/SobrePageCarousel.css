@@ -4,9 +4,8 @@
   display: flex;
   flex-direction: column;
 }
-.sobre-car-vert-nos-somos, 
 .sobre-car-vert-servicos {
-  height: 100vh;
+  height: auto;
   width: 100%;
   background: #fff;
 }

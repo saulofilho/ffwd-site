@@ -2,8 +2,9 @@ import React, { useState, useEffect } from 'react'
 import classnames from "classnames";
 import { Location } from '@reach/router'
 import { Link } from 'gatsby'
-import { Menu, X } from 'react-feather'
+import { X } from 'react-feather'
 import Logo from './Logo'
+import { debounce } from "lodash"
 
 import './Nav.css'
 
@@ -15,33 +16,36 @@ export const Navigation = (props) => {
   const [visible, setVisible] = useState(true);
 
   useEffect(() => {
-    setCurrentPath({ currentPath: props.location.pathname })
-    window.addEventListener("scroll", handleScroll);
+    setCurrentPath(props.location.pathname);
+
+    const onScrollDebounced = debounce(() => {
+      handleScroll();
+    }, 50);
+
+    const handleScroll = () => {
+      const currentScrollPos = window.pageYOffset;
+      const visible = prevScrollpos > currentScrollPos;
+  
+      setPrevScrollpos(currentScrollPos)
+      setVisible(visible)
+      console.log('prev', prevScrollpos)
+      console.log('curr', currentScrollPos)
+    };
+
+    window.addEventListener("scroll", onScrollDebounced);
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("scroll", onScrollDebounced);
     }
   }, [])
 
-  const handleScroll = () => {
-    const currentScrollPos = window.pageYOffset;
-    const visible = prevScrollpos > currentScrollPos;
-
-    setPrevScrollpos({
-      prevScrollpos: currentScrollPos,
-      visible
-    })
-  };
-
-  const handleMenuToggle = () => setActive({ active: !active })
+  const handleMenuToggle = () => setActive(!active)
 
   // Only close nav if it is open
   const handleLinkClick = () => setActive(active) && handleMenuToggle()
 
   const toggleSubNav = subNav =>
-    setActiveSubNav({
-      activeSubNav: activeSubNav === subNav ? false : subNav
-    })
+    setActiveSubNav(activeSubNav === subNav ? false : subNav)
 
   const { subNav } = props,
     NavLink = ({ to, className, children, ...props }) => (
@@ -50,7 +54,7 @@ export const Navigation = (props) => {
         className={`NavLink ${
           to === currentPath ? 'active' : ''
           } ${className}`}
-        onClick={handleLinkClick}
+        onClick={() => handleLinkClick()}
         {...props}
       >
         {children}
@@ -69,72 +73,77 @@ export const Navigation = (props) => {
           )
       }
     >
-      <div className="Nav--Container">
-        <Link to="/" onClick={handleLinkClick}>
-          <Logo />
+      <div className="nav-container">
+        <Link to="/" onClick={() => handleLinkClick()}>
+          <Logo {...props} />
         </Link>
         <div className="Nav--Links">
           <NavLink to="/sobre/">sobre</NavLink>
           <NavLink to="/projetos/">projetos</NavLink>
           <NavLink to="/pessoas/">pessoas</NavLink>
           <NavLink to="/blog/">blog</NavLink>
-          {/* <div
-              className={`Nav--Group ${
-                this.state.activeSubNav === 'posts' ? 'active' : ''
+          <div
+            className={`Nav--Group ${
+              activeSubNav === 'posts' ? 'active' : ''
               }`}
-            >
-              <span
-                className={`NavLink Nav--GroupParent ${
-                  this.props.location.pathname.includes('posts') ||
-                  this.props.location.pathname.includes('blog') ||
-                  this.props.location.pathname.includes('post-categories')
-                    ? 'active'
-                    : ''
+          >
+            <span
+              className={`NavLink Nav--GroupParent ${
+                props.location.pathname.includes('posts') ||
+                  props.location.pathname.includes('blog') ||
+                  props.location.pathname.includes('post-categories')
+                  ? 'active'
+                  : ''
                 }`}
-                onClick={() => this.toggleSubNav('posts')}
-              >
-                Blog
+              onClick={() => toggleSubNav('posts')}
+            >
+              Blog
                 <div className="Nav--GroupLinks">
-                  <NavLink to="/blog/" className="Nav--GroupLink">
-                    All Posts
+                <NavLink to="/blog/" className="Nav--GroupLink">
+                  All Posts
                   </NavLink>
-                  {subNav.posts.map((link, index) => (
-                    <NavLink
-                      to={link.slug}
-                      key={'posts-subnav-link-' + index}
-                      className="Nav--GroupLink"
-                    >
-                      {link.title}
-                    </NavLink>
-                  ))}
-                </div>
-              </span>
-            </div> */}
+                {subNav.posts.map((link, index) => (
+                  <NavLink
+                    to={link.slug}
+                    key={'posts-subnav-link-' + index}
+                    className="Nav--GroupLink"
+                  >
+                    {link.title}
+                  </NavLink>
+                ))}
+              </div>
+            </span>
+          </div>
           <NavLink to="/contato/">contato</NavLink>
           <button
             className="Button-blank Nav--MenuButton"
-            onClick={handleMenuToggle}
+            onClick={() => handleMenuToggle()}
           >
-            X
           </button>
         </div>
         {
-          props.location.pathname === '/' || 
-          props.location.pathname.split('/')[1] === 'contato' || 
-          props.location.pathname.split('/')[1] === 'vaga'
+          props.location.pathname === '/' ||
+            props.location.pathname.split('/')[1] === 'contato' ||
+            props.location.pathname.split('/')[1] === 'vaga'
             ?
             <button
               className="Button-blank Nav--MenuButton"
-              onClick={handleMenuToggle}
+              onClick={() => handleMenuToggle()}
             >
-              {active ? <X color='#000' /> : <img src={`/images/menu-ham-white.png`} alt="logo-black" />}
+              {active ? 
+              <X color='#000' />
+                :
+              <img src={`/images/menu-ham-white.png`} alt="logo-black" />}
             </button>
             :
             <button
               className="Button-blank Nav--MenuButton"
-              onClick={handleMenuToggle}
+              onClick={() => handleMenuToggle()}
             >
-              {active ? <X color='#000' /> : <img src={`/images/menu-ham-black.png`} alt="logo-black" />}
+              {active ? 
+              <X color='#000' />
+                :
+              <img src={`/images/menu-ham-black.png`} alt="logo-black" />}
             </button>
         }
       </div>

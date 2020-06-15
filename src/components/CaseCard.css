@@ -1,17 +1,10 @@
 .CaseCard {
   width: 100%;
-  height: 100%;
-  overflow: hidden;
-  position: relative;
+  height: auto;
 }
-/* .CaseCard:hover,
-.CaseCard:focus {
-  transform: translateY(-1px);
-  box-shadow: 0 2px 30px rgba(0, 0, 0, 0.15);
-} */
 .CaseCard--Image {
   width: 100%;
-  height: 320px;
+  height: auto;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -19,27 +12,34 @@
 .CaseCard--Image::before {
   content: "";
   background: #000;
-  opacity: 0.4;
+  opacity: 0.2;
   position: absolute;
   width: 100%;
   height: 100%;
 }
-.CaseCard--Title {
-  color: #fff;
-  font-family: var(--font-primary);
-  text-transform: uppercase;
-  font-size: 3rem;
-}
 .case-card-flex {
-  width: 100%;
-  height: 100%;
+  height: auto;
   display: flex;
   flex-flow: column;
-  justify-content: space-around;
   position: relative;
+  margin: 39px 24px auto;
+  overflow: hidden;
 }
-.case-card-down .default-text-sub {
-  text-transform: uppercase;
-  font-size: 4rem;
+.case-sub p {
+  font-family: var(--font-secondary);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  margin-top: 10px;
+}
+.ver-mais p {
+  font-family: var(--font-secondary);
+  font-style: normal;
   font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  margin-top: 161px;
+  margin-bottom: 38px;
 }

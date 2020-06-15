@@ -28,7 +28,7 @@
   object-fit: cover;
 }
 .post-text-header {
-  font-family: var(--font-second);
+  font-family: var(--font-secondary);
   font-size: 3rem;
   font-weight: bolder;
   word-wrap: break-word;
@@ -36,7 +36,7 @@
   padding-top: 10px;
 }
 .post-text-title {
-  font-family: var(--font-second);
+  font-family: var(--font-secondary);
   font-size: 2rem;
   word-wrap: break-word;
   line-height: 1.4;
@@ -44,7 +44,7 @@
 }
 .anchor-back {
   text-transform: uppercase;
-  font-family: var(--font-second);
+  font-family: var(--font-secondary);
   font-size: 1.3rem;
 }
 .post-texts {
@@ -79,7 +79,7 @@
 }
 .SinglePost--Pagination--Link {
   text-transform: uppercase;
-  font-family: var(--font-second);
+  font-family: var(--font-secondary);
   font-size: 1.5rem;
   text-decoration: none;
   color: #000;

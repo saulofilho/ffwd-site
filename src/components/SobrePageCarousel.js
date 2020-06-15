@@ -45,7 +45,7 @@ const SobrePageCarousel = ({
       <Swiper {...HorizontalSwiperParams}>
         <div>
           <Swiper {...VerticalSwiperParams}>
-            <div className="sobre-car-vert-nos-somos" data-hash="slide1">
+            <div className="" data-hash="slide1">
               <div className="default-flex">
                 <p className="default-text-header container">nós somos</p>
                 <p className="default-text-title container">mais que digital</p>

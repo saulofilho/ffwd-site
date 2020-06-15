@@ -10,16 +10,11 @@
 }
 .case-hero {
   color: #000;
-  height: 100vh;
+  height: auto;
   display: flex;
   flex-flow: column;
   justify-content: center;
   align-items: left;
-}
-.containerCasePost {
-  height: 100%;
-  width: 100%;
-  padding-bottom: 100px;
 }
 .case-imgs {
   height: auto;
@@ -27,7 +22,7 @@
 }
 .case-imgs img {
   width: 100%;
-  height: 300px;
+  height: auto;
   object-fit: cover;
 }
 .CasePost--BackButton {
@@ -65,7 +60,7 @@
   align-items: center;
   justify-content: space-between;
   background: #000;
-  height: 100vh;
+  height: 128px;
 }
 .CasePost--Pagination--Link {
   text-transform: uppercase;
@@ -84,4 +79,29 @@
 }
 .resultados {
   height: 100%;
+}
+.anchor-down {
+  margin: 116px auto 68px 30px;
+}
+.case-content {
+  margin: 60px 24px;
+}
+.case-content h4 {
+  margin: 24px auto;
+}
+.case-content iframe {
+  margin: 0 !important;
+}
+.case-content p {
+  font-family: var(--font-secondary);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+}
+.case-content p:first-of-type {
+  margin-top: 24px;
+}
+.case-content p:not(:last-of-type) {
+  margin-bottom: 12px;
 }

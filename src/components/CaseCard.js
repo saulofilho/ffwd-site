@@ -19,12 +19,18 @@ const CaseCard = ({
         }}
       >
         <div className="case-card-flex">
-          <div className="case-card-top">
-            <p className="default-text-title container">{ProjetosTitle}</p>
-            <p className="default-text-sub container">{ProjetosDescription}</p>
+          <h3>
+            {ProjetosTitle}
+          </h3>
+          <div className="case-sub">
+            <p>
+              {ProjetosDescription}
+            </p>
           </div>
-          <div className="case-card-down">
-            <p className="default-text-sub container">ver mais</p>
+          <div className="ver-mais">
+            <p>
+              ver mais
+            </p>
           </div>
         </div>
       </div>

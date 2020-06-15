@@ -3,43 +3,125 @@
   position: fixed;
   width: 100%;
   top: 0;
-  z-index: 2;
+  z-index: 9;
   transition: top 0.3s;
 }
-
 .navbar--hidden {
-  top: -300px;
+  top: -100px;
 }
-.Nav--Container {
+.nav-container {
   display: flex;
   align-items: flex-start;
-  height: auto;
+  width: auto;
+  height: 100%;
   justify-content: space-between;
-  margin: 24px 40px 0;
+  margin: 40px 24px 0;
   align-items: center;
 }
 .Nav--Links {
+  display: none;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: transparent;
+  animation: Nav--Links 0.2s ease;
+  background: #fff;
+}
+.Nav-active .Nav--Links {
+  display: flex;
+}
+.Nav-active {
+  background: #fff;
+}
+
+.Nav--Container {
+  display: flex;
+}
+
+.Nav--MenuButton {
+  display: block !important;
+  margin-left: auto;
+  z-index: 1;
+}
+.Nav .Logo {
+  z-index: 1;
+}
+
+.Nav-active .NavLink {
+  animation: Nav--Link 0.3s ease-out;
+  animation-fill-mode: both;
+}
+.Nav .NavLink,
+.Nav .NavLinkHome {
+  font-family: var(--font-primary);
+  text-transform: uppercase;
+  display: block;
+  font-weight: 500;
+  transition: color 0.2s, border-bottom-color 0.2s;
+  color: #000;
+  text-decoration: none;
+  border-bottom: 1px solid #000;
+  width: 100%;
+  padding-left: 50px;
+  font-size: 4rem;
+}
+.NavLink:first-child {
+  border-top: 1px solid #000;
+}
+.NavLinkHome:first-child {
+  border-top: 1px solid #000;
+}
+
+.Nav .NavLink:nth-of-type(2) {
+  animation-delay: 0.1s;
+}
+.Nav .NavLink:nth-of-type(3) {
+  animation-delay: 0.2s;
+}
+.Nav .NavLink:nth-of-type(4) {
+  animation-delay: 0.3s;
+}
+.Nav .NavLink:nth-of-type(5) {
+  animation-delay: 0.4s;
+}
+.Nav .NavLink:nth-of-type(6) {
+  animation-delay: 0.5s;
+}
+.Nav .NavLink:nth-of-type(7) {
+  animation-delay: 0.6s;
+}
+.Nav .NavLink:nth-of-type(8) {
+  animation-delay: 0.7s;
+}
+.Nav .NavLink:nth-of-type(7) {
+  animation-delay: 0.6s;
+}
+.Nav--GroupLinks {
+  position: relative;
+  text-align: center;
+}
+.Nav--GroupLinks .NavLink {
+  font-size: 1.5rem;
+  width: auto;
+}
+/* .Nav--Links {
   display: flex;
   align-items: left;
   justify-content: center;
   flex-direction: column;
-}
-
-/* .Nav--Links > * + * {
-  margin-left: 1rem;
 } */
 
-.Nav .Logo {
-  margin-right: 3rem;
-  position: relative;
-}
-
-.Nav--MenuButton {
+/* .Nav--MenuButton {
   display: none !important;
-}
+} */
 
-.NavLink {
-  font-family: var(--font-second);
+/* .NavLink {
+  font-family: var(--font-secondary);
   display: block;
   font-weight: 500;
   transition: color 0.2s, border-bottom-color 0.2s;
@@ -47,29 +129,22 @@
   text-decoration: none;
   border-bottom: 2px solid;
   border-bottom-color: transparent;
-}
-.NavLinkHome {
-  font-family: var(--font-second);
-  display: block;
-  font-weight: 500;
-  transition: color 0.2s, border-bottom-color 0.2s;
-  text-decoration: none;
-  border-bottom: 2px solid;
-  border-bottom-color: transparent;
-  color: #fff;
-}
-.NavLink:hover,
+} */
+
+/* .NavLink:hover,
 .NavLink.active,
 .NavLink:focus {
   color: #000;
   border-bottom-color: currentColor;
-}
-.NavLinkHome:hover,
+} */
+
+/* .NavLinkHome:hover,
 .NavLinkHome.active,
 .NavLinkHome:focus {
   color: #fff;
   border-bottom-color: currentColor;
-}
+} */
+
 .Nav--Group {
   position: relative;
   cursor: pointer;
@@ -125,110 +200,6 @@
 .Nav-active {
   height: 100%;
   width: 100%;
-}
-
-@media (max-width: 600px) {
-  .Nav-active {
-    background: #fff;
-  }
-  
-  .Nav--Container {
-    display: flex;
-  }
-
-  .Nav--MenuButton {
-    display: block !important;
-    margin-left: auto;
-    z-index: 1;
-  }
-  .Nav .Logo {
-    z-index: 1;
-  }
-
-  .Nav--Links {
-    display: none;
-    align-items: center;
-    flex-direction: column;
-    position: fixed;
-    justify-content: center;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: transparent;
-    animation: Nav--Links 0.2s ease;
-    background: #fff;
-  }
-
-  /* .Nav--Links > * + * {
-    margin-left: 0;
-    margin-top: 1rem;
-  } */
-
-  .Nav-active .Nav--Links {
-    display: flex;
-  }
-
-  .Nav-active .NavLink {
-    animation: Nav--Link 0.3s ease-out;
-    animation-fill-mode: both;
-  }
-
-  .Nav .NavLink,
-  .Nav .NavLinkHome {
-    font-family: var(--font-primary);
-    text-transform: uppercase;
-    display: block;
-    font-weight: 500;
-    transition: color 0.2s, border-bottom-color 0.2s;
-    color: #000;
-    text-decoration: none;
-    border-bottom: 1px solid #000;
-    width: 100%;
-    padding-left: 50px;
-    font-size: 4rem;
-  }
-  .NavLink:first-child {
-    border-top: 1px solid #000;
-  }
-  .NavLinkHome:first-child {
-    border-top: 1px solid #000;
-  }
-
-  .Nav .NavLink:nth-of-type(2) {
-    animation-delay: 0.1s;
-  }
-  .Nav .NavLink:nth-of-type(3) {
-    animation-delay: 0.2s;
-  }
-  .Nav .NavLink:nth-of-type(4) {
-    animation-delay: 0.3s;
-  }
-  .Nav .NavLink:nth-of-type(5) {
-    animation-delay: 0.4s;
-  }
-  .Nav .NavLink:nth-of-type(6) {
-    animation-delay: 0.5s;
-  }
-  .Nav .NavLink:nth-of-type(7) {
-    animation-delay: 0.6s;
-  }
-  .Nav .NavLink:nth-of-type(8) {
-    animation-delay: 0.7s;
-  }
-  .Nav .NavLink:nth-of-type(7) {
-    animation-delay: 0.6s;
-  }
-
-  .Nav--GroupLinks {
-    position: relative;
-    text-align: center;
-  }
-
-  .Nav--GroupLinks .NavLink {
-    font-size: 1.5rem;
-    width: auto;
-  }
 }
 
 @keyframes Nav--Link {

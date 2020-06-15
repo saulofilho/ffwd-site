@@ -70,28 +70,28 @@ export const ContactPageTemplate = () => (
         <div className="social-btn-style">
           <button>
             <a href="https://wa.me/5511933430190?text=Olá">
-              <div class="whatsapp-selo-desk">phone</div>
+              <div className="whatsapp-selo-desk">phone</div>
             </a>
           </button>
         </div>
         <div className="social-btn-style">
           <button>
             <a href="https://wa.me/5511933430190?text=Olá">
-              <div class="whatsapp-selo-desk">insta</div>
+              <div className="whatsapp-selo-desk">insta</div>
             </a>
           </button>
         </div>
         <div className="social-btn-style">
           <button>
             <a href="https://wa.me/5511933430190?text=Olá">
-              <div class="whatsapp-selo-desk">fb</div>
+              <div className="whatsapp-selo-desk">fb</div>
             </a>
           </button>
         </div>
         <div className="social-btn-style">
           <button>
             <a href="https://wa.me/5511933430190?text=Olá">
-              <div class="whatsapp-selo-desk">mail</div>
+              <div className="whatsapp-selo-desk">mail</div>
             </a>
           </button>
         </div>
