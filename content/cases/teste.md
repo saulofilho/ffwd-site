@@ -51,9 +51,8 @@ container:
 
 
       O projeto culminou na venda de um kit de produtos, cuja venda foi toda revertida para projetos sociais.
-
-
-      ## o filme
+  - type: AddText
+    text: "## o filme"
   - type: AddImage
     image: ../../images/group-8.png
     alt: filme
