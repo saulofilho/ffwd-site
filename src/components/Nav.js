@@ -73,7 +73,7 @@ export const Navigation = (props) => {
           )
       }
     >
-      <div className="nav-container">
+      <div className="nav-container container">
         <Link to="/" onClick={() => handleLinkClick()}>
           <Logo {...props} />
         </Link>

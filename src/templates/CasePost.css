@@ -55,23 +55,19 @@
   width: 100%;
   height: 100%;
 }
-.CasePost--Pagination {
+.case-post {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   background: #000;
   height: 128px;
 }
-.CasePost--Pagination--Link {
+.case-post-link {
+  font-family: var(--font-secondary);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
   text-transform: uppercase;
-  font-family: var(--font-primary);
-  font-size: 3rem;
-  text-decoration: none;
-  color: #fff;
-}
-.next {
-  margin-left: auto;
-  display: flex;
 }
 .resultados strong {
   color: #000;
@@ -104,4 +100,17 @@
 }
 .case-content p:not(:last-of-type) {
   margin-bottom: 12px;
+}
+.next {
+  margin-left: auto;
+  padding-right: 40px;
+}
+.next img {
+  padding-left: 16px;
+}
+.prev {
+  padding-left: 40px;
+}
+.prev img {
+  padding-right: 16px;
 }

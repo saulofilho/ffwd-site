@@ -34,16 +34,15 @@ const HomeCarousel = ({
               data-swiper-parallax-opacity={parallaxOpacity}
             >
               <div 
-                className="teste"
+                className="home-image"
                 style={{
                   backgroundImage: `url(${project.HomeImage} )`
                 }}
               />
-              {/* <img src={project.HomeImage} alt="" /> */}
-              <div className="home-car-texts container">
-                <p className="default-text-header">{project.ClientTitle}</p>
-                <h1 className="default-text-title">{project.title}</h1>
-                <p className="default-text-about">{project.HomeDescription}</p>
+              <div className="home-car-texts">
+                <p className="default-text-header container">{project.ClientTitle}</p>
+                <h1 className="default-text-title container">{project.title}</h1>
+                <p className="default-text-about container">{project.HomeDescription}</p>
               </div>
             </div>
           </a>

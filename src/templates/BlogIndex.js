@@ -2,10 +2,10 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { Location } from '@reach/router'
 import qs from 'qs'
-
 import PostSection from '../components/PostSection'
 import PostCategoriesNav from '../components/PostCategoriesNav'
 import Layout from '../components/Layout'
+import BlogSearch from '../components/BlogSearch'
 
 /**
  * Filter posts by date. Feature dates will be fitered
@@ -67,7 +67,7 @@ export const BlogIndexTemplate = ({
                 blog
                 </p>
               <section className="search-blog">
-                <PostCategoriesNav enableSearch categories={postCategories} />
+                {enableSearch && <BlogSearch />}
                 <div className="default-btn search-btn">
                   <button>search</button>
                 </div>
@@ -86,6 +86,7 @@ export const BlogIndexTemplate = ({
                 </div>
               </section>
             )}
+            <PostCategoriesNav enableSearch categories={postCategories} />
           </main>
         )
       }}
@@ -147,7 +148,7 @@ export const pageQuery = graphql`
           }
           frontmatter {
             title
-            date(formatString: "D. MMMM. M. Y")
+            date(formatString: "d.M.YYYY")
             featuredImage
           }
         }

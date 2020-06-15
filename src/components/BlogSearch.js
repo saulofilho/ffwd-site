@@ -2,6 +2,7 @@ import React from 'react'
 import { navigate } from 'gatsby'
 import { Location } from '@reach/router'
 import qs from 'qs'
+import './BlogSearch.css'
 
 export default ({ pageCount }) => {
   return (
@@ -13,7 +14,7 @@ export default ({ pageCount }) => {
           <input
             type="text"
             value={search.s || ''}
-            placeholder="Escreva aqui"
+            placeholder="Busque por palavras-chave"
             onChange={e => {
               let search = {}
               search.s = e.target.value

@@ -1,0 +1,28 @@
+.search-blog {
+  width: 100%;
+}
+.search-blog input[type='text'] {
+  right: 0;
+  border: 0;
+  padding: 16px 15px;
+  background: #FFFFFF;
+  border: 1px solid #989898;
+  margin: 24px auto 8px 24px;
+  width: 232px;
+  height: 48px;
+}
+.search-blog input[type='text']:focus {
+  outline: none;
+}
+.search-blog input[type='text']::placeholder {
+  font-family: var(--font-secondary);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  color: #989898;
+}
+.search-btn button {
+  width: 92px;
+  height: 48px;
+  margin: auto 24px;
+}

@@ -5,6 +5,8 @@ import Content from '../components/Content'
 import Layout from '../components/Layout'
 import './CasePost.css'
 import arrowDown from '../../static/images/ico-seta-down.png'
+import arrowLeft from '../../static/images/arrow-left.png'
+import arrowRight from '../../static/images/arrow-right.png'
 
 export const CasePostTemplate = ({
   container = [],
@@ -45,44 +47,44 @@ export const CasePostTemplate = ({
                   key={item.text + index}
                 >
                   <div className="case-imgs">
-                    {item.image === null ? <></> : <img src={item.image} alt={item.alt} /> }
+                    {item.image === null ? <></> : <img src={item.image} alt={item.alt} />}
                   </div>
                   <div className="case-texts container">
-                    {item.text === null ? <></> : <Content className="case-content" source={item.text} /> }
+                    {item.text === null ? <></> : <Content className="case-content" source={item.text} />}
                   </div>
                 </div>
               ))}
             </div>
             <div className="resultados container">
-              <Content 
+              <Content
                 className="case-content"
-                source={body} 
+                source={body}
               />
             </div>
           </div>
-          <div className="CasePost--Pagination">
-            <div className="container">
+          <div className="case-post container">
               {prevPostURL && (
+              <div className="prev">
+                <img src={arrowLeft} alt="arrowLeft" />
                 <Link
-                  className="CasePost--Pagination--Link prev"
+                  className="case-post-link"
                   to={prevPostURL}
                 >
-                  ANTERIOR ‹
+                  ANTERIOR
                 </Link>
+              </div>
               )}
               {nextPostURL && (
-                <>
-                  <div className="next">
-                    <Link
-                      className="CasePost--Pagination--Link next"
-                      to={nextPostURL}
-                    >
-                      › PRÓXIMO
-                    </Link>
-                  </div>
-                </>
+                <div className="next">
+                  <Link
+                    className="case-post-link"
+                    to={nextPostURL}
+                  >
+                    PRÓXIMO
+                  </Link>
+                  <img src={arrowRight} alt="arrowRight" />
+                </div>
               )}
-            </div>
           </div>
         </div>
       </article>
