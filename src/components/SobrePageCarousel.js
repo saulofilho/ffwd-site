@@ -8,7 +8,6 @@ const SobrePageCarousel = ({
 }) => {
 
   const HorizontalSwiperParams = {
-    slidesPerView: 1,
     loop: true,
     grabCursor: false,
     effect: 'fade',
@@ -16,18 +15,14 @@ const SobrePageCarousel = ({
       watchState: true,
     },
     pagination: {
-      el: '.swiper-pagination.swiper-pagination-h',
+      el: '.swiper-pagination .swiper-pagination-sobre',
       clickable: true
     }
-    // navigation: {
-    //   nextEl: '.swiper-button-next',
-    //   prevEl: '.swiper-button-prev',
-    // },
   };
 
   const VerticalSwiperParams = {
     direction: 'vertical',
-    grabCursor: false,
+    grabCursor: true,
     freeMode: true,
     hashNavigation: {
       watchState: true,
@@ -45,212 +40,251 @@ const SobrePageCarousel = ({
       <Swiper {...HorizontalSwiperParams}>
         <div>
           <Swiper {...VerticalSwiperParams}>
-            <div className="" data-hash="slide1">
-              <div className="default-flex">
-                <p className="default-text-header container">nós somos</p>
-                <p className="default-text-title container">mais que digital</p>
-                <p className="default-text-sub container">
-                  Você pode pensar que somos uma agência de marketing digital.
-                  Mas nós somos mais do que isso.
-                </p>
-                <div className="default-btn container padding-btn">
-                  <button>
-                    we make great launches
-                  </button>
-                </div>
+            <div className="mais-que-digital" data-hash="mais-que-digital">
+              <p className="default-text-header container">
+                nós somos
+              </p>
+              <p className="default-text-title container">
+                mais que digital
+              </p>
+              <p className="default-text-sub-sobre container">
+                Você pode pensar que somos uma agência de marketing digital.
+                Mas nós somos mais do que isso.
+              </p>
+              <div className="default-btn container">
+                <button>
+                  we make great launches
+                </button>
               </div>
             </div>
             <div className="sobre-car-vert-one">
-              <div className="default-flex">
-                <p className="invert-color default-text-header container">
-                  quem somos
+                <p className="default-text-header-sobre container">
+                  nós somos
                 </p>
-                <p className="invert-color default-text-title container">
-                  mais que comunicacao. experiencias
+                <p className="default-text-title-sobre container">
+                  mais que comunicação. experiências.
                 </p>
-                <p className="invert-color default-text-sub container">
-                  Nascemos digital e evoluímos. Combinamos estratégia, 
-                  criatividade e inovação para criar experiências completas em 
+                <p className="default-text-about-sobre container">
+                  Nascemos digital e evoluímos. Combinamos estratégia,
+                  criatividade e inovação para criar experiências completas em
                   todos os pontos de contato das marcas com seus consumidores.
                 </p>
-                <div className="default-btn container padding-btn">
+                <div className="default-btn container">
                   <button>
-                    Conheca nossos cases
+                    Conheça nossos cases
                   </button>
                 </div>
-              </div>
             </div>
             <div className="sobre-car-vert-two">
-            <div className="default-flex">
-                <p className="default-text-header container">quem somos</p>
-                <p className="default-text-title container">assista ao nosso manifesto</p>
-              </div>
+                <p className="default-text-header-sobre container">
+                  quem somos
+                </p>
+                <p className="default-text-title-sobre container">
+                  assista ao nosso manifesto.
+                </p>
+                <div className="img-manifesto">
+                </div>
             </div>
             <div className="sobre-car-vert-three">
-            <div className="default-flex">
-                <p className="invert-color default-text-header container">nossa abordagem</p>
-                <p className="invert-color default-text-title container">digital first</p>
-                <p className="invert-color default-text-sub container">
+                <p className="default-text-header-sobre container">
+                  nossa abordagem
+                </p>
+                <p className="default-text-title-sobre container">
+                  digital 
+                  <br/>
+                  first
+                </p>
+                <p className="default-text-about-sobre container">
                   <strong>
                     O Digital First provoca a deixar de lado
                     o favoritismo pelo que é tradicional.
                   </strong>
-                  <br/>
-                  <br/>
-                    É estar conectado com o mundo, com as mudanças. 
+                  <br />
+                  <br />
+                    É estar conectado com o mundo, com as mudanças.
                     É colocar os consumidores no centro das decisões.
-                    Propomos um novo pensamento, uma nova forma de enxergar 
-                    oportunidades, de solucionar problemas, de conquistar o mundo. 
+                    Propomos um novo pensamento, uma nova forma de enxergar
+                    oportunidades, de solucionar problemas, de conquistar o mundo.
                 </p>
                 <div className="default-btn container padding-btn">
                   <button>
                     Nossos Servicos
                   </button>
                 </div>
-              </div>
             </div>
             <div className="sobre-car-vert-four">
-            <div className="default-flex">
-                <p className="default-text-title container">we make great launches</p>
-                <p className="default-text-sub container">
-                Nossa capacidade interdisciplinar e abordagem digital first 
-                garantem a criação de 
-                experiências que abrangem todos os pontos de contato digitais 
-                e físicos das marcas, 
-                gerando muito mais impacto e valor para os consumidores.
+                <p className="default-text-title-sobre container">
+                  we make great launches
                 </p>
-                <p className="default-text-line container">
-                  nos fazemos grandes lancamentos
+                <p className="default-text-about-sobre container">
+                  Nossa capacidade interdisciplinar e abordagem digital first
+                  garantem a criação de
+                  experiências que abrangem todos os pontos de contato digitais
+                  e físicos das marcas,
+                  gerando muito mais impacto e valor para os consumidores.
                 </p>
-                <div className="default-btn container padding-btn">
+                <p className="nave-text-upper container">
+                  Nós
+                  <br/>
+                  fazemos 
+                  <br/>
+                  grandes 
+                  <br/>
+                  lançamentos
+                </p>
+                <div className="default-btn">
                   <button>
                     Great Launches
                   </button>
                 </div>
-                <div className="default-text-header btn-subir container">
+                {/* <div className="default-text-header btn-subir container">
                   <a href="#slide1">
                     <p>
                       ↑
-                      <br/>
+                      <br />
                       subir
                     </p>
                   </a>
-                </div>
-              </div>
+                </div> */}
             </div>
           </Swiper>
         </div>
         <div>
           <Swiper {...VerticalSwiperParams}>
-            <div className="sobre-car-vert-servicos" data-hash="slide2">
-              <div className="default-flex">
-                <p className="default-text-header container">serviços</p>
-                <p className="default-text-sub container">
-                  Criamos experiências autênticas e apaixonantes para conectar 
+            <div className="servicos" data-hash="servicos">
+                <p className="default-text-header container">
+                  serviços
+                </p>
+                <p className="default-text-sub-sobre container">
+                  Criamos experiências autênticas 
+                  <br/>
+                  e apaixonantes para conectar
                   marcas e pessoas.
                 </p>
-                <p className="default-text-header container low-text-header">
-                  Unindo diferentes competências a abordagem digital first, 
-                  estamos aqui para fazer grandes lançamentos para o mercado. 
-                  Como? A partir dos pilares:
+                <p className="default-text-about container">
+                  Unindo diferentes competências a abordagem 
+                  <br/>
+                  digital first,
+                  estamos aqui para fazer grandes 
+                  <br/>
+                  lançamentos para o mercado.
+                  Como? 
+                  <br/>
+                  <br/>
+                  A partir dos pilares:
                 </p>
-                <p className="default-text-sub font-text-sub container">
-                  ESTRATÉGIA
-                <br/>
-                <br/>
-                  MARKETING
-                <br/>
-                <br/>
-                  EXPERIÊNCIA
-                </p>
-              </div>
+                <div className="servicos-texts">
+                  <p>
+                    ESTRATÉGIA
+                  </p>
+                  <p>
+                    MARKETING
+                  </p>
+                  <p>
+                    EXPERIÊNCIA
+                  </p>
+                </div>
             </div>
             <div className="sobre-car-vert-servicos-one"></div>
             <div className="sobre-car-vert-servicos-two">
-              <div className="default-flex">
                 <div className="pilares-div container">
-                  <p className="invert-color default-text-title">
+                  <h2>
                     pilares
-                  </p>
+                  </h2>
                 </div>
-                <div className="estrategia-row container">
-                  <p className="default-text-header invert-color">
+                <div className="pilares-row container">
+                  <p className="pilares-title">
                     Estratégia
                   </p>
-                  <p className="default-text-header invert-color low-text-header">
+                  <p className="pilares-text">
                     Campanhas/Launches
-                    <br/>
+                    <br />
                     Consultoria de Presença Digital
-                    <br/>
+                    <br />
                     Branding
-                    <br/>
+                    <br />
                     Inovação Aberta
-                    <br/>
+                    <br />
                     Planejamento Estratégico
                   </p>
                 </div>
-                <div className="estrategia-row container">
-                  <p className="default-text-header invert-color">
-                    Estratégia
+                <div className="pilares-row container">
+                  <p className="pilares-title">
+                    Marketing 
                   </p>
-                  <p className="default-text-header invert-color low-text-header">
-                    Campanhas/Launches
-                    <br/>
-                    Consultoria de Presença Digital
-                    <br/>
-                    Branding
-                    <br/>
-                    Inovação Aberta
-                    <br/>
-                    Planejamento Estratégico
+                  <p className="pilares-text">
+                  Produção Multimidia
+                    <br />
+                    Conteúdo
+                    <br />
+                    Design
+                    <br />
+                    Performance
                   </p>
                 </div>
-                <div className="estrategia-row container">
-                  <p className="default-text-header invert-color">
-                    Estratégia
+                <div className="pilares-row container">
+                  <p className="pilares-title">
+                    Experiência
                   </p>
-                  <p className="default-text-header invert-color low-text-header">
-                    Campanhas/Launches
-                    <br/>
+                  <p className="pilares-text">
+                  Ações integradas
+                    <br />
                     Consultoria de Presença Digital
-                    <br/>
-                    Branding
-                    <br/>
-                    Inovação Aberta
-                    <br/>
-                    Planejamento Estratégico
+                    <br />
+                    UX/UI
+                    <br />
+                    Desenvolvimento
+                    <br />
+                    Apps/Webapps
                   </p>
                 </div>
-              </div>
             </div>
             <div className="sobre-car-vert-servicos-three">
-            <div className="default-flex">
-                <p className="default-text-title container">we make great launches</p>
-                <p className="default-text-sub container">
-                Nossa capacidade interdisciplinar e abordagem digital first 
-                garantem a criação de 
-                experiências que abrangem todos os pontos de contato digitais 
-                e físicos das marcas, 
-                gerando muito mais impacto e valor para os consumidores.
+                <p className="default-text-title-sobre container">
+                  we make 
+                  <br/>
+                  great launches
                 </p>
-                <p className="default-text-line container">
-                  nos fazemos grandes lancamentos
+                <p className="default-text-about-sobre container">
+                  Nossa capacidade interdisciplinar 
+                  <br/>
+                  e abordagem digital first
+                  garantem 
+                  <br/>
+                  a criação de
+                  experiências que abrangem 
+                  <br/>
+                  todos os pontos de contato digitais
+                  e 
+                  <br/>
+                  físicos das marcas,
+                  gerando muito mais 
+                  <br/>
+                  impacto e valor para os consumidores.
                 </p>
-                <div className="default-btn container padding-btn">
+                <p className="nave-text-upper container">
+                  Nós
+                  <br/>
+                  fazemos 
+                  <br/>
+                  grandes 
+                  <br/>
+                  lançamentos
+                </p>
+                <div className="default-btn">
                   <button>
                     Great Launches
                   </button>
                 </div>
-                <div className="default-text-header btn-subir container">
-                  <a href="#slide2">
+                {/* <div className="default-text-header btn-subir container">
+                  <a href="#slide1">
                     <p>
                       ↑
-                      <br/>
+                      <br />
                       subir
                     </p>
                   </a>
-                </div>
-              </div>
+                </div> */}
             </div>
           </Swiper>
         </div>

@@ -38,18 +38,11 @@
 }
 html {
   box-sizing: border-box;
-  font-size: 62.5%;
-  background: #fff;
   height: 100%;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
 }
 body {
-  color: var(--secondary);
-  font-size: 1.6em;
-  font-weight: 400;
-  letter-spacing: 0.01em;
-  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
 a {
@@ -107,10 +100,8 @@ h4 {
   font-size: 64px;
   line-height: 70px;
   text-transform: uppercase;
-  padding: 16px 24px 0;
+  padding: 16px 100px 0 24px;
   width: 100%;
-  max-width: 100%;
-  padding-right: 30%;
 }
 .default-text-about {
   font-family: var(--font-secondary);
@@ -119,9 +110,8 @@ h4 {
   font-size: 12px;
   line-height: 16px;
   word-wrap: break-word;
-  padding: 24px 24px 0;
+  padding: 24px 90px 0 24px;
   width: 100%;
-  padding-right: 30%;
 }
 pre {
   background: var(--lightGrey);
@@ -171,22 +161,13 @@ blockquote {
   bottom: 0;
 }
 
-@keyframes fadeIn {
+/* @keyframes fadeIn {
   from {
     opacity: 0;
   }
-}
+} */
 
-/* Layout */
-
-.section {
-  width: 100%;
-  padding: 5rem 0;
-  border-bottom: 1px solid #f1f1f1;
-}
-
-
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
   .section {
     width: 100%;
     padding: 5rem 0;
@@ -197,7 +178,7 @@ blockquote {
   .section.thin {
     padding: 1.5rem 0;
   }
-}
+} */
 
 /* Buttons */
 
@@ -237,22 +218,6 @@ blockquote {
   justify-content: center;
 }
 
-/* container default style */
-.invert-color {
-  color: #fff;
-}
-.default-flex {
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-  word-wrap: break-word;
-}
-.padding-btn {
-  padding-top: 50px;
-}
 .default-btn button {
   font-family: var(--font-secondary);
   font-style: normal;

@@ -4,7 +4,7 @@ import logo from '../../static/images/logo-white-vertical.png'
 
 export default () => (
     <footer>
-      <div className="footer-custom">
+      <div className="footer-custom container">
         <div className="logo-footer">
           <img src={logo} alt="logo-white-vertical" />
         </div>
@@ -17,7 +17,7 @@ export default () => (
         <div className="endereco">
           <div className="escritorio">
             <p>
-              <strong>Escritorio</strong>
+              <strong>Escritório</strong>
             </p>
             <p>
               <br />

@@ -17,7 +17,7 @@ export const CasePostTemplate = ({
   nextPostURL,
   prevPostURL,
 }) => (
-    <main className="CasePostPage">
+    <main>
       <article
         className="home-case"
         itemScope

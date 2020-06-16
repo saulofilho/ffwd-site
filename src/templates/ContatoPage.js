@@ -6,12 +6,16 @@ import './ContatoPage.css'
 
 // Export Template for use in CMS preview
 export const ContactPageTemplate = () => (
-  <main className="Contact">
+  <main>
     <div className="contato-hero">
       <div className="default-flex">
-        <p className="default-text-header container invert-color">cotato</p>
-        <p className="default-text-title container invert-color">vamos falar?</p>
-        <p className="default-text-sub container invert-color">
+        <p className="default-text-header container">
+          contato
+        </p>
+        <p className="default-text-title container">
+          vamos falar?
+        </p>
+        <p className="default-text-sub container">
           Liga pra gente, manda um email,
           vem conhecer a agência.
           Estamos esperando seu contato.
@@ -47,54 +51,54 @@ export const ContactPageTemplate = () => (
       </div>
       <div className="contato-infos-container">
         <p className="default-text-header">01.</p>
-        <p className="default-text-title">contato para novos negócios:</p>
+        <h2>contato para novos negócios:</h2>
         <p className="default-text-header">go@ffwd.com.br</p>
       </div>
       <div className="contato-infos-container">
-        <p className="default-text-header">02.</p>
-        <p className="default-text-title">assine nossa news</p>
-        <p className="default-text-header top-zero">*sem spam, prometemos =]</p>
+        <p className="default-text-header">
+          02.
+        </p>
+        <h2>
+          assine nossa news
+        </h2>
+        <p className="default-text-header top-zero">
+          *sem spam, prometemos =]
+        </p>
         <section className="news-email">
           <input 
             type="text" 
             placeholder="E-mail"
           />
           <div className="default-btn news-btn">
-            <button>cadastre-se</button>
+            <button>
+              cadastre-se
+            </button>
           </div>
         </section>
       </div>
     </div>
     <div className="contato-social-container">
       <section className="social-btns container">
-        <div className="social-btn-style">
           <button>
             <a href="https://wa.me/5511933430190?text=Olá">
-              <div className="whatsapp-selo-desk">phone</div>
+              <img src="/images/ico-whats.png" alt="whats"/>
             </a>
           </button>
-        </div>
-        <div className="social-btn-style">
           <button>
             <a href="https://wa.me/5511933430190?text=Olá">
-              <div className="whatsapp-selo-desk">insta</div>
+              <img src="/images/ico-insta.png" alt="insta"/>
             </a>
           </button>
-        </div>
-        <div className="social-btn-style">
           <button>
             <a href="https://wa.me/5511933430190?text=Olá">
-              <div className="whatsapp-selo-desk">fb</div>
+              <img src="/images/ico-face.png" alt="face"/>
             </a>
           </button>
-        </div>
-        <div className="social-btn-style">
           <button>
             <a href="https://wa.me/5511933430190?text=Olá">
-              <div className="whatsapp-selo-desk">mail</div>
+              <img src="/images/ico-mail.png" alt="mail"/>
             </a>
           </button>
-        </div>
       </section>
     </div>
   </main>

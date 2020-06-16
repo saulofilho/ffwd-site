@@ -5,18 +5,11 @@ export default ({ location }) => (
   <>
     {location.pathname === '/' ||
       location.pathname.split('/')[1] === 'contato' ||
-      location.pathname.split('/')[1] === 'vaga' ? <div
-        className="Logo"
-        style={{
-          backgroundImage: `url(/images/logo-white.png)`
-        }}
-      />
+      location.pathname.split('/')[1] === 'vaga'
+      ?
+      <img src={'/images/logo-white.png'} />
       :
-      <div
-        className="Logo"
-        style={{
-          backgroundImage: `url(/images/logo-black.png)`
-        }}
-      />}
+      <img src={'/images/logo-black.png'} />
+    }
   </>
 )

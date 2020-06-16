@@ -13,13 +13,13 @@ const CaseCard = ({
   <Link to={slug} className={`CaseCard ${className}`}>
     {HomeImage && (
       <div 
-        className="CaseCard--Image relative"
+        className="CaseCard--Image relative "
         style={{
           backgroundImage: `url(${HomeImage})`
         }}
       >
-        <div className="case-card-flex">
-          <h3>
+        <div className="case-card-flex container">
+          <h3 className="">
             {ProjetosTitle}
           </h3>
           <div className="case-sub">

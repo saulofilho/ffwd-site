@@ -24,13 +24,11 @@ export const ProjetosIndexTemplate = ({
           post.frontmatter.title.toLowerCase()
         )
         return (
-          <main className="projeto">
-            <div className="
-            ">
-              <div className="default-flex">
-                <p className="default-text-header">projetos</p>
-                <p className="default-text-title">nossos cases</p>
-                <p className="default-text-about">
+          <main>
+            <div className="projeto">
+                <p className="default-text-header container">projetos</p>
+                <p className="default-text-title container">nossos cases</p>
+                <p className="default-text-about container">
                   Somos uma agência mais que digital, com foco em experiências
                   e resultados.
                   Nesses mais de 10 anos de marketing, criatividade e tecnologia
@@ -40,21 +38,20 @@ export const ProjetosIndexTemplate = ({
                   <br />
                   Veja nossos cases:
                 </p>
-                <div className="anchor-down">
+                <div className="anchor-down container">
                   <a href="#projeto-section">
-                    <img src={arrowDown} alt="" />
+                    <img src={arrowDown} alt="arrowDown" />
                   </a>
                 </div>
-              </div>
             </div>
             {!!cases.length && (
               <section className="projeto-section" id="projeto-section">
                 <CaseSection posts={filteredPosts} />
               </section>
             )}
-            <div className="nossos-clientes">
+            <div className="nossos-clientes container">
               <h2>nossos clientes</h2>
-              <div className="nossos-clientes-logos">
+              <div className="nossos-clientes-logos container">
                 <img src={cardClient} alt="" />
                 <img src={cardClient} alt="" />
                 <img src={cardClient} alt="" />

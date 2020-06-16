@@ -25,11 +25,9 @@ export const Navigation = (props) => {
     const handleScroll = () => {
       const currentScrollPos = window.pageYOffset;
       const visible = prevScrollpos > currentScrollPos;
-  
+
       setPrevScrollpos(currentScrollPos)
       setVisible(visible)
-      console.log('prev', prevScrollpos)
-      console.log('curr', currentScrollPos)
     };
 
     window.addEventListener("scroll", onScrollDebounced);
@@ -37,7 +35,7 @@ export const Navigation = (props) => {
     return () => {
       window.removeEventListener("scroll", onScrollDebounced);
     }
-  }, [])
+  }, [prevScrollpos])
 
   const handleMenuToggle = () => setActive(!active)
 
@@ -69,7 +67,7 @@ export const Navigation = (props) => {
             {
               "navbar--hidden": !visible
             },
-            `Nav ${active ? 'Nav-active' : ''}`
+            `Nav ${active ? 'nav-active' : ''}`
           )
       }
     >
@@ -77,75 +75,75 @@ export const Navigation = (props) => {
         <Link to="/" onClick={() => handleLinkClick()}>
           <Logo {...props} />
         </Link>
-        <div className="Nav--Links">
-          <NavLink to="/sobre/">sobre</NavLink>
-          <NavLink to="/projetos/">projetos</NavLink>
-          <NavLink to="/pessoas/">pessoas</NavLink>
-          <NavLink to="/blog/">blog</NavLink>
-          <div
-            className={`Nav--Group ${
-              activeSubNav === 'posts' ? 'active' : ''
-              }`}
-          >
-            <span
-              className={`NavLink Nav--GroupParent ${
-                props.location.pathname.includes('posts') ||
-                  props.location.pathname.includes('blog') ||
-                  props.location.pathname.includes('post-categories')
-                  ? 'active'
-                  : ''
-                }`}
-              onClick={() => toggleSubNav('posts')}
-            >
-              Blog
-                <div className="Nav--GroupLinks">
-                <NavLink to="/blog/" className="Nav--GroupLink">
-                  All Posts
-                  </NavLink>
-                {subNav.posts.map((link, index) => (
-                  <NavLink
-                    to={link.slug}
-                    key={'posts-subnav-link-' + index}
-                    className="Nav--GroupLink"
-                  >
-                    {link.title}
-                  </NavLink>
-                ))}
-              </div>
-            </span>
-          </div>
-          <NavLink to="/contato/">contato</NavLink>
-          <button
-            className="Button-blank Nav--MenuButton"
-            onClick={() => handleMenuToggle()}
-          >
-          </button>
-        </div>
         {
           props.location.pathname === '/' ||
             props.location.pathname.split('/')[1] === 'contato' ||
             props.location.pathname.split('/')[1] === 'vaga'
             ?
             <button
-              className="Button-blank Nav--MenuButton"
+              className="Button-blank nav-btn"
               onClick={() => handleMenuToggle()}
             >
-              {active ? 
-              <X color='#000' />
+              {active ?
+                <X color='#000' />
                 :
-              <img src={`/images/menu-ham-white.png`} alt="logo-black" />}
+                <img src={`/images/menu-ham-white.png`} alt="logo-black" />}
             </button>
             :
             <button
-              className="Button-blank Nav--MenuButton"
+              className="Button-blank nav-btn"
               onClick={() => handleMenuToggle()}
             >
-              {active ? 
-              <X color='#000' />
+              {active ?
+                <X color='#000' />
                 :
-              <img src={`/images/menu-ham-black.png`} alt="logo-black" />}
+                <img src={`/images/menu-ham-black.png`} alt="logo-black" />}
             </button>
         }
+      </div>
+      <div className="nav-links">
+        <NavLink to="/sobre/">sobre</NavLink>
+        <NavLink to="/projetos/">projetos</NavLink>
+        <NavLink to="/pessoas/">pessoas</NavLink>
+        <NavLink to="/blog/">blog</NavLink>
+        <div
+          className={`Nav--Group ${
+            activeSubNav === 'posts' ? 'active' : ''
+            }`}
+        >
+          <span
+            className={`NavLink Nav--GroupParent ${
+              props.location.pathname.includes('posts') ||
+                props.location.pathname.includes('blog') ||
+                props.location.pathname.includes('post-categories')
+                ? 'active'
+                : ''
+              }`}
+            onClick={() => toggleSubNav('posts')}
+          >
+            Blog
+                <div className="Nav--GroupLinks">
+              <NavLink to="/blog/" className="Nav--GroupLink">
+                All Posts
+                  </NavLink>
+              {subNav.posts.map((link, index) => (
+                <NavLink
+                  to={link.slug}
+                  key={'posts-subnav-link-' + index}
+                  className="Nav--GroupLink"
+                >
+                  {link.title}
+                </NavLink>
+              ))}
+            </div>
+          </span>
+        </div>
+        <NavLink to="/contato/">contato</NavLink>
+        <button
+          className="Button-blank nav-btn"
+          onClick={() => handleMenuToggle()}
+        >
+        </button>
       </div>
     </nav>
   )

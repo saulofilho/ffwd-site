@@ -1,110 +1,265 @@
-.sobre-car {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
-.sobre-car-vert-servicos {
-  height: auto;
-  width: 100%;
+.mais-que-digital {
   background: #fff;
 }
+.mais-que-digital button {
+  width: 154px;
+  height: 24px;
+  font-family: var(--font-secondary);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 16px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin: 20px 0 0 24px;
+}
 .sobre-car-vert-one {
-  height: 100vh;
+  height: 640px;
   width: 100%;
-  background-image: url(/images/quem_somos_01.png);
+  background-image: url(/images/mais-que-comunica.png);
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
 }
-.sobre-car-vert-two {
-  height: 100vh;
+.default-text-header-sobre {
+  font-family: var(--font-secondary);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  line-height: 16px;
+  text-transform: uppercase;
+  padding: 60px 24px 0;
   width: 100%;
-  background-image: url(/images/quem_somos_03.png);
+  color: #fff;
+}
+.default-text-title-sobre {
+  font-family: var(--font-primary);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 46px;
+  text-transform: uppercase;
+  padding: 16px 80px 0 24px;
+  width: 100%;
+  color: #fff;
+}
+.default-text-about-sobre {
+  font-family: var(--font-secondary);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  padding: 24px 80px 0 24px;
+  width: 100%;
+  color: #fff;
+}
+.default-text-sub-sobre {
+  font-family: var(--font-secondary);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 16px 80px 0 24px;
+  width: 100%;
+  color: #1D1D1B;
+}
+.sobre-car-vert-one .default-btn {
+  padding: 20px 0 0 24px;
+}
+.sobre-car-vert-one button {
+  width: 227px;
+  height: 48px;
+  font-family: var(--font-secondary);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  border: 1px solid #FFFFFF;
+}
+.sobre-car-vert-two {
+  height: 640px;
+  width: 100%;
+  background: #fff;
+}
+.sobre-car-vert-two .default-text-header-sobre,
+.sobre-car-vert-two .default-text-title-sobre {
+  color: #000;
+}
+.img-manifesto {
+  height: 448px;
+  width: 100%;
+  background-image: url(/images/assista-manifesto.png);
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .sobre-car-vert-three {
-  height: 100vh;
+  height: 640px;
   width: 100%;
-  background-image: url(/images/quem_somos_02.png);
+  background-image: url(/images/astronauta-mob.png);
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
 }
-.sobre-car-vert-four .btn-subir {
-  font-weight: bolder;
+.sobre-car-vert-three button {
+  width: 176px;
+  height: 48px;
+  font-family: var(--font-secondary);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin: 20px 0 0 24px;
+  border: 1px solid #FFFFFF;
 }
 .sobre-car-vert-four {
-  height: 100vh;
+  height: 640px;
   width: 100%;
-  background-image: url(/images/quem_somos_03.png);
+  background-image: url(/images/nave.png);
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
 }
+.sobre-car-vert-four .default-text-about-sobre,
+.sobre-car-vert-four .default-text-title-sobre {
+  color: #000;
+}
+.sobre-car-vert-four .default-text-title-sobre {
+  padding-top: 24px;
+}
+.nave-text-upper {
+  font-family: var(--font-secondary);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #1D1D1B;
+  padding: 40px 0 60px 24px;
+}
+.sobre-car-vert-four button {
+  width: 105px;
+  height: 24px;
+  font-family: var(--font-secondary);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 16px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin: 0 24px;
+  border: 1px solid #FFFFFF;
+}
+/* .sobre-car-vert-four .btn-subir {
+  font-weight: bolder;
+} */
 .swiper-scrollbar {
   display: none;
 }
-.sobre-car-vert-servicos .default-text-sub {
-  font-weight: bolder;
+.servicos {
+  background: #fff;
+}
+.servicos .default-text-about {
+  padding: 24px 24px 0;
+}
+.servicos-texts {
+  padding: 24px 24px;
+}
+.servicos-texts p {
+  font-family: var(--font-secondary);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 16px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #1D1D1B;
+  padding-bottom: 24px;
 }
 .sobre-car-vert-servicos-one {
-  height: 100vh;
+  height: 640px;
   width: 100%;
-  background-image: url(/images/servicos-one.png);
+  background-image: url(/images/escala-mob.png);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
+  background-color: #fff;
 }
 .sobre-car-vert-servicos-two {
-  height: 100vh;
+  height: 640px;
   width: 100%;
   background: #000;
-}
-.sobre-car-vert-servicos-three {
-  height: 100vh;
-  width: 100%;
-  background-image: url(/images/servicos-two.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.low-text-header {
-  text-transform: inherit;
-  padding-top: 30px;
-}
-.font-text-sub {
-  font-size: 1.3rem;
-  font-weight: bolder;
 }
 .sobre-car-vert-servicos .default-text-header:nth-of-type(1) {
   padding-bottom: 50px;
 }
 .pilares-div {
-  border-bottom: 3px solid #fff;
-  height: 70px;
+  padding: 60px 24px;
 }
-.estrategia-row {
-  border-bottom: 1px solid #797979;
-  height: auto;
-  padding: 30px 0;
+.pilares-div h2 {
+  color: #fff;
+}
+.pilares-row {
   display: flex;
   flex-flow: row;
 }
-.estrategia-row:last-child {
-  border-bottom: none;
+.pilares-title {
+  font-family: var(--font-secondary);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  color: #FFFFFF;
+  padding: 60px 0 0 24px;
 }
-.estrategia-row .default-text-header {
-  text-transform: inherit;
-  font-weight: bolder;
+.pilares-text {
+  font-family: var(--font-secondary);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  color: #FFFFFF;
+  padding: 60px 0 0 65px;
 }
-.estrategia-row .low-text-header {
-  padding-top: 0;
-  font-weight: lighter;
-  padding-left: 50px;
+.sobre-car-vert-servicos-three {
+  width: 100%;
+  background-image: url(/images/astronauta-white-mob.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+.sobre-car-vert-servicos-three .default-text-about-sobre,
+.sobre-car-vert-servicos-three .default-text-title-sobre {
+  color: #000;
+}
+.sobre-car-vert-servicos-three .default-text-title-sobre {
+  padding-top: 24px;
+}
+.sobre-car-vert-servicos-three button {
+  width: 105px;
+  height: 24px;
+  font-family: var(--font-secondary);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 16px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin: 0 24px;
+  border: 1px solid #FFFFFF;
+}
+
+
+
+
 .btn-subir {
   bottom: 40px;
   position: absolute;
@@ -115,4 +270,22 @@
 }
 .btn-subir a p {
   font-weight: bolder;
+}
+
+
+
+
+.swiper-pagination-sobre {
+  border: 1px solid red !important;
+  border-radius: 40px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  min-width: 152px;
+  height: 24px;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

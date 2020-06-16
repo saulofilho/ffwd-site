@@ -5,7 +5,6 @@ import Layout from '../components/Layout.js'
 import SobrePageCarousel from '../components/SobrePageCarousel'
 import './SobrePage.css'
 
-// Export Template for use in CMS preview
 export const ComponentsPageTemplate = () => (
   <main>
     <section className="sobre-section">

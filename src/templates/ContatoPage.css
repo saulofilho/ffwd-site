@@ -1,14 +1,13 @@
-.Contact {
-  width: 100%;
-  height: 100%;
-}
 .contato-hero {
-  height: 100vh;
+  height: 490px;
   width: 100%;
-  background-image: url(/images/quem_somos_01.png);
+  background-image: url(/images/contato.png);
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
+}
+.contato-hero p {
+  color: #fff;
 }
 .contato-infos {
   height: 100%;
@@ -68,6 +67,10 @@
 .social-btns {
   display: flex;
 }
+.social-btns button {
+  background: transparent;
+  border: none;
+}
 .news-email input[type='text'] {
   right: 0;
   border: 0;
@@ -76,11 +79,6 @@
   font-size: 1.4rem;
   color: #494944;
   width: 100%;
-}
-.social-btn-style button {
-  background: pink;
-  outline: 0;
-  padding: 5px;
 }
 .adress {
   padding-left: 60px;
