@@ -35,7 +35,7 @@ export const Navigation = (props) => {
     return () => {
       window.removeEventListener("scroll", onScrollDebounced);
     }
-  }, [prevScrollpos])
+  }, [prevScrollpos, props.location.pathname])
 
   const handleMenuToggle = () => setActive(!active)
 

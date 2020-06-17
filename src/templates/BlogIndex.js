@@ -35,8 +35,6 @@ export const byCategory = (posts, title, contentType) => {
 
 export const BlogIndexTemplate = ({
   title,
-  subtitle,
-  featuredImage,
   posts = [],
   postCategories = [],
   enableSearch = true,
@@ -86,14 +84,13 @@ export const BlogIndexTemplate = ({
                 </div>
               </section>
             )}
-            <PostCategoriesNav enableSearch categories={postCategories} />
+            {/* <PostCategoriesNav enableSearch categories={postCategories} /> */}
           </main>
         )
       }}
     </Location>
   )
 
-// Export Default BlogIndex for front-end
 const BlogIndex = ({ data: { page, posts, postCategories }, location }) => (
   <Layout
     location={location}

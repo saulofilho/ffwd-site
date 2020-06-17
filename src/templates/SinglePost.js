@@ -1,18 +1,17 @@
 import React from 'react'
 import _get from 'lodash/get'
 import { Link, graphql } from 'gatsby'
-
-// import Content from '../components/Content'
 import Layout from '../components/Layout'
 import './SinglePost.css'
+import arrowLeftBlk from '../../static/images/arrow-left-blk.png'
+import arrowRightBlk from '../../static/images/arrow-right-blk.png'
 
 export const SinglePostTemplate = ({
-  header,
-  title,
+  featuredImage,
+  PostTitle,
+  PostText,
   date,
-  body,
   nextPostURL,
-  prevPostURL,
 }) => (
     <main className="BlogPostPage">
       <article
@@ -20,57 +19,38 @@ export const SinglePostTemplate = ({
         itemScope
         itemType="http://schema.org/BlogPosting"
       >
-        <div className="single-post">
-          <div className="SinglePost--InnerContent">
-            <div className="post-hero">
-              <div className="anchor-back container">
-                <Link className="SinglePost--BackButton" to="/blog/">
-                  back ←
-                </Link>
-              </div>
-              <p className="post-text-header container">{header}</p>
-                <p className="post-text-title container" itemProp="title">
-                  titulo
-                </p>
-              <div className="post-img">
-                {/* <img src={featuredImage} alt="" /> */}
-                imgs
-              </div>
-            </div>
-            {/* <div className="containerOne" id="containerOne">
-              {containerOne.map(item => (
-                <>
-                  <div className="post-texts container">
-                    <Content source={item.textOne} />
-                  </div>
-                </>
-              ))}
-            </div> */}
+        <div className="post-hero">
+          <div className="anchor-posts">
+            <Link to="/blog/">
+              <img src={arrowLeftBlk} alt="arrowLeftBlk" />
+              back
+            </Link>
           </div>
-          <div className="SinglePost--Pagination">
-            <div className="container">
-              {prevPostURL && (
-                <Link
-                  className="SinglePost--Pagination--Link prev"
-                  to={prevPostURL}
-                >
-                  previous news ←
-                </Link>
-              )}
-              {nextPostURL && (
-                <>
-                  <div className="next">
-                    <Link
-                      className="SinglePost--Pagination--Link"
-                      to={nextPostURL}
-                    >
-                      next news →
-                </Link>
-                  </div>
-                </>
-              )}
-            </div>
+          <p className="default-text-header">
+            {date}
+          </p>
+          <h4 itemProp="title">
+            {PostTitle}
+          </h4>
+          <div className="post-img">
+            <img src={featuredImage} alt="blog" />
           </div>
+          <p className="default-text-about container" itemProp="title">
+            {PostText}
+          </p>
+        </div>
+        <div className="single-post-pagination container">
+            {nextPostURL && (
+                <div className="next">
+                  <Link
+                    className="single-post-pagination-link"
+                    to={nextPostURL}
+                  >
+                    next news
+                    <img src={arrowRightBlk} alt="arrowRightBlk" />
+                </Link>
+                </div>
+            )}
         </div>
       </article>
     </main>
@@ -110,7 +90,9 @@ export const pageQuery = graphql`
       id
       frontmatter {
         featuredImage
-        title
+        PostTitle
+        PostText
+        PostAboutDesktop
         template
         date(formatString: "MMMM Do, YYYY")
       }

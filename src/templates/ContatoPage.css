@@ -6,63 +6,67 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+.contato-adress-container {
+  display: flex;
+  flex-flow: row;
+  align-items: left;
+  overflow: hidden;
+}
 .contato-hero p {
   color: #fff;
 }
 .contato-infos {
-  height: 100%;
   background: #fff;
-  padding: 50px 0;
+  padding: 40px 24px 60px;
   display: flex;
   flex-flow: column;
   justify-content: center;
-  align-items: left;
 }
-.contato-infos .default-text-header {
-  padding-top: 30px;
-  text-transform: inherit;
+.call-us .default-text-about {
+  padding: 0;
 }
-.news-email {
-  width: 100%;
-}
-.news-btn {
-  padding-top: 20px;
+.adress .default-text-about {
+  padding: 0 0 0 21px;
 }
 .contato-infos-container {
   display: flex;
   flex-flow: column;
   justify-content: center;
   align-items: left;
-  height: 100%;
-  width: 100%;
   overflow: hidden;
-  word-wrap: break-word;
-  padding: 50px 0;
+  padding: 60px 0;
 }
-.contato-adress-container {
-  display: flex;
-  flex-flow: row;
-  align-items: left;
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-  word-wrap: break-word;
+.contato-infos-container .default-text-header {
+  padding: 0;
 }
-.contato-infos-container .default-text-title {
-  margin-bottom: 0;
+.contato-infos-container .default-text-about {
+  text-transform: lowercase;
+  padding: 17px 0 0 0;
 }
-.contato-infos-container .top-zero,
-.contato-adress-container .top-zero {
-  padding-top: 0;
-  text-transform: inherit;
+.contato-news .default-text-header {
+  padding: 0;
 }
-.contato-adress-container .default-text-header strong {
-  font-family: inherit;
-  font-weight: bolder;
+.contato-news .default-text-about {
+  padding: 16px 0;
 }
-.contato-social-container {
-  height: 100%;
-  width: 100%;
+.news-email input[type='text'] {
+  width: 232px;
+  height: 48px;
+  border: 1px solid #989898;
+  background: #FFFFFF;
+  font-size: 1.4rem;
+  font-family: var(--font-secondary);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  color: #989898;
+  padding: 16px 15px;
+}
+.news-email button {
+  margin: 8px 0 60px 0;
+  width: 138px;
+  height: 48px;
 }
 .social-btns {
   display: flex;
@@ -70,16 +74,5 @@
 .social-btns button {
   background: transparent;
   border: none;
-}
-.news-email input[type='text'] {
-  right: 0;
-  border: 0;
-  padding: 2rem 2rem;
-  border: 1px solid #494944;
-  font-size: 1.4rem;
-  color: #494944;
-  width: 100%;
-}
-.adress {
-  padding-left: 60px;
+  padding: 0 14px 0 0;
 }

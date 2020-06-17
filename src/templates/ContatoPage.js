@@ -15,7 +15,7 @@ export const ContactPageTemplate = () => (
         <p className="default-text-title container">
           vamos falar?
         </p>
-        <p className="default-text-sub container">
+        <p className="default-text-sub-sobre container">
           Liga pra gente, manda um email,
           vem conhecer a agência.
           Estamos esperando seu contato.
@@ -25,43 +25,51 @@ export const ContactPageTemplate = () => (
     <div className="contato-infos container">
       <div className="contato-adress-container">
         <div className="call-us">
-          <p className="default-text-header">
+          <p className="default-text-about">
             <strong>Call us on</strong>
           </p>
-          <p className="default-text-header top-zero">
+          <p className="default-text-about">
+            <br/>
             +55 48 3364 5570
             <br/>
             go@ffwd.rocks
           </p>
         </div>
         <div className="adress">
-          <p className="default-text-header">
+          <p className="default-text-about">
             <strong>Adress</strong>
           </p>
-          <p className="default-text-header top-zero">
+          <p className="default-text-about">
+            <br/>
             Rua Niberto Haase, 100 - Sala 301
             <br/>
-            Santa Mônica,
-            <br/>
-            Florianópolis, SC
+            Santa Mônica, Florianópolis, SC
             <br/>
             88035-215
           </p>
         </div>
       </div>
       <div className="contato-infos-container">
-        <p className="default-text-header">01.</p>
-        <h2>contato para novos negócios:</h2>
-        <p className="default-text-header">go@ffwd.com.br</p>
-      </div>
-      <div className="contato-infos-container">
         <p className="default-text-header">
-          02.
+          01
         </p>
         <h2>
-          assine nossa news
+          contato para novos negócios:
         </h2>
-        <p className="default-text-header top-zero">
+        <p className="default-text-about">
+          go@ffwd.com.br
+        </p>
+      </div>
+      <div className="contato-news">
+        <p className="default-text-header">
+          02
+        </p>
+        <h2>
+          assine 
+          <br/>
+          nossa news
+        </h2>
+        <p className="default-text-about">
           *sem spam, prometemos =]
         </p>
         <section className="news-email">
@@ -69,37 +77,37 @@ export const ContactPageTemplate = () => (
             type="text" 
             placeholder="E-mail"
           />
-          <div className="default-btn news-btn">
+          <div className="default-btn">
             <button>
               cadastre-se
             </button>
           </div>
         </section>
       </div>
-    </div>
-    <div className="contato-social-container">
-      <section className="social-btns container">
-          <button>
-            <a href="https://wa.me/5511933430190?text=Olá">
-              <img src="/images/ico-whats.png" alt="whats"/>
-            </a>
-          </button>
-          <button>
-            <a href="https://wa.me/5511933430190?text=Olá">
-              <img src="/images/ico-insta.png" alt="insta"/>
-            </a>
-          </button>
-          <button>
-            <a href="https://wa.me/5511933430190?text=Olá">
-              <img src="/images/ico-face.png" alt="face"/>
-            </a>
-          </button>
-          <button>
-            <a href="https://wa.me/5511933430190?text=Olá">
-              <img src="/images/ico-mail.png" alt="mail"/>
-            </a>
-          </button>
-      </section>
+      <div className="contato-social-container">
+        <section className="social-btns container">
+            <button>
+              <a href="https://wa.me/5511933430190?text=Olá">
+                <img src="/images/ico-face.png" alt="face"/>
+              </a>
+            </button>
+            <button>
+              <a href="https://wa.me/5511933430190?text=Olá">
+                <img src="/images/ico-insta.png" alt="insta"/>
+              </a>
+            </button>
+            <button>
+              <a href="https://wa.me/5511933430190?text=Olá">
+                <img src="/images/ico-whats.png" alt="whats"/>
+              </a>
+            </button>
+            <button>
+              <a href="https://wa.me/5511933430190?text=Olá">
+                <img src="/images/ico-mail.png" alt="mail"/>
+              </a>
+            </button>
+        </section>
+      </div>
     </div>
   </main>
 )

@@ -1,12 +1,10 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import { Location } from '@reach/router'
-
 import HomeCarousel from '../components/HomeCarousel'
 import Layout from '../components/Layout'
 import './HomePage.css'
 
-// Export Template for use in CMS preview
 export const HomePageTemplate = ({
   cases = []
 }) => (

@@ -21,7 +21,7 @@ export const VagaPostTemplate = ({
         <div className="vaga-single">
           <div className="vaga-hero">
             <div className="container">
-              <div className="anchor-back">
+              <div className="anchor-posts">
                 <Link className="VagaPost--BackButton" to="/pessoas/">
                   back ←
                 </Link>

@@ -1,13 +1,13 @@
 import React from 'react'
-
 import PostCard from '../components/PostCard'
 import './PostSection.css'
+import arrowUp from '../../static/images/arrow-up.png'
 
 class PostSection extends React.Component {
   static defaultProps = {
     posts: [],
     title: '',
-    limit: 12,
+    limit: 100,
     showLoadMore: true,
     loadMoreTitle: 'Mais',
     perPageLimit: 12
@@ -31,7 +31,7 @@ class PostSection extends React.Component {
       <div className="PostSection">
         {title && <p className="PostSection--Title">{title}</p>}
         {!!visiblePosts.length && (
-          <div className="PostSection--Grid">
+          <div className="post-section-grid">
             {visiblePosts.map((post, index) => (
               <PostCard key={post.title + index} {...post} />
             ))}
@@ -46,11 +46,9 @@ class PostSection extends React.Component {
             </div>
           </div>
         )}
-        <div className="anchor-up">
+        <div className="anchor-up container">
           <a href="#blog-hero">
-            ↑
-            <br/>
-            subir
+            <img src={arrowUp} alt="arrowUp" />  topo
           </a>
         </div>
       </div>
