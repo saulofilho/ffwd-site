@@ -1,123 +1,238 @@
-.pessoas-car {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
-.pessoas-car-vert-we-are,
-.cultura-car-vert-our-culture,
-.vagas-car-vert {
-  height: 100vh;
+.as-pessoas,
+.cultura,
+.nossas-vagas {
   width: 100%;
   background: #fff;
 }
 .owner {
-  height: 100vh;
+  min-height: 432px;
+  height: 100%;
   width: 100%;
-  background-image: url(/images/pessoas-1.png);
+  background-image: url(/images/fernando.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-.pessoas-car-vert-one {
-  background: #fff;
-  height: 100vh;
-  width: 100%;
-}
-.owner-text {
+.owner-name {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 60%;
+  flex-flow: column;
+  align-items: flex-end;
 }
-.pessoas-car-vert-two {
-  background: #fff;
-  height: 100vh;
-  width: 100%;
+.owner-name p:nth-child(1) {
+  padding: 24px 24px 8px;
+  font-style: normal;
+  font-family: var(--font-secondary);
+  font-weight: bolder;
+  font-size: 10px;
+  line-height: 16px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
-.pessoas-car-vert-two .default-text-sub {
+.owner-name p:nth-child(2) {
+  font-style: normal;
+  font-family: var(--font-secondary);
   font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.04em;
+  text-transform: none;
+}
+.the-people-behind {
+  background: #fff;
+
+}
+.the-people-behind .default-text-title {
+  padding: 16px 60px 60px 24px;
+}
+.owner-text .default-text-about {
+  padding: 60px 24px;
+}
+.todos-que-entram {
+  background: #fff;
+  height: 266px;
+  width: 100%;
 }
 .the-team {
   background: #000;
-  height: 40%;
-  width: 100%;
+  height: 100%;
 }
 .the-team .default-text-title {
-  padding: 50px 0;
+  color: #fff;
+  padding: 56px 24px 0;
 }
-.the-team .defaul-text-sub {
-  padding-bottom: 50px;
+.the-team .default-text-about {
+  color: #fff;
+  padding: 13px 24px 56px;
 }
-.team {
-  height: 100vh;
+.team-photo {
   width: 100%;
+  height: 370px;
   background-image: url(/images/team.png);
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
 }
-.pessoas-car-vert-three {
-  height: 100vh;
-  width: 100%;
-}
-.team-wrapper {
-  height: 60%;
-  width: 100%;
-}
 .the-heads {
   background: #fff;
-  height: 40%;
   width: 100%;
+  height: 100%;
+}
+.the-heads .default-text-title {
+  padding: 60px 24px 24px; 
+}
+.the-heads .default-text-about {
+  padding: 0 24px 60px; 
+}
+.wrapper-photos-heads {
+  height: 100%;
 }
 .man {
-  height: 50%;
   width: 100%;
+  height: 50%;
   background-image: url(/images/man.png);
-  background-position: center;
+  background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .woman {
-  height: 50%;
   width: 100%;
+  height: 50%;
   background-image: url(/images/woman.png);
-  background-position: center;
+  background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
 }
-.pessoas-car-vert-one .default-text-title {
+.the-people-behind .default-text-title {
   padding-bottom: 40px;
 }
-.cultura-car-vert-one {
-  height: 100vh;
-  width: 100%;
-  background-image: url(/images/mandamentos_01.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.cultura .default-text-sub {
+  padding: 16px 48px 0 24px;
 }
-.pessoas-car-vert-servicos-two {
-  height: 100vh;
-  width: 100%;
+.wrapper-cultura-imgs {
   background: #000;
+  position: relative;
 }
-.pessoas-car-vert-servicos-three {
-  height: 100vh;
-  width: 100%;
-  background-image: url(/images/servicos-two.png);
+.wrapper-cultura-imgs .default-text-header {
+  color: #fff;
+  padding: 60px 24px 16px;
+}
+.wrapper-cultura-imgs h3 {
+  color: #fff;
+  padding: 0 24px 24px;
+}
+.wrapper-cultura-imgs .default-text-about {
+  color: #fff;
+  padding: 0 24px;
+}
+.wrapper-img {
+  padding-top: 5%;
+}
+.img-1-10 {
+  height: 312px;
+  width: 150px;
+  background-image: url(/images/1-10.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  padding-bottom: 40px;
 }
-.pessoas-car-vert-servicos .default-text-header:nth-of-type(1) {
-  padding-bottom: 50px;
+.img-2-10 {
+  height: 312px;
+  width: 150px;
+  background-image: url(/images/2-10.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 40px;
+}
+.img-3-10 {
+  height: 312px;
+  width: 100%;
+  background-image: url(/images/3-10.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 40px;
+}
+.img-4-10 {
+  height: 312px;
+  width: 100%;
+  background-image: url(/images/4-10-mob.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 40px;
+}
+.img-5-10 {
+  height: 320px;
+  width: 100%;
+  background-image: url(/images/5-10.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 40px;
+}
+.img-6-10 {
+  height: 312px;
+  width: 250px;
+  background-image: url(/images/6-10.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 40px;
+}
+.img-7-10 {
+  height: 312px;
+  width: 250px;
+  background-image: url(/images/7-10.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 40px;
+}
+.img-8-10 {
+  height: 312px;
+  width: 100%;
+  background-image: url(/images/8-10.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 40px;
+}
+.img-9-10 {
+  height: 312px;
+  width: 210px;
+  background-image: url(/images/9-10.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 40px;
+}
+.img-10-10 {
+  height: 220px;
+  width: 100%;
+  background-image: url(/images/10-10.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 40px;
 }
 .vagas-index {
-  width: 100%;
-  height: 100vh;
   background: #000;
+  height: auto !important;
 }
-.pessoas-car-img {
-  padding-top: 50px;
+.vagas-index .default-text-header {
+  color: #fff;
+  padding: 60px 24px 16px;
+} 
+.vagas-index .default-text-title {
+  color: #fff;
+  padding: 0 24px 24px;
+} 
+.vagas-index .default-text-about {
+  color: #fff;
+  padding: 0 24px 24px;
+} 
+.apply {
+  padding: 0 24px;
 }

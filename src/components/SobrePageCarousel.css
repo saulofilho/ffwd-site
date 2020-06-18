@@ -175,7 +175,7 @@
 .servicos-texts p {
   font-family: var(--font-secondary);
   font-style: normal;
-  font-weight: 600;
+  font-weight: bolder;
   font-size: 10px;
   line-height: 16px;
   letter-spacing: 0.04em;

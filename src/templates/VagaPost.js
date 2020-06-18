@@ -4,6 +4,7 @@ import { Link, graphql } from 'gatsby'
 import Content from '../components/Content'
 import Layout from '../components/Layout'
 import './VagaPost.css'
+import arrowLeftWht from '../../static/images/arrow-left-wht.png'
 
 export const VagaPostTemplate = ({
   title,
@@ -14,39 +15,45 @@ export const VagaPostTemplate = ({
 }) => (
     <main>
       <article
-        className="home-vaga"
         itemScope
         itemType="http://schema.org/BlogPosting"
       >
-        <div className="vaga-single">
           <div className="vaga-hero">
-            <div className="container">
               <div className="anchor-posts">
-                <Link className="VagaPost--BackButton" to="/pessoas/">
-                  back ←
+                <Link to="/pessoas/">
+                  <img src={arrowLeftWht} alt="arrowLeftWht" />
+                  back
                 </Link>
               </div>
-              <p className="default-text-header ">{header}</p>
+              <p className="default-text-header">
+                {header}
+              </p>
               <p className="default-text-title">
                 {title}
               </p>
-              <p className="default-text-sub">{about}</p>
-            </div>
+              <p className="default-text-about">
+                {about}
+              </p>
           </div>
           <div className="container vaga-text">
-            <p className="default-text-sub vaga-up">Overview</p>
-            <div className="default-text-sub">
+            <p className="default-text-sub vaga-up">
+              Overview
+            </p>
+            <div className="default-text-about">
               <Content source={overview} />
             </div>
-            <p className="default-text-sub vaga-up">What We’d Like To See</p>
-            <div className="default-text-sub">
+            <p className="default-text-sub">
+              What We’d Like To See
+            </p>
+            <div className="default-text-about">
               <Content source={LikeToSee} />
             </div>
             <div className="default-btn apply-btn">
-              <button>Apply.</button>
+              <button>
+                Apply
+              </button>
             </div>
           </div>
-        </div>
       </article>
     </main>
   )

@@ -75,13 +75,6 @@ h3 {
   line-height: 30px;
   text-transform: uppercase;
 }
-h4 {
-  font-family: var(--font-secondary);
-  font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 20px;
-}
 .default-text-header {
   font-family: var(--font-secondary);
   font-style: normal;
@@ -100,7 +93,7 @@ h4 {
   font-size: 64px;
   line-height: 70px;
   text-transform: uppercase;
-  padding: 16px 100px 0 24px;
+  padding: 16px 60px 0 24px;
   width: 100%;
 }
 .default-text-about {
@@ -111,6 +104,14 @@ h4 {
   line-height: 16px;
   padding: 24px 90px 0 24px;
   width: 100%;
+}
+.default-text-sub {
+  font-family: var(--font-secondary);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 16px 0 0 24px;
 }
 pre {
   background: var(--lightGrey);

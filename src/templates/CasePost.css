@@ -77,7 +77,7 @@
 .case-content {
   margin: 60px 24px;
 }
-.case-content h4 {
+.case-content .default-text-sub {
   margin: 24px auto;
 }
 .case-content iframe {

@@ -13,7 +13,7 @@ export const SinglePostTemplate = ({
   date,
   nextPostURL,
 }) => (
-    <main className="BlogPostPage">
+    <main>
       <article
         className="home-post"
         itemScope
@@ -29,9 +29,9 @@ export const SinglePostTemplate = ({
           <p className="default-text-header">
             {date}
           </p>
-          <h4 itemProp="title">
+          <p className="default-text-sub" itemProp="title">
             {PostTitle}
-          </h4>
+          </p>
           <div className="post-img">
             <img src={featuredImage} alt="blog" />
           </div>

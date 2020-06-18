@@ -39,6 +39,7 @@
   justify-content: center;
   animation: nav-links 0.2s ease;
   background: rgb(155, 60, 60);
+  height: 100%;
 }
 .Nav--Container {
   display: flex;

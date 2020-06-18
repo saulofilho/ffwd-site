@@ -1,34 +1,34 @@
 ---
 template: VagaPost
-header: "02."
-title: design directorx
+header: "01."
+title: design director
 about: Design Directors are the driving force keeping the creative side of Huge
   at the top of its game. They make sure no talent goes to waste and the work
-  stays sharp and relevant.x
+  stays sharp and relevant.
 overview: >-
   Design Directors are the driving force keeping the creative side of Huge at
   the top of its game. They make sure no talent goes to waste and the work stays
   sharp and relevant. Design Directors develop original design concepts, global
   marketing campaigns, and digital media. You're able to output your best work
   while overseeing multiple projects from creativity and execution, to directly
-  managing a large team of creatives.x
+  managing a large team of creatives.
 
-  Huge's Design Directors are responsible for managing client relationships related to all things creative, including pitches, and proposals. We want a Director who's craft is high and likes getting her/his hands dirty when needed: you lead by example and you can show how it's done. You'll lead one of Latin America's best design teams, and you'll be the counterpart for Medellin's Design Director.x
+  Huge's Design Directors are responsible for managing client relationships related to all things creative, including pitches, and proposals. We want a Director who's craft is high and likes getting her/his hands dirty when needed: you lead by example and you can show how it's done. You'll lead one of Latin America's best design teams, and you'll be the counterpart for Medellin's Design Director.
 LikeToSee: >-
   +10 years of experience in a creative leadership role (at least 5+ years in a
-  digital agency environment).x
+  digital agency environment).
 
 
-  Robust background with experience in a creative leadership role in a digital agency environment. Recognized expertise in one or more of the following: interactive design, branding, product design, visual design, advertising digital marketing.x
+  Robust background with experience in a creative leadership role in a digital agency environment. Recognized expertise in one or more of the following: interactive design, branding, product design, visual design, advertising digital marketing.
 
 
-  Although you don't need to be an expert in UX you are an expert designing for digital: apps, web apps, sites, e-commerce, and digital ads amongst others.x
+  Although you don't need to be an expert in UX you are an expert designing for digital: apps, web apps, sites, e-commerce, and digital ads amongst others.
 
 
-  Advanced knowledge of the fundamentals of interaction design, product design, user-centered design, brand development, digital marketing, and the creative process, as well as new platforms and technologies.x
+  Advanced knowledge of the fundamentals of interaction design, product design, user-centered design, brand development, digital marketing, and the creative process, as well as new platforms and technologies.
 
 
-  Ability to provide clear creative direction as well as timely and helpful feedback to improve creative processes that keep work on budget and schedule.x
+  Ability to provide clear creative direction as well as timely and helpful feedback to improve creative processes that keep work on budget and schedule.
 
 
   Bold leadership skills are essential for this role. We need someone confident in everything from team building and mentoring, to guiding large groups of creative talent.
