@@ -1,13 +1,13 @@
 ---
 template: CasePost
 date: 2020-06-16T13:14:46.866Z
+ClientTitle: 02. MALWEE
 title: MALWEE face
 HomeDescription: Um teste registrava a porcentagem de semelhança entre mães e
   filhos para ser compartilhado no Facebook
 HomeImage: ../../images/base_bg-2-.png
 ProjetosTitle: dias das mães tech
 ProjetosDescription: Reconhecimento facial para gerar engajamento.
-ClientTitle: 02. MALWEE
 CaseTitle: sou parte de você
 CaseAbout: "Cara de um, focinho do outro: não dá pra negar! Toda mãe adora saber
   que o filho carrega um pouquinho de si, nem que seja na cor dos cabelos ou no
@@ -46,24 +46,24 @@ status: Published
 
 #### VIEWS VIRAIS DA CAMPANHA*
 
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\__
+.
 
 # 60 MI
 
 #### IMPRESSÕES TOTAIS
 
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\__
+.
 
 # +27 MI
 
 #### VIEWS TOTAIS
 
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\__
+.
 
 # +1 MI
 
 #### MIDÍA ESPONTÂNEA*
 
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\__
+.
 
 \*Whatsapp não contabilizado
