@@ -10,7 +10,7 @@ ProjetosTitle: enfim lovers
 ProjetosDescription: Mais de 100k leads gerados
 CaseTitle: ENFIM LOVERS
 CaseAbout: >-
-  **A ação de namorados que abalou o cosmos e os corações.** 
+  #### A ação de namorados que abalou o cosmos e os corações. 
 
 
 
