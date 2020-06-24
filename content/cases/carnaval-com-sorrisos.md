@@ -57,3 +57,20 @@ container:
     alt: x
 status: Published
 ---
+## RESULTADOS
+
+# 60%
+
+#### CRESCIMENTO ANUAL
+
+.
+
+# 800 MIL
+
+#### PAGEVIEW DO BLOG / ANO
+
+.
+
+#### DO ZERO A
+
+# 1.1 milhão
