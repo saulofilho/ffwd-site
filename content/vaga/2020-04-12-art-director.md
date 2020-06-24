@@ -1,7 +1,7 @@
 ---
 template: VagaPost
 date: 2020-04-12T21:25:32.495Z
-header: "02."
+header: "02"
 title: REDATORA SENIOR
 about: Web Engineers liaise between cross-functional teams to understand core
   presentation layer requirements and recommend and implement solutions that
