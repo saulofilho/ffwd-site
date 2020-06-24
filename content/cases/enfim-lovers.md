@@ -10,7 +10,9 @@ ProjetosTitle: enfim lovers
 ProjetosDescription: Mais de 100k leads gerados
 CaseTitle: ENFIM LOVERS
 CaseAbout: >-
-  A ação de namorados que abalou o cosmos e os corações. 
+  **A ação de namorados que abalou o cosmos e os corações.** 
+
+
 
 
   O Sol já estava em sucesso desde quando ação Enfim Lovers foi ao ar e aos astros, já que essa ação foi idealizada para engajar ainda mais o público-alvo da marca em seu lifestyle místico, através de um teste online para descobrir a combinação astrológica do participante e o seu amor/crush!
