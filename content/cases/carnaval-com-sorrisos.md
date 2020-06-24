@@ -12,6 +12,8 @@ CaseAbout: >-
   5 anos de uma parceria de sucesso e resultados. 
 
 
+
+
   Fomos escolhidos para participar e criar o planejamento estratégico para a entrada da marca no universo digital. A partir de 2010, passamos por várias "eras de conteúdo" e mantivemos sempre os níveis de crescimento e engajamento dos usuários com a marca.
 container:
   - type: AddImage
