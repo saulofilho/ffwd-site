@@ -24,8 +24,6 @@ LikeToSee: >-
   digital agency environment).
 
 
-
-
   Robust background with experience in a creative leadership role in a digital agency environment. Recognized expertise in one or more of the following: interactive design, branding, product design, visual design, advertising digital marketing.
 
 
