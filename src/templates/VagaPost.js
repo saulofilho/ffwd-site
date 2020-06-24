@@ -19,23 +19,23 @@ export const VagaPostTemplate = ({
         itemType="http://schema.org/BlogPosting"
       >
           <div className="vaga-hero">
-              <div className="anchor-posts">
-                <Link to="/pessoas/">
+              <div className="anchor-posts container">
+                <Link to="/pessoas/" className="">
                   <img src={arrowLeftWht} alt="arrowLeftWht" />
                   back
                 </Link>
               </div>
-              <p className="default-text-header">
+              <p className="default-text-header container">
                 {header}
               </p>
-              <p className="default-text-title">
+              <p className="default-text-title container">
                 {title}
               </p>
-              <p className="default-text-about">
+              <p className="default-text-about container">
                 {about}
               </p>
           </div>
-          <div className="container vaga-text">
+          <div className="vaga-text container">
             <p className="default-text-sub vaga-up">
               Overview
             </p>
@@ -58,7 +58,6 @@ export const VagaPostTemplate = ({
     </main>
   )
 
-// Export Default VagaPost for front-end
 const VagaPost = ({ data: { post, allPosts }, location }) => {
   const thisEdge = allPosts.edges.find(edge => edge.node.id === post.id)
   return (
@@ -100,7 +99,6 @@ export const pageQuery = graphql`
         date(formatString: "MMMM Do, YYYY")
       }
     }
-
     allPosts: allMarkdownRemark(
       filter: { fields: { contentType: { eq: "vaga" } } }
       sort: { order: DESC, fields: [frontmatter___date] }

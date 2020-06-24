@@ -138,6 +138,7 @@ collections:
     fields:
       - { label: Template, name: template, widget: hidden, default: CasePost }
       - { label: Date, name: date, widget: datetime, dateFormat: "DD.MM.YYYY", required: false }
+      - { label: Case Number and Client Title, name: ClientTitle, widget: string, required: false }
       - { label: Home Title, name: title, widget: string, required: false }
       - { label: Home Description, name: HomeDescription, widget: text, required: false }
       - {
@@ -148,9 +149,8 @@ collections:
       }
       - { label: Projetos Page Title, name: ProjetosTitle, widget: string, required: false }
       - { label: Projetos Page Description, name: ProjetosDescription, widget: text, required: false }
-      - { label: Client Title, name: ClientTitle, widget: string, required: false }
       - { label: Case Title, name: CaseTitle, widget: string, required: false }
-      - { label: Case About, name: CaseAbout, widget: text, required: false }
+      - { label: Case About, name: CaseAbout, widget: markdown, required: false }
       - label: 'Case Container'
         name: 'container'
         widget: 'list'
@@ -215,7 +215,7 @@ collections:
 
   - name: 'settings'
     label: 'Settings'
-    delete: false # Prevent users from deleting documents in this collection
+    delete: false
     editor:
       preview: false
     files:

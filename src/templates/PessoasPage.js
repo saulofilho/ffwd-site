@@ -41,7 +41,7 @@ export const PessoasPageTemplate = ({
   )
 
 // Export Default PessoasPage for front-end
-const PessoasPage = ({ data: { page, vaga, postCategories }, location }) => (
+const PessoasPage = ({ data: { page, vaga }, location }) => (
   <Layout
     location={location}
     meta={page.frontmatter.meta || false}
@@ -52,11 +52,6 @@ const PessoasPage = ({ data: { page, vaga, postCategories }, location }) => (
       {...page.fields}
       {...page.frontmatter}
       vaga={vaga.edges.map(post => ({
-        ...post.node,
-        ...post.node.frontmatter,
-        ...post.node.fields
-      }))}
-      postCategories={postCategories.edges.map(post => ({
         ...post.node,
         ...post.node.frontmatter,
         ...post.node.fields
@@ -87,10 +82,9 @@ export const pageQuery = graphql`
         LikeToSee
       }
     }
-
     vaga: allMarkdownRemark(
       filter: { fields: { contentType: { eq: "vaga" } } }
-      sort: { order: DESC, fields: [frontmatter___date] }
+      sort: { order: ASC, fields: [frontmatter___date] }
     ) {
       edges {
         node {

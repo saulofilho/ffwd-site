@@ -40,9 +40,18 @@ const HomeCarousel = ({
                 }}
               />
               <div className="home-car-texts">
-                <p className="default-text-header container">{project.ClientTitle}</p>
-                <h1 className="default-text-title container">{project.title}</h1>
-                <p className="default-text-about container">{project.HomeDescription}</p>
+                <p className="default-text-header container">
+                  {project.ClientTitle}
+                </p>
+                <h1 className="default-text-title container">
+                  {project.title}
+                </h1>
+                <p className="default-text-about container">
+                  {project.HomeDescription}
+                </p>
+                <p className="default-text-header container">
+                  clique para conferir o case
+                </p>
               </div>
             </div>
           </a>

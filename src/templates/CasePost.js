@@ -33,7 +33,9 @@ export const CasePostTemplate = ({
                 {CaseTitle}
               </p>
               <p className="default-text-about">
-                {CaseAbout}
+                <Content
+                  source={CaseAbout}
+                />
               </p>
               <div className="anchor-down">
                 <a href="#containerCasePost">
@@ -62,7 +64,8 @@ export const CasePostTemplate = ({
               />
             </div>
           </div>
-          <div className="case-post container">
+          <div className="case-post-wrapper">
+            <div className="case-post container">
               {prevPostURL && (
               <div className="prev">
                 <img src={arrowLeft} alt="arrowLeft" />
@@ -85,6 +88,7 @@ export const CasePostTemplate = ({
                   <img src={arrowRight} alt="arrowRight" />
                 </div>
               )}
+            </div>
           </div>
         </div>
       </article>
@@ -138,7 +142,7 @@ export const pageQuery = graphql`
     }
     allPosts: allMarkdownRemark(
       filter: { fields: { contentType: { eq: "cases" } } }
-      sort: { order: DESC, fields: [frontmatter___date] }
+      sort: { order: ASC, fields: [frontmatter___date] }
     ) {
       edges {
         node {

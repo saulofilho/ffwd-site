@@ -50,10 +50,13 @@
   width: 100%;
   height: 100%;
 }
+.case-post-wrapper {
+  background: #000;
+  height: 128px;
+}
 .case-post {
   display: flex;
   align-items: center;
-  background: #000;
   height: 128px;
 }
 .case-post-link {
