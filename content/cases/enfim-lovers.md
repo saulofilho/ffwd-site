@@ -47,3 +47,30 @@ container:
     alt: x
 status: Published
 ---
+## RESULTADOS
+
+# 300 MIL
+
+#### TOTAL DE TESTES*
+
+.
+
+# 62%
+
+#### ENGAGAMENTO COM A PLATAFORMA
+
+.
+
+# +500 MIL
+
+#### LIKES DURANTE A AÇÃO* (instagram)
+
+.
+
+# +175 MIL
+
+#### TOTAL DE USUÁRIOS* (emails)
+
+.
+
+\*Soma dos anos 2017 e 2018
