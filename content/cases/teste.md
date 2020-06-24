@@ -1,13 +1,13 @@
 ---
 template: CasePost
 date: 2020-06-12T13:25:19.723Z
+ClientTitle: 01. grupo malwee
 title: malwee 50 anos
 HomeDescription: Branding, conceito, design, tecnologia, conteúdo e performance.
   Confira como foi este lançamento de sucesso.
 HomeImage: ../../images/base_bg-1-.png
 ProjetosTitle: malwee 50 anos
 ProjetosDescription: Ação que viralizou com mais de 60 milhões de visualizações
-ClientTitle: 01. grupo malwee
 CaseTitle: malwee 50 anos
 CaseAbout: "Todos são capazes de fazer o bem, e cada atitude, por menor que
   seja, nos aproxima de um mundo melhor. O Grupo Malwee marcou seus 50 anos com
@@ -69,24 +69,24 @@ status: Published
 
 #### VIEWS VIRAIS DA CAMPANHA*
 
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\__
+.
 
 # 60 MI
 
 #### IMPRESSÕES TOTAIS
 
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\__
+.
 
 # +27 MI
 
 #### VIEWS TOTAIS
 
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\__
+.
 
 # +1 MI
 
 #### MIDÍA ESPONTÂNEA*
 
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\__
+.
 
 \*Whatsapp não contabilizado
