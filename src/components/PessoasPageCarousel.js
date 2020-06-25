@@ -16,7 +16,7 @@ const PessoasPageCarousel = ({
       watchState: true,
     },
     pagination: {
-      el: '.swiper-pagination .swiper-pagination-pessoas',
+      el: '.swiper-pagination.swiper-pagination-pessoas',
       clickable: true
     }
   };
@@ -33,7 +33,8 @@ const PessoasPageCarousel = ({
       hide: true,
       clickable: true
     },
-    mousewheel: true
+    mousewheel: true,
+    freeMode: true,
   }
 
   return (
@@ -67,6 +68,22 @@ const PessoasPageCarousel = ({
                 <br />
                 our work.
               </p>
+              <div className="owner-text-desk">
+                <p className="default-text-about container">
+                  Todos que entram aqui tem em comum a vontade de fazer
+                  diferente. Somos inquietos e nunca paramos de buscar soluções
+                  para os problemas: dos nossos clientes, do dia-a-dia, da sociedade.
+                  Nossa grande aspiração é mudar a relação entre marcas e pessoas,
+                  gerar experiências incríveis e transmitir a verdade das marcas.
+                  Para isso, contamos com um time completo, com pessoas que
+                  acreditam que a união entre estratégia, comunicação,
+                  tecnologia e criatividade são a chave para entregar melhores
+                  serviços e experiências.
+                    <br />
+                  <br />
+                    Aqui, abraçamos as suas causas e seus sonhos.
+                  </p>
+              </div>
               <div className="owner">
                 <div className="owner-name">
                   <p>

@@ -5,8 +5,8 @@ import Content from '../components/Content'
 import Layout from '../components/Layout'
 import './CasePost.css'
 import arrowDown from '../../static/images/ico-seta-down.png'
-import arrowLeft from '../../static/images/arrow-left.png'
-import arrowRight from '../../static/images/arrow-right.png'
+import arrowLeft from '../../static/images/arrow-left-wht.png'
+import arrowRight from '../../static/images/arrow-right-wht.png'
 
 export const CasePostTemplate = ({
   container = [],

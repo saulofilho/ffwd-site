@@ -26,8 +26,12 @@ export const ProjetosIndexTemplate = ({
         return (
           <main>
             <div className="projeto">
-                <p className="default-text-header container">projetos</p>
-                <p className="default-text-title container">nossos cases</p>
+                <p className="default-text-header container">
+                  projetos
+                </p>
+                <p className="default-text-title container">
+                  nossos cases
+                </p>
                 <p className="default-text-about container">
                   Somos uma agência mais que digital, com foco em experiências
                   e resultados.
@@ -50,7 +54,12 @@ export const ProjetosIndexTemplate = ({
               </section>
             )}
             <div className="nossos-clientes container">
-              <h2>nossos clientes</h2>
+              <h2 className="display-none-desk">nossos clientes</h2>
+              <h2 className="display-none-mob">nossas marcas</h2>
+              <p className="default-text-about display-none-mob">
+                Somos uma agência mais que digital, com foco em experiências e 
+                resultados. Nesses mais de 10 anos de marketing.
+              </p>
               <div className="nossos-clientes-logos container">
                 <img src={cardClient} alt="" />
                 <img src={cardClient} alt="" />

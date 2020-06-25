@@ -15,7 +15,7 @@ const SobrePageCarousel = ({
       watchState: true,
     },
     pagination: {
-      el: '.swiper-pagination .swiper-pagination-sobre',
+      el: '.swiper-pagination.swiper-pagination-sobre',
       clickable: true
     }
   };

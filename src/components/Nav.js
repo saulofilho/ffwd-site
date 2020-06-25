@@ -61,89 +61,122 @@ export const Navigation = (props) => {
 
   return (
     <nav
-      className={
-        classnames
-          ("navbar",
-            {
-              "navbar--hidden": !visible
-            },
-            `Nav ${active ? 'nav-active' : ''}`
-          )
-      }
+      className={`${active ? 'nav-active' : ''}`}
     >
-      <div className="nav-container container">
-        <Link to="/" onClick={() => handleLinkClick()}>
-          <Logo {...props} />
-        </Link>
-        {
-          props.location.pathname === '/' ||
-            props.location.pathname.split('/')[1] === 'contato' ||
-            props.location.pathname.split('/')[1] === 'vaga'
-            ?
-            <button
-              className="Button-blank nav-btn"
-              onClick={() => handleMenuToggle()}
-            >
-              {active ?
-                <X color='#000' />
-                :
-                <img src={`/images/menu-ham-white.png`} alt="logo-black" />}
-            </button>
-            :
-            <button
-              className="Button-blank nav-btn"
-              onClick={() => handleMenuToggle()}
-            >
-              {active ?
-                <X color='#000' />
-                :
-                <img src={`/images/menu-ham-black.png`} alt="logo-black" />}
-            </button>
-        }
+      <div className={classnames("navbar", { "navbar-hidden": !visible })}>
+        <div className="nav-wrapper container">
+          <Link to="/" onClick={() => handleLinkClick()}>
+            <Logo {...props} />
+          </Link>
+          {
+            props.location.pathname === '/' ||
+              props.location.pathname.split('/')[1] === 'contato' ||
+              props.location.pathname.split('/')[1] === 'vaga'
+              ?
+              <button
+                className="Button-blank nav-btn"
+                onClick={() => handleMenuToggle()}
+              >
+                {active ?
+                  <X color='#000' />
+                  :
+                  <img src={`/images/menu-ham-white.png`} alt="logo-black" />}
+              </button>
+              :
+              <button
+                className="Button-blank nav-btn"
+                onClick={() => handleMenuToggle()}
+              >
+                {active ?
+                  <X color='#000' />
+                  :
+                  <img src={`/images/menu-ham-black.png`} alt="logo-black" />}
+              </button>
+          }
+        </div>
       </div>
       <div className="nav-links">
-        <NavLink to="/sobre/">sobre</NavLink>
-        <NavLink to="/projetos/">projetos</NavLink>
-        <NavLink to="/pessoas/">pessoas</NavLink>
-        <NavLink to="/blog/">blog</NavLink>
-        <div
-          className={`Nav--Group ${
-            activeSubNav === 'posts' ? 'active' : ''
-            }`}
-        >
-          <span
-            className={`NavLink Nav--GroupParent ${
-              props.location.pathname.includes('posts') ||
-                props.location.pathname.includes('blog') ||
-                props.location.pathname.includes('post-categories')
-                ? 'active'
-                : ''
-              }`}
-            onClick={() => toggleSubNav('posts')}
+        <div className="nav-links-nav">
+          <img src={'/images/logo-black.png'} />
+          <button
+            className="Button-blank nav-btn"
+            onClick={() => handleMenuToggle()}
           >
-            Blog
-                <div className="Nav--GroupLinks">
-              <NavLink to="/blog/" className="Nav--GroupLink">
-                All Posts
-                  </NavLink>
-              {subNav.posts.map((link, index) => (
-                <NavLink
-                  to={link.slug}
-                  key={'posts-subnav-link-' + index}
-                  className="Nav--GroupLink"
-                >
-                  {link.title}
-                </NavLink>
-              ))}
-            </div>
-          </span>
+            <X color='#000' />
+          </button>
         </div>
-        <NavLink to="/contato/">contato</NavLink>
-        <button
-          className="Button-blank nav-btn"
-          onClick={() => handleMenuToggle()}
-        >
-        </button>
+        <div className="nav-links-menu-hamburger">
+          <NavLink to="/sobre/">sobre</NavLink>
+          <NavLink to="/projetos/">projetos</NavLink>
+          <NavLink to="/pessoas/">pessoas</NavLink>
+          <NavLink to="/blog/">blog</NavLink>
+          <div
+            className={`Nav--Group ${
+              activeSubNav === 'posts' ? 'active' : ''
+              }`}
+          >
+            <span
+              className={`NavLink Nav--GroupParent ${
+                props.location.pathname.includes('posts') ||
+                  props.location.pathname.includes('blog') ||
+                  props.location.pathname.includes('post-categories')
+                  ? 'active'
+                  : ''
+                }`}
+              onClick={() => toggleSubNav('posts')}
+            >
+              Pessoas
+              <div className="Nav--GroupLinks">
+                <NavLink to="/blog/" className="Nav--GroupLink">
+                  All Posts
+                </NavLink>
+                {subNav.posts.map((link, index) => (
+                  <NavLink
+                    to={link.slug}
+                    key={'posts-subnav-link-' + index}
+                    className="Nav--GroupLink"
+                  >
+                    {link.title}
+                  </NavLink>
+                ))}
+              </div>
+            </span>
+          </div>
+          <NavLink to="/contato/">contato</NavLink>
+          <div className="contact-menu-hamburger display-none-desk">
+            <div className="contato-address-container">
+              <div className="call-us">
+                <p className="default-text-about">
+                  <strong>Call us on</strong>
+                </p>
+                <p className="default-text-about">
+                  <br />
+              +55 48 3364 5570
+              <br />
+              go@ffwd.rocks
+            </p>
+              </div>
+              <div className="address">
+                <p className="default-text-about">
+                  <strong>address</strong>
+                </p>
+                <p className="default-text-about">
+                  <br />
+              Rua Niberto Haase, 100 - Sala 301
+              <br />
+              Santa Mônica, Florianópolis, SC
+              <br />
+              88035-215
+            </p>
+              </div>
+            </div>
+          </div>
+          <button
+            className="Button-blank nav-btn"
+            onClick={() => handleMenuToggle()}
+          >
+          </button>
+        </div>
       </div>
     </nav>
   )

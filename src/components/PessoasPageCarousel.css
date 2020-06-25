@@ -39,7 +39,6 @@
 }
 .the-people-behind {
   background: #fff;
-
 }
 .the-people-behind .default-text-title {
   padding: 16px 60px 60px 24px;
@@ -101,9 +100,6 @@
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
-}
-.the-people-behind .default-text-title {
-  padding-bottom: 40px;
 }
 .cultura .default-text-sub {
   padding: 16px 48px 0 24px;
@@ -234,4 +230,45 @@
 } 
 .apply {
   padding: 0 24px;
+}
+
+/* desktop */
+
+.owner-text-desk {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .the-people-behind {
+    display: flex;
+    flex-flow: row;
+  }
+  .the-people-behind .default-text-title {
+    padding: 80px 0 24px 129px;
+  }
+  .owner-text .default-text-about {
+    display: none;
+  }
+  .owner-text-desk {
+    display: flex;
+  }
+}
+
+
+
+
+.swiper-pagination-pessoas {
+  border: 1px solid #000;
+  background: #000;
+  border-radius: 40px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  min-width: 152px;
+  height: 24px;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

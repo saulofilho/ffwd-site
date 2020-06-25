@@ -11,7 +11,7 @@ const HeroSliderConfigs = {
     watchState: true,
   },
   pagination: {
-    el: '.swiper-pagination',
+    el: '.swiper-pagination.swiper-pagination-home',
     clickable: true,
   }
 };
@@ -27,7 +27,6 @@ const HomeCarousel = ({
     <Swiper {...HeroSliderConfigs} getSwiper={setParallaxSwiper}>
       {filteredPosts.map(project => (
         <div className="home-slide" key={project.slug}>
-          <a href={project.slug}>
             <div
               className="home-slide-image"
               data-swiper-parallax={parallaxAmount}
@@ -49,12 +48,15 @@ const HomeCarousel = ({
                 <p className="default-text-about container">
                   {project.HomeDescription}
                 </p>
-                <p className="default-text-header container">
-                  clique para conferir o case
-                </p>
+                <div className="link-slug">
+                  <a href={project.slug}>
+                    <p className="default-text-header container">
+                      clique para conferir o case
+                    </p>
+                  </a>
+                </div>
               </div>
             </div>
-          </a>
         </div>
       ))}
     </Swiper>

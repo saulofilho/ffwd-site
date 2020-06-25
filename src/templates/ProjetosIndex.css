@@ -7,7 +7,8 @@
   width: 100%;
 }
 .projeto .anchor-down {
-  margin: 84px auto 68px 30px;
+  width: 100%;
+  padding: 84px 0 68px 30px;
 }
 .nossos-clientes {
   padding: 60px 24px;
@@ -15,4 +16,32 @@
 .nossos-clientes h2 {
   width: 70%;
   margin-bottom: 34px;
+}
+.nossos-clientes-logos img {
+  margin: 0 auto;
+}
+
+/* desktop */
+
+@media (min-width: 1024px) {
+  .projeto .default-text-title {
+    padding: 16px 680px 0 0;
+  }
+  .projeto .default-text-about {
+    padding: 24px 760px 0 0;
+  }
+  .nossos-clientes-logos {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 40px;
+  }
+  .nossos-clientes .default-text-about {
+    padding: 16px 630px 64px 0;
+  }
+  .nossos-clientes h2 {
+    margin-bottom: 0;
+  }
+  .projeto .anchor-down {
+    padding: 84px 0 68px 0px;
+  }
 }

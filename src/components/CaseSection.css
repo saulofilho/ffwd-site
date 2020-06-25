@@ -1,45 +1,12 @@
-.CaseSection--Grid {
+.cases-wrapper {
   display: flex;
   flex-direction: column;
   height: 100%;
   width: 100%;
 }
-
-
-.CaseSection--Grid > * {
-  width: calc(33.33% - 2rem);
-  margin-bottom: 4rem;
-}
-
-@supports (display: grid) {
-  .CaseSection--Grid {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .CaseSection--Grid > * {
-    width: auto;
-    margin: 0;
-  }
-}
-
-.CaseSection--Title {
-  position: absolute;
-  top: 0;
-  left: 0;
-  color: red;
-}
-
-@media screen and (max-width: 888px) {
-  .CaseSection--Grid > * {
-    display: flex;
-    flex-direction: column;
-  }
-
-  @supports (display: grid) {
-    .CaseSection--Grid {
-      display: flex;
-      flex-direction: column;
-    }
+@media (min-width: 1024px) {
+  .cases-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
   }
 }

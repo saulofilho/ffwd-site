@@ -225,7 +225,6 @@ blockquote {
   align-items: center;
   justify-content: center;
 }
-
 .default-btn button {
   font-family: var(--font-secondary);
   font-style: normal;
@@ -237,4 +236,30 @@ blockquote {
   border: none;
   cursor: pointer;
   text-transform: uppercase;
+}
+.display-none-mob {
+  display: none;
+}
+
+/* desktop */
+
+@media (min-width: 1024px) {
+  .display-none-desk {
+    display: none;
+  }
+  .display-none-mob {
+    display: block;
+  }
+  .default-text-header {
+    padding: 184px 0 0;
+  }
+  .default-text-title {
+    padding: 16px 60px 0 0;
+  }
+  .default-text-about {
+    padding: 24px 90px 0 0;
+  }
+  .default-text-sub {
+    padding: 16px 0 0 0;
+  }
 }

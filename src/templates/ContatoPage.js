@@ -23,7 +23,7 @@ export const ContactPageTemplate = () => (
       </div>
     </div>
     <div className="contato-infos container">
-      <div className="contato-adress-container">
+      <div className="contato-address-container">
         <div className="call-us">
           <p className="default-text-about">
             <strong>Call us on</strong>
@@ -35,9 +35,9 @@ export const ContactPageTemplate = () => (
             go@ffwd.rocks
           </p>
         </div>
-        <div className="adress">
+        <div className="address">
           <p className="default-text-about">
-            <strong>Adress</strong>
+            <strong>address</strong>
           </p>
           <p className="default-text-about">
             <br/>

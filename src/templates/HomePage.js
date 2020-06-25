@@ -17,10 +17,8 @@ export const HomePageTemplate = ({
         )
 
       return (
-        <main className="homePage">
-          <section className="homePage-section">
-            <HomeCarousel filteredPosts={filteredPosts} />
-          </section>
+        <main className="home-page">
+          <HomeCarousel filteredPosts={filteredPosts} />
         </main>
       )
     }}

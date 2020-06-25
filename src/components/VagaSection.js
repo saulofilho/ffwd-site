@@ -31,7 +31,7 @@ class VagaSection extends React.Component {
       <div className="CaseSection">
         {title && <h2 className="CaseSection--Title">{title}</h2>}
         {!!visiblePosts.length && (
-          <div className="CaseSection--Grid">
+          <div className="cases-wrapper">
             {visiblePosts.map((post, index) => (
               <CaseCard key={post.title + index} {...post} />
             ))}

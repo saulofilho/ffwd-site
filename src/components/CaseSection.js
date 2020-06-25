@@ -25,7 +25,7 @@ class CaseSection extends React.Component {
     return (
       <>
         {!!visiblePosts.length && (
-          <div className="CaseSection--Grid">
+          <div className="cases-wrapper">
             {visiblePosts.map((post, index) => (
               <CaseCard key={post.title + index} {...post} />
             ))}
