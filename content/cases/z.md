@@ -6,7 +6,7 @@ title: fórmula individual
 HomeDescription: Para atrair a atenção do público masculino durante o grande
   prêmio de Fórmula 1 do Brasil.
 HomeImage: ../../images/base_bg.png
-HomeImageMob: ../../images/torus-19-.jpg
+HomeImageMob: ../../images/formula-mob.png
 ProjetosTitle: Game 3D
 ProjetosDescription: Ação interativa para gerar engajamento
 CaseTitle: fórmula individual
