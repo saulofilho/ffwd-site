@@ -6,7 +6,7 @@ title: malwee 50 anos
 HomeDescription: Branding, conceito, design, tecnologia, conteúdo e performance.
   Confira como foi este lançamento de sucesso.
 HomeImage: ../../images/base_bg-1-.png
-HomeImageMob: ../../images/torus-19-.jpg
+HomeImageMob: ../../images/malwee-50-mob.png
 ProjetosTitle: malwee 50 anos
 ProjetosDescription: Ação que viralizou com mais de 60 milhões de visualizações
 CaseTitle: malwee 50 anos
