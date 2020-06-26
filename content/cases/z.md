@@ -1,13 +1,14 @@
 ---
 template: CasePost
 date: 2020-06-11T18:57:31.348Z
+ClientTitle: 02.individual
 title: fórmula individual
 HomeDescription: Para atrair a atenção do público masculino durante o grande
   prêmio de Fórmula 1 do Brasil.
 HomeImage: ../../images/base_bg.png
+HomeImageMob: ../../images/torus-19-.jpg
 ProjetosTitle: Game 3D
 ProjetosDescription: Ação interativa para gerar engajamento
-ClientTitle: 02.individual
 CaseTitle: fórmula individual
 CaseAbout: Para atrair a atenção do público masculino durante o grande prêmio de
   Fórmula 1 do Brasil, a F/FWD desenvolveu uma ação que mudou como uma marca de
