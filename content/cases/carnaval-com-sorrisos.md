@@ -22,6 +22,7 @@ container:
   - type: AddImageMob
     alt: m
     image: ../../images/torus-19-.jpg
+    imagemob: ../../images/torus-19-.jpg
   - type: AddText
     text: >-
       ## desafio
@@ -39,6 +40,7 @@ container:
   - type: AddImageMob
     image: ../../images/torus-19-.jpg
     alt: m
+    imagemob: ../../images/torus-19-.jpg
   - type: AddText
     text: >-
       ## proposta
