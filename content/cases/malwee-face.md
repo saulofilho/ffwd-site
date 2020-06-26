@@ -6,7 +6,7 @@ title: MALWEE face
 HomeDescription: Um teste registrava a porcentagem de semelhança entre mães e
   filhos para ser compartilhado no Facebook
 HomeImage: ../../images/base_bg-2-.png
-HomeImageMob: ../../images/torus-19-.jpg
+HomeImageMob: ../../images/face-mob.png
 ProjetosTitle: dias das mães tech
 ProjetosDescription: Reconhecimento facial para gerar engajamento.
 CaseTitle: sou parte de você
