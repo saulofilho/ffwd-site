@@ -6,6 +6,7 @@ title: enfim lovers
 HomeDescription: Como um app e uma ação interativa conquistaram mais de 100 mil
   leads em menos de 30 dias de campanha?
 HomeImage: ../../images/enfim-lovers.png
+HomeImageMob: ../../images/torus-19-.jpg
 ProjetosTitle: enfim lovers
 ProjetosDescription: Mais de 100k leads gerados
 CaseTitle: ENFIM LOVERS
