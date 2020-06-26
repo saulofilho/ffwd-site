@@ -6,6 +6,7 @@ title: d/spot dimas
 HomeDescription: Branding, conceito, design, tecnologia, conteúdo e performance.
   Confira como foi este lançamento de sucesso.
 HomeImage: ../../images/dimas.png
+HomeImageMob: ../../images/torus-19-.jpg
 ProjetosTitle: Lançamento Imobiliário
 ProjetosDescription: Sucesso de vendas em uma campanha digital first
 CaseTitle: dimas d/spot
