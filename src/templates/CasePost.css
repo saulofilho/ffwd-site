@@ -5,7 +5,7 @@
 }
 .case-hero {
   color: #000;
-  height: auto;
+  height: 100vh;
   display: flex;
   flex-flow: column;
   justify-content: center;
@@ -111,4 +111,14 @@
 }
 .prev img {
   padding-right: 16px;
+}
+/* desktop */
+
+@media (min-width: 1024px) {
+  .case-hero .anchor-down {
+    padding: calc(100px - 30px) 0 68px 0;
+  }
+  .case-hero .anchor-down {
+    padding: 180px 0 68px 0;
+  }
 }

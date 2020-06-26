@@ -359,7 +359,7 @@ const PessoasPageCarousel = ({
                 <a href="#vagas-index">
                   <img src={arrowDown} alt="arrow-don" />
                 </a>
-              </div>
+                </div>
             </div>
             {posts.map(img => (
               <div className="vagas-index" id="vagas-index">

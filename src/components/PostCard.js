@@ -30,7 +30,7 @@ const PostCard = ({
               <Image background src={featuredImage} alt={PostTitle} />
             </div>
           )}
-          <div className="line container">
+          <div className="line container display-none-desk">
             <img src={line} alt="line" />
           </div>
         </div>

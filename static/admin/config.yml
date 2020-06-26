@@ -145,7 +145,13 @@ collections:
         label: Home Image,
         name: HomeImage,
         widget: image,
-        required: true,
+        required: false,
+      }
+      - {
+        label: Home Image Mob,
+        name: HomeImageMob,
+        widget: image,
+        required: false,
       }
       - { label: Projetos Page Title, name: ProjetosTitle, widget: string, required: false }
       - { label: Projetos Page Description, name: ProjetosDescription, widget: text, required: false }
@@ -162,6 +168,12 @@ collections:
           fields:
             - { name: image, label: image, widget: image, required: false }
             - { name: alt, label: Alt, widget: string, required: false }
+        - label: 'Add Image Mob'
+          name: 'AddImageMob'
+          widget: image
+          fields:
+            - { name: imagemob, label: image, widget: image, required: false }
+            - { name: altmob, label: Alt, widget: string, required: false }
         - label: 'Add Text'
           name: 'AddText'
           widget: markdown

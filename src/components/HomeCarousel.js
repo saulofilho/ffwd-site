@@ -33,9 +33,15 @@ const HomeCarousel = ({
               data-swiper-parallax-opacity={parallaxOpacity}
             >
               <div 
-                className="home-image"
+                className="home-image display-none-mob"
                 style={{
                   backgroundImage: `url(${project.HomeImage} )`
+                }}
+              />
+              <div 
+                className="home-image display-none-desk"
+                style={{
+                  backgroundImage: `url(${project.HomeImageMob} )`
                 }}
               />
               <div className="home-car-texts">
@@ -49,11 +55,11 @@ const HomeCarousel = ({
                   {project.HomeDescription}
                 </p>
                 <div className="link-slug">
-                  <a href={project.slug}>
                     <p className="default-text-header container">
+                  <a href={project.slug}>
                       clique para conferir o case
-                    </p>
                   </a>
+                    </p>
                 </div>
               </div>
             </div>

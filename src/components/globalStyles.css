@@ -168,28 +168,6 @@ blockquote {
   right: 0;
   bottom: 0;
 }
-
-/* @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-} */
-
-/* @media (max-width: 600px) {
-  .section {
-    width: 100%;
-    padding: 5rem 0;
-  }
-  .section.thick {
-    padding: 7rem 0;
-  }
-  .section.thin {
-    padding: 1.5rem 0;
-  }
-} */
-
-/* Buttons */
-
 .Button {
   background: var(--primary);
   color: white;

@@ -13,3 +13,16 @@
   width: 100%;
   padding: 16px 24px;
 }
+
+/* desktop */
+
+@media (min-width: 1024px) {
+  .post-section-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .post-card-img {
+    width: 451px;
+    height: 311px;
+  }
+}

@@ -6,6 +6,7 @@ import PostSection from '../components/PostSection'
 import PostCategoriesNav from '../components/PostCategoriesNav'
 import Layout from '../components/Layout'
 import BlogSearch from '../components/BlogSearch'
+import arrowDown from '../../static/images/ico-seta-down.png'
 
 /**
  * Filter posts by date. Feature dates will be fitered
@@ -67,14 +68,16 @@ export const BlogIndexTemplate = ({
               <section className="search-blog">
                 {enableSearch && <BlogSearch />}
                 <div className="default-btn search-btn">
-                  <button>search</button>
+                  <button>
+                    search
+                  </button>
                 </div>
               </section>
               <div className="anchor-down">
                 <a href="#posts-section">
-                  ↓
+                  <img src={arrowDown} alt="arrow-don" />
                 </a>
-              </div>
+                </div>
             </div>
 
             {!!posts.length && (

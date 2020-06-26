@@ -75,6 +75,7 @@ export const pageQuery = graphql`
             title
             date
             HomeImage
+            HomeImageMob
             HomeDescription
             ClientTitle
             CaseTitle

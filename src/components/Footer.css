@@ -59,3 +59,35 @@ footer {
   line-height: 16px;
   margin-top: 60px;
 }
+/* desktop */
+
+@media (min-width: 1024px) {
+  .footer-custom {
+    display: flex;
+    flex-direction: column;
+    padding: 60px 0;
+  }
+  .endereco-desk {
+    display: flex;
+    flex-direction: row;
+    padding: 60px 0;
+  }
+  .endereco-desk .phone,
+  .endereco-desk .endereco .escritorio,
+  .endereco-desk .endereco .social,
+  .endereco-desk .all-right {
+    margin-top: 0;
+  }
+  .endereco-desk .endereco .social {
+    margin-left: 0;
+  }
+  .endereco-desk .phone {
+    padding-right: 60px;
+  }
+  .endereco-desk .endereco .escritorio {
+    padding-right: 60px;
+  }
+  .endereco-desk .all-right {
+    margin-left: auto;
+  }
+}

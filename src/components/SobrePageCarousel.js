@@ -2,11 +2,10 @@ import React from 'react';
 import 'swiper/css/swiper.css';
 import Swiper from 'react-id-swiper';
 import './SobrePageCarousel.css';
+import arrowDown from '../../static/images/ico-seta-down.png'
+import arrowUp from '../../static/images/arrow-up-blk.png'
 
-const SobrePageCarousel = ({
-  posts,
-}) => {
-
+const SobrePageCarousel = () => {
   const HorizontalSwiperParams = {
     loop: true,
     grabCursor: false,
@@ -19,11 +18,10 @@ const SobrePageCarousel = ({
       clickable: true
     }
   };
-
   const VerticalSwiperParams = {
     direction: 'vertical',
-    grabCursor: true,
-    freeMode: true,
+    grabCursor: false,
+    freeMode: false,
     hashNavigation: {
       watchState: true,
     },
@@ -32,15 +30,15 @@ const SobrePageCarousel = ({
       hide: true,
       clickable: true
     },
-    mousewheel: true
+    mousewheel: true,
+    freeMode: true,
   }
-
   return (
     <>
       <Swiper {...HorizontalSwiperParams}>
         <div>
           <Swiper {...VerticalSwiperParams}>
-            <div className="mais-que-digital" data-hash="mais-que-digital">
+            <div className="mais-que-digital">
               <p className="default-text-header container">
                 nós somos
               </p>
@@ -56,8 +54,13 @@ const SobrePageCarousel = ({
                   we make great launches
                 </button>
               </div>
+              <div className="anchor-down container display-none-mob">
+                <a href="#experiencias">
+                  <img src={arrowDown} alt="arrowDown" />
+                </a>
+              </div>
             </div>
-            <div className="sobre-car-vert-one">
+            <div className="experiencias" id="experiencias">
                 <p className="default-text-header-sobre container">
                   nós somos
                 </p>
@@ -75,17 +78,25 @@ const SobrePageCarousel = ({
                   </button>
                 </div>
             </div>
-            <div className="sobre-car-vert-two">
-                <p className="default-text-header-sobre container">
-                  quem somos
-                </p>
-                <p className="default-text-title-sobre container">
-                  assista ao nosso manifesto.
-                </p>
-                <div className="img-manifesto">
+            <div className="quem-somos-wrapper">
+              <div className="container quem-somos">
+                <div className="quem-somos-texts">
+                  <p className="default-text-header-sobre container">
+                    quem somos
+                  </p>
+                  <p className="default-text-title-sobre container display-none-desk">
+                    assista ao nosso manifesto.
+                  </p>
+                  <p className="default-text-title-sobre container display-none-mob">
+                    MAIS QUE COMUNICAÇÃO. EXPERIÊNCIAS.
+                  </p>
                 </div>
+                <div className="img-manifesto">
+                  <button></button>
+                </div>
+              </div>
             </div>
-            <div className="sobre-car-vert-three">
+            <div className="nossa-abordagem">
                 <p className="default-text-header-sobre container">
                   nossa abordagem
                 </p>
@@ -106,52 +117,71 @@ const SobrePageCarousel = ({
                     Propomos um novo pensamento, uma nova forma de enxergar
                     oportunidades, de solucionar problemas, de conquistar o mundo.
                 </p>
-                <div className="default-btn container padding-btn">
+                <div className="default-btn container display-none-desk">
                   <button>
                     Nossos Servicos
                   </button>
                 </div>
             </div>
-            <div className="sobre-car-vert-four">
+            <div className="make-great-launches">
                 <p className="default-text-title-sobre container">
-                  we make great launches
+                  we make
+                  <br/> 
+                  great launches
                 </p>
-                <p className="default-text-about-sobre container">
-                  Nossa capacidade interdisciplinar e abordagem digital first
-                  garantem a criação de
-                  experiências que abrangem todos os pontos de contato digitais
-                  e físicos das marcas,
-                  gerando muito mais impacto e valor para os consumidores.
+                <p className="default-text-about-sobre container display-none-desk">
+                  Nossa capacidade interdisciplinar 
+                  <br/>
+                  e abordagem digital first
+                  garantem 
+                  <br/>
+                  a criação de
+                  experiências que abrangem 
+                  <br/>
+                  todos os pontos de contato digitais
+                  e 
+                  <br/>
+                  físicos das marcas,
+                  gerando muito mais 
+                  <br/>
+                  impacto e valor para os consumidores.
                 </p>
-                <p className="nave-text-upper container">
-                  Nós
+                <p className="default-text-about-sobre container display-none-mob">
+                  <strong>
+                    O Digital First provoca a deixar de lado o favoritismo 
+                    <br/>
+                    pelo que é tradicional. 
+                  </strong>
                   <br/>
-                  fazemos 
                   <br/>
-                  grandes 
+                  É estar conectado com o mundo, com as mudanças. É colocar 
                   <br/>
-                  lançamentos
+                  os consumidores no centro das decisões. Propomos um novo 
+                  <br/>
+                  pensamento, uma nova forma de enxergar oportunidades, 
+                  <br/>
+                  de solucionar problemas, de conquistar o mundo.
                 </p>
-                <div className="default-btn">
+                <div className="default-btn container">
                   <button>
                     Great Launches
                   </button>
                 </div>
-                {/* <div className="default-text-header btn-subir container">
-                  <a href="#slide1">
-                    <p>
-                      ↑
-                      <br />
-                      subir
-                    </p>
-                  </a>
-                </div> */}
+                <div className="container">
+                  <div className="btn-up display-none-mob">
+                    <a href="#mais-que-digital">
+                      <h4>
+                      <img src={arrowUp} alt="arrowUp" /> subir
+                      </h4>
+                    </a>
+                  </div>
+                </div>
             </div>
           </Swiper>
         </div>
         <div>
           <Swiper {...VerticalSwiperParams}>
-            <div className="servicos" data-hash="servicos">
+            <div className="servicos">
                 <p className="default-text-header container">
                   serviços
                 </p>
@@ -173,7 +203,7 @@ const SobrePageCarousel = ({
                   <br/>
                   A partir dos pilares:
                 </p>
-                <div className="servicos-texts">
+                <div className="servicos-texts container">
                   <p>
                     ESTRATÉGIA
                   </p>
@@ -184,68 +214,75 @@ const SobrePageCarousel = ({
                     EXPERIÊNCIA
                   </p>
                 </div>
+                <div className="anchor-down container display-none-mob">
+                <a href="#escala">
+                  <img src={arrowDown} alt="arrowDown" />
+                </a>
+              </div>
             </div>
-            <div className="sobre-car-vert-servicos-one"></div>
-            <div className="sobre-car-vert-servicos-two">
-                <div className="pilares-div container">
-                  <h2>
-                    pilares
-                  </h2>
-                </div>
-                <div className="pilares-row container">
-                  <p className="pilares-title">
-                    Estratégia
-                  </p>
-                  <p className="pilares-text">
-                    Campanhas/Launches
-                    <br />
-                    Consultoria de Presença Digital
-                    <br />
-                    Branding
-                    <br />
-                    Inovação Aberta
-                    <br />
-                    Planejamento Estratégico
-                  </p>
-                </div>
-                <div className="pilares-row container">
-                  <p className="pilares-title">
-                    Marketing 
-                  </p>
-                  <p className="pilares-text">
-                  Produção Multimidia
-                    <br />
-                    Conteúdo
-                    <br />
-                    Design
-                    <br />
-                    Performance
-                  </p>
-                </div>
-                <div className="pilares-row container">
-                  <p className="pilares-title">
-                    Experiência
-                  </p>
-                  <p className="pilares-text">
-                  Ações integradas
-                    <br />
-                    Consultoria de Presença Digital
-                    <br />
-                    UX/UI
-                    <br />
-                    Desenvolvimento
-                    <br />
-                    Apps/Webapps
-                  </p>
-                </div>
+            <div className="escala" id="escala"></div>
+            <div className="pilares-wrapper">
+              <div className="pilares container">
+                  <div className="pilares-div container">
+                    <h2>
+                      pilares
+                    </h2>
+                  </div>
+                  <div className="pilares-row container">
+                    <p className="pilares-title">
+                      Estratégia
+                    </p>
+                    <p className="pilares-text">
+                      Campanhas/Launches
+                      <br />
+                      Consultoria de Presença Digital
+                      <br />
+                      Branding
+                      <br />
+                      Inovação Aberta
+                      <br />
+                      Planejamento Estratégico
+                    </p>
+                  </div>
+                  <div className="pilares-row container">
+                    <p className="pilares-title">
+                      Marketing 
+                    </p>
+                    <p className="pilares-text">
+                    Produção Multimidia
+                      <br />
+                      Conteúdo
+                      <br />
+                      Design
+                      <br />
+                      Performance
+                    </p>
+                  </div>
+                  <div className="pilares-row container">
+                    <p className="pilares-title">
+                      Experiência
+                    </p>
+                    <p className="pilares-text">
+                    Ações integradas
+                      <br />
+                      Consultoria de Presença Digital
+                      <br />
+                      UX/UI
+                      <br />
+                      Desenvolvimento
+                      <br />
+                      Apps/Webapps
+                    </p>
+                  </div>
+              </div>
             </div>
-            <div className="sobre-car-vert-servicos-three">
+            <div className="we-make-great">
                 <p className="default-text-title-sobre container">
                   we make 
                   <br/>
                   great launches
                 </p>
-                <p className="default-text-about-sobre container">
+                <p className="default-text-about-sobre container display-none-desk">
                   Nossa capacidade interdisciplinar 
                   <br/>
                   e abordagem digital first
@@ -262,6 +299,22 @@ const SobrePageCarousel = ({
                   <br/>
                   impacto e valor para os consumidores.
                 </p>
+                <p className="default-text-about-sobre container display-none-mob">
+                  <strong>
+                    O Digital First provoca a deixar de lado o favoritismo 
+                    <br/>
+                    pelo que é tradicional. 
+                  </strong>
+                  <br/>
+                  <br/>
+                  É estar conectado com o mundo, com as mudanças. É colocar 
+                  <br/>
+                  os consumidores no centro das decisões. Propomos um novo 
+                  <br/>
+                  pensamento, uma nova forma de enxergar oportunidades, 
+                  <br/>
+                  de solucionar problemas, de conquistar o mundo.
+                </p>
                 <p className="nave-text-upper container">
                   Nós
                   <br/>
@@ -271,20 +324,20 @@ const SobrePageCarousel = ({
                   <br/>
                   lançamentos
                 </p>
-                <div className="default-btn">
+                <div className="default-btn container">
                   <button>
                     Great Launches
                   </button>
                 </div>
-                {/* <div className="default-text-header btn-subir container">
-                  <a href="#slide1">
-                    <p>
-                      ↑
-                      <br />
-                      subir
-                    </p>
-                  </a>
-                </div> */}
+                <div className="container">
+                  <div className="btn-up display-none-mob">
+                    <a href="#mais-que-digital">
+                      <h4>
+                      <img src={arrowUp} alt="arrowUp" /> subir
+                      </h4>
+                    </a>
+                  </div>
+                </div>
             </div>
           </Swiper>
         </div>

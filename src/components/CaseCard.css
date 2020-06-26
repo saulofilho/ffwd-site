@@ -2,6 +2,10 @@
   width: 100%;
   height: auto;
 }
+.case-card-flex:hover {
+  background: #000;
+  opacity: 0.6;
+}
 .CaseCard--Image {
   width: 100%;
   height: auto;
