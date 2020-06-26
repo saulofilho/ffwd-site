@@ -5,6 +5,7 @@ ClientTitle: 06. dudalina
 title: carnaval com sorrisos
 HomeDescription: Experiência tech que foi sucesso na Sapucai
 HomeImage: ../../images/default-img.jpg
+HomeImageMob: ../../images/torus-19-.jpg
 ProjetosTitle: CARNAVAL COM SORRISOS
 ProjetosDescription: Experiência tech que foi sucesso na Sapucaí
 CaseTitle: zero to hero
