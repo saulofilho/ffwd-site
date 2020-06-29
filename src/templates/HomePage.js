@@ -5,7 +5,7 @@ import HomeCarousel from '../components/HomeCarousel'
 import Layout from '../components/Layout'
 import './HomePage.css'
 
-window.scroll({ behavior: 'smooth' });
+// window.scroll({ behavior: 'smooth' });
 
 export const HomePageTemplate = ({
   cases = []
