@@ -442,7 +442,9 @@ const PessoasPageCarousel = ({
                 vagas
               </p>
               <h1 className="container">
-                nossas vagas
+                nossas
+                <br/> 
+                vagas
               </h1>
               <p className="default-text-sub container">
                 Se você gosta de aprender, trocar
