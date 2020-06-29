@@ -48,7 +48,10 @@ export const CasePostTemplate = ({
                 <div
                   key={item.text + index}
                 >
-                  <div className="case-imgs">
+                  <div className="case-imgs display-none-desk">
+                    {item.imagemob === null ? <></> : <img src={item.imagemob} alt={item.alt} />}
+                  </div>
+                  <div className="case-imgs display-none-mob">
                     {item.image === null ? <></> : <img src={item.image} alt={item.alt} />}
                   </div>
                   <div className="case-texts container">
@@ -130,6 +133,7 @@ export const pageQuery = graphql`
         container {
           text
           image
+          imagemob
           alt
         }
         title

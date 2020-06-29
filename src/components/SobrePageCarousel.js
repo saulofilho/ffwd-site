@@ -4,6 +4,7 @@ import Swiper from 'react-id-swiper';
 import './SobrePageCarousel.css';
 import arrowDown from '../../static/images/ico-seta-down.png'
 import arrowUp from '../../static/images/arrow-up-blk.png'
+import logo from '../../static/images/logo-white-vertical.png'
 
 const SobrePageCarousel = () => {
   const HorizontalSwiperParams = {
@@ -37,15 +38,17 @@ const SobrePageCarousel = () => {
   return (
     <>
       <Swiper {...HorizontalSwiperParams}>
-        <div>
+        <div data-hash="mais-que-digital">
           <Swiper {...VerticalSwiperParams}>
             <div className="mais-que-digital">
               <p className="default-text-header container">
                 nós somos
               </p>
-              <p className="default-text-title container">
-                mais que digital
-              </p>
+              <h1 className="container">
+                mais que
+                <br/> 
+                digital
+              </h1>
               <p className="default-text-sub-sobre container">
                 Você pode pensar que somos uma agência de marketing digital.
                 Mas nós somos mais do que isso.
@@ -61,7 +64,7 @@ const SobrePageCarousel = () => {
                 </a>
               </div>
             </div>
-            <div className="experiencias" id="experiencias">
+            <div className="experiencias" id="experiencias" data-hash="experienciasxxx">
                 <p className="default-text-header-sobre container">
                   nós somos
                 </p>
@@ -93,7 +96,7 @@ const SobrePageCarousel = () => {
                   </p>
                 </div>
                 <div className="img-manifesto">
-                  <button></button>
+                  <a href="https://youtu.be/Q-If3ld6x-I"></a>
                 </div>
               </div>
             </div>
@@ -109,14 +112,22 @@ const SobrePageCarousel = () => {
                 <p className="default-text-about-sobre container">
                   <strong>
                     O Digital First provoca a deixar de lado
-                    o favoritismo pelo que é tradicional.
+                    o favoritismo
+                    <br/> 
+                    pelo que é tradicional.
                   </strong>
                   <br />
                   <br />
                     É estar conectado com o mundo, com as mudanças.
-                    É colocar os consumidores no centro das decisões.
-                    Propomos um novo pensamento, uma nova forma de enxergar
-                    oportunidades, de solucionar problemas, de conquistar o mundo.
+                    É colocar 
+                    <br/> 
+                    os consumidores no centro das decisões.
+                    Propomos um novo 
+                    <br/> 
+                    pensamento, uma nova forma de enxergar
+                    oportunidades, 
+                    <br/> 
+                    de solucionar problemas, de conquistar o mundo.
                 </p>
                 <div className="default-btn container display-none-desk">
                   <button>
@@ -165,6 +176,15 @@ const SobrePageCarousel = () => {
                   <br/>
                   de solucionar problemas, de conquistar o mundo.
                 </p>
+                <p className="nave-text-upper container">
+                  Nós
+                  <br/>
+                  fazemos 
+                  <br/>
+                  grandes 
+                  <br/>
+                  lançamentos
+                </p>
                 <div className="default-btn container">
                   <button>
                     Great Launches
@@ -180,9 +200,58 @@ const SobrePageCarousel = () => {
                   </div>
                 </div>
             </div>
+            <footer>
+              <div className="footer-custom container">
+                <div className="logo-footer">
+                  <img src={logo} alt="logo-white-vertical" />
+                </div>
+                <div className="endereco-desk">
+                  <div className="phone">
+                    <p>
+                      <strong>+55 48 3364 5570</strong>
+                    </p>
+                    <p>go@ffwd.rocks</p>
+                  </div>
+                  <div className="endereco">
+                    <div className="escritorio">
+                      <p>
+                        <strong>Escritório</strong>
+                      </p>
+                      <p>
+                        <br />
+                Rua Niberto Haase, 100 - Sala 301
+                <br />
+                Santa Mônica, Florianópolis, SC
+                <br />
+                88035-215
+            </p>
+                    </div>
+                    <div className="social">
+                      <p>
+                        <strong>Social</strong>
+                      </p>
+                      <p>
+                        <br />
+                        <a href="facebook">Facebook</a>
+                      </p>
+                      <p><a href="insta">Instagramk</a></p>
+                      <p><a href="linkedin">LinkedIn</a></p>
+                    </div>
+                  </div>
+                  <div className="all-right">
+                    <p>
+                      <strong>
+                        ©{new Date().getFullYear()}FFWD INC.
+              </strong>
+                    </p>
+                    <p>All right reserve</p>
+                  </div>
+                </div>
+              </div>
+            </footer>
           </Swiper>
         </div>
-        <div>
+        <div data-hash="servicos">
           <Swiper {...VerticalSwiperParams}>
             <div className="servicos">
                 <p className="default-text-header container">
@@ -226,7 +295,7 @@ const SobrePageCarousel = () => {
             <div className="escala" id="escala"></div>
             <div className="pilares-wrapper">
               <div className="pilares container">
-                  <div className="pilares-div container">
+                  <div className="pilares-div">
                     <h2>
                       pilares
                     </h2>
@@ -342,6 +411,55 @@ const SobrePageCarousel = () => {
                   </div>
                 </div>
             </div>
+            <footer>
+              <div className="footer-custom container">
+                <div className="logo-footer">
+                  <img src={logo} alt="logo-white-vertical" />
+                </div>
+                <div className="endereco-desk">
+                  <div className="phone">
+                    <p>
+                      <strong>+55 48 3364 5570</strong>
+                    </p>
+                    <p>go@ffwd.rocks</p>
+                  </div>
+                  <div className="endereco">
+                    <div className="escritorio">
+                      <p>
+                        <strong>Escritório</strong>
+                      </p>
+                      <p>
+                        <br />
+                Rua Niberto Haase, 100 - Sala 301
+                <br />
+                Santa Mônica, Florianópolis, SC
+                <br />
+                88035-215
+            </p>
+                    </div>
+                    <div className="social">
+                      <p>
+                        <strong>Social</strong>
+                      </p>
+                      <p>
+                        <br />
+                        <a href="facebook">Facebook</a>
+                      </p>
+                      <p><a href="insta">Instagramk</a></p>
+                      <p><a href="linkedin">LinkedIn</a></p>
+                    </div>
+                  </div>
+                  <div className="all-right">
+                    <p>
+                      <strong>
+                        ©{new Date().getFullYear()}FFWD INC.
+              </strong>
+                    </p>
+                    <p>All right reserve</p>
+                  </div>
+                </div>
+              </div>
+            </footer>
           </Swiper>
         </div>
       </Swiper>

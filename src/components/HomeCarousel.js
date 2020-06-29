@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import 'swiper/css/swiper.css';
 import Swiper from 'react-id-swiper';
 import './HomeCarousel.css';
@@ -20,17 +20,12 @@ const HomeCarousel = ({
   filteredPosts,
 }) => {
 
-  const [parallaxSwiper, setParallaxSwiper] = useState(null);
-  const parallaxAmount = parallaxSwiper ? parallaxSwiper.width * 0.95 : 0;
-  const parallaxOpacity = 0.5;
   return (
-    <Swiper {...HeroSliderConfigs} getSwiper={setParallaxSwiper}>
+    <Swiper {...HeroSliderConfigs}>
       {filteredPosts.map(project => (
         <div className="home-slide" key={project.slug} data-hash={project.slug}>
             <div
               className="home-slide-image"
-              data-swiper-parallax={parallaxAmount}
-              data-swiper-parallax-opacity={parallaxOpacity}
             >
               <div 
                 className="home-image display-none-mob"

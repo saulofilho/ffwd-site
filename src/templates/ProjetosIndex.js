@@ -12,6 +12,10 @@ export const byDate = cases => {
   return cases.filter(post => Date.parse(post.date) <= now)
 }
 
+const scrollToBottom = () => {
+  document.querySelector('#projeto-section').scrollIntoView({ behavior: 'smooth' });
+}
+
 export const ProjetosIndexTemplate = ({
   cases = [],
   contentType
@@ -45,9 +49,16 @@ export const ProjetosIndexTemplate = ({
                   Veja nossos cases:
                 </p>
                 <div className="anchor-down container">
-                  <a href="#projeto-section">
+                  {/* <a href="#projeto-section">
                     <img src={arrowDown} alt="arrowDown" />
-                  </a>
+                  </a> */}
+                  <button
+                    onClick={() => {
+                      scrollToBottom()
+                    }}
+                  >
+                    <img src={arrowDown} alt="arrowDown" />
+                  </button>
                 </div>
             </div>
             <section className="projeto-section" id="projeto-section">

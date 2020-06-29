@@ -156,13 +156,8 @@ collections:
           widget: image
           fields:
             - { name: image, label: image, widget: image, required: false }
+            - { name: imagemob, label: image mob, widget: image, required: false }
             - { name: alt, label: Alt, widget: string, required: false }
-        - label: 'Add Image Mob'
-          name: 'AddImageMob'
-          widget: image
-          fields:
-            - { name: imagemob, label: image, widget: image, required: false }
-            - { name: altmob, label: Alt, widget: string, required: false }
         - label: 'Add Text'
           name: 'AddText'
           widget: markdown

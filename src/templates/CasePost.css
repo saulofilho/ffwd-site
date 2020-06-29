@@ -15,12 +15,13 @@
   align-items: left;
 }
 .case-imgs {
-  height: auto;
+  height: 100%;
   width: 100%;
+  background: red;
 }
 .case-imgs img {
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
 }
 .case-post-wrapper {
