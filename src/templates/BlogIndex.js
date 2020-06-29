@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import { Location } from '@reach/router'
 import qs from 'qs'
 import PostSection from '../components/PostSection'
-import PostCategoriesNav from '../components/PostCategoriesNav'
+// import PostCategoriesNav from '../components/PostCategoriesNav'
 import Layout from '../components/Layout'
 import BlogSearch from '../components/BlogSearch'
 import arrowDown from '../../static/images/ico-seta-down.png'
@@ -37,7 +37,6 @@ export const byCategory = (posts, title, contentType) => {
 export const BlogIndexTemplate = ({
   title,
   posts = [],
-  postCategories = [],
   enableSearch = true,
   contentType
 }) => (
@@ -139,7 +138,7 @@ export const pageQuery = graphql`
     }
     posts: allMarkdownRemark(
       filter: { fields: { contentType: { eq: "posts" } } }
-      sort: { order: DESC, fields: [frontmatter___date] }
+      sort: { order: ASC, fields: [frontmatter___date] }
     ) {
       edges {
         node {

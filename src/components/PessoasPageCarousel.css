@@ -231,13 +231,10 @@
 .apply {
   padding: 0 24px;
 }
-
 /* desktop */
-
 .owner-text-desk {
   display: none;
 }
-
 @media (min-width: 1024px) {
   .the-people-behind {
     display: flex;
@@ -253,10 +250,6 @@
     display: flex;
   }
 }
-
-
-
-
 .swiper-pagination-pessoas {
   border: 1px solid #000;
   background: #000;

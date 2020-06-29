@@ -50,7 +50,7 @@
   background-size: auto;
   right: -30px;
 }
-.swiper-pagination-bullet {
+.swiper-pagination-home .swiper-pagination-bullet {
   background: #fff;
   opacity: unset;
   width: 4px;
@@ -59,7 +59,7 @@
 .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
   margin: 0 8px;
 }
-.swiper-pagination-bullet::before {
+.swiper-pagination-home .swiper-pagination-bullet::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -71,7 +71,7 @@
   left: 10px;
   bottom: 0;
 }
-.swiper-pagination-bullet::after {
+.swiper-pagination-home .swiper-pagination-bullet::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -90,10 +90,14 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
-.swiper-pagination-bullet-active::before {
-  content: url(/images/aro.png);
-  position: inherit;
-  display: block;
+.swiper-pagination-home .swiper-pagination-bullet-active {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background: url(/images/ativo.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
 }
 .home-slide-image {
   height: 100%;
@@ -145,5 +149,8 @@
   .home-slide-image .link-slug .default-text-header {
     padding: 60px 0 0;
     font-weight: bolder;
+  }
+  .home-car-texts .default-text-about {
+    padding: 24px 750px 0 0;
   }
 }

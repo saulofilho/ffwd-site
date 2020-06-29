@@ -26,7 +26,7 @@ const HomeCarousel = ({
   return (
     <Swiper {...HeroSliderConfigs} getSwiper={setParallaxSwiper}>
       {filteredPosts.map(project => (
-        <div className="home-slide" key={project.slug}>
+        <div className="home-slide" key={project.slug} data-hash={project.slug}>
             <div
               className="home-slide-image"
               data-swiper-parallax={parallaxAmount}

@@ -19,6 +19,7 @@ const SobrePageCarousel = () => {
     }
   };
   const VerticalSwiperParams = {
+    autoHeight: true,
     direction: 'vertical',
     grabCursor: false,
     freeMode: false,

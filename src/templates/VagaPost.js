@@ -11,7 +11,8 @@ export const VagaPostTemplate = ({
   header,
   about,
   overview,
-  LikeToSee
+  LikeToSee,
+  link
 }) => (
     <main>
       <article
@@ -50,7 +51,9 @@ export const VagaPostTemplate = ({
             </div>
             <div className="default-btn apply-btn">
               <button>
-                Apply
+                <a href={link}>
+                  Apply
+                </a>
               </button>
             </div>
           </div>
@@ -96,12 +99,13 @@ export const pageQuery = graphql`
         about
         overview
         LikeToSee
+        link
         date(formatString: "MMMM Do, YYYY")
       }
     }
     allPosts: allMarkdownRemark(
       filter: { fields: { contentType: { eq: "vaga" } } }
-      sort: { order: DESC, fields: [frontmatter___date] }
+      sort: { order: ASC, fields: [frontmatter___date] }
     ) {
       edges {
         node {

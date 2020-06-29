@@ -207,6 +207,7 @@ collections:
       - { label: Vaga About, name: about, widget: text, required: false }
       - { label: Vaga Overview, name: overview, widget: markdown, required: false }
       - { label: Vaga Like To See, name: LikeToSee, widget: markdown, required: false }
+      - { label: Link, name: link, widget: string, required: false }
       - label: 'Status'
         name: 'status'
         widget: 'select'

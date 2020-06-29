@@ -44,6 +44,8 @@ html {
 }
 body {
   -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
 }
 a {
   color: var(--primary);

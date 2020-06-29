@@ -20,16 +20,13 @@ const PostCard = ({
             <p className="default-text-header">
               {date}
             </p>
-            {PostTitle &&
-              <p className="default-text-about">
-                {PostTitle}
-              </p>}
+            <p className="default-text-about">
+              {PostTitle}
+            </p>
           </div>
-          {featuredImage && (
-            <div className="post-card-img relative container">
-              <Image background src={featuredImage} alt={PostTitle} />
-            </div>
-          )}
+          <div className="post-card-img relative container">
+            <Image background src={featuredImage} alt={PostTitle} />
+          </div>
           <div className="line container display-none-desk">
             <img src={line} alt="line" />
           </div>

@@ -28,11 +28,6 @@ const PessoasPageCarousel = ({
     hashNavigation: {
       watchState: true,
     },
-    scrollbar: {
-      el: '.swiper-scrollbar',
-      hide: true,
-      clickable: true
-    },
     mousewheel: true,
     freeMode: true,
   }
@@ -40,9 +35,9 @@ const PessoasPageCarousel = ({
   return (
     <>
       <Swiper {...HorizontalSwiperParams}>
-        <div>
+        <div data-hash="xxx">
           <Swiper {...VerticalSwiperParams}>
-            <div className="as-pessoas" data-hash="slide1">
+            <div className="as-pessoas" data-hash="teste">
               <p className="default-text-header container">
                 as pessoas
                 </p>
@@ -62,7 +57,7 @@ const PessoasPageCarousel = ({
                   múltiplos, um time completo.
                 </p>
             </div>
-            <div className="the-people-behind">
+            <div className="the-people-behind" data-hash="teste2">
               <p className="default-text-title container">
                 the people behind
                 <br />
@@ -94,7 +89,7 @@ const PessoasPageCarousel = ({
                 </div>
               </div>
             </div>
-            <div className="todos-que-entram">
+            <div className="todos-que-entram" data-hash="teste3">
               <div className="owner-text">
                 <p className="default-text-about container">
                   Todos que entram aqui tem em comum a vontade de fazer
@@ -126,7 +121,7 @@ const PessoasPageCarousel = ({
                 </p>
               </div>
             </div>
-            <div className="wrapper-team-heads">
+            <div className="wrapper-team-heads" data-hash="test4">
               <div className="team-photo">
               </div>
               <div className="the-heads">
@@ -140,7 +135,7 @@ const PessoasPageCarousel = ({
                 </p>
               </div>
             </div>
-            <div className="wrapper-photos-heads">
+            <div className="wrapper-photos-heads" data-hash="teste5">
               <div className="man">
               </div>
               <div className="woman">
@@ -148,9 +143,9 @@ const PessoasPageCarousel = ({
             </div>
           </Swiper>
         </div>
-        <div>
+        <div data-hash="xxx2">
           <Swiper {...VerticalSwiperParams}>
-            <div className="cultura" data-hash="slide1">
+            <div className="cultura" data-hash="cultura">
               <p className="default-text-header container">
                 cultura
                 </p>
@@ -163,7 +158,7 @@ const PessoasPageCarousel = ({
                 melhor forma. Esta palavras do código de cultura não são vazias.
                 </p>
             </div>
-            <div className="wrapper-cultura-imgs">
+            <div className="wrapper-cultura-imgs" data-hash="cultura2">
               <p className="default-text-header container">
                 cultura
               </p>
@@ -340,9 +335,9 @@ const PessoasPageCarousel = ({
             </div>
           </Swiper>
         </div>
-        <div>
+        <div data-hash="xxx3">
           <Swiper {...VerticalSwiperParams}>
-            <div className="nossas-vagas">
+            <div className="nossas-vagas" data-hash="nossas-vagas">
               <p className="default-text-header container">
                 vagas
                 </p>
@@ -362,7 +357,7 @@ const PessoasPageCarousel = ({
                 </div>
             </div>
             {posts.map(img => (
-              <div className="vagas-index" id="vagas-index">
+              <div className="vagas-index" id="vagas-index" data-hash="vagas-index">
                 <div className="default-text-header container">
                   {img.header}
                 </div>
