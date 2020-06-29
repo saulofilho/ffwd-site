@@ -20,10 +20,6 @@ container:
   - type: AddImage
     image: ../../images/video1-2-1.png
     alt: x
-  - type: AddImageMob
-    alt: m
-    image: ../../images/torus-19-.jpg
-    imagemob: ../../images/torus-19-.jpg
   - type: AddText
     text: >-
       ## desafio
@@ -38,10 +34,6 @@ container:
   - type: AddImage
     image: ../../images/group-10-1.png
     alt: x
-  - type: AddImageMob
-    image: ../../images/torus-19-.jpg
-    alt: m
-    imagemob: ../../images/torus-19-.jpg
   - type: AddText
     text: >-
       ## proposta
