@@ -12,9 +12,9 @@ export const ContactPageTemplate = () => (
         <p className="default-text-header container">
           contato
         </p>
-        <p className="default-text-title container">
+        <h1 className="container">
           vamos falar?
-        </p>
+        </h1>
         <p className="default-text-sub-sobre container">
           Liga pra gente, manda um email,
           vem conhecer a agência.
@@ -37,7 +37,7 @@ export const ContactPageTemplate = () => (
         </div>
         <div className="address">
           <p className="default-text-about">
-            <strong>address</strong>
+            <strong>Address</strong>
           </p>
           <p className="default-text-about">
             <br/>
@@ -49,50 +49,52 @@ export const ContactPageTemplate = () => (
           </p>
         </div>
       </div>
-      <div className="contato-infos-container">
-        <p className="default-text-header">
-          01
-        </p>
-        <h2>
-          contato para novos negócios:
-        </h2>
-        <p className="default-text-about">
-          go@ffwd.com.br
-        </p>
-      </div>
-      <div className="contato-news">
-        <p className="default-text-header">
-          02
-        </p>
-        <h2>
-          assine 
-          <br/>
-          nossa news
-        </h2>
-        <p className="default-text-about">
-          *sem spam, prometemos =]
-        </p>
-        <section className="news-email">
-          <input 
-            type="text" 
-            placeholder="E-mail"
-          />
-          <div className="default-btn">
-            <button>
-              cadastre-se
-            </button>
-          </div>
-        </section>
+      <div className="contato-assine-wrapper">
+        <div className="contato-infos-container">
+          <p className="default-text-header">
+            01
+          </p>
+          <h2>
+            contato para novos negócios:
+          </h2>
+          <p className="default-text-about">
+            go@ffwd.com.br
+          </p>
+        </div>
+        <div className="contato-news">
+          <p className="default-text-header">
+            02
+          </p>
+          <h2>
+            assine 
+            <br/>
+            nossa news
+          </h2>
+          <p className="default-text-about">
+            *sem spam, prometemos =]
+          </p>
+          <section className="news-email">
+            <input 
+              type="text" 
+              placeholder="E-mail"
+            />
+            <div className="default-btn">
+              <button>
+                cadastre-se
+              </button>
+            </div>
+          </section>
+        </div>
       </div>
       <div className="contato-social-container">
         <section className="social-btns container">
             <button>
-              <a href="https://wa.me/5511933430190?text=Olá">
+              <a href="https://www.facebook.com/goFFWD/">
                 <img src="/images/ico-face.png" alt="face"/>
               </a>
             </button>
             <button>
-              <a href="https://wa.me/5511933430190?text=Olá">
+              <a href="https://www.instagram.com/goffwd/">
                 <img src="/images/ico-insta.png" alt="insta"/>
               </a>
             </button>
@@ -102,7 +104,7 @@ export const ContactPageTemplate = () => (
               </a>
             </button>
             <button>
-              <a href="https://wa.me/5511933430190?text=Olá">
+              <a href="mailto:go@ffwd.com.br">
                 <img src="/images/ico-mail.png" alt="mail"/>
               </a>
             </button>

@@ -1,10 +1,12 @@
 .navbar {
   background: transparent;
-  position: fixed;
   width: 100%;
   top: 0;
   z-index: 9;
   transition: top 0.3s;
+}
+.headroom-wrapper {
+  height: auto !important;
 }
 .navbar .Logo {
   z-index: 1;
@@ -125,7 +127,7 @@
 
 @media (min-width: 1024px) {
   .nav-wrapper {
-    padding: 60px 0;
+    padding: 60px 0 0 0;
   }
   .nav-active .NavLink {
     border-bottom: none;

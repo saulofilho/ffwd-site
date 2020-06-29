@@ -1,6 +1,14 @@
 .post-card-img {
-  width: 312px;
+  width: 100%;
   height: 311px;
+  padding: 0 24px;
+}
+.post-card-bg {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .post-card-text .default-text-header {
   padding: 40px 24px 16px;
@@ -26,7 +34,6 @@
     grid-template-columns: repeat(2, 1fr);
   }
   .post-card-img {
-    width: 451px;
-    height: 311px;
+    width: 100%;
   }
 }

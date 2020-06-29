@@ -5,13 +5,15 @@ import Layout from '../components/Layout'
 import './SinglePost.css'
 import arrowLeftBlk from '../../static/images/arrow-left-blk.png'
 import arrowRightBlk from '../../static/images/arrow-right-blk.png'
+import Content from '../components/Content'
 
 export const SinglePostTemplate = ({
   featuredImage,
   PostTitle,
   PostText,
+  PostAboutDesktop,
   date,
-  nextPostURL,
+  nextPostURL
 }) => (
     <main>
       <article
@@ -19,25 +21,38 @@ export const SinglePostTemplate = ({
         itemScope
         itemType="http://schema.org/BlogPosting"
       >
+        {console.log('xx', PostTitle)}
         <div className="post-hero">
-          <div className="anchor-posts">
+          <div className="anchor-posts container">
             <Link to="/blog/">
               <img src={arrowLeftBlk} alt="arrowLeftBlk" />
               back
             </Link>
           </div>
-          <p className="default-text-header">
+          <p className="default-text-header container">
             {date}
           </p>
-          <p className="default-text-sub" itemProp="title">
+          <p className="default-text-sub container" itemProp="title">
             {PostTitle}
           </p>
           <div className="post-img">
-            <img src={featuredImage} alt="blog" />
+            <div 
+              className="blog-post-img relative"
+              style={{
+                backgroundImage: `url(${featuredImage})`
+              }}>
+            </div>
           </div>
-          <p className="default-text-about container" itemProp="title">
-            {PostText}
-          </p>
+          <div className="container blog-post-wrapper">
+          <Content
+            className="blog-about-content display-none-mob"
+            source={PostAboutDesktop}
+          />
+          <Content
+            className="blog-text-content"
+            source={PostText}
+          />
+          </div>
         </div>
         <div className="single-post-pagination container">
             {nextPostURL && (
@@ -56,7 +71,6 @@ export const SinglePostTemplate = ({
     </main>
   )
 
-// Export Default SinglePost for front-end
 const SinglePost = ({ data: { post, allPosts }, location }) => {
   const thisEdge = allPosts.edges.find(edge => edge.node.id === post.id)
   return (
@@ -99,7 +113,7 @@ export const pageQuery = graphql`
     }
     allPosts: allMarkdownRemark(
       filter: { fields: { contentType: { eq: "posts" } } }
-      sort: { order: DESC, fields: [frontmatter___date] }
+      sort: { order: ASC, fields: [frontmatter___date] }
     ) {
       edges {
         node {

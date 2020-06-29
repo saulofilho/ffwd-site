@@ -59,11 +59,13 @@ export const BlogIndexTemplate = ({
 
         return (
           <main className="Blog" id="blog-hero">
-            <div className="case-hero container">
-              <p className="default-text-header">news + views</p>
-              <p className="default-text-title" itemProp="title">
+            <div className="blog-hero container">
+              <p className="default-text-header">
+                news + views
+              </p>
+              <h1 className="" itemProp="title">
                 blog
-                </p>
+              </h1>
               <section className="search-blog">
                 {enableSearch && <BlogSearch />}
                 <div className="default-btn search-btn">
@@ -78,15 +80,11 @@ export const BlogIndexTemplate = ({
                 </a>
                 </div>
             </div>
-
-            {!!posts.length && (
-              <section className="posts-section" id="posts-section">
-                <div className="container">
-                  <PostSection posts={filteredPosts} />
-                </div>
-              </section>
-            )}
-            {/* <PostCategoriesNav enableSearch categories={postCategories} /> */}
+            <section className="posts-section" id="posts-section">
+              <div className="container">
+                <PostSection posts={filteredPosts} />
+              </div>
+            </section>
           </main>
         )
       }}

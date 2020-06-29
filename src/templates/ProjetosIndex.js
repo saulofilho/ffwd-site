@@ -29,9 +29,11 @@ export const ProjetosIndexTemplate = ({
                 <p className="default-text-header container">
                   projetos
                 </p>
-                <p className="default-text-title container">
-                  nossos cases
-                </p>
+                <h1 className="container">
+                  nossos
+                  <br/>
+                  cases
+                </h1>
                 <p className="default-text-about container">
                   Somos uma agência mais que digital, com foco em experiências
                   e resultados.
@@ -48,14 +50,18 @@ export const ProjetosIndexTemplate = ({
                   </a>
                 </div>
             </div>
-            {!!cases.length && (
-              <section className="projeto-section" id="projeto-section">
-                <CaseSection posts={filteredPosts} />
-              </section>
-            )}
+            <section className="projeto-section" id="projeto-section">
+              <CaseSection posts={filteredPosts} />
+            </section>
             <div className="nossos-clientes container">
-              <h2 className="display-none-desk">nossos clientes</h2>
-              <h2 className="display-none-mob">nossas marcas</h2>
+              <h2 className="display-none-desk">
+                nossos
+                <br/> 
+                clientes
+              </h2>
+              <h2 className="display-none-mob">
+                nossas marcas
+              </h2>
               <p className="default-text-about display-none-mob">
                 Somos uma agência mais que digital, com foco em experiências e 
                 resultados. Nesses mais de 10 anos de marketing.

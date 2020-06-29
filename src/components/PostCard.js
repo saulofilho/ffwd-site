@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import Image from './Image'
 import line from '../../static/images/line.png'
 import './PostCard.css'
 
@@ -25,7 +24,13 @@ const PostCard = ({
             </p>
           </div>
           <div className="post-card-img relative container">
-            <Image background src={featuredImage} alt={PostTitle} />
+            <div 
+              className="post-card-bg"
+              style={{
+                backgroundImage: `url(${featuredImage})`
+              }}
+              alt={PostTitle}
+            />
           </div>
           <div className="line container display-none-desk">
             <img src={line} alt="line" />

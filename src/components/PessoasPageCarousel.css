@@ -1,5 +1,5 @@
-.as-pessoas,
-.cultura,
+.we-are-ffwd,
+.our-culture,
 .nossas-vagas {
   width: 100%;
   background: #fff;
@@ -101,7 +101,7 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
-.cultura .default-text-sub {
+.our-culture .default-text-sub {
   padding: 16px 48px 0 24px;
 }
 .wrapper-cultura-imgs {
@@ -231,11 +231,19 @@
 .apply {
   padding: 0 24px;
 }
+.nossas-vagas .anchor-down {
+  width: 100%;
+  padding: 84px 0 68px 30px;
+}
 /* desktop */
 .owner-text-desk {
   display: none;
 }
 @media (min-width: 1024px) {
+  .pessoas .default-text-title {
+    font-size: 64px;
+    line-height: 70px;
+  }
   .the-people-behind {
     display: flex;
     flex-flow: row;
@@ -250,6 +258,7 @@
     display: flex;
   }
 }
+
 .swiper-pagination-pessoas {
   border: 1px solid #000;
   background: #000;

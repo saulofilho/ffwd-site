@@ -27,20 +27,15 @@ export const PessoasPageTemplate = ({
 
         return (
           <main className="pessoas">
-            {!!vaga.length && (
-              <section className="pessoas-section">
-                <PessoasPageCarousel
-                  posts={filteredPosts}
-                />
-              </section>
-            )}
+            <PessoasPageCarousel
+              posts={filteredPosts}
+            />
           </main>
         )
       }}
     </Location>
   )
 
-// Export Default PessoasPage for front-end
 const PessoasPage = ({ data: { page, vaga }, location }) => (
   <Layout
     location={location}
@@ -98,21 +93,6 @@ export const pageQuery = graphql`
             about
             overview
             LikeToSee
-          }
-        }
-      }
-    }
-    postCategories: allMarkdownRemark(
-      filter: { fields: { contentType: { eq: "postCategories" } } }
-      sort: { order: ASC, fields: [frontmatter___title] }
-    ) {
-      edges {
-        node {
-          fields {
-            slug
-          }
-          frontmatter {
-            title
           }
         }
       }

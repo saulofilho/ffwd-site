@@ -58,7 +58,7 @@
 .default-text-sub-sobre {
   font-family: var(--font-secondary);
   font-style: normal;
-  font-weight: bolder;
+  font-weight: 600;
   font-size: 16px;
   line-height: 20px;
   padding: 16px 80px 0 24px;

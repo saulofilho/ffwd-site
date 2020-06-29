@@ -22,7 +22,7 @@ class Image extends React.Component {
     '1500',
     '1600',
     '2000'
-  ] // image sizes used for image source sets
+  ]
 
   state = {
     isIntersecting: false
@@ -39,7 +39,6 @@ class Image extends React.Component {
   }
 
   getResolutionString(res) {
-    /* add resolutions options for inline images */
     if (res === 'small') {
       res = '800x'
     } else if (res === 'medium') {

@@ -153,4 +153,7 @@
   .home-car-texts .default-text-about {
     padding: 24px 750px 0 0;
   }
+  .home-car-texts h1 {
+    padding: 16px 750px 0 0;
+  }
 }

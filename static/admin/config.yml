@@ -103,25 +103,14 @@ collections:
       - { label: Date, name: date, widget: datetime, dateFormat: "DD.MM.YYYY", required: false }
       - { label: Slug Title, name: title, widget: string, required: false }
       - { label: Post Title, name: PostTitle, widget: string, required: false }
-      - { label: Post Text, name: PostText, widget: text, required: false }
-      - { label: Post About Desktop, name: PostAboutDesktop, widget: text, required: false }
+      - { label: Post Text, name: PostText, widget: markdown, required: false }
+      - { label: Post About Desktop, name: PostAboutDesktop, widget: markdown, required: false }
       - {
           label: Featured Image,
           name: featuredImage,
           widget: image,
           required: false,
         }
-      - label: 'Categories'
-        name: 'categories'
-        widget: 'list'
-        required: false
-        fields:
-          - label: 'Category'
-            name: 'category'
-            widget: 'relation'
-            collection: 'postCategories'
-            searchFields: ['title']
-            valueField: 'title'
       - label: 'Status'
         name: 'status'
         widget: 'select'
@@ -213,18 +202,6 @@ collections:
         widget: 'select'
         options: ['Published', 'Featured', 'Draft']
         default: 'Published'
-
-  - name: postCategories
-    label: Post Category
-    editor:
-      preview: false
-    folder: content/postCategories
-    slug: '{{slug}}'
-    create: true
-    fields:
-      - { label: Template, name: template, widget: hidden, default: BlogIndex }
-      - { label: Title, name: title, widget: string }
-      - { label: Subtitle, name: subtitle, widget: string, required: false }
 
   - name: 'settings'
     label: 'Settings'

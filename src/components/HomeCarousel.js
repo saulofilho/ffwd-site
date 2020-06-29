@@ -48,7 +48,7 @@ const HomeCarousel = ({
                 <p className="default-text-header container">
                   {project.ClientTitle}
                 </p>
-                <h1 className="default-text-title container">
+                <h1 className="container">
                   {project.title}
                 </h1>
                 <p className="default-text-about container">

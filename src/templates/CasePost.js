@@ -29,9 +29,9 @@ export const CasePostTemplate = ({
               <p className="default-text-header">
                 {ClientTitle}
               </p>
-              <p className="default-text-title" itemProp="title">
+              <h1 className="">
                 {CaseTitle}
-              </p>
+              </h1>
               <p className="default-text-about">
                 <Content
                   source={CaseAbout}

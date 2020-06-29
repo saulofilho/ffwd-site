@@ -6,6 +6,9 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+.contato-hero h1 {
+  color: #fff;
+}
 .contato-address-container {
   display: flex;
   flex-flow: row;
@@ -63,6 +66,9 @@
   color: #989898;
   padding: 16px 15px;
 }
+.news-email input[type='text']:focus {
+  border: 2px solid #000000;
+}
 .news-email button {
   margin: 8px 0 60px 0;
   width: 138px;
@@ -75,4 +81,40 @@
   background: transparent;
   border: none;
   padding: 0 14px 0 0;
+}
+/* desktop */
+
+@media (min-width: 1024px) {
+  .contato-hero {
+    height: 100vh;
+    width: 100%;
+  }
+  .contato-hero h1 {
+    padding-right: 800px;
+  }
+  .contato-assine-wrapper {
+    display: flex;
+    align-items: flex-start;
+    flex-flow: row;
+    width: 100%;
+    height: 100%;
+    align-content: center;
+    flex-wrap: wrap;
+  }
+  .contato-infos {
+    padding: 60px 0;
+  }
+  .contato-infos-container {
+    width: 40%;
+  }
+  .contato-infos-container,
+  .contato-news {
+    padding: 48px 0 0;
+  }
+  .contato-infos-container h2 {
+    padding-right: 120px;
+  }
+  .news-email button {
+    margin: 8px 0 0;
+  }
 }

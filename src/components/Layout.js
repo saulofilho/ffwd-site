@@ -56,8 +56,6 @@ export default ({ children, meta, title, location }) => {
               titleTemplate={`%s | ${siteTitle}`}
             >
               {title}
-              <link href="https://ucarecdn.com" rel="preconnect" crossorigin />
-              <link rel="dns-prefetch" href="https://ucarecdn.com" />
               {/* Add font link tags here */}
             </Helmet>
 
@@ -78,9 +76,10 @@ export default ({ children, meta, title, location }) => {
             <Fragment>{children}</Fragment>
             
             {/* footer */}
-            {location.pathname === '/' ? <></> : <Footer /> }
-            {/* {location.pathname === '/' || location.pathname.split('/')[1] === 'cases' ? <></> : <Footer /> } */}
-
+            {/* {location.pathname === '/' ? <></> : <Footer /> } */}
+            {location.pathname === '/' || 
+              location.pathname.split('/')[1] === 'pessoas' || 
+              location.pathname.split('/')[1] === 'sobre' ? <></> : <Footer /> }
           </Fragment>
         )
       }}

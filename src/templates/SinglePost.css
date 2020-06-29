@@ -4,6 +4,7 @@
 }
 .post-hero {
   color: #000;
+  width: 100%;
   height: 100%;
   display: flex;
   flex-flow: column;
@@ -14,8 +15,12 @@
   padding: 69px 0 0 24px;
 }
 .post-hero .default-text-sub {
-  width: 312px;
-  padding: 8px 0 0 24px;
+  width: 100%;
+  padding: 8px 24px 0;
+  font-weight: bolder;
+}
+.post-hero .default-text-sub p {
+  padding-bottom: 16px;
 }
 .post-hero .default-text-about {
   padding: 0px 24px;
@@ -23,13 +28,9 @@
 .post-img {
   padding: 22px 24px 20px;
 }
-.post-img img {
-  width: 100%;
-  height: 311px;
-  object-fit: cover;
-}
 .anchor-posts {
-  padding: 130px 0 0 32px;
+  padding: 130px 0 0 40px;
+  width: 100%;
 }
 .anchor-posts img {
   padding-right: 16px;
@@ -37,7 +38,7 @@
 .anchor-posts a {
   font-family: var(--font-secondary);
   font-style: normal;
-  font-weight: 600;
+  font-weight: bolder;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
@@ -63,4 +64,72 @@
   font-size: 1.5rem;
   text-decoration: none;
   color: #000;
+}
+.blog-post-wrapper {
+  display: flex;
+  flex-flow: row;
+}
+.blog-about-content p {
+  font-family: var(--font-secondary);
+  font-style: normal;
+  font-weight: bolder;
+  font-size: 16px;
+  line-height: 20px;
+  color: #1D1D1B;
+}
+.blog-text-content {
+  padding: 0 24px 38px;
+}
+.blog-text-content p {
+  font-family: var(--font-secondary);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  color: #1D1D1B;
+}
+.blog-text-content p:not(:last-of-type) {
+  margin-bottom: 12px;
+}
+.blog-post-img {
+  width: 100%;
+  height: 312px;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.blog-post-wrapper {
+  width: 100%;
+  height: auto;
+  padding: 30px 0 68px;
+}
+
+/* desktop */
+
+@media (min-width: 1024px) {
+  .anchor-posts {
+    padding: 150px 0 0 0;
+    width: 100%;
+  }
+  .post-img {
+    padding: 22px 0 20px;
+    height: auto;
+  }
+  .blog-post-img {
+    height: 600px;
+  }
+  .post-hero .default-text-header {
+    padding: 69px 0 0;
+  }
+  .post-hero .default-text-sub {
+    padding: 8px 0 0;
+  }
+  .blog-about-content {
+    width: 40%;
+  }
+  .blog-text-content {
+    padding: 0;
+    padding-left: 128px;
+    width: 100%;
+  }
 }

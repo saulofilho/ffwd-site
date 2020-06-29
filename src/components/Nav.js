@@ -5,6 +5,7 @@ import { Link } from 'gatsby'
 import { X } from 'react-feather'
 import Logo from './Logo'
 import { debounce } from "lodash"
+import Headroom from 'react-headroom'
 
 import './Nav.css'
 
@@ -15,27 +16,27 @@ export const Navigation = (props) => {
   const [prevScrollpos, setPrevScrollpos] = useState(0);
   const [visible, setVisible] = useState(true);
 
-  useEffect(() => {
-    setCurrentPath(props.location.pathname);
+  // useEffect(() => {
+  //   setCurrentPath(props.location.pathname);
 
-    const onScrollDebounced = debounce(() => {
-      handleScroll();
-    }, 50);
+  //   const onScrollDebounced = debounce(() => {
+  //     handleScroll();
+  //   }, 50);
 
-    const handleScroll = () => {
-      const currentScrollPos = window.pageYOffset;
-      const visible = prevScrollpos > currentScrollPos;
+  //   const handleScroll = () => {
+  //     const currentScrollPos = window.pageYOffset;
+  //     const visible = prevScrollpos > currentScrollPos;
 
-      setPrevScrollpos(currentScrollPos)
-      setVisible(visible)
-    };
+  //     setPrevScrollpos(currentScrollPos)
+  //     setVisible(visible)
+  //   };
 
-    window.addEventListener("scroll", onScrollDebounced);
+  //   window.addEventListener("scroll", onScrollDebounced);
 
-    return () => {
-      window.removeEventListener("scroll", onScrollDebounced);
-    }
-  }, [prevScrollpos, props.location.pathname])
+  //   return () => {
+  //     window.removeEventListener("scroll", onScrollDebounced);
+  //   }
+  // }, [prevScrollpos, props.location.pathname])
 
   const handleMenuToggle = () => setActive(!active)
 
@@ -63,6 +64,13 @@ export const Navigation = (props) => {
     <nav
       className={`${active ? 'nav-active' : ''}`}
     >
+      <Headroom
+      style={{
+        position: "fixed",
+        background: "transparent",
+        zIndex: 9
+      }} 
+      >
       <div className={classnames("navbar", { "navbar-hidden": !visible })}>
         <div className="nav-wrapper container">
           <Link to="/" onClick={() => handleLinkClick()}>
@@ -95,6 +103,7 @@ export const Navigation = (props) => {
           }
         </div>
       </div>
+      </Headroom>
       <div className="nav-links">
         <div className="nav-links-nav">
           <img src={'/images/logo-black.png'} />
