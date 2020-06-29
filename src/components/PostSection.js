@@ -7,8 +7,7 @@ const PostSection = ({
   posts = []
 }) => {
     return (
-      <div className="PostSection">
-        <h1>teste</h1>
+      <div className="posts-section">
         <div className="post-section-grid">
           {posts.map((post, index) => (
             <PostCard key={post.title + index} {...post} />
