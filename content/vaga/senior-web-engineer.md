@@ -69,5 +69,6 @@ LikeToSee: >-
 
 
   Please include a link to your online portfolio to be considered. Huge is committed to creating an inclusive employee experience for all Hugers. We firmly believe that our work isn’t at its best unless all of our employees, regardless of race, gender, religion, sexual orientation, age, or disability have equal opportunities to do great work.
+link: https://www.notion.so/
 status: Published
 ---
