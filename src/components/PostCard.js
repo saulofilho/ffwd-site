@@ -13,7 +13,7 @@ const PostCard = ({
   ...props
 }) => (
     <>
-
+      <Link to={slug}>
         <div className={`post-card ${className}`}>
           <div className="post-card-text">
             <p className="default-text-header">
@@ -36,7 +36,7 @@ const PostCard = ({
             <img src={line} alt="line" />
           </div>
         </div>
-
+      </Link>
     </>
   )
 
