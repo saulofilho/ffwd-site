@@ -32,6 +32,10 @@ const PostCard = ({
               alt={PostTitle}
             />
           </div>
+            <h1
+                          style={{
+                            color: `red`
+                          }}>teste 3</h1>
           <div className="line container display-none-desk">
             <img src={line} alt="line" />
           </div>
