@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import Image from './Image'
 import line from '../../static/images/line.png'
 import './PostCard.css'
 
@@ -19,23 +20,16 @@ const PostCard = ({
             <p className="default-text-header">
               {date}
             </p>
-            <p className="default-text-about">
-              {PostTitle}
-            </p>
+            {PostTitle &&
+              <p className="default-text-about">
+                {PostTitle}
+              </p>}
           </div>
-          <div className="post-card-img relative container">
-            <div 
-              className="post-card-bg"
-              style={{
-                backgroundImage: `url(${featuredImage})`
-              }}
-              alt={PostTitle}
-            />
-          </div>
-            <h1
-                          style={{
-                            color: `red`
-                          }}>teste 3</h1>
+          {featuredImage && (
+            <div className="post-card-img relative container">
+              <Image background src={featuredImage} alt={PostTitle} />
+            </div>
+          )}
           <div className="line container display-none-desk">
             <img src={line} alt="line" />
           </div>
