@@ -143,14 +143,14 @@
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
-  background: #fff;
+  background-color: red;
 }
 .make-great-launches .default-text-about-sobre,
 .make-great-launches .default-text-title-sobre {
   color: #000;
 }
 .make-great-launches .default-text-title-sobre {
-  padding-top: 24px;
+  padding-top: 60px;
 }
 .nave-text-upper {
   font-family: var(--font-secondary);

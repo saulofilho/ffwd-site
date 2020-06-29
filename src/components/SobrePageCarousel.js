@@ -125,6 +125,8 @@ const SobrePageCarousel = () => {
                 </div>
             </div>
             <div className="make-great-launches">
+              <div className="make-great-launches-bg">
+              </div>
                 <p className="default-text-title-sobre container">
                   we make
                   <br/> 

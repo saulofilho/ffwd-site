@@ -82,7 +82,14 @@ export const BlogIndexTemplate = ({
             </div>
             <section className="posts-section" id="posts-section">
               <div className="container">
-                <PostSection posts={filteredPosts} />
+              {filteredPosts.map((post) => (
+              <p className="default-text-about">
+                {console.log('x', post)}
+                        {post.PostTitle}
+                      </p>
+                      ))}
+                {/* <PostSection posts={filteredPosts} /> */}
+                <p>teste</p>
               </div>
             </section>
           </main>
