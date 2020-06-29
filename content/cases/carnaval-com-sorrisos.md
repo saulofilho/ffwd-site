@@ -20,6 +20,7 @@ container:
   - type: AddImage
     image: ../../images/video1-2-1.png
     alt: x
+    imagemob: ../../images/default-img.jpg
   - type: AddText
     text: >-
       ## desafio
