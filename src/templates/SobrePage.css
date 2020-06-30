@@ -5,11 +5,22 @@
 .sobre-section .swiper-container {
   width: 100%;
   height: auto;
-  margin-left: auto;
-  margin-right: auto;
 }
 .sobre-section .swiper-wrapper {
   height: 100vh !important;
+}
+.sobre-section .swiper-pagination-sobre {
+  border: 1px solid #000;
+  background: #000;
+  border-radius: 40px;
+  width: 152px;
+  margin: auto;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  bottom: 60px;
 }
 .sobre-hero {
   height: 100vh;

@@ -108,7 +108,25 @@ const SobrePageCarousel = () => {
                   <br/>
                   first
                 </p>
-                <p className="default-text-about-sobre container">
+                <p className="default-text-about-sobre container display-none-desk">
+                  <strong>
+                    O Digital First provoca a deixar de lado
+                    <br/> 
+                    o favoritismo pelo que é tradicional.
+                  </strong>
+                  <br />
+                  <br />
+                    É estar conectado com o mundo, com as mudanças.
+                    <br/> 
+                    É colocar os consumidores no centro das decisões.
+                    <br/> 
+                    Propomos um novo pensamento, uma nova forma 
+                    <br/> 
+                    de enxergar oportunidades, de solucionar 
+                    <br/> 
+                    problemas, de conquistar o mundo.
+                </p>
+                <p className="default-text-about-sobre container display-none-mob">
                   <strong>
                     O Digital First provoca a deixar de lado
                     o favoritismo
