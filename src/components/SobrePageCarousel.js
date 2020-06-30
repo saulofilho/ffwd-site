@@ -28,7 +28,8 @@ const SobrePageCarousel = () => {
     autoHeight: true,
     direction: 'vertical',
     mousewheel: true,
-    freeMode: true
+    freeMode: true,
+    slidesPerView: 'auto'
   }
   return (
     <>
@@ -221,7 +222,7 @@ const SobrePageCarousel = () => {
                   </div>
                 </div>
             </div>
-            {/* <footer>
+            <footer>
               <div className="footer-custom container">
                 <div className="logo-footer">
                   <img src={logo} alt="logo-white-vertical" />
@@ -269,7 +270,7 @@ const SobrePageCarousel = () => {
                   </div>
                 </div>
               </div>
-            </footer> */}
+            </footer>
           </Swiper>
         </div>
         <div data-hash="servicos">
@@ -436,7 +437,7 @@ const SobrePageCarousel = () => {
                   </div>
                 </div>
             </div>
-            {/* <footer>
+            <footer>
               <div className="footer-custom container">
                 <div className="logo-footer">
                   <img src={logo} alt="logo-white-vertical" />
@@ -484,7 +485,7 @@ const SobrePageCarousel = () => {
                   </div>
                 </div>
               </div>
-            </footer> */}
+            </footer>
           </Swiper>
         </div>
       </Swiper>

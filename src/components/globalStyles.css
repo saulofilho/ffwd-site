@@ -33,16 +33,14 @@
 ::selection {
   background: #cacaca;
 }
-html {
+html,
+body {
   box-sizing: border-box;
+  position: relative;
   height: 100%;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
-}
-body {
   -webkit-font-smoothing: antialiased;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
 }
 a {
   color: var(--primary);

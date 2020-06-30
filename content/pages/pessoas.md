@@ -1,8 +1,8 @@
 ---
 template: PessoasPage
 slug: pessoas
-title: Pessoas Page
+title: Pessoas
 meta:
   description: This is a meta description.
-  title: Pessoas Page
+  title: Pessoas
 ---

@@ -1,8 +1,8 @@
 ---
 template: BlogIndex
 slug: blog
-title: Blog Page
+title: Blog
 meta:
   description: This is a meta description.
-  title: Blog Page
+  title: Blog
 ---

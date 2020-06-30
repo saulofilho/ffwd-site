@@ -1,8 +1,8 @@
 ---
 template: ContatoPage
 slug: contato
-title: Contato Page
+title: Contato
 meta:
   description: This is a meta description.
-  title: Contato Page
+  title: Contato
 ---

@@ -1,8 +1,8 @@
 ---
 template: ProjetosIndex
 slug: projetos
-title: Projetos Page
+title: Projetos
 meta:
   description: This is a meta description.
-  title: Projetos Page
+  title: Projetos
 ---
