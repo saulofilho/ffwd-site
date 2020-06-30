@@ -1,8 +1,6 @@
-.we-are-ffwd,
-.our-culture,
-.nossas-vagas {
-  width: 100%;
+.we-are-ffwd {
   background: #fff;
+  height: 900px !important;
 }
 .owner {
   min-height: 432px;
@@ -39,6 +37,11 @@
 }
 .the-people-behind {
   background: #fff;
+  height: 900px !important;
+}
+.wrapper-team-heads {
+  background: #fff;
+  height: 900px !important;
 }
 .the-people-behind .default-text-title {
   padding: 16px 60px 60px 24px;
@@ -48,8 +51,7 @@
 }
 .todos-que-entram {
   background: #fff;
-  height: 266px;
-  width: 100%;
+  height: 900px !important;
 }
 .the-team {
   background: #000;
@@ -83,7 +85,7 @@
   padding: 0 24px 60px; 
 }
 .wrapper-photos-heads {
-  height: 100%;
+  height: 900px !important;
 }
 .man {
   width: 100%;
@@ -101,10 +103,15 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+.our-culture {
+  background: #fff;
+  height: 900px !important;
+}
 .our-culture .default-text-sub {
   padding: 16px 48px 0 24px;
 }
 .wrapper-cultura-imgs {
+  height: 900px !important;
   background: #000;
   position: relative;
 }
@@ -215,6 +222,7 @@
 }
 .vagas-index {
   background: #000;
+  height: 900px !important;
 }
 .vagas-index .default-text-header {
   color: #fff;
@@ -232,8 +240,70 @@
   padding: 0 24px;
 }
 .nossas-vagas .anchor-down {
+  height: 900px !important;
   width: 100%;
   padding: 84px 0 68px 30px;
+}
+.swiper-pagination-pessoas::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url(/images/line-blk.png);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: auto;
+  left: -30px;
+}
+.swiper-pagination-pessoas::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url(/images/line-blk.png);
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: auto;
+  right: -30px;
+}
+.pessoas .swiper-pagination-pessoas .swiper-pagination-bullet::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url(/images/line-left-wht-carousel.png);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: auto;
+  left: 10px;
+  bottom: 0;
+}
+.pessoas .swiper-pagination-pessoas .swiper-pagination-bullet::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url(/images/line-right-wht-carousel.png);
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: auto;
+  right: 10px;
+  bottom: 0;
+}
+.pessoas .swiper-pagination-pessoas .swiper-pagination-bullet {
+  background: #fff;
+  opacity: unset;
+  width: 4px;
+  height: 4px;
+}
+.pessoas .swiper-pagination-pessoas .swiper-pagination-bullet-active {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background: url(/images/ativo.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
 }
 /* desktop */
 .owner-text-desk {
@@ -257,20 +327,43 @@
   .owner-text-desk {
     display: flex;
   }
-}
-
-.swiper-pagination-pessoas {
-  border: 1px solid #000;
-  background: #000;
-  border-radius: 40px;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  margin: auto;
-  min-width: 152px;
-  height: 24px;
-  margin-bottom: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  .swiper-pagination-pessoas .swiper-pagination-bullet::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(/images/car-arrow-left.png);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: auto;
+    left: 10px;
+    bottom: 0;
+  }
+  .swiper-pagination-pessoas .swiper-pagination-bullet::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(/images/car-arrow-right.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: auto;
+    right: 10px;
+    bottom: 0;
+  }
+  .swiper-pagination-pessoas .swiper-pagination-bullet {
+    background: #000;
+    opacity: unset;
+    width: 4px;
+    height: 4px;
+  }
+  .swiper-pagination-pessoas .swiper-pagination-bullet-active {
+    content: "";
+    width: 12px;
+    height: 12px;
+    background: url(/images/ativo-blk.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+  }
 }

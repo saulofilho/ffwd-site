@@ -1,12 +1,10 @@
 .sobre-section {
   height: 100vh;
   width: 100%;
-  background: yellow;
 }
 .sobre-section .swiper-container {
   height: 100%;
   width: 100%;
-  background: blue;
 }
 .sobre-section .swiper-pagination-sobre {
   border: 1px solid #000;
@@ -19,8 +17,6 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  bottom: 60px;
+  bottom: 15%;
+  left: 0;
 }
-/* .sobre-section footer {
-  height: auto !important;
-} */

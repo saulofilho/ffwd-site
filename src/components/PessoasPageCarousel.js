@@ -5,14 +5,18 @@ import './PessoasPageCarousel.css';
 import arrowDown from '../../static/images/ico-seta-down.png'
 import logo from '../../static/images/logo-white-vertical.png'
 
+// const scrollToTop = () => {
+//   window.scroll({ top: 0, left: 0, behavior: 'smooth' });
+// }
+
+// const scrollToBottom = () => {
+//   document.querySelector('#').scrollIntoView({ behavior: 'smooth' });
+// }
+
 const PessoasPageCarousel = ({
   posts,
 }) => {
-
   const HorizontalSwiperParams = {
-    loop: true,
-    grabCursor: false,
-    effect: 'fade',
     hashNavigation: {
       watchState: true,
     },
@@ -21,14 +25,12 @@ const PessoasPageCarousel = ({
       clickable: true
     }
   };
-
   const VerticalSwiperParams = {
-    direction: 'vertical',
-    slidesPerView: 'auto',
     autoHeight: true,
-    grabCursor: false,
-    freeMode: true,
+    direction: 'vertical',
     mousewheel: true,
+    freeMode: true,
+    slidesPerView: 'auto',
     hashNavigation: {
       watchState: true,
     }
@@ -37,7 +39,7 @@ const PessoasPageCarousel = ({
   return (
     <>
       <Swiper {...HorizontalSwiperParams}>
-        <div className="pessoas" data-hash="xxx">
+        <div data-hash="pessoas">
           <Swiper {...VerticalSwiperParams}>
             <div className="we-are-ffwd" data-hash="teste">
               <p className="default-text-header container">
@@ -194,7 +196,7 @@ const PessoasPageCarousel = ({
             </footer>
           </Swiper>
         </div>
-        <div className="cultura" data-hash="xxx2">
+        <div data-hash="cultura">
           <Swiper {...VerticalSwiperParams}>
             <div className="our-culture" data-hash="cultura">
               <p className="default-text-header container">
@@ -435,7 +437,7 @@ const PessoasPageCarousel = ({
             </footer>
           </Swiper>
         </div>
-        <div className="vagas" data-hash="xxx3">
+        <div data-hash="vagas">
           <Swiper {...VerticalSwiperParams}>
             <div className="nossas-vagas" data-hash="nossas-vagas">
               <p className="default-text-header container">

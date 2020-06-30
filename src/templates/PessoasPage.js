@@ -26,10 +26,12 @@ export const PessoasPageTemplate = ({
       )
 
         return (
-          <main className="pessoas">
-            <PessoasPageCarousel
-              posts={filteredPosts}
-            />
+          <main>
+            <section className="pessoas">
+              <PessoasPageCarousel
+                posts={filteredPosts}
+              />
+            </section>
           </main>
         )
       }}

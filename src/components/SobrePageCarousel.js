@@ -29,7 +29,10 @@ const SobrePageCarousel = () => {
     direction: 'vertical',
     mousewheel: true,
     freeMode: true,
-    slidesPerView: 'auto'
+    slidesPerView: 'auto',
+    hashNavigation: {
+      watchState: true,
+    }
   }
   return (
     <>
