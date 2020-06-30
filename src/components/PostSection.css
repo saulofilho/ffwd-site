@@ -7,15 +7,10 @@
 .anchor-up {
   padding: 14px 38px;
 }
-.anchor-up a {
-  text-decoration: none;
-  font-family: var(--font-secondary);
-  font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 20px;
-  text-transform: uppercase;
-  color: #FFFFFF;
+.anchor-up button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 /* desktop */

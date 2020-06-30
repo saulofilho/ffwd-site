@@ -10,6 +10,11 @@
   width: 100%;
   padding: 84px 0 68px 30px;
 }
+.anchor-down button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
 .nossos-clientes {
   padding: 60px 24px;
 }
@@ -48,5 +53,9 @@
   }
   .projeto .anchor-down {
     padding: 84px 0 68px 0px;
+  }
+  .nossos-clientes h2 {
+    font-size: 64px;
+    padding-bottom: 10px;
   }
 }

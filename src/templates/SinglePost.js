@@ -108,7 +108,7 @@ export const pageQuery = graphql`
         PostText
         PostAboutDesktop
         template
-        date(formatString: "MMMM Do, YYYY")
+        date(formatString: "DD.MM.YYYY")
       }
     }
     allPosts: allMarkdownRemark(

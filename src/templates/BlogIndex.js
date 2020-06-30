@@ -1,37 +1,13 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import { Location } from '@reach/router'
-import qs from 'qs'
 import PostSection from '../components/PostSection'
-// import PostCategoriesNav from '../components/PostCategoriesNav'
 import Layout from '../components/Layout'
 import BlogSearch from '../components/BlogSearch'
 import arrowDown from '../../static/images/ico-seta-down.png'
 
-/**
- * Filter posts by date. Feature dates will be fitered
- * When used, make sure you run a cronejob each day to show schaduled content. See docs
- *
- * @param {posts} object
- */
-export const byDate = posts => {
-  const now = Date.now()
-  return posts.filter(post => Date.parse(post.date) <= now)
-}
-
-/**
- * filter posts by category.
- *
- * @param {posts} object
- * @param {title} string
- * @param {contentType} string
- */
-export const byCategory = (posts, title, contentType) => {
-  const isCategory = contentType === 'postCategories'
-  const byCategory = post =>
-    post.categories &&
-    post.categories.filter(cat => cat.category === title).length
-  return isCategory ? posts.filter(byCategory) : posts
+const scrollToBottom = () => {
+  document.querySelector('#posts-section').scrollIntoView({ behavior: 'smooth' });
 }
 
 export const BlogIndexTemplate = ({
@@ -42,21 +18,6 @@ export const BlogIndexTemplate = ({
 }) => (
     <Location>
       {({ location }) => {
-        let filteredPosts =
-          posts && !!posts.length
-            ? byCategory(byDate(posts), title, contentType)
-            : []
-
-        let queryObj = location.search.replace('?', '')
-        queryObj = qs.parse(queryObj)
-
-        if (enableSearch && queryObj.s) {
-          const searchTerm = queryObj.s.toLowerCase()
-          filteredPosts = filteredPosts.filter(post =>
-            post.frontmatter.title.toLowerCase().includes(searchTerm)
-          )
-        }
-
         return (
           <main className="Blog" id="blog-hero">
             <div className="blog-hero container">
@@ -75,9 +36,13 @@ export const BlogIndexTemplate = ({
                 </div>
               </section>
               <div className="anchor-down">
-                <a href="#posts-section">
+                <button
+                    onClick={() => {
+                      scrollToBottom()
+                    }}
+                  >
                   <img src={arrowDown} alt="arrow-don" />
-                </a>
+                  </button>
                 </div>
             </div>
             <section className="posts-section" id="posts-section">
@@ -91,7 +56,7 @@ export const BlogIndexTemplate = ({
     </Location>
   )
 
-const BlogIndex = ({ data: { page, posts, postCategories }, location }) => (
+const BlogIndex = ({ data: { page, posts }, location }) => (
   <Layout
     location={location}
     meta={page.frontmatter.meta || false}
@@ -102,11 +67,6 @@ const BlogIndex = ({ data: { page, posts, postCategories }, location }) => (
       {...page.fields}
       {...page.frontmatter}
       posts={posts.edges.map(post => ({
-        ...post.node,
-        ...post.node.frontmatter,
-        ...post.node.fields
-      }))}
-      postCategories={postCategories.edges.map(post => ({
         ...post.node,
         ...post.node.frontmatter,
         ...post.node.fields
@@ -136,7 +96,7 @@ export const pageQuery = graphql`
     }
     posts: allMarkdownRemark(
       filter: { fields: { contentType: { eq: "posts" } } }
-      sort: { order: ASC, fields: [frontmatter___date] }
+      sort: { order: DESC, fields: [frontmatter___date] }
     ) {
       edges {
         node {
@@ -146,23 +106,8 @@ export const pageQuery = graphql`
           frontmatter {
             PostTitle
             title
-            date(formatString: "YYYY.MM.DD")
+            date(formatString: "DD.MM.YYYY")
             featuredImage
-          }
-        }
-      }
-    }
-    postCategories: allMarkdownRemark(
-      filter: { fields: { contentType: { eq: "postCategories" } } }
-      sort: { order: ASC, fields: [frontmatter___title] }
-    ) {
-      edges {
-        node {
-          fields {
-            slug
-          }
-          frontmatter {
-            title
           }
         }
       }

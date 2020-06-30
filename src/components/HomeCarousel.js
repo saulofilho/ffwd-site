@@ -5,7 +5,6 @@ import './HomeCarousel.css';
 
 const HeroSliderConfigs = {
   slidesPerView: 1,
-  effect: 'fade',
   loop: true,
   hashNavigation: {
     watchState: true,
@@ -23,7 +22,7 @@ const HomeCarousel = ({
   return (
     <Swiper {...HeroSliderConfigs}>
       {filteredPosts.map(project => (
-        <div className="home-slide" key={project.slug} data-hash={project.slug}>
+        <div className="home-slide" key={project.slug} data-hash={project.title.replace(/\s/g, "")}>
             <div
               className="home-slide-image"
             >

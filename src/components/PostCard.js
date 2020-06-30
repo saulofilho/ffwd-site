@@ -8,7 +8,6 @@ const PostCard = ({
   date,
   PostTitle,
   slug,
-  categories = [],
   className = '',
   ...props
 }) => (

@@ -5,29 +5,20 @@ import HomeCarousel from '../components/HomeCarousel'
 import Layout from '../components/Layout'
 import './HomePage.css'
 
-// window.scroll({ behavior: 'smooth' });
-
 export const HomePageTemplate = ({
   cases = []
 }) => (
   <Location>
     {({ location }) => {
-      let filteredPosts = cases
-
-        filteredPosts = filteredPosts.filter(post =>
-          post.frontmatter.title.toLowerCase()
-        )
-
       return (
         <main className="home-page">
-          <HomeCarousel filteredPosts={filteredPosts} />
+          <HomeCarousel filteredPosts={cases} />
         </main>
       )
     }}
   </Location>
 )
 
-// Export Default HomePage for front-end
 const HomePage = ({ data: { page, cases }, location }) => (
   <Layout
     location={location}

@@ -7,11 +7,6 @@ import './ProjetosIndex.css'
 import arrowDown from '../../static/images/ico-seta-down.png'
 import cardClient from '../../static/images/card-cliente.png'
 
-export const byDate = cases => {
-  const now = Date.now()
-  return cases.filter(post => Date.parse(post.date) <= now)
-}
-
 const scrollToBottom = () => {
   document.querySelector('#projeto-section').scrollIntoView({ behavior: 'smooth' });
 }
@@ -22,11 +17,6 @@ export const ProjetosIndexTemplate = ({
 }) => (
     <Location>
       {({ location }) => {
-        let filteredPosts = byDate(cases)
-
-        filteredPosts = filteredPosts.filter(post =>
-          post.frontmatter.title.toLowerCase()
-        )
         return (
           <main>
             <div className="projeto">
@@ -49,9 +39,6 @@ export const ProjetosIndexTemplate = ({
                   Veja nossos cases:
                 </p>
                 <div className="anchor-down container">
-                  {/* <a href="#projeto-section">
-                    <img src={arrowDown} alt="arrowDown" />
-                  </a> */}
                   <button
                     onClick={() => {
                       scrollToBottom()
@@ -62,7 +49,7 @@ export const ProjetosIndexTemplate = ({
                 </div>
             </div>
             <section className="projeto-section" id="projeto-section">
-              <CaseSection posts={filteredPosts} />
+              <CaseSection posts={cases} />
             </section>
             <div className="nossos-clientes container">
               <h2 className="display-none-desk">

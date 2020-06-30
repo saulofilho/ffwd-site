@@ -6,11 +6,16 @@ import arrowDown from '../../static/images/ico-seta-down.png'
 import arrowUp from '../../static/images/arrow-up-blk.png'
 import logo from '../../static/images/logo-white-vertical.png'
 
+const scrollToTop = () => {
+  window.scroll({ top: 0, left: 0, behavior: 'smooth' });
+}
+
+const scrollToBottom = () => {
+  document.querySelector('#experiencias').scrollIntoView({ behavior: 'smooth' });
+}
+
 const SobrePageCarousel = () => {
   const HorizontalSwiperParams = {
-    loop: true,
-    grabCursor: false,
-    effect: 'fade',
     hashNavigation: {
       watchState: true,
     },
@@ -22,18 +27,8 @@ const SobrePageCarousel = () => {
   const VerticalSwiperParams = {
     autoHeight: true,
     direction: 'vertical',
-    grabCursor: false,
-    freeMode: false,
-    hashNavigation: {
-      watchState: true,
-    },
-    scrollbar: {
-      el: '.swiper-scrollbar',
-      hide: true,
-      clickable: true
-    },
     mousewheel: true,
-    freeMode: true,
+    freeMode: true
   }
   return (
     <>
@@ -59,12 +54,16 @@ const SobrePageCarousel = () => {
                 </button>
               </div>
               <div className="anchor-down container display-none-mob">
-                <a href="#experiencias">
+              <button
+                    onClick={() => {
+                      scrollToBottom()
+                    }}
+                  >
                   <img src={arrowDown} alt="arrowDown" />
-                </a>
+                  </button>
               </div>
             </div>
-            <div className="experiencias" id="experiencias" data-hash="experienciasxxx">
+            <div className="experiencias" id="experiencias">
                 <p className="default-text-header-sobre container">
                   nós somos
                 </p>
@@ -192,15 +191,19 @@ const SobrePageCarousel = () => {
                 </div>
                 <div className="container">
                   <div className="btn-up display-none-mob">
-                    <a href="#mais-que-digital">
+                  <button
+                    onClick={() => {
+                      scrollToTop()
+                    }}
+                  >
                       <h4>
                       <img src={arrowUp} alt="arrowUp" /> subir
                       </h4>
-                    </a>
+                    </button>
                   </div>
                 </div>
             </div>
-            <footer>
+            {/* <footer>
               <div className="footer-custom container">
                 <div className="logo-footer">
                   <img src={logo} alt="logo-white-vertical" />
@@ -248,7 +251,7 @@ const SobrePageCarousel = () => {
                   </div>
                 </div>
               </div>
-            </footer>
+            </footer> */}
           </Swiper>
         </div>
         <div data-hash="servicos">
@@ -403,15 +406,19 @@ const SobrePageCarousel = () => {
                 </div>
                 <div className="container">
                   <div className="btn-up display-none-mob">
-                    <a href="#mais-que-digital">
-                      <h4>
-                      <img src={arrowUp} alt="arrowUp" /> subir
-                      </h4>
-                    </a>
+                  <button
+                    onClick={() => {
+                      scrollToTop()
+                    }}
+                  >
+                    <h4>
+                    <img src={arrowUp} alt="arrowUp" /> subir
+                    </h4>
+                    </button>
                   </div>
                 </div>
             </div>
-            <footer>
+            {/* <footer>
               <div className="footer-custom container">
                 <div className="logo-footer">
                   <img src={logo} alt="logo-white-vertical" />
@@ -459,7 +466,7 @@ const SobrePageCarousel = () => {
                   </div>
                 </div>
               </div>
-            </footer>
+            </footer> */}
           </Swiper>
         </div>
       </Swiper>

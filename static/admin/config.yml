@@ -96,7 +96,7 @@ collections:
     editor:
       preview: true
     folder: content/posts
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    slug: '{{slug}}'
     create: true
     fields:
       - { label: Template, name: template, widget: hidden, default: SinglePost }
