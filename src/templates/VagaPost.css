@@ -2,11 +2,13 @@
   background: #000;
   color: #fff;
   width: 100%;
-  height: 100%;
+  height: 477px;
   display: flex;
   flex-flow: column;
   justify-content: center;
-
+}
+.vaga-hero .anchor-posts {
+  padding: 130px 40px 0;
 }
 .vaga-hero .anchor-posts a {
   color: #fff;
@@ -19,9 +21,17 @@
 }
 .vaga-hero .default-text-title {
   padding: 16px 0 24px 24px;
+  font-weight: normal;
+  font-size: 64px;
+  line-height: 70px;
 }
 .vaga-hero .default-text-about {
   padding: 0 24px 60px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  color: #fff;
 }
 .vaga-text {
   height: 100%;
@@ -39,4 +49,46 @@
 .apply-btn button {
   width: 80px;
   height: 48px;
+}
+.overview-content p,
+.like-to-see-content p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  color: #1D1D1B;
+  padding-bottom: 12px;
+}
+.overview-content p:last-child,
+.like-to-see-content p:last-child {
+  padding-bottom: 0;
+}
+
+/* desktop */
+
+@media (min-width: 1024px) {
+  .vaga-hero {
+    height: 548px;
+  }
+  .vaga-hero .anchor-posts {
+    padding: 146px 20px 0;
+  }
+  .vaga-hero .default-text-header {
+    padding: 83px 0 0;
+  }
+  .vaga-hero .default-text-title {
+    padding: 16px 715px 24px 0;
+  }
+  .vaga-hero .default-text-about {
+    padding: 0 715px 60px 0;
+  }
+  .vaga-text .default-text-sub {
+    padding: 60px 0 24px 0;
+  }
+  .vaga-text .default-text-about {
+    padding: 0 345px 0 0;
+  }
+  .apply-btn {
+    padding: 60px 0;
+  }
 }

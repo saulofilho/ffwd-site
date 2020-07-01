@@ -337,10 +337,10 @@
   .our-culture {
     height: 720px !important;
   }
-  .pessoas .default-text-title {
+  .we-are-ffwd .default-text-title {
     font-size: 64px;
     line-height: 70px;
-    padding: 16px 0 0 24px;
+    padding: 16px 0 0;
   }
   .the-people-behind {
     display: flex;

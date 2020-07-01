@@ -8,6 +8,10 @@ import arrowDown from '../../static/images/ico-seta-down.png'
 import arrowLeft from '../../static/images/arrow-left-wht.png'
 import arrowRight from '../../static/images/arrow-right-wht.png'
 
+const scrollToBottom = () => {
+  document.querySelector('#containerCasePost').scrollIntoView({ behavior: 'smooth' });
+}
+
 export const CasePostTemplate = ({
   container = [],
   ClientTitle,
@@ -29,7 +33,7 @@ export const CasePostTemplate = ({
               <p className="default-text-header">
                 {ClientTitle}
               </p>
-              <h1 className="">
+              <h1>
                 {CaseTitle}
               </h1>
               <p className="default-text-about">
@@ -37,10 +41,14 @@ export const CasePostTemplate = ({
                   source={CaseAbout}
                 />
               </p>
-              <div className="anchor-down">
-                <a href="#containerCasePost">
-                  <img src={arrowDown} alt="" />
-                </a>
+              <div className="anchor-down btn-down-case container">
+                <button
+                  onClick={() => {
+                    scrollToBottom()
+                  }}
+                >
+                  <img src={arrowDown} alt="arrowDown" />
+                </button>
               </div>
             </div>
             <div className="containerCasePost" id="containerCasePost">
@@ -62,7 +70,7 @@ export const CasePostTemplate = ({
             </div>
             <div className="resultados container">
               <Content
-                className="case-content"
+                className="case-content-resultados"
                 source={body}
               />
             </div>

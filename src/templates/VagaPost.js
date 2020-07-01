@@ -41,17 +41,17 @@ export const VagaPostTemplate = ({
               Overview
             </p>
             <div className="default-text-about">
-              <Content source={overview} />
+              <Content className="overview-content" source={overview} />
             </div>
             <p className="default-text-sub">
               What We’d Like To See
             </p>
             <div className="default-text-about">
-              <Content source={LikeToSee} />
+              <Content className="like-to-see-content" source={LikeToSee} />
             </div>
             <div className="default-btn apply-btn">
               <button>
-                <a href={link}>
+                <a target='_blank' href={link}>
                   Apply
                 </a>
               </button>

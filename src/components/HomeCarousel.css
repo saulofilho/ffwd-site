@@ -119,6 +119,9 @@
 .home-car-texts .default-text-header {
   text-transform: uppercase;
 }
+.home-car-texts .default-text-about {
+  color: #fff;
+}
 
 /* desktop */
 

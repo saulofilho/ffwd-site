@@ -1,8 +1,3 @@
-.home-case, 
-.single-case {
-  height: 100%;
-  width: 100%;
-}
 .case-hero {
   height: 100vh;
 }
@@ -86,6 +81,11 @@
 .prev img {
   padding-right: 16px;
 }
+.btn-down-case {
+  position: absolute;
+  bottom: 68px;
+  padding: 0 24px;
+}
 /* desktop */
 
 @media (min-width: 1024px) {
@@ -97,5 +97,29 @@
   }
   .blog-hero .anchor-down {
     padding: 180px 0 68px 0;
+  }
+  .case-hero h1 {
+    padding: 16px 720px 0 0;
+  }
+  .case-texts .case-content p {
+    padding: 0 10%;
+  }
+  .case-content {
+    margin: 0;
+    padding: 120px 0;
+    display: flex;
+    flex-flow: row;
+  }
+  .case-content h2 {
+    font-size: 64px;
+    line-height: 70px;
+  }
+  .case-hero .default-text-about {
+    padding: 24px 720px 0 0;
+  }
+  .btn-down-case {
+    position: absolute;
+    bottom: 88px;
+    padding: 0;
   }
 }
