@@ -66,6 +66,7 @@ h2 {
   font-size: 40px;
   line-height: 46px;
   text-transform: uppercase;
+  color: #1D1D1B;
 }
 h3 {
   font-family: var(--font-primary);
@@ -74,11 +75,12 @@ h3 {
   font-size: 24px;
   line-height: 30px;
   text-transform: uppercase;
+  color: #1D1D1B;
 }
 h4 {
   font-family: var(--font-secondary);
   font-style: normal;
-  font-weight: 600;
+  font-weight: bolder;
   font-size: 16px;
   line-height: 20px;
   color: #1D1D1B;
@@ -112,14 +114,16 @@ h4 {
   line-height: 16px;
   padding: 24px 90px 0 24px;
   width: 100%;
+  color: #1D1D1B;
 }
 .default-text-sub {
   font-family: var(--font-secondary);
   font-style: normal;
-  font-weight: 600;
+  font-weight: bolder;
   font-size: 16px;
   line-height: 20px;
   padding: 16px 0 0 24px;
+  color: #1D1D1B;
 }
 pre {
   background: var(--lightGrey);

@@ -1,6 +1,6 @@
 .mais-que-digital {
   background: #fff;
-  height: 900px !important;
+  height: 640px !important;
 }
 .mais-que-digital button {
   width: 154px;
@@ -16,7 +16,7 @@
   margin: 20px 0 0 24px;
 }
 .experiencias {
-  height: 900px !important;
+  height: 640px !important;
   width: 100%;
   background-image: url(/images/mais-que.png);
   background-position: bottom;
@@ -90,7 +90,7 @@
   border: 1px solid #FFFFFF;
 }
 .quem-somos-wrapper {
-  height: 900px !important;
+  height: 640px !important;
   width: 100%;
   background: #fff;
 }
@@ -122,7 +122,7 @@
   cursor: pointer;
 }
 .nossa-abordagem {
-  height: 900px !important;
+  height: 640px !important;
   width: 100%;
   background-image: url(/images/astronauta-mob.png);
   background-position: bottom;
@@ -144,7 +144,7 @@
   border: 1px solid #FFFFFF;
 }
 .make-great-launches {
-  height: 900px !important;
+  height: 640px !important;
   width: 100%;
   background-image: url(/images/nave.png);
   background-position: bottom;
@@ -181,7 +181,7 @@
   border: 1px solid #FFFFFF;
 }
 .servicos {
-  height: 900px !important;
+  height: 640px !important;
   width: 100%;
   background: #fff;
 }
@@ -203,7 +203,7 @@
   padding-bottom: 24px;
 }
 .escala {
-  height: 900px !important;
+  height: 640px !important;
   width: 100%;
   background-image: url(/images/escala-mob.png);
   background-position: center;
@@ -212,13 +212,13 @@
   background-color: #fff;
 }
 .pilares-wrapper {
-  height: 900px !important;
+  height: 640px !important;
   width: 100%;
   background: #000;
 }
 .pilares {
+  height: 640px !important;
   width: 100%;
-  height: 900px !important;
 }
 .sobre-car-vert-servicos .default-text-header:nth-of-type(1) {
   padding-bottom: 50px;
@@ -253,7 +253,7 @@
   color: #ADADAD;
 }
 .we-make-great {
-  height: 900px !important;
+  height: 640px !important;
   width: 100%;
   background-image: url(/images/astronauta-white-mob.png);
   background-position: center;
@@ -343,10 +343,14 @@
   background-repeat: no-repeat;
   background-size: auto;
 }
-.btn-up {
+.sobre-section .btn-up {
   padding-top: 60px;
 }
-.btn-up h4 {
+.sobre-section .btn-up button {
+  border: 0;
+  background: transparent;
+}
+.sobre-section .btn-up h4 {
   text-transform: uppercase;
 }
 
@@ -361,6 +365,9 @@
   }
   .default-text-sub-sobre {
     padding: 16px 773px 0 0;
+  }
+  .mais-que-digital {
+    height: 720px !important;
   }
   .mais-que-digital .anchor-down button {
     margin: 0;
@@ -384,7 +391,7 @@
     padding: 24px 600px 0 0;
   }
   .experiencias {
-    height: 900px !important;
+    height: 720px !important;
     width: 100%;
     background-image: url(/images/mais-que-desk.png);
     background-position: right;
@@ -396,7 +403,7 @@
     padding: 20px 0 0;
   }
   .img-manifesto {
-    height: 900px !important;
+    height: 720px !important;
     width: 676px;
     background-image: url(/images/mani-mob.png);
     background-position: bottom;
@@ -405,6 +412,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  .quem-somos-wrapper {
+    height: 720px !important;
   }
   .quem-somos {
     width: 100%;
@@ -419,17 +429,20 @@
     padding: 16px 80px 0 0;
   }
   .nossa-abordagem {
-    height: 900px !important;
+    height: 720px !important;
     width: 100%;
     background-image: url(/images/astronauta-desk.png);
   }
   .make-great-launches {
-    height: 900px !important;
+    height: 720px !important;
     width: 100%;
     background-image: url(/images/nave-desk.png);
     background-position: right;
     background-repeat: no-repeat;
     background-size: contain;
+  }
+  .pilares-wrapper {
+    height: 720px !important;
   }
   .nave-text-upper {
     padding: 40px 0 60px 0;
@@ -476,6 +489,9 @@
     background-repeat: no-repeat;
     background-size: auto;
   }
+  .servicos {
+    height: 720px !important;
+  }
   .servicos-texts {
     padding: 0 0 24px 0;
   }
@@ -494,7 +510,7 @@
     padding-bottom: 16px;
   }
   .escala {
-    height: 900px !important;
+    height: 720px !important;
     width: 100%;
     background-image: url(/images/escala-desk.png);
     background-position: center;
@@ -535,12 +551,12 @@
     align-items: flex-start;
     flex-flow: row;
     width: 100%;
-    height: 900px !important;
+    height: 720px !important;
     align-content: center;
     flex-wrap: wrap;
   }
   .we-make-great {
-    height: 900px !important;
+    height: 720px !important;
     width: 100%;
     background-image: url(/images/astronauta-desk-sobre.png);
     background-position: right;

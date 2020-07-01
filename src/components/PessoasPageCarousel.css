@@ -1,13 +1,16 @@
 .we-are-ffwd {
   background: #fff;
-  height: 900px !important;
+  height: 640px !important;
+}
+.we-are-ffwd .default-text-title {
+  font-size: 64px;
+  line-height: 70px;
 }
 .owner {
-  min-height: 432px;
-  height: 100%;
+  height: 432px;
   width: 100%;
   background-image: url(/images/fernando.png);
-  background-position: center;
+  background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -37,25 +40,24 @@
 }
 .the-people-behind {
   background: #fff;
-  height: 900px !important;
+  height: 984px !important;
 }
 .wrapper-team-heads {
   background: #fff;
-  height: 900px !important;
+  height: 969px !important;
 }
 .the-people-behind .default-text-title {
-  padding: 16px 60px 60px 24px;
+  padding: 60px 60px 60px 24px;
 }
 .owner-text .default-text-about {
   padding: 60px 24px;
 }
-.todos-que-entram {
-  background: #fff;
-  height: 900px !important;
+.the-team-wrapper {
+  height: 640px !important;
 }
 .the-team {
+  height: 266px;
   background: #000;
-  height: 100%;
 }
 .the-team .default-text-title {
   color: #fff;
@@ -69,14 +71,14 @@
   width: 100%;
   height: 370px;
   background-image: url(/images/team.png);
-  background-position: bottom;
+  background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .the-heads {
   background: #fff;
+  height: 250px;
   width: 100%;
-  height: 100%;
 }
 .the-heads .default-text-title {
   padding: 60px 24px 24px; 
@@ -85,33 +87,29 @@
   padding: 0 24px 60px; 
 }
 .wrapper-photos-heads {
-  height: 900px !important;
+  height: 719px !important;
 }
-.man {
+.couple-mob {
+  height: 719px;
   width: 100%;
-  height: 50%;
-  background-image: url(/images/man.png);
-  background-position: top;
+  background-image: url(/images/man-woman-mob.png);
+  background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
-}
-.woman {
-  width: 100%;
-  height: 50%;
-  background-image: url(/images/woman.png);
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-size: auto;
 }
 .our-culture {
   background: #fff;
-  height: 900px !important;
+  height: 640px !important;
+}
+.our-culture .default-text-title {
+  font-size: 64px;
+  line-height: 70px;
 }
 .our-culture .default-text-sub {
   padding: 16px 48px 0 24px;
 }
 .wrapper-cultura-imgs {
-  height: 900px !important;
+  height: 640px !important;
   background: #000;
   position: relative;
 }
@@ -133,33 +131,33 @@
 .img-1-10 {
   height: 312px;
   width: 150px;
-  background-image: url(/images/1-10.png);
+  background-image: url(/images/1-10-mob.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   padding-bottom: 40px;
 }
 .img-2-10 {
-  height: 312px;
-  width: 150px;
-  background-image: url(/images/2-10.png);
+  width: 226px;
+  height: 399px;
+  background-image: url(/images/2-10-mob.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   padding-bottom: 40px;
 }
 .img-3-10 {
-  height: 312px;
-  width: 100%;
-  background-image: url(/images/3-10.png);
+  width: 370px;
+  height: 304px;
+  background-image: url(/images/3-10-mob.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   padding-bottom: 40px;
 }
 .img-4-10 {
-  height: 312px;
-  width: 100%;
+  width: 360px;
+  height: 320.67px;
   background-image: url(/images/4-10-mob.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -167,62 +165,66 @@
   padding-bottom: 40px;
 }
 .img-5-10 {
-  height: 320px;
-  width: 100%;
-  background-image: url(/images/5-10.png);
+  width: 360px;
+  height: 395px;
+  background-image: url(/images/5-10-mob.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   padding-bottom: 40px;
+}
+.cultura-img-6 .default-text-about {
+  position: absolute;
+  z-index: 1;
 }
 .img-6-10 {
-  height: 312px;
-  width: 250px;
-  background-image: url(/images/6-10.png);
+  width: 360px;
+  height: 388.33px;
+  position: absolute;
+  bottom: 40px;
+  background-image: url(/images/6-10-mob.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-bottom: 40px;
 }
 .img-7-10 {
-  height: 312px;
-  width: 250px;
-  background-image: url(/images/7-10.png);
+  width: 290.94px;
+  height: 340px;
+  background-image: url(/images/7-10-mob.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   padding-bottom: 40px;
 }
 .img-8-10 {
-  height: 312px;
-  width: 100%;
-  background-image: url(/images/8-10.png);
+  width: 360px;
+  height: 356.67px;
+  background-image: url(/images/8-10-mob.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   padding-bottom: 40px;
 }
 .img-9-10 {
-  height: 312px;
-  width: 210px;
-  background-image: url(/images/9-10.png);
+  width: 235px;
+  height: 348px;
+  background-image: url(/images/9-10-mob.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   padding-bottom: 40px;
 }
 .img-10-10 {
-  height: 220px;
-  width: 100%;
-  background-image: url(/images/10-10.png);
+  width: 360px;
+  height: 232px;
+  background-image: url(/images/10-10-mob.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-bottom: 40px;
+  margin-top: 60px;
 }
 .vagas-index {
   background: #000;
-  height: 900px !important;
 }
 .vagas-index .default-text-header {
   color: #fff;
@@ -239,9 +241,28 @@
 .apply {
   padding: 0 24px;
 }
-.nossas-vagas .anchor-down {
-  height: 900px !important;
+.apply button {
+  border: 0;
+  background: #000;
+  width: 80px;
+  height: 40px;
+  cursor: pointer;
+  text-align: left;
+}
+.apply button a {
+  font-family: var(--font-secondary);
+  font-style: normal;
+  font-weight: bolder;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+.nossas-vagas {
+  height: 640px !important;
   width: 100%;
+}
+.nossas-vagas .anchor-down {
   padding: 84px 0 68px 30px;
 }
 .swiper-pagination-pessoas::before {
@@ -310,22 +331,327 @@
   display: none;
 }
 @media (min-width: 1024px) {
+  .we-are-ffwd {
+    height: 720px !important;
+  }
+  .our-culture {
+    height: 720px !important;
+  }
   .pessoas .default-text-title {
     font-size: 64px;
     line-height: 70px;
+    padding: 16px 0 0 24px;
   }
   .the-people-behind {
     display: flex;
     flex-flow: row;
+    height: 720px !important;
+  }
+  .the-team-wrapper {
+    height: 1122px !important;
+    position: relative;
+    width: 100%;
+  }
+  .the-team {
+    position: absolute;
+    width: 712px;
+    height: 1182px;
+    left: 336px;
+    top: -60px;
+    background: #000;
+  }
+  .the-team .default-text-about {
+    padding: 40px 24px 60px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .the-heads {
+    height: auto;
+  }
+  .the-heads .default-text-about {
+    padding: 24px 0 60px;
+  }
+  .team-photo {
+    width: 837px;
+    height: 704px;
+    background-image: url(/images/team-desk.png);
+    position: absolute;
+    bottom: 60px;
+  }
+  .people-desk-wrapper {
+    display: flex;
+    flex-flow: row;
+    width: 100%;
+    justify-content: space-between;
   }
   .the-people-behind .default-text-title {
-    padding: 80px 0 24px 129px;
+    padding: 80px 0 0 129px;
+  }
+  .owner {
+    height: 720px;
+    width: 607.59px;
+    background-image: url(/images/fernando-desk.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .owner-texts-wrapper {
+    padding: 40px 0 24px 129px;
+  }
+  .owner-texts-wrapper .default-text-about {
+    padding: 40px 0;
   }
   .owner-text .default-text-about {
     display: none;
   }
   .owner-text-desk {
     display: flex;
+  }
+  .the-heads .default-text-title {
+    padding: 120px 0 0; 
+  }
+  .wrapper-team-heads {
+    height: 1574px !important;
+  }
+  .wrapper-photos-heads {
+    height: 1280px !important;
+  }
+  .couple-wrapper {
+    display: flex;
+    flex-flow: column;
+  }
+  .person-1-photo {
+    width: 50%;
+    height: 645px;
+    background-image: url(/images/man.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .person-2-photo {
+    width: 50%;
+    height: 645px;
+    background-image: url(/images/woman.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .person-1, 
+  .person-2 {
+    display: flex;
+    flex-flow: row;
+  }
+  .person-1-text, 
+  .person-2-text {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    align-items: flex-start;
+    padding: 0 10%;
+  }
+  .person-1-text .default-text-sub, 
+  .person-2-text .default-text-sub {
+    font-weight: normal;
+  }
+  .person-2-text .default-text-sub {
+    padding: 24px 0 0;
+  }
+  .pessoas-btn-up {
+    position: absolute;
+    bottom: 60px;
+    left: 0;
+    z-index: 1;
+  }
+  .pessoas-btn-up .btn-up button {
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    padding-left: 129px;
+  }
+  .pessoas-btn-up .btn-up h4 {
+    text-transform: uppercase;
+  }
+  .btn-up-cultura .btn-up {
+    width: 100%;
+  }
+  .btn-up-cultura {
+    height: 168px !important;
+    background: #000000;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+  }
+  .btn-up-cultura .btn-up button {
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+  }
+  .btn-up-cultura .btn-up h4 {
+    text-transform: uppercase;
+    color: #fff;
+  }
+  .our-culture .default-text-sub {
+    padding: 16px 0 192px;
+  }
+  .our-culture .default-text-title {
+    padding: 16px 0 0;
+  }
+  .wrapper-cultura-imgs {
+    height: 720px !important;
+  }
+  .wrapper-cultura-imgs h3 {
+    padding-right: 30px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 46px;
+    text-align: center;
+  }
+  .wrapper-cultura-imgs .default-text-about {
+    text-align: center;
+    padding: 0;
+  }
+  .wrapper-img {
+    padding-top: 22px;
+  }
+  .wrapper-cultura-imgs .default-text-header {
+    color: #fff;
+    padding: 70px 0 35px;
+    text-align: center;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .img-1-10 {
+    width: 192.46px;
+    height: 400px;
+    background-image: url(/images/1-10.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 40px;
+  }
+  .img-2-10 {
+    width: 226.9px;
+    height: 400px;
+    background-image: url(/images/2-10.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 40px;
+  }
+  .img-3-10 {
+    width: 488.14px;
+    height: 400px;
+    background-image: url(/images/3-10.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 40px;
+  }
+  .img-4-10 {
+    width: 272.44px;
+    height: 400px;
+    background-image: url(/images/4-10-mob.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 40px;
+  }
+  .img-5-10 {
+    width: 432.86px;
+    height: 400px;
+    background-image: url(/images/5-10.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 40px;
+  }
+  .cultura-img-6 .default-text-about {
+    position: unset;
+    z-index: 1;
+  }
+  .img-6-10 {
+    width: 320.67px;
+    height: 400px;
+    background-image: url(/images/6-10.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 40px;
+    position: unset;
+  }
+  .img-7-10 {
+    width: 343.05px;
+    height: 400px;
+    background-image: url(/images/7-10.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 40px;
+  }
+  .img-8-10 {
+    width: 595.79px;
+    height: 400px;
+    background-image: url(/images/8-10.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 40px;
+  }
+  .img-9-10 {
+    width: 270.77px;
+    height: 400px;
+    background-image: url(/images/9-10.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 40px;
+  }
+  .img-10-10 {
+    width: 635.15px;
+    height: 400px;
+    background-image: url(/images/10-10.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 40px;
+  }
+  .nossas-vagas {
+    height: 720px !important;
+  }
+  .vagas-index {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+  }
+  .vagas-index .default-text-header {
+    color: #fff;
+    padding: 60px 24px 0;
+  } 
+  .vagas-item {
+    width: 499px;
+    height: 421px;
+  }
+  .vagas-item .default-text-title {
+    font-size: 64px;
+    line-height: 70px;
+    padding: 16px 150px 0 24px; 
+  }
+  .apply button {
+    text-align: center;
+  }
+  .vagas-index .default-text-about {
+    color: #fff;
+    padding: 24px 170px 24px 24px;
   }
   .swiper-pagination-pessoas .swiper-pagination-bullet::before {
     content: "";
