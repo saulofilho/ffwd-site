@@ -1,6 +1,6 @@
 ---
 template: CasePost
-date: 2020-06-01T13:25:19.723Z
+date: 2020-07-02T13:25:19.723Z
 ClientTitle: 01. grupo malwee
 title: malwee 50 anos
 HomeDescription: Branding, conceito, design, tecnologia, conteúdo e performance.
