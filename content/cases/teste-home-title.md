@@ -9,18 +9,7 @@ HomeImageMob: ../../images/torus-15-.jpg
 ProjetosTitle: teste projetos page title
 ProjetosDescription: teste projetos page description
 CaseTitle: teste case title
-CaseAbout: |-
-  # teste case about
-
-  ## teste case about
-
-  ### teste case about
-
-  #### teste case about
-
-  ##### teste case about
-
-  ###### teste case about
+CaseAbout: teste case about
 container:
   - type: AddImage
     image: ../../images/torus-8-.jpg
@@ -29,11 +18,42 @@ container:
   - type: AddTitle
     title: teste title
   - type: AddText
-    text: teste text
+    text: |-
+      # teste case about h1
+
+      ## teste case about h2
+
+      ### teste case about h3
+
+      #### teste case about h4
+
+      ##### teste case about h5
+
+      ###### teste case about h6
   - type: AddText
     text: <iframe width="560" height="315"
       src="https://www.youtube.com/embed/L6XmDg0PEtE" frameborder="0"
       allow="accelerometer; autoplay; encrypted-media; gyroscope;
       picture-in-picture" allowfullscreen></iframe>
+resultadoscontainer:
+  - type: AddTitle
+    title: "## resultados Heading 2"
+  - type: AddResultado
+    resultado: |-
+      # 60%
+
+      #### CRESCIMENTO ANUAL
+  - type: AddResultado
+    resultado: |-
+      <!--StartFragment-->
+
+      # fragment
+
+      <!--EndFragment-->
+  - type: AddResultado
+    resultado: |-
+      #### DO ZERO A
+
+      # 1.1 milhãoz
 status: Published
 ---
