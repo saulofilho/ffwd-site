@@ -1,7 +1,7 @@
 ---
 template: CasePost
-date: 2020-06-05T18:57:31.348Z
-ClientTitle: 05.individual
+date: 2020-06-28T18:57:31.348Z
+ClientTitle: 05. individual
 title: fórmula individual
 HomeDescription: Para atrair a atenção do público masculino durante o grande
   prêmio de Fórmula 1 do Brasil.
