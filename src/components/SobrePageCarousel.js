@@ -6,12 +6,12 @@ import arrowDown from '../../static/images/ico-seta-down.png'
 import arrowUp from '../../static/images/arrow-up-blk.png'
 import logo from '../../static/images/logo-white-vertical.png'
 
-const scrollToTop = () => {
-  window.scroll({ top: 0, left: 0, behavior: 'smooth' });
+const scrollToBottomMais = () => {
+  document.querySelector('#experiencias').scrollIntoView({ behavior: 'smooth' });
 }
 
-const scrollToBottom = () => {
-  document.querySelector('#experiencias').scrollIntoView({ behavior: 'smooth' });
+const scrollToBottomServicos = () => {
+  document.querySelector('#escala').scrollIntoView({ behavior: 'smooth' });
 }
 
 const SobrePageCarousel = () => {
@@ -37,9 +37,9 @@ const SobrePageCarousel = () => {
   return (
     <>
       <Swiper {...HorizontalSwiperParams}>
-        <div data-hash="mais-que-digital">
+        <div>
           <Swiper {...VerticalSwiperParams}>
-            <div className="mais-que-digital">
+            <div className="mais-que-digital" data-hash="mais-que-digital-top">
               <p className="default-text-header container">
                 nós somos
               </p>
@@ -60,7 +60,7 @@ const SobrePageCarousel = () => {
               <div className="anchor-down container display-none-mob">
               <button
                     onClick={() => {
-                      scrollToBottom()
+                      scrollToBottomMais()
                     }}
                   >
                   <img src={arrowDown} alt="arrowDown" />
@@ -213,15 +213,11 @@ const SobrePageCarousel = () => {
                 </div>
                 <div className="container">
                   <div className="btn-up display-none-mob">
-                  <button
-                    onClick={() => {
-                      scrollToTop()
-                    }}
-                  >
+                    <a href="#mais-que-digital-top">
                       <h4>
-                      <img src={arrowUp} alt="arrowUp" /> subir
+                        <img src={arrowUp} alt="arrowUp" /> subir
                       </h4>
-                    </button>
+                    </a>
                   </div>
                 </div>
             </div>
@@ -276,9 +272,9 @@ const SobrePageCarousel = () => {
             </footer>
           </Swiper>
         </div>
-        <div data-hash="servicos">
+        <div>
           <Swiper {...VerticalSwiperParams}>
-            <div className="servicos">
+            <div className="servicos" data-hash="servicos-top">
                 <p className="default-text-header container">
                   serviços
                 </p>
@@ -312,9 +308,13 @@ const SobrePageCarousel = () => {
                   </p>
                 </div>
                 <div className="anchor-down container display-none-mob">
-                <a href="#escala">
+              <button
+                    onClick={() => {
+                      scrollToBottomServicos()
+                    }}
+                  >
                   <img src={arrowDown} alt="arrowDown" />
-                </a>
+                  </button>
               </div>
             </div>
             <div className="escala" id="escala"></div>
@@ -428,15 +428,11 @@ const SobrePageCarousel = () => {
                 </div>
                 <div className="container">
                   <div className="btn-up display-none-mob">
-                  <button
-                    onClick={() => {
-                      scrollToTop()
-                    }}
-                  >
-                    <h4>
-                    <img src={arrowUp} alt="arrowUp" /> subir
-                    </h4>
-                    </button>
+                  <a href="#servicos-top">
+                      <h4>
+                        <img src={arrowUp} alt="arrowUp" /> subir
+                      </h4>
+                    </a>
                   </div>
                 </div>
             </div>

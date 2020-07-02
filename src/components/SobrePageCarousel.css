@@ -70,7 +70,8 @@
   width: 100%;
   color: #1D1D1B;
 }
-.mais-que-digital .anchor-down {
+.mais-que-digital .anchor-down,
+.servicos .anchor-down {
   width: 100%;
   padding: 84px 0 0;
 }

@@ -388,6 +388,17 @@
   }
   .the-people-behind .default-text-title {
     padding: 80px 0 0 129px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 64px;
+    line-height: 70px;
+  }
+  .the-team .default-text-title {
+    padding: 56px 24px 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 64px;
+    line-height: 70px;
   }
   .owner {
     height: 720px;
@@ -410,7 +421,11 @@
     display: flex;
   }
   .the-heads .default-text-title {
-    padding: 120px 0 0; 
+    padding: 120px 0 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 64px;
+    line-height: 70px;
   }
   .wrapper-team-heads {
     height: 1574px !important;

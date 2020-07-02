@@ -117,4 +117,7 @@
   .news-email button {
     margin: 8px 0 0;
   }
+  .address .default-text-about {
+    padding: 0 0 0 60px;
+  }
 }

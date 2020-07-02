@@ -151,24 +151,43 @@ collections:
         widget: 'list'
         required: false
         types:
-        - label: 'Add Image'
+        - label: 'Image'
           name: 'AddImage'
           widget: image
           fields:
             - { name: image, label: image, widget: image, required: false }
             - { name: imagemob, label: image mob, widget: image, required: false }
             - { name: alt, label: Alt, widget: string, required: false }
-        - label: 'Add Text'
+        - label: 'Title'
+          name: 'AddTitle'
+          widget: markdown
+          fields:
+            - { name: title, label: title, widget: markdown, required: false }
+        - label: 'Text'
           name: 'AddText'
           widget: markdown
           fields:
             - { name: text, label: text, widget: markdown, required: false }
-        - label: 'Add YouTube'
-          name: 'AddText'
+        - label: 'YouTube'
+          name: 'AddYouTube'
           widget: markdown
           fields:
             - { name: youtube, label: youtube, widget: markdown, required: false }
-      - { label: Extra Content, name: body, widget: markdown, required: false }
+      - label: 'Resultados Container'
+        name: 'resultadoscontainer'
+        widget: 'list'
+        required: false
+        types:
+        - label: 'Title'
+          name: 'AddTitle'
+          widget: markdown
+          fields:
+            - { name: title, label: title, widget: markdown, required: false }
+        - label: 'Resultado'
+          name: 'AddResultado'
+          widget: markdown
+          fields:
+            - { name: resultado, label: resultado, widget: markdown, required: false }
       - label: 'Status'
         name: 'status'
         widget: 'select'

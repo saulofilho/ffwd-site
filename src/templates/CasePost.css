@@ -46,9 +46,9 @@
 .blog-hero .anchor-down {
   padding: calc(100px - 30px) 0 68px 30px;
 }
-.case-content {
+/* .case-content {
   margin: 60px 24px;
-}
+} */
 .case-content .default-text-sub {
   margin: 24px auto;
 }
@@ -104,12 +104,12 @@
   .case-texts .case-content p {
     padding: 0 10%;
   }
-  .case-content {
+  /* .case-content {
     margin: 0;
     padding: 120px 0;
     display: flex;
     flex-flow: row;
-  }
+  } */
   .case-content h2 {
     font-size: 64px;
     line-height: 70px;

@@ -1,10 +1,13 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-
 import Layout from '../components/Layout'
 import './ContatoPage.css'
+import arrowDownWht from '../../static/images/arrow-down-wht.png'
 
-// Export Template for use in CMS preview
+const scrollToBottom = () => {
+  document.querySelector('#contatos-infos').scrollIntoView({ behavior: 'smooth' });
+}
+
 export const ContactPageTemplate = () => (
   <main>
     <div className="contato-hero">
@@ -21,8 +24,17 @@ export const ContactPageTemplate = () => (
           Estamos esperando seu contato.
           </p>
       </div>
+      <div className="anchor-down container">
+        <button
+          onClick={() => {
+            scrollToBottom()
+          }}
+        >
+          <img src={arrowDownWht} alt="arrow-down-wht" />
+        </button>
+      </div>
     </div>
-    <div className="contato-infos container">
+    <div className="contato-infos container" id="contatos-infos">
       <div className="contato-address-container">
         <div className="call-us">
           <p className="default-text-about">

@@ -11,8 +11,16 @@ const scrollToTop = () => {
   window.scroll({ top: 0, left: 0, behavior: 'smooth' });
 }
 
-const scrollToBottom = () => {
-  document.querySelector('#').scrollIntoView({ behavior: 'smooth' });
+const scrollToBottomVagas = () => {
+  document.querySelector('#vagas-index').scrollIntoView({ behavior: 'smooth' });
+}
+
+const scrollToBottomWeAre = () => {
+  document.querySelector('#vagas-index').scrollIntoView({ behavior: 'smooth' });
+}
+
+const scrollToBottomOurCulture = () => {
+  document.querySelector('#vagas-index').scrollIntoView({ behavior: 'smooth' });
 }
 
 const PessoasPageCarousel = ({
@@ -65,7 +73,7 @@ const PessoasPageCarousel = ({
                 <div className="anchor-down container display-none-mob">
               <button
                     onClick={() => {
-                      scrollToBottom()
+                      scrollToBottomWeAre()
                     }}
                   >
                   <img src={arrowDown} alt="arrowDown" />
@@ -307,7 +315,7 @@ const PessoasPageCarousel = ({
               <div className="anchor-down container display-none-mob">
               <button
                     onClick={() => {
-                      scrollToBottom()
+                      scrollToBottomOurCulture()
                     }}
                   >
                   <img src={arrowDown} alt="arrowDown" />
@@ -854,10 +862,14 @@ const PessoasPageCarousel = ({
                 F*DAS,
                 <br /> esse é o seu lugar.
               </p>
-              <div className="anchor-down container ">
-                <a href="#vagas-index">
+              <div className="anchor-down container">
+              <button
+                    onClick={() => {
+                      scrollToBottomVagas()
+                    }}
+                  >
                   <img src={arrowDown} alt="arrowDown" />
-                </a>
+                  </button>
               </div>
             </div>
             <div className="vagas-index" id="vagas-index" data-hash="vagas-index">

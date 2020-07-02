@@ -7,6 +7,17 @@
 .anchor-up {
   padding: 14px 38px;
 }
+.posts-section .anchor-up button {
+  color: #fff;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+.posts-section .anchor-up button img {
+  padding-right: 13px;
+}
 .anchor-up button {
   background: transparent;
   border: none;

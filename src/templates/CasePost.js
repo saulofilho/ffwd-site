@@ -14,10 +14,10 @@ const scrollToBottom = () => {
 
 export const CasePostTemplate = ({
   container = [],
+  resultadoscontainer = [],
   ClientTitle,
   CaseTitle,
   CaseAbout,
-  body,
   nextPostURL,
   prevPostURL,
 }) => (
@@ -36,11 +36,11 @@ export const CasePostTemplate = ({
               <h1>
                 {CaseTitle}
               </h1>
-              <p className="default-text-about">
+              <div className="default-text-about">
                 <Content
                   source={CaseAbout}
                 />
-              </p>
+              </div>
               <div className="anchor-down btn-down-case container">
                 <button
                   onClick={() => {
@@ -62,17 +62,35 @@ export const CasePostTemplate = ({
                   <div className="case-imgs display-none-mob">
                     {item.image === null ? <></> : <img src={item.image} alt={item.alt} />}
                   </div>
-                  <div className="case-texts container">
-                    {item.text === null ? <></> : <Content className="case-content" source={item.text} />}
+                  <div className="case-content">
+                    <div className="case-title container">
+                      {item.title === null ? <></> : <Content className="case-title" source={item.title} />}
+                    </div>
+                    <div className="case-texts container">
+                      {item.text === null ? <></> : <Content className="case-text" source={item.text} />}
+                    </div>
+                  </div>
+                  <div className="case-yt display-none-mob">
+                    {item.youtube === null ? <></> : <Content className="case-yt" source={item.youtube} />}
                   </div>
                 </div>
               ))}
             </div>
             <div className="resultados container">
-              <Content
-                className="case-content-resultados"
-                source={body}
-              />
+              {resultadoscontainer.map((item, index) => (
+                <div
+                  key={item.title + index}
+                >
+                  <Content
+                    className="case-content-title"
+                    source={item.title}
+                  />
+                  <Content
+                    className="case-content-resultados"
+                    source={item.resultado}
+                  />
+                </div>
+              ))}
             </div>
           </div>
           <div className="case-post-wrapper">
@@ -117,7 +135,6 @@ const CasePost = ({ data: { post, allPosts }, location }) => {
       <CasePostTemplate
         {...post}
         {...post.frontmatter}
-        body={post.html}
         nextPostURL={_get(thisEdge, 'next.fields.slug')}
         prevPostURL={_get(thisEdge, 'previous.fields.slug')}
       />
@@ -139,10 +156,16 @@ export const pageQuery = graphql`
       id
       frontmatter {
         container {
+          title
           text
           image
           imagemob
           alt
+          youtube
+        }
+        resultadoscontainer {
+          title
+          resultado
         }
         title
         ClientTitle
@@ -154,7 +177,7 @@ export const pageQuery = graphql`
     }
     allPosts: allMarkdownRemark(
       filter: { fields: { contentType: { eq: "cases" } } }
-      sort: { order: ASC, fields: [frontmatter___date] }
+      sort: { order: DESC, fields: [frontmatter___date] }
     ) {
       edges {
         node {

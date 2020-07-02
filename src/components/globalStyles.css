@@ -206,6 +206,9 @@ blockquote {
   align-items: center;
   justify-content: center;
 }
+button {
+  cursor: pointer;
+}
 .default-btn button {
   font-family: var(--font-secondary);
   font-style: normal;
