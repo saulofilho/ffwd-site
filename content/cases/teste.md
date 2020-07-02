@@ -15,53 +15,72 @@ CaseAbout: "Todos são capazes de fazer o bem, e cada atitude, por menor que
   uma ação digital para compartilhar #atitudesdobem."
 container:
   - type: AddImage
-    image: ../../images/bg-header-1-1.png
+    image: ../../images/default-img.jpg
     alt: teste
-  - type: AddText
-    text: >-
+    imagemob: ../../images/bg-header-1-1.png
+  - type: AddTitle
+    title: |-
       ## desafio
 
-
       #### Transmitir 50 anos de boas ações
-
-
-      Como comemorar os 50 anos da marca com algo algo verdadeiro e com valor para a sociedade? O Grupo Malwee nos desafiou a traduzir a essência da marca em uma ação com capacidade de emocionar a todos os brasileiros.
-  - type: AddImage
-    image: ../../images/image-1-1.png
-    alt: x
-  - type: AddImage
-    image: ../../images/rectangle-23.png
-    alt: blk
   - type: AddText
-    text: <iframe width="560" height="315"
-      src="https://www.youtube.com/embed/Fe2eHypip0Q" frameborder="0"
-      allow="accelerometer; autoplay; encrypted-media; gyroscope;
-      picture-in-picture" allowfullscreen></iframe>
+    text: Como comemorar os 50 anos da marca com algo algo verdadeiro e com valor
+      para a sociedade? O Grupo Malwee nos desafiou a traduzir a essência da
+      marca em uma ação com capacidade de emocionar a todos os brasileiros.
+  - type: AddImage
+    image: ../../images/default-img.jpg
+    alt: x
+    imagemob: ../../images/image-1-1.png
+  - type: AddImage
+    image: ../../images/default-img.jpg
+    alt: blk
+    imagemob: ../../images/rectangle-23.png
+  - type: AddTitle
+    title: "## solução"
   - type: AddText
     text: >-
-      ## solução
+      No ano em que completou 50 anos, o Grupo Malwee realizou uma ação para
+      valorizar o compromisso social.
 
 
-      No ano em que completou 50 anos, o Grupo Malwee realizou uma ação para valorizar o compromisso social.
-
-       
-
-      A campanha foi ativada com um vídeo emocional, mostrando a importância de fazer o bem. 
+      A campanha foi ativada com um vídeo emocional, mostrando a importância de fazer o bem.
 
 
-
-
-      Após, desdobrou-se em um site aberto e colaborativo, onde cada usuário podia compartilhar suas #atitudesdobem e inspirar os demais a fazerem o mesmo. Dando força a corrente de pequenos gestos de bondade, a cada semana da campanha foram lançados vídeos-cápsula para reforçar a ideia de fazer o bem ao próximo. 
-
-
+      Após, desdobrou-se em um site aberto e colaborativo, onde cada usuário podia compartilhar suas #atitudesdobem e inspirar os demais a fazerem o mesmo. Dando força a corrente de pequenos gestos de bondade, a cada semana da campanha foram lançados vídeos-cápsula para reforçar a ideia de fazer o bem ao próximo.
 
 
       O projeto culminou na venda de um kit de produtos, cuja venda foi toda revertida para projetos sociais.
-  - type: AddText
-    text: "## o filme"
+  - type: AddTitle
+    title: "## O FILME"
   - type: AddImage
-    image: ../../images/group-8.png
+    image: ../../images/default-img.jpg
     alt: filme
+    imagemob: ../../images/group-8.png
+resultadoscontainer:
+  - type: AddTitle
+    title: "# RESULTADOS"
+  - type: AddResultado
+    resultado: |-
+      # 22 MI
+
+      #### VIEWS VIRAIS DA CAMPANHA*
+  - type: AddResultado
+    resultado: |-
+      # 60 MI
+
+      #### IMPRESSÕES TOTAIS
+  - type: AddResultado
+    resultado: |-
+      # +27 MI
+
+      #### VIEWS TOTAIS
+  - type: AddResultado
+    resultado: |-
+      # +1 MI
+
+      #### MIDÍA ESPONTÂNEA*
+
+      \*Whatsapp não contabilizado
 status: Published
 ---
 ## RESULTADOS
