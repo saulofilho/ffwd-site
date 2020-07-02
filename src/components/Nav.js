@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react'
-import classnames from "classnames";
 import { Location } from '@reach/router'
 import { Link } from 'gatsby'
 import { X } from 'react-feather'
 import Logo from './Logo'
-import { debounce } from "lodash"
 import Headroom from 'react-headroom'
 
 import './Nav.css'
@@ -13,38 +11,20 @@ export const Navigation = (props) => {
   const [active, setActive] = useState(false);
   const [activeSubNav, setActiveSubNav] = useState(false);
   const [currentPath, setCurrentPath] = useState(false);
-  const [prevScrollpos, setPrevScrollpos] = useState(0);
-  const [visible, setVisible] = useState(true);
 
-  // useEffect(() => {
-  //   setCurrentPath(props.location.pathname);
-
-  //   const onScrollDebounced = debounce(() => {
-  //     handleScroll();
-  //   }, 50);
-
-  //   const handleScroll = () => {
-  //     const currentScrollPos = window.pageYOffset;
-  //     const visible = prevScrollpos > currentScrollPos;
-
-  //     setPrevScrollpos(currentScrollPos)
-  //     setVisible(visible)
-  //   };
-
-  //   window.addEventListener("scroll", onScrollDebounced);
-
-  //   return () => {
-  //     window.removeEventListener("scroll", onScrollDebounced);
-  //   }
-  // }, [prevScrollpos, props.location.pathname])
+  useEffect(() => {
+    setCurrentPath(props.location.pathname);
+  }, [])
 
   const handleMenuToggle = () => setActive(!active)
 
-  // Only close nav if it is open
   const handleLinkClick = () => setActive(active) && handleMenuToggle()
 
-  const toggleSubNav = subNav =>
-    setActiveSubNav(activeSubNav === subNav ? false : subNav)
+  const toggleSubNav = () =>
+    setActiveSubNav(!activeSubNav)
+
+  // const toggleSubNav = subNav =>
+  //   setActiveSubNav(activeSubNav === subNav ? false : subNav)
 
   const { subNav } = props,
     NavLink = ({ to, className, children, ...props }) => (
@@ -61,9 +41,7 @@ export const Navigation = (props) => {
     )
 
   return (
-    <nav
-      className={`${active ? 'nav-active' : ''}`}
-    >
+    <nav className={`${active ? 'nav-active' : ''}`}>
       <Headroom
       style={{
         position: "fixed",
@@ -71,7 +49,7 @@ export const Navigation = (props) => {
         zIndex: 9
       }} 
       >
-      <div className={classnames("navbar", { "navbar-hidden": !visible })}>
+      <div className="navbar">
         <div className="nav-wrapper container">
           <Link to="/" onClick={() => handleLinkClick()}>
             <Logo {...props} />
@@ -119,7 +97,7 @@ export const Navigation = (props) => {
           <NavLink to="/projetos/">projetos</NavLink>
           <NavLink to="/pessoas/">pessoas</NavLink>
           <NavLink to="/blog/">blog</NavLink>
-          <div
+          {/* <div
             className={`Nav--Group ${
               activeSubNav === 'posts' ? 'active' : ''
               }`}
@@ -134,7 +112,7 @@ export const Navigation = (props) => {
                 }`}
               onClick={() => toggleSubNav('posts')}
             >
-              Pessoas
+              xxx
               <div className="Nav--GroupLinks">
                 <NavLink to="/blog/" className="Nav--GroupLink">
                   All Posts
@@ -150,8 +128,28 @@ export const Navigation = (props) => {
                 ))}
               </div>
             </span>
+          </div> */}
+          <div
+            className={`Nav--Group ${
+              activeSubNav === true ? 'active' : ''
+              }`}
+          >
+            <button
+              className={`NavLink Nav--GroupParent active`}
+              onClick={() => toggleSubNav()}
+            >
+              xxx
+              <div className="Nav--GroupLinks">
+                <NavLink to="/blog/" className="Nav--GroupLink">
+                  serviços
+                </NavLink>
+                <NavLink to="/blog/" className="Nav--GroupLink">
+                  great launches
+                </NavLink>
+              </div>
+            </button>
           </div>
-          <NavLink to="/contato/">contato</NavLink>
+          {/* <NavLink to="/contato/">contato</NavLink> */}
           <div className="contact-menu-hamburger display-none-desk">
             <div className="contato-address-container">
               <div className="call-us">

@@ -354,6 +354,9 @@
 .sobre-section .btn-up h4 {
   text-transform: uppercase;
 }
+.sobre-section .btn-up a h4 img {
+  padding-right: 13px;
+}
 
 /* desktop */
 

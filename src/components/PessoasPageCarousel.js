@@ -7,19 +7,15 @@ import arrowUp from '../../static/images/arrow-up-blk.png'
 import arrowUpWht from '../../static/images/arrow-up-wht.png'
 import logo from '../../static/images/logo-white-vertical.png'
 
-const scrollToTop = () => {
-  window.scroll({ top: 0, left: 0, behavior: 'smooth' });
-}
-
-const scrollToBottomVagas = () => {
-  document.querySelector('#vagas-index').scrollIntoView({ behavior: 'smooth' });
-}
-
 const scrollToBottomWeAre = () => {
-  document.querySelector('#vagas-index').scrollIntoView({ behavior: 'smooth' });
+  document.querySelector('#the-people-behind').scrollIntoView({ behavior: 'smooth' });
 }
 
 const scrollToBottomOurCulture = () => {
+  document.querySelector('#wrapper-cultura-imgs').scrollIntoView({ behavior: 'smooth' });
+}
+
+const scrollToBottomVagas = () => {
   document.querySelector('#vagas-index').scrollIntoView({ behavior: 'smooth' });
 }
 
@@ -51,7 +47,7 @@ const PessoasPageCarousel = ({
       <Swiper {...HorizontalSwiperParams}>
         <div data-hash="pessoas">
           <Swiper {...VerticalSwiperParams}>
-            <div className="we-are-ffwd" data-hash="we-are-ffwd">
+            <div className="we-are-ffwd" data-hash="we-are-ffwd-top">
               <p className="default-text-header container">
                 as pessoas
                 </p>
@@ -80,7 +76,7 @@ const PessoasPageCarousel = ({
                   </button>
               </div>
             </div>
-            <div className="the-people-behind" data-hash="the-people-behind">
+            <div className="the-people-behind" id="the-people-behind">
               <div className="people-desk-wrapper">
                 <div className="people-text-wrapper">
                   <p className="default-text-title container">
@@ -135,11 +131,13 @@ const PessoasPageCarousel = ({
                 </div>
                 <div className="owner">
                   <div className="owner-name">
-                    <p>
-                      fernando werner
-                      <br />
-                    </p>
-                    <p>Owner</p>
+                    <div>
+                      <p>
+                        fernando werner
+                        <br />
+                        <p>Owner</p>
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -160,7 +158,7 @@ const PessoasPageCarousel = ({
                   </p>
               </div>
             </div>
-            <div className="the-team-wrapper" data-hash="the-team-wrapper">
+            <div className="the-team-wrapper">
               <div className="the-team">
                 <p className="default-text-title container">
                   the
@@ -177,7 +175,7 @@ const PessoasPageCarousel = ({
               </div>
               <div className="team-photo" />
             </div>
-            <div className="wrapper-team-heads" data-hash="wrapper-team-heads">
+            <div className="wrapper-team-heads">
               <div className="the-heads">
                 <p className="default-text-title container">
                   the heads
@@ -185,7 +183,7 @@ const PessoasPageCarousel = ({
                 <p className="default-text-about container">
                   Nossas lideranças, os representantes
                   <br />
-                  dos valores da FFWD.
+                  dos valores da <strong>FFWD.</strong>
                 </p>
               </div>
               <div className="wrapper-photos-heads">
@@ -225,15 +223,11 @@ const PessoasPageCarousel = ({
                 </div>
                 <div className="pessoas-btn-up container">
                   <div className="btn-up display-none-mob">
-                  <button
-                    onClick={() => {
-                      scrollToTop()
-                    }}
-                  >
-                      <h4>
-                      <img src={arrowUp} alt="arrowUp" /> subir
-                      </h4>
-                    </button>
+                  <a href="#we-are-ffwd-top">
+                    <h4>
+                    <img src={arrowUp} alt="arrowUp" /> subir
+                    </h4>
+                  </a>
                   </div>
                 </div>
               </div>
@@ -291,7 +285,7 @@ const PessoasPageCarousel = ({
         </div>
         <div data-hash="cultura">
           <Swiper {...VerticalSwiperParams}>
-            <div className="our-culture" data-hash="cultura">
+            <div className="our-culture" data-hash="cultura-top">
               <p className="default-text-header container">
                 cultura
               </p>
@@ -322,7 +316,7 @@ const PessoasPageCarousel = ({
                   </button>
               </div>
             </div>
-            <div className="wrapper-cultura-imgs cultura-img-1" data-hash="wrapper-cultura-imgs">
+            <div className="wrapper-cultura-imgs cultura-img-1" id="wrapper-cultura-imgs">
               <p className="default-text-header container">
                 cultura
               </p>
@@ -781,17 +775,13 @@ const PessoasPageCarousel = ({
                 <div className="img-10-10 container"></div>
               </div>
             </div>
-            <div className="btn-up-cultura">
+            <div className="btn-up-cultura ">
               <div className="btn-up display-none-mob container">
-                <button
-                  onClick={() => {
-                    scrollToTop()
-                  }}
-                >
-                  <h4>
-                    <img src={arrowUpWht} alt="arrowUpWht" /> topo
-                      </h4>
-                </button>
+              <a href="#cultura-top">
+                <h4>
+                <img src={arrowUpWht} alt="arrowUpWht" /> subir
+                </h4>
+              </a>
               </div>
             </div>
             <footer>
@@ -847,7 +837,7 @@ const PessoasPageCarousel = ({
         </div>
         <div data-hash="vagas">
           <Swiper {...VerticalSwiperParams}>
-            <div className="nossas-vagas" id="nossas-vagas"  data-hash="nossas-vagas">
+            <div className="nossas-vagas" data-hash="nossas-vagas-top">
               <p className="default-text-header container">
                 vagas
               </p>
@@ -872,7 +862,7 @@ const PessoasPageCarousel = ({
                   </button>
               </div>
             </div>
-            <div className="vagas-index" id="vagas-index" data-hash="vagas-index">
+            <div className="vagas-index" id="vagas-index">
               {posts.map((post, index) => (
                 <div className="vagas-item" key={post.title + index}>
                   <div className="default-text-header container">
@@ -896,15 +886,11 @@ const PessoasPageCarousel = ({
             </div>
             <div className="btn-up-cultura">
               <div className="btn-up display-none-mob container">
-                <button
-                  onClick={() => {
-                    scrollToTop()
-                  }}
-                >
-                  <h4>
-                    <img src={arrowUpWht} alt="arrowUpWht" /> topo
-                      </h4>
-                </button>
+              <a href="#nossas-vagas-top">
+                <h4>
+                <img src={arrowUpWht} alt="arrowUpWht" /> topo
+                </h4>
+              </a>
               </div>
             </div>
             <footer>

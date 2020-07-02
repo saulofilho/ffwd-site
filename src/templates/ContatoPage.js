@@ -24,7 +24,7 @@ export const ContactPageTemplate = () => (
           Estamos esperando seu contato.
           </p>
       </div>
-      <div className="anchor-down container">
+      <div className="anchor-down container display-none-mob">
         <button
           onClick={() => {
             scrollToBottom()

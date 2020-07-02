@@ -89,6 +89,9 @@
     height: 100vh;
     width: 100%;
   }
+  .contato-hero .anchor-down {
+    padding: 124px 13px 0;
+  }
   .contato-hero h1 {
     padding-right: 800px;
   }

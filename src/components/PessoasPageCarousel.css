@@ -95,7 +95,7 @@
   background-image: url(/images/man-woman-mob.png);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: cover;
 }
 .our-culture {
   background: #fff;
@@ -262,9 +262,6 @@
   height: 640px !important;
   width: 100%;
 }
-.nossas-vagas .anchor-down {
-  padding: 84px 0 68px 30px;
-}
 .swiper-pagination-pessoas::before {
   content: "";
   position: absolute;
@@ -325,6 +322,9 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: auto;
+}
+.pessoas .anchor-down button {
+  padding-top: 10%;
 }
 /* desktop */
 .owner-text-desk {
@@ -476,19 +476,20 @@
     padding: 24px 0 0;
   }
   .pessoas-btn-up {
-    position: absolute;
-    bottom: 60px;
+    position: relative;
+    bottom: 130px;
     left: 0;
     z-index: 1;
   }
-  .pessoas-btn-up .btn-up button {
-    border: 0;
-    background: transparent;
+  .pessoas-btn-up .btn-up a {
     cursor: pointer;
     padding-left: 129px;
   }
   .pessoas-btn-up .btn-up h4 {
     text-transform: uppercase;
+  }
+  .pessoas-btn-up .btn-up a h4 img {
+    padding-right: 13px;
   }
   .btn-up-cultura .btn-up {
     width: 100%;
@@ -501,17 +502,15 @@
     width: 100%;
     align-items: center;
   }
-  .btn-up-cultura .btn-up button {
-    border: 0;
-    background: transparent;
-    cursor: pointer;
+  .btn-up-cultura .btn-up a h4 img {
+    padding-right: 13px;
   }
   .btn-up-cultura .btn-up h4 {
     text-transform: uppercase;
     color: #fff;
   }
   .our-culture .default-text-sub {
-    padding: 16px 0 192px;
+    padding: 16px 0 0;
   }
   .our-culture .default-text-title {
     padding: 16px 0 0;

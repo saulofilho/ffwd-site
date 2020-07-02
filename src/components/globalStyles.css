@@ -209,6 +209,9 @@ blockquote {
 button {
   cursor: pointer;
 }
+button:hover {
+  opacity: 0.5;
+}
 .default-btn button {
   font-family: var(--font-secondary);
   font-style: normal;
