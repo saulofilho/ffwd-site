@@ -14,38 +14,50 @@ CaseAbout: Um lançamento imobiliário completo e digital first. Do branding ao
   sucesso de vendas.
 container:
   - type: AddImage
-    image: ../../images/rectangle-12.png
+    image: ../../images/default-img.jpg
     alt: x
-  - type: AddText
-    text: >-
+    imagemob: ../../images/rectangle-12.png
+  - type: AddTitle
+    title: |-
       ## desafio
 
-
-
-
       #### Lançar um empreendimento imobiliário de um jeito diferente.
-
-
-
-
-      Como alcançar o sucesso de vendas num mundo cada vez mais digital? O desafio foi fugir do óbvio, não apostar no tradicional e desenvolver o empreendimento como uma nova marca.
-  - type: AddImage
-    image: ../../images/group-6.png
-    alt: x
   - type: AddText
-    text: >-
-      ## solução
-
-
-
-
-      Abraçamos a causa e aplicamos nossa abordagem digital first para desenvolver todo o conceito criativo da campanha, bem como o branding do novo empreendimento Dimas Construções. A solução foi traduzida em um lançamento completo, com teaser, filme conceitual, um site com multi funcionalidade e dezenas de ações de conteúdo e performance no meio digital. Para dar força local à campanha, criamos também a estratégia de comunicação offline, fechando o ciclo do lançamento.
+    text: Como alcançar o sucesso de vendas num mundo cada vez mais digital? O
+      desafio foi fugir do óbvio, não apostar no tradicional e desenvolver o
+      empreendimento como uma nova marca.
   - type: AddImage
-    image: ../../images/planejamento-1-_18-copia-1.png
+    image: ../../images/default-img.jpg
     alt: x
+    imagemob: ../../images/group-6.png
+  - type: AddTitle
+    title: "## solução"
+  - type: AddText
+    text: Abraçamos a causa e aplicamos nossa abordagem digital first para
+      desenvolver todo o conceito criativo da campanha, bem como o branding do
+      novo empreendimento Dimas Construções. A solução foi traduzida em um
+      lançamento completo, com teaser, filme conceitual, um site com multi
+      funcionalidade e dezenas de ações de conteúdo e performance no meio
+      digital. Para dar força local à campanha, criamos também a estratégia de
+      comunicação offline, fechando o ciclo do lançamento.
   - type: AddImage
-    image: ../../images/mail-correspondence-stationery-mockup-1.png
+    image: ../../images/default-img.jpg
     alt: x
+    imagemob: ../../images/planejamento-1-_18-copia-1.png
+  - type: AddImage
+    image: ../../images/default-img.jpg
+    alt: x
+    imagemob: ../../images/mail-correspondence-stationery-mockup-1.png
+resultadoscontainer:
+  - type: AddTitle
+    title: "## RESULTADO"
+  - type: AddResultado
+    resultado: >-
+      Nos primeiros 6 meses após o lançamento o empreendimento já havia vendido
+      50% das suas unidades.
+
+
+      A campanha teve grande alcance geolocalizado e conversão de leads acima do estimado. Além das vendas, o recall de marca foi altamente relevante, atrelando um design ousado para um segmento mais tradicional.
 status: Published
 ---
 ## resultado
