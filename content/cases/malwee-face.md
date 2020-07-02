@@ -18,27 +18,59 @@ container:
   - type: AddImage
     image: ../../images/malwee_01-1.png
     alt: mae
+    imagemob: ../../images/bg-header-1.png
+  - type: AddTitle
+    title: "## desafio"
   - type: AddText
-    text: >-
-      ## desafio
-
-
-      Como envolver mães e filhos numa ação de forma verdadeira? Para além do presente de dia das mães, o desafio era criar valor emocional e gerar interação com a marca através de um conteúdo relevante.
+    text: Como envolver mães e filhos numa ação de forma verdadeira? Para além do
+      presente de dia das mães, o desafio era criar valor emocional e gerar
+      interação com a marca através de um conteúdo relevante.
   - type: AddImage
     image: ../../images/malwee_02-1.png
     alt: red
+    imagemob: ../../images/red-mob.png
+  - type: AddTitle
+    title: "## solução"
   - type: AddText
-    text: >-
-      ## solução
-
-
-      Oferecer às mães brasileiras a oportunidade de testar a semelhança entre elas e seus filhos, através da tecnologia de reconhecimento facial. O teste era simples: para descobrir a porcentagem de semelhança entre mães e filhos, bastava fazer upload de uma foto própria e de uma foto da mãe no hotsite da ação. A partir daí, o match era gerado automaticamente, mostrando o quão parecido o usuário é com sua mãe em formato de post compartilhável.
+    text: "Oferecer às mães brasileiras a oportunidade de testar a semelhança entre
+      elas e seus filhos, através da tecnologia de reconhecimento facial. O
+      teste era simples: para descobrir a porcentagem de semelhança entre mães e
+      filhos, bastava fazer upload de uma foto própria e de uma foto da mãe no
+      hotsite da ação. A partir daí, o match era gerado automaticamente,
+      mostrando o quão parecido o usuário é com sua mãe em formato de post
+      compartilhável."
   - type: AddImage
     image: ../../images/malwee_02-2.png
     alt: women
+    imagemob: ../../images/women-mob.png
   - type: AddImage
     image: ../../images/malwee_03-1.png
     alt: girls
+resultadoscontainer:
+  - type: AddTitle
+    title: "## RESULTADOS"
+  - type: AddResultado
+    resultado: |-
+      # 22 MI
+
+      #### VIEWS VIRAIS DA CAMPANHA*
+  - type: AddResultado
+    resultado: |-
+      # 60 MI
+
+      #### IMPRESSÕES TOTAIS
+  - type: AddResultado
+    resultado: |-
+      # +27 MI
+
+      #### VIEWS TOTAIS
+  - type: AddResultado
+    resultado: |-
+      # +1 MI
+
+      #### MIDÍA ESPONTÂNEA*
+
+      \*Whatsapp não contabilizado
 status: Published
 ---
 ## RESULTADOS
