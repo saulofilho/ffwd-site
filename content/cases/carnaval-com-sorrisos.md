@@ -56,6 +56,24 @@ container:
     image: ../../images/default-img.jpg
     alt: x
     imagemob: ../../images/group-12-1.png
+resultadoscontainer:
+  - type: AddTitle
+    title: "## RESULTADOS"
+  - type: AddResultado
+    resultado: |-
+      # 60%
+
+      #### CRESCIMENTO ANUAL
+  - type: AddResultado
+    resultado: |-
+      # 800 MIL
+
+      #### PAGEVIEW DO BLOG / ANO
+  - type: AddResultado
+    resultado: |-
+      #### DO ZERO A
+
+      # 1.1 MILHÃO
 status: Published
 ---
 ## RESULTADOS
