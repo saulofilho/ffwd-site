@@ -1,6 +1,6 @@
 ---
 template: CasePost
-date: 2020-06-06T19:32:02.036Z
+date: 2020-06-27T19:32:02.036Z
 ClientTitle: 06. dudalina
 title: carnaval com sorrisos
 HomeDescription: Experiência tech que foi sucesso na Sapucai
