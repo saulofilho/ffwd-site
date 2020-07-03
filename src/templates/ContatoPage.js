@@ -111,7 +111,7 @@ export const ContactPageTemplate = () => (
               </a>
             </button>
             <button>
-              <a href="https://wa.me/5511933430190?text=Olá">
+              <a href="https://wa.me/554891519810?text=FFWD">
                 <img src="/images/ico-whats.png" alt="whats"/>
               </a>
             </button>

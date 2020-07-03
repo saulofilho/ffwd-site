@@ -37,7 +37,7 @@ const SobrePageCarousel = () => {
   return (
     <>
       <Swiper {...HorizontalSwiperParams}>
-        <div>
+        <div data-hash="mais-que-digital">
           <Swiper {...VerticalSwiperParams}>
             <div className="mais-que-digital" data-hash="mais-que-digital-top">
               <p className="default-text-header container">
@@ -272,7 +272,7 @@ const SobrePageCarousel = () => {
             </footer>
           </Swiper>
         </div>
-        <div>
+        <div data-hash="servicos">
           <Swiper {...VerticalSwiperParams}>
             <div className="servicos" data-hash="servicos-top">
                 <p className="default-text-header container">

@@ -10,6 +10,7 @@ import './Nav.css'
 export const Navigation = (props) => {
   const [active, setActive] = useState(false);
   const [activeSubNav, setActiveSubNav] = useState(false);
+  const [activeSubNavPessoas, setActiveSubNavPessoas] = useState(false);
   const [currentPath, setCurrentPath] = useState(false);
 
   useEffect(() => {
@@ -20,11 +21,11 @@ export const Navigation = (props) => {
 
   const handleLinkClick = () => setActive(active) && handleMenuToggle()
 
-  const toggleSubNav = () =>
+  const toggleSubNavSobre = () =>
     setActiveSubNav(!activeSubNav)
 
-  // const toggleSubNav = subNav =>
-  //   setActiveSubNav(activeSubNav === subNav ? false : subNav)
+  const toggleSubNavPessoas = () =>
+    setActiveSubNavPessoas(!activeSubNavPessoas)
 
   const { subNav } = props,
     NavLink = ({ to, className, children, ...props }) => (
@@ -93,63 +94,53 @@ export const Navigation = (props) => {
           </button>
         </div>
         <div className="nav-links-menu-hamburger">
-          <NavLink to="/sobre/">sobre</NavLink>
-          <NavLink to="/projetos/">projetos</NavLink>
-          <NavLink to="/pessoas/">pessoas</NavLink>
-          <NavLink to="/blog/">blog</NavLink>
-          {/* <div
-            className={`Nav--Group ${
-              activeSubNav === 'posts' ? 'active' : ''
-              }`}
-          >
-            <span
-              className={`NavLink Nav--GroupParent ${
-                props.location.pathname.includes('posts') ||
-                  props.location.pathname.includes('blog') ||
-                  props.location.pathname.includes('post-categories')
-                  ? 'active'
-                  : ''
-                }`}
-              onClick={() => toggleSubNav('posts')}
-            >
-              xxx
-              <div className="Nav--GroupLinks">
-                <NavLink to="/blog/" className="Nav--GroupLink">
-                  All Posts
-                </NavLink>
-                {subNav.posts.map((link, index) => (
-                  <NavLink
-                    to={link.slug}
-                    key={'posts-subnav-link-' + index}
-                    className="Nav--GroupLink"
-                  >
-                    {link.title}
-                  </NavLink>
-                ))}
-              </div>
-            </span>
-          </div> */}
           <div
-            className={`Nav--Group ${
+            className={`nav-group ${
               activeSubNav === true ? 'active' : ''
               }`}
           >
             <button
-              className={`NavLink Nav--GroupParent active`}
-              onClick={() => toggleSubNav()}
+              className={`NavLink active`}
+              onClick={() => toggleSubNavSobre()}
             >
-              xxx
-              <div className="Nav--GroupLinks">
-                <NavLink to="/blog/" className="Nav--GroupLink">
+              <p>
+                sobre
+              </p>
+              <div className="nav-group-links">
+                <NavLink to="/sobre/#mais-que-digital">
                   serviços
                 </NavLink>
-                <NavLink to="/blog/" className="Nav--GroupLink">
+                <NavLink to="/sobre/#servicos" className="great-launches-font">
                   great launches
                 </NavLink>
               </div>
             </button>
           </div>
-          {/* <NavLink to="/contato/">contato</NavLink> */}
+          <NavLink to="/projetos/">projetos</NavLink>
+          <div
+            className={`nav-group ${
+              activeSubNavPessoas === true ? 'active' : ''
+              }`}
+          >
+            <button
+              className={`NavLink active`}
+              onClick={() => toggleSubNavPessoas()}
+            >
+              <p>
+                pessoas
+              </p>
+              <div className="nav-group-links">
+                <NavLink to="/pessoas/#cultura">
+                  cultura
+                </NavLink>
+                <NavLink to="/pessoas/#vagas">
+                  vagas
+                </NavLink>
+              </div>
+            </button>
+          </div>
+          <NavLink to="/blog/">blog</NavLink>
+          <NavLink to="/contato/">contato</NavLink>
           <div className="contact-menu-hamburger display-none-desk">
             <div className="contato-address-container">
               <div className="call-us">
@@ -165,7 +156,7 @@ export const Navigation = (props) => {
               </div>
               <div className="address">
                 <p className="default-text-about">
-                  <strong>address</strong>
+                  <strong>Address</strong>
                 </p>
                 <p className="default-text-about">
                   <br />

@@ -44,11 +44,13 @@
   left: 0;
   z-index: 9;
 }
+.nav-group .nav-group-links .NavLink {
+  border-bottom:  0;
+}
 .nav-active .NavLink {
   animation: Nav--Link 0.3s ease-out;
   animation-fill-mode: both;
   font-family: var(--font-primary);
-  transition: color 0.2s, border-bottom-color 0.2s;
   text-decoration: none;
   border-bottom: 1px solid #000;
   font-style: normal;
@@ -57,11 +59,10 @@
   line-height: 70px;
   text-transform: uppercase;
   color: #000000;
-  display: block;
+  display: flex;
+  flex-flow: column;
   padding: 8px 24px;
-}
-.nav-active .NavLink:first-child {
-  padding: 0 24px 8px;
+  width: 100%;
 }
 .nav-links {
   display: none;
@@ -87,31 +88,39 @@
   border: 0;
   background: transparent;
 }
-
-
-.Nav--GroupLinks {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: auto;
-  background: transparent;
-  max-height: 0;
+.nav-group-links {
+  width: 100%;
+  height: 0;
+  display: none;
   overflow: hidden;
-  transition: 0.3s ease all;
 }
-.Nav--Group.active .Nav--GroupLinks {
-  max-height: 100vh;
-  opacity: 1;
-  transition: 0.6s ease all;
+.nav-group.active .nav-group-links {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-flow: column;
 }
-.Nav--Group.active .Nav--GroupParent::after {
-  top: calc(50% + 0.2rem);
-  transform: translateY(-50%) rotate(-135deg);
+.nav-group-links .NavLink {
+  padding: 12px 0;
+  text-align: left;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #000;
+  color: #fff;
 }
-.Nav--GroupLink {
-  display: block;
+.nav-group-links .NavLink:last-child {
+  padding: 12px 0 0;
+}
+.nav-group button {
+  padding: 12px 0;
+  text-align: left;
+}
+.nav-group.active button p {
+  padding-bottom: 12px;
+}
+.NavLink.great-launches-font {
+  width: max-content;
   position: relative;
-  width: 15rem;
+  animation: mymove 10s linear alternate infinite;
 }
 @keyframes Nav--Link {
   from {
@@ -123,8 +132,22 @@
     transform: translate(0, 0);
   }
 }
+@keyframes mymove {
+  from { margin-left: -100%; } to { margin-left: 100%; }
+}
 
 /* desktop */
+
+
+
+
+@media (min-width: 720px) {
+  .NavLink.great-launches-font {
+    width: unset;
+    position: unset;
+    animation: unset;
+  }
+}
 
 @media (min-width: 1024px) {
   .nav-wrapper {
@@ -134,35 +157,24 @@
     border-bottom: none;
     padding: 12px 129px;
   }
-  .nav-active .NavLink:first-child {
-    padding: 0 129px 12px;
-  }
   .nav-links-nav {
     padding: 64px 129px 60px;
   }
+  .nav-group-links .NavLink {
+    padding: 12px 0;
+    text-align: left;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #000;
+    color: #fff;
+  }
+  .nav-group-links .NavLink:last-child {
+    padding: 12px 0 0;
+  }
+  .nav-group button {
+    padding: 12px 0;
+    text-align: left;
+  }
+  .nav-group.active button p {
+    padding-bottom: 12px;
+  }
 }
-
-
-
-
-
-
-
-/*
-.Nav--GroupParent {
-  padding-right: 3rem;
-}
-
-.Nav--GroupParent::after {
-  content: '';
-  position: absolute;
-  top: calc(50% - 0.2rem);
-  right: 1rem;
-  border-bottom: 2px solid var(--darkGrey);
-  border-right: 2px solid var(--darkGrey);
-  display: block;
-  height: 0.8rem;
-  width: 0.8rem;
-  transition: 0.3s ease all;
-  transform: translateY(-50%) rotate(45deg);
-} */
