@@ -1,23 +1,38 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { graphql } from 'gatsby'
 import { Location } from '@reach/router'
 import PostSection from '../components/PostSection'
 import Layout from '../components/Layout'
-import BlogSearch from '../components/BlogSearch'
 import arrowDown from '../../static/images/ico-seta-down.png'
+import TypeChecker from 'typeco';
+import '../components/BlogSearch.css'
+import loadable from '@loadable/component'
+
+const SearchField = loadable(() => import('react-search-field'))
 
 const scrollToBottom = () => {
   document.querySelector('#posts-section').scrollIntoView({ behavior: 'smooth' });
 }
 
 export const BlogIndexTemplate = ({
-  title,
-  posts = [],
-  enableSearch = true,
-  contentType
-}) => (
+  posts = []
+}) => {
+  const [onSearchClickExampleList, setOnSearchClickExampleList] = useState([...posts]);
+
+
+  return (
     <Location>
-      {({ location }) => {
+      {() => {
+
+        const getMatchedList = (searchText) => {
+          if (TypeChecker.isEmpty(searchText)) return posts;
+          return posts.filter(post => post.PostTitle.toLowerCase().includes(searchText.toLowerCase()));
+        };
+
+        const onSearchClickExample = (value) => {
+          setOnSearchClickExampleList(getMatchedList(value))
+        }
+
         return (
           <main className="Blog" id="blog-hero">
             <div className="blog-hero container">
@@ -28,26 +43,25 @@ export const BlogIndexTemplate = ({
                 blog
               </h1>
               <section className="search-blog">
-                {enableSearch && <BlogSearch />}
-                <div className="default-btn search-btn">
-                  <button>
-                    search
-                  </button>
-                </div>
+                <SearchField
+                  placeholder="Busque por palavras-chave"
+                  classNames="test-class"
+                  onSearchClick={onSearchClickExample}
+                />
               </section>
               <div className="anchor-down">
                 <button
-                    onClick={() => {
-                      scrollToBottom()
-                    }}
-                  >
+                  onClick={() => {
+                    scrollToBottom()
+                  }}
+                >
                   <img src={arrowDown} alt="arrow-don" />
-                  </button>
-                </div>
+                </button>
+              </div>
             </div>
             <section className="posts-section" id="posts-section">
               <div className="container">
-                <PostSection posts={posts} />
+                <PostSection posts={onSearchClickExampleList} />
               </div>
             </section>
           </main>
@@ -55,6 +69,7 @@ export const BlogIndexTemplate = ({
       }}
     </Location>
   )
+}
 
 const BlogIndex = ({ data: { page, posts }, location }) => (
   <Layout

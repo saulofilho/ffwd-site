@@ -21,7 +21,6 @@ export const SinglePostTemplate = ({
         itemScope
         itemType="http://schema.org/BlogPosting"
       >
-        {console.log('xx', PostTitle)}
         <div className="post-hero">
           <div className="anchor-posts container">
             <Link to="/blog/">
@@ -55,17 +54,15 @@ export const SinglePostTemplate = ({
           </div>
         </div>
         <div className="single-post-pagination container">
-            {nextPostURL && (
-                <div className="next">
-                  <Link
-                    className="single-post-pagination-link"
-                    to={nextPostURL}
-                  >
-                    next news
-                    <img src={arrowRightBlk} alt="arrowRightBlk" />
-                </Link>
-                </div>
-            )}
+          <div className="next">
+            <Link
+              className="single-post-pagination-link"
+              to={nextPostURL}
+            >
+              next news
+              <img src={arrowRightBlk} alt="arrowRightBlk" />
+          </Link>
+          </div>
         </div>
       </article>
     </main>

@@ -8,6 +8,7 @@
     "url": "https://github.com/saulofilho/ffwd-site"
   },
   "dependencies": {
+    "@loadable/component": "^5.13.1",
     "@reach/router": "^1.2.1",
     "dom-form-serializer": "^1.0.7",
     "gatsby": "^2.17.7",
@@ -46,8 +47,10 @@
     "react-id-swiper": "^4.0.0",
     "react-markdown": "^4.2.2",
     "react-photoswipe": "^1.3.0",
+    "react-search-field": "^1.0.0",
     "smoothscroll-polyfill": "^0.4.4",
-    "swiper": "^5.4.5"
+    "swiper": "^5.4.5",
+    "typeco": "^1.0.0"
   },
   "keywords": [
     "gatsby"

@@ -1,39 +1,69 @@
 .search-blog {
   width: 100%;
 }
-.search-blog input[type='text'] {
-  right: 0;
-  border: 0;
-  padding: 16px 15px;
-  background: #FFFFFF;
-  border: 1px solid #989898;
-  margin: 24px auto 8px 24px;
-  width: 232px;
-  height: 48px;
+.search-blog .react-search-field {
+  border: unset !important;
+  justify-content: unset !important;
+  height: unset !important;
+  display: flex !important;
+  flex-flow: column;
 }
-.search-blog input[type='text']:focus {
-  border: 2px solid #000000;
+.search-blog .react-search-field input[type='text'] {
+  right: 0 !important;
+  border: 0 !important;
+  padding: 16px 15px !important;
+  background: #FFFFFF !important;
+  border: 1px solid #989898 !important;
+  margin: 24px auto 8px 24px !important;
+  width: 232px !important;
+  height: 48px !important;
 }
-.search-blog input[type='text']::placeholder {
-  font-family: var(--font-secondary);
+.search-blog .react-search-field input[type='text']:focus {
+  border: 2px solid #000000 !important;
+}
+.search-blog .react-search-field input[type='text']::placeholder {
+  font-family: var(--font-secondary) !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-size: 12px !important;
+  color: #989898 !important;
+}
+.search-blog .react-search-field button {
+  width: 92px !important;
+  height: 48px !important;
+  margin: auto 24px !important;
+  font-family: var(--font-secondary) !important;
+  font-style: normal !important;
+  font-weight: 600 !important;
+  font-size: 16px !important;
+  line-height: 20px !important;
+  color: #fff !important;
+  background: #000 !important;
+  border: none !important;
+  cursor: pointer !important;
+  text-transform: uppercase !important;
+  padding: 0 !important;
+}
+.search-blog .react-search-field button::after {
+  content: "SEARCH";
+  font-family: var(--font-secondary) !important;
   font-style: normal;
-  font-weight: normal;
-  font-size: 12px;
-  color: #989898;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  color: #FFFFFF;
 }
-.search-btn button {
-  width: 92px;
-  height: 48px;
-  margin: auto 24px;
+.search-blog .react-search-field button.react-search-field-button svg {
+  display: none !important;
 }
 
 /* desktop */
 
 @media (min-width: 1024px) {
-  .search-blog input[type='text'] {
-    margin: 24px auto 8px 0;
+  .search-blog .react-search-field input[type='text'] {
+    margin: 24px auto 8px 0 !important;
   }
-  .search-btn button {
-    margin: 0;
+  .search-blog .react-search-field button{
+    margin: 0 !important;
   }
 }

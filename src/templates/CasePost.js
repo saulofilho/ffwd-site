@@ -20,7 +20,18 @@ export const CasePostTemplate = ({
   CaseAbout,
   nextPostURL,
   prevPostURL,
-}) => (
+}) => {
+
+  const newArrOfObjects = container
+    .map(
+        obj => 
+        Object.keys(obj).filter(e => obj[e] !== null)
+        .reduce((o, e) => {o[e]  = obj[e]; return o;}, {})
+    )
+
+    // console.log('FILTRADO', newArrOfObjects)
+
+  return(
     <main>
       <article
         className="home-case"
@@ -52,10 +63,11 @@ export const CasePostTemplate = ({
               </div>
             </div>
             <div className="containerCasePost" id="containerCasePost">
-              {container.map((item, index) => (
+              {newArrOfObjects.map((item, index) => (
                 <div
-                  key={item.text + index}
+                  key={item + index}
                 >
+                  {/* {console.log('MAP', newArrOfObjects)} */}
                   <div className="case-imgs display-none-desk">
                     {item.imagemob === null ? <></> : <img src={item.imagemob} alt={item.alt} />}
                   </div>
@@ -64,14 +76,19 @@ export const CasePostTemplate = ({
                   </div>
                   <div className="case-content">
                     <div className="case-title container">
-                      {item.title === null ? <></> : <Content className="case-title" source={item.title} />}
+                      {item.title === null ? 'x' : <Content className="case-title" source={item.title} />}
                     </div>
                     <div className="case-texts container">
-                      {item.text === null ? <></> : <Content className="case-text" source={item.text} />}
+                      {item.text === null ? 'xx' : <Content className="case-text" source={item.text} />}
                     </div>
                   </div>
-                  <div className="case-yt display-none-mob">
-                    {item.youtube === null ? <></> : <Content className="case-yt" source={item.youtube} />}
+                  <div className="yt-wrapper">
+                    <div className="case-yt display-none-mob">
+                      {item.youtube === null ? <></> : <Content className="case-yt" source={item.youtube} />}
+                    </div>
+                    <div className="case-yt display-none-desk">
+                      {item.youtube === null ? <></> : <Content className="case-yt" source={item.youtube} />}
+                    </div>
                   </div>
                 </div>
               ))}
@@ -123,6 +140,7 @@ export const CasePostTemplate = ({
       </article>
     </main>
   )
+}
 
 const CasePost = ({ data: { post, allPosts }, location }) => {
   const thisEdge = allPosts.edges.find(edge => edge.node.id === post.id)
