@@ -35,25 +35,35 @@ container:
       src="https://www.youtube.com/embed/L6XmDg0PEtE" frameborder="0"
       allow="accelerometer; autoplay; encrypted-media; gyroscope;
       picture-in-picture" allowfullscreen></iframe>
-resultadoscontainer:
-  - type: AddTitle
-    title: "## resultados Heading 2"
-  - type: AddResultado
-    resultado: |-
-      # 60%
+resultadoscontainer: |-
+  ## RESULTADOS
 
-      #### CRESCIMENTO ANUAL
-  - type: AddResultado
-    resultado: |-
-      <!--StartFragment-->
+  <div class="resultados-wrapper">
 
-      # fragment
+  <div class="resultados-item">
 
-      <!--EndFragment-->
-  - type: AddResultado
-    resultado: |-
-      #### DO ZERO A
+  # 60%
 
-      # 1.1 milhãoz
+  #### CRESCIMENTO ANUAL
+
+  </div>
+
+  <div class="resultados-item">
+
+  # 800 MIL
+
+  #### PAGEVIEW DO BLOG / ANO
+
+  </div>
+
+  <div class="resultados-item">
+
+  #### DO ZERO A
+
+  # 1.1 MILHÃO
+
+  </div>
+
+  </div>
 status: Published
 ---
