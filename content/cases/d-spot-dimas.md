@@ -48,16 +48,26 @@ container:
     image: ../../images/default-img.jpg
     alt: x
     imagemob: ../../images/mail-correspondence-stationery-mockup-1.png
-resultadoscontainer:
-  - type: AddTitle
-    title: "## RESULTADO"
-  - type: AddResultado
-    resultado: >-
-      Nos primeiros 6 meses após o lançamento o empreendimento já havia vendido
-      50% das suas unidades.
+resultadoscontainer: >-
+  ## RESULTADOS
 
 
-      A campanha teve grande alcance geolocalizado e conversão de leads acima do estimado. Além das vendas, o recall de marca foi altamente relevante, atrelando um design ousado para um segmento mais tradicional.
+  <div class="resultados-wrapper">
+
+
+  <div class="resultados-item">
+
+
+  Nos primeiros 6 meses após o lançamento o empreendimento já havia vendido 50% das suas unidades. 
+
+
+  A campanha teve grande alcance geolocalizado e conversão de leads acima do estimado. Além das vendas, o recall de marca foi altamente relevante, atrelando um design ousado para um segmento mais tradicional.
+
+
+  </div>
+
+
+  </div>
 status: Published
 ---
 ## resultado
