@@ -46,31 +46,36 @@ container:
   - type: AddImage
     image: ../../images/malwee_03-1.png
     alt: girls
-resultadoscontainer:
-  - type: AddTitle
-    title: "## RESULTADOS"
-  - type: AddResultado
-    resultado: |-
-      # 22 MI
+resultadoscontainer: |-
+  ## RESULTADOS
 
-      #### VIEWS VIRAIS DA CAMPANHA*
-  - type: AddResultado
-    resultado: |-
-      # 60 MI
+  <div class="resultados-wrapper">
 
-      #### IMPRESSÕES TOTAIS
-  - type: AddResultado
-    resultado: |-
-      # +27 MI
+  <div class="resultados-item">
 
-      #### VIEWS TOTAIS
-  - type: AddResultado
-    resultado: |-
-      # +1 MI
+  # 60%
 
-      #### MIDÍA ESPONTÂNEA*
+  #### CRESCIMENTO ANUAL
 
-      \*Whatsapp não contabilizado
+  </div>
+
+  <div class="resultados-item">
+
+  # 800 MIL
+
+  #### PAGEVIEW DO BLOG / ANO
+
+  </div>
+
+  <div class="resultados-item">
+
+  #### DO ZERO A
+
+  # 1.1 MILHÃO
+
+  </div>
+
+  </div>
 status: Published
 ---
 ## RESULTADOS
