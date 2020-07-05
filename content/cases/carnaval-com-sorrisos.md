@@ -21,33 +21,12 @@ container:
     image: ../../images/default-img.jpg
     alt: x
     imagemob: ../../images/video1-2-1.png
-  - type: AddTitle
-    text: |-
-      ## desafio
-
-      #### O desafio era começar do ZERO.
   - type: AddText
-    text: Sem nenhuma presença nas mídias digitais, o intuito era começar a presença
-      digital da Dudalina e torná-la conhecida pelo público-alvo da marca. Sem
-      histório e sem leads, as campanhas iniciais exigiram estratégias múltiplas
-      e criativas, que foram ampliadas para estratégias certeiras de
-      performance.
+    text: ""
   - type: AddImage
     image: ../../images/default-img.jpg
     alt: x
     imagemob: ../../images/group-10-1.png
-  - type: AddTitle
-    text: "## proposta"
-  - type: AddText
-    text: >-
-      Ao longo de 5 anos de trabalho exclusivamente digital, atingimos a marca
-      de 1.5 milhões de seguidores. 
-
-
-      Mais de 20 ações criativas lançadas. Milhares de leads e um relacionamento forte e fiel com os fãs da marca. 
-
-
-      A construção dessa plataforma digital da Dudalina, atrelada ao sucesso das campanhas de marketing inseriram a marca no ambiente digital com força e relevância. Que tal saber o que fizemos pela Dudalina? Navegue pelo infográfico:
   - type: AddImage
     image: ../../images/default-img.jpg
     alt: x
