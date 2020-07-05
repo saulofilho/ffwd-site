@@ -35,24 +35,36 @@ container:
     image: ../../images/default-img.jpg
     alt: x
     imagemob: ../../images/group-12-1.png
-resultadoscontainer:
-  - type: AddTitle
-    title: "## RESULTADOS"
-  - type: AddResultado
-    resultado: |-
-      # 60%
+resultadoscontainer: |-
+  ## RESULTADOS
 
-      #### CRESCIMENTO ANUAL
-  - type: AddResultado
-    resultado: |-
-      # 800 MIL
+  <div class="resultados-wrapper">
 
-      #### PAGEVIEW DO BLOG / ANO
-  - type: AddResultado
-    resultado: |-
-      #### DO ZERO A
+  <div class="resultados-item">
 
-      # 1.1 MILHÃO
+  # 60%
+
+  #### CRESCIMENTO ANUAL
+
+  </div>
+
+  <div class="resultados-item">
+
+  # 800 MIL
+
+  #### PAGEVIEW DO BLOG / ANO
+
+  </div>
+
+  <div class="resultados-item">
+
+  #### DO ZERO A
+
+  # 1.1 MILHÃO
+
+  </div>
+
+  </div>
 status: Published
 ---
 ## RESULTADOS
