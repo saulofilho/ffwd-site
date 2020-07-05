@@ -71,17 +71,23 @@ container:
     image: ../../images/default-img.jpg
     alt: sf
     imagemob: ../../images/image9.png
-resultadoscontainer:
-  - type: AddTitle
-    title: "## resultados"
-  - type: AddResultado
-    resultado: Cada carro se comportava de uma maneira específica num terreno, e
-      cada item influenciava no desempenho do veículo. Com isso, através de
-      algoritmos, conseguimos criar centenas de variações possíveis e somente
-      uma combinação, completaria a prova no melhor tempo possível. E com isso
-      milhares de usuários criaram diferentes carros em busca do melhor tempo,
-      enquanto navegavam pelas pistas do mundo, patrocinadas pela Fórmula
-      Individual.
+resultadoscontainer: >-
+  ## RESULTADOS
+
+
+  <div class="resultados-wrapper">
+
+
+  <div class="resultados-item">
+
+
+  Cada carro se comportava de uma maneira específica num terreno, e cada item influenciava no desempenho do veículo. Com isso, através de algoritmos, conseguimos criar centenas de variações possíveis e somente uma combinação, completaria a prova no melhor tempo possível. E com isso milhares de usuários criaram diferentes carros em busca do melhor tempo, enquanto navegavam pelas pistas do mundo, patrocinadas pela Fórmula Individual.
+
+
+  </div>
+
+
+  </div>
 status: Published
 ---
 ## resultado
