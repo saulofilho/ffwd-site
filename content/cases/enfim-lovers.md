@@ -49,31 +49,36 @@ container:
     image: ../../images/default-img.jpg
     alt: x
     imagemob: ../../images/image4-1.png
-resultadoscontainer:
-  - type: AddTitle
-    title: "## RESULTADOS"
-  - type: AddResultado
-    resultado: |-
-      # 300 MIL
+resultadoscontainer: |-
+  ## RESULTADOS
 
-      #### TOTAL DE TESTES*
-  - type: AddResultado
-    resultado: |-
-      # 62%
+  <div class="resultados-wrapper">
 
-      #### ENGAGAMENTO COM A PLATAFORMA
-  - type: AddResultado
-    resultado: |-
-      # +500 MIL
+  <div class="resultados-item">
 
-      #### LIKES DURANTE A AÇÃO* (instagram)
-  - type: AddResultado
-    resultado: |-
-      # +175 MIL
+  # 60%
 
-      #### TOTAL DE USUÁRIOS* (emails)
+  #### CRESCIMENTO ANUAL
 
-      \*Soma dos anos 2017 e 2018
+  </div>
+
+  <div class="resultados-item">
+
+  # 800 MIL
+
+  #### PAGEVIEW DO BLOG / ANO
+
+  </div>
+
+  <div class="resultados-item">
+
+  #### DO ZERO A
+
+  # 1.1 MILHÃO
+
+  </div>
+
+  </div>
 status: Published
 ---
 ## RESULTADOS
