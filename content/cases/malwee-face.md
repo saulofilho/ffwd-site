@@ -20,7 +20,16 @@ container:
     alt: mae
     imagemob: ../../images/bg-header-1.png
   - type: AddTitle
-    title: "## desafio"
+    title: |-
+      ## desafio
+
+      <div class="resultados-item">
+
+      # 60%
+
+      #### CRESCIMENTO ANUAL
+
+      </div>
   - type: AddText
     text: Como envolver mães e filhos numa ação de forma verdadeira? Para além do
       presente de dia das mães, o desafio era criar valor emocional e gerar
