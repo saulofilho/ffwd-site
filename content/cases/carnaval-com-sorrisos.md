@@ -22,7 +22,14 @@ container:
     alt: x
     imagemob: ../../images/video1-2-1.png
   - type: AddText
-    text: ""
+    text: >-
+      ## desafio
+
+
+      **O desafio era começar do ZERO.**
+
+
+      Sem nenhuma presença nas mídias digitais, o intuito era começar a presença digital da Dudalina e torná-la conhecida pelo público-alvo da marca. Sem histório e sem leads, as campanhas iniciais exigiram estratégias múltiplas e criativas, que foram ampliadas para estratégias certeiras de performance.
   - type: AddImage
     image: ../../images/default-img.jpg
     alt: x
