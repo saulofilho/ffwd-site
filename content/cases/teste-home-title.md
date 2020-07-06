@@ -42,8 +42,7 @@ container2:
     imagemob: ../../images/torus-19-.jpg
     alt: z
   - type: AddYouTube
-    youtube: <iframe width="100%" height="100%"
-      src="https://www.youtube.com/embed/IWmVSm2KevY" frameborder="0"
+    youtube: <iframe src="https://www.youtube.com/embed/IWmVSm2KevY" frameborder="0"
       allow="accelerometer; autoplay; encrypted-media; gyroscope;
       picture-in-picture" allowfullscreen></iframe>
 title4: teste title 4
