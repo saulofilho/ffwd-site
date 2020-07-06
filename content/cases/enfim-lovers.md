@@ -52,5 +52,10 @@ resultados:
   - type: texts
     title: 62%
     text: ENGAGAMENTO COM A PLATAFORMA
+  - type: texts
+    title: "10"
+    text: xxx
+    sub1: do zero a
+    sub2: "*Whatsapp não contabilizado"
 status: Published
 ---
