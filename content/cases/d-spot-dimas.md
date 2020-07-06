@@ -45,5 +45,12 @@ container2:
 title4: resultado
 resultados:
   - type: texts
+    text2: >-
+      Nos primeiros 6 meses após o lançamento o empreendimento já havia vendido
+      50% das suas unidades. 
+
+
+      A campanha teve grande alcance geolocalizado e conversão de leads acima do estimado. Além das vendas, o recall de marca foi altamente relevante, atrelando um design ousado para um segmento mais tradicional.
+    image: ../../images/mail-correspondence-stationery-mockup-1.png
 status: Published
 ---
