@@ -1,6 +1,6 @@
 ---
 template: CasePost
-date: 2020-06-06T16:57:19.454Z
+date: 2020-07-01T16:57:19.454Z
 ClientTitle: 06. dudalina
 title: zero to hero
 HomeDescription: 5 anos de uma parceria de sucesso e resultados. Fomos
