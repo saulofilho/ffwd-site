@@ -1,6 +1,6 @@
 ---
 template: CasePost
-date: 2020-06-05T16:50:41.250Z
+date: 2020-07-02T16:50:41.250Z
 ClientTitle: 05. individual
 title: fórmula individual
 HomeDescription: Para atrair a atenção do público masculino durante o grande
