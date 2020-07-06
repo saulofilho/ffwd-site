@@ -357,6 +357,30 @@
 .sobre-section .btn-up a h4 img {
   padding-right: 13px;
 }
+.sobre-section .footer-custom {
+  padding: 60px 24px 80px;
+}
+.sobre-section .swiper-container {
+  height: 100%;
+  width: 100%;
+}
+.sobre-section .swiper-pagination-sobre {
+  border: 1px solid #000;
+  background: #000;
+  border-radius: 40px;
+  width: 152px;
+  margin: auto;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  bottom: 20%;
+  left: 0;
+}
+.sobre-section  .footer-custom {
+  padding: 60px 24px 80px;
+}
 
 /* desktop */
 
@@ -371,7 +395,7 @@
     padding: 16px 773px 0 0;
   }
   .mais-que-digital {
-    height: 100vh !important;
+    height: 720px !important;
   }
   .mais-que-digital .anchor-down button {
     margin: 0;
@@ -454,7 +478,7 @@
   .make-great-launches button {
     margin: 0;
   }
-  .swiper-pagination-sobre .swiper-pagination-bullet::before {
+  .sobre-section .swiper-pagination-sobre .swiper-pagination-bullet::before {
     content: "";
     position: absolute;
     width: 100%;
@@ -466,7 +490,7 @@
     left: 10px;
     bottom: 0;
   }
-  .swiper-pagination-sobre .swiper-pagination-bullet::after {
+  .sobre-section .swiper-pagination-sobre .swiper-pagination-bullet::after {
     content: "";
     position: absolute;
     width: 100%;
@@ -478,23 +502,18 @@
     right: 10px;
     bottom: 0;
   }
-  .swiper-pagination-sobre .swiper-pagination-bullet {
-    background: #000;
-    opacity: unset;
-    width: 4px;
-    height: 4px;
+  .sobre-section .swiper-pagination-sobre {
+    background: transparent;
+    bottom: 10%;
   }
-  .swiper-pagination-sobre .swiper-pagination-bullet-active {
-    content: "";
-    width: 12px;
-    height: 12px;
-    background: url(/images/ativo-blk.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: auto;
+  .sobre-section .swiper-pagination-sobre .swiper-pagination-bullet-active {
+    background: url(/images/ativo-blk.png) !important;
+  }
+  .sobre-section .swiper-pagination-sobre .swiper-pagination-bullet {
+    background: #000;
   }
   .servicos {
-    height: 100vh !important;
+    height: 720px !important;
   }
   .servicos-texts {
     padding: 0 0 24px 0;
@@ -580,5 +599,8 @@
   }
   .make-great-launches .default-text-title-sobre {
     padding: 120px 80px 0 0;
+  }
+  .sobre-section .footer-custom {
+    padding: 60px 0 0;
   }
 }

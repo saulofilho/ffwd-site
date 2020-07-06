@@ -1,5 +1,5 @@
 .projeto {
-  height: 100vh;
+  height: 640px;
   width: 100%;
   background: #fff;
 }
@@ -34,6 +34,9 @@
 /* desktop */
 
 @media (min-width: 1024px) {
+  .projeto {
+    height: 720px;
+  }
   .projeto .default-text-title {
     padding: 16px 680px 0 0;
   }

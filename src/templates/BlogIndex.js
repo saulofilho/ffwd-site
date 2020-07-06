@@ -19,7 +19,6 @@ export const BlogIndexTemplate = ({
 }) => {
   const [onSearchClickExampleList, setOnSearchClickExampleList] = useState([...posts]);
 
-
   return (
     <Location>
       {() => {

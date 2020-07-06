@@ -86,7 +86,7 @@
 
 @media (min-width: 1024px) {
   .contato-hero {
-    height: 100vh;
+    height: 720px;
     width: 100%;
   }
   .contato-hero .anchor-down {

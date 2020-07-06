@@ -66,15 +66,17 @@ const PessoasPageCarousel = ({
                   <br />
                   múltiplos, um time completo.
                 </p>
-                <div className="anchor-down container display-none-mob">
-              <button
-                    onClick={() => {
-                      scrollToBottomWeAre()
-                    }}
-                  >
-                  <img src={arrowDown} alt="arrowDown" />
-                  </button>
-              </div>
+                <div className="container">
+                  <div className="anchor-down container display-none-mob">
+                    <button
+                      onClick={() => {
+                        scrollToBottomWeAre()
+                      }}
+                    >
+                      <img src={arrowDown} alt="arrowDown" />
+                    </button>
+                  </div>
+                </div>
             </div>
             <div className="the-people-behind" id="the-people-behind">
               <div className="people-desk-wrapper">
@@ -135,7 +137,7 @@ const PessoasPageCarousel = ({
                       <p>
                         fernando werner
                         <br />
-                        <p>Owner</p>
+                        <span>Owner</span>
                       </p>
                     </div>
                   </div>
@@ -218,7 +220,9 @@ const PessoasPageCarousel = ({
                   </div>
                 </div>
                 <div className="display-none-desk">
-                  <div className="couple-mob">
+                  <div className="photos-wrapper-mob">
+                    <div className="photo-up"></div>
+                    <div className="photo-down"></div>
                   </div>
                 </div>
                 <div className="pessoas-btn-up container">
@@ -306,14 +310,16 @@ const PessoasPageCarousel = ({
                 <br/>
                 palavras do código de cultura não são vazias.
               </p>
-              <div className="anchor-down container display-none-mob">
-              <button
+              <div className="container">
+                <div className="anchor-down container display-none-mob">
+                  <button
                     onClick={() => {
                       scrollToBottomOurCulture()
                     }}
                   >
-                  <img src={arrowDown} alt="arrowDown" />
+                    <img src={arrowDown} alt="arrowDown" />
                   </button>
+                </div>
               </div>
             </div>
             <div className="wrapper-cultura-imgs cultura-img-1" id="wrapper-cultura-imgs">
@@ -535,10 +541,13 @@ const PessoasPageCarousel = ({
                 que 
                 <br/>
                 segue. Quando você cultiva um jardim é preciso tirar ervas
-                daninhas, mas as flores morrerão se tudo que você fizer 
-                for tirar
-                ervas daninhas. Elas precisam de outros 
+                daninhas, 
                 <br/>
+                mas as flores morrerão se tudo que você fizer 
+                for tirar
+                ervas daninhas. 
+                <br/>
+                Elas precisam de outros 
                 cuidados.
                 Não foque em coisas pequenas.
               </p>
@@ -852,14 +861,16 @@ const PessoasPageCarousel = ({
                 F*DAS,
                 <br /> esse é o seu lugar.
               </p>
-              <div className="anchor-down container">
-              <button
+              <div className="container">
+                <div className="anchor-down">
+                  <button
                     onClick={() => {
                       scrollToBottomVagas()
                     }}
                   >
-                  <img src={arrowDown} alt="arrowDown" />
+                    <img src={arrowDown} alt="arrowDown" />
                   </button>
+                </div>
               </div>
             </div>
             <div className="vagas-index" id="vagas-index">

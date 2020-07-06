@@ -54,7 +54,9 @@ const SobrePageCarousel = () => {
               </p>
               <div className="default-btn container">
                 <button>
-                  we make great launches
+                  <a href="#make-great">
+                    we make great launches
+                  </a>
                 </button>
               </div>
               <div className="anchor-down container display-none-mob">
@@ -81,7 +83,9 @@ const SobrePageCarousel = () => {
                 </p>
                 <div className="default-btn container">
                   <button>
-                    Conheça nossos cases
+                    <a href="/projetos/">
+                     Conheça nossos cases
+                    </a>
                   </button>
                 </div>
             </div>
@@ -152,11 +156,13 @@ const SobrePageCarousel = () => {
                 </p>
                 <div className="default-btn container display-none-desk">
                   <button>
-                    Nossos Servicos
+                    <a href="/sobre/#servicos">
+                      Nossos serviços
+                    </a>
                   </button>
                 </div>
             </div>
-            <div className="make-great-launches">
+            <div className="make-great-launches" data-hash="make-great">
               <div className="make-great-launches-bg">
               </div>
                 <p className="default-text-title-sobre container">
@@ -208,7 +214,9 @@ const SobrePageCarousel = () => {
                 </p>
                 <div className="default-btn container">
                   <button>
-                    Great Launches
+                    <a href="/projetos/">
+                      Great Launches
+                    </a>
                   </button>
                 </div>
                 <div className="container">
@@ -423,7 +431,9 @@ const SobrePageCarousel = () => {
                 </p>
                 <div className="default-btn container">
                   <button>
-                    Great Launches
+                    <a href="/projetos/">
+                      Great Launches
+                    </a>
                   </button>
                 </div>
                 <div className="container">

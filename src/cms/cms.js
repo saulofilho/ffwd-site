@@ -11,9 +11,6 @@ import { PessoasPageTemplate } from '../templates/PessoasPage'
 import { SinglePostTemplate } from '../templates/SinglePost'
 import { CasePostTemplate } from '../templates/CasePost'
 import { VagaPostTemplate } from '../templates/VagaPost'
-// import uploadcare from 'netlify-cms-media-library-uploadcare'
-
-// CMS.registerMediaLibrary(uploadcare)
 
 if (
   window.location.hostname === 'localhost' &&
@@ -50,6 +47,6 @@ CMS.registerPreviewTemplate('posts', ({ entry }) => (
 CMS.registerPreviewTemplate('cases', ({ entry }) => (
   <CasePostTemplate {...entry.toJS().data} />
 ))
-CMS.registerPreviewTemplate('vagas', ({ entry }) => (
+CMS.registerPreviewTemplate('vaga', ({ entry }) => (
   <VagaPostTemplate {...entry.toJS().data} />
 ))

@@ -100,7 +100,7 @@ export const pageQuery = graphql`
         overview
         LikeToSee
         link
-        date(formatString: "MMMM Do, YYYY")
+        date(formatString: "DD.MM.YYYY")
       }
     }
     allPosts: allMarkdownRemark(

@@ -92,7 +92,7 @@ h4 {
   letter-spacing: 0.04em;
   line-height: 16px;
   text-transform: uppercase;
-  padding: 184px 24px 0;
+  padding: 180px 24px 0;
   width: 100%;
 }
 .default-text-title {
@@ -111,7 +111,7 @@ h4 {
   font-weight: normal;
   font-size: 12px;
   line-height: 16px;
-  padding: 24px 90px 0 24px;
+  padding: 16px 80px 0 24px;
   width: 100%;
   color: #1D1D1B;
 }
@@ -233,9 +233,13 @@ button:hover {
 @media (min-width: 1024px) {
   .display-none-desk {
     display: none;
+    width: 100%;
+    height: 100%;
   }
   .display-none-mob {
     display: block;
+    width: 100%;
+    height: 100%;
   }
   .default-text-header {
     padding: 184px 0 0;

@@ -2,10 +2,10 @@ import React from 'react'
 import _get from 'lodash/get'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
-import './SinglePost.css'
+import Content from '../components/Content'
 import arrowLeftBlk from '../../static/images/arrow-left-blk.png'
 import arrowRightBlk from '../../static/images/arrow-right-blk.png'
-import Content from '../components/Content'
+import './SinglePost.css'
 
 export const SinglePostTemplate = ({
   featuredImage,
@@ -54,6 +54,7 @@ export const SinglePostTemplate = ({
           </div>
         </div>
         <div className="single-post-pagination container">
+        {nextPostURL && (
           <div className="next">
             <Link
               className="single-post-pagination-link"
@@ -63,6 +64,7 @@ export const SinglePostTemplate = ({
               <img src={arrowRightBlk} alt="arrowRightBlk" />
           </Link>
           </div>
+          )}
         </div>
       </article>
     </main>
