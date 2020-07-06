@@ -21,6 +21,14 @@ container:
     image: ../../images/default-img.jpg
     alt: x
     imagemob: ../../images/video1-2-1.png
+  - type: AddImage
+    image: ../../images/default-img.jpg
+    alt: x
+    imagemob: ../../images/group-10-1.png
+  - type: AddImage
+    image: ../../images/default-img.jpg
+    alt: x
+    imagemob: ../../images/group-11-1.png
   - type: AddText
     text: >-
       ## desafio
@@ -30,14 +38,18 @@ container:
 
 
       Sem nenhuma presença nas mídias digitais, o intuito era começar a presença digital da Dudalina e torná-la conhecida pelo público-alvo da marca. Sem histório e sem leads, as campanhas iniciais exigiram estratégias múltiplas e criativas, que foram ampliadas para estratégias certeiras de performance.
-  - type: AddImage
-    image: ../../images/default-img.jpg
-    alt: x
-    imagemob: ../../images/group-10-1.png
-  - type: AddImage
-    image: ../../images/default-img.jpg
-    alt: x
-    imagemob: ../../images/group-11-1.png
+
+
+      <div class="resultados-item">
+
+
+      # 60%
+
+
+      #### CRESCIMENTO ANUAL
+
+
+      </div>
   - type: AddImage
     image: ../../images/default-img.jpg
     alt: x
