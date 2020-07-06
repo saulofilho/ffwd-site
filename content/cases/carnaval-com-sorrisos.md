@@ -54,6 +54,17 @@ container:
     image: ../../images/default-img.jpg
     alt: x
     imagemob: ../../images/group-12-1.png
+resultados: >-2
+    <div class="resultados-wrapper">
+
+    <div class="resultados-item">
+
+    Cada carro se comportava de uma maneira específica num terreno, e cada item influenciava no desempenho do veículo. Com isso, através de algoritmos, conseguimos criar centenas de variações possíveis e somente uma combinação, completaria a prova no melhor tempo possível. E com isso milhares de usuários criaram diferentes carros em busca do melhor tempo, enquanto navegavam pelas pistas do mundo, patrocinadas pela Fórmula Individual.
+
+    </div>
+
+    </div>
+status: Published
 resultadoscontainer: |-
   ## RESULTADOS
 
@@ -84,7 +95,6 @@ resultadoscontainer: |-
   </div>
 
   </div>
-status: Published
 ---
 ## RESULTADOS
 
