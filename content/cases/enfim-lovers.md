@@ -36,8 +36,8 @@ text2: >-
   zodíaco. 
 
 
-  Foram criadas 77 combinações com sugestão de date perfeito, viagem ideal e pedra mágica do casal, além de um resumo sobre o match e as principais características de cada um. Para tornar a experiência ainda mais incrível, os resultados foram gerados por ilustrações da influencer @nanaths, que também ativou a campanha em seu perfil.z
-title3: x
+  Foram criadas 77 combinações com sugestão de date perfeito, viagem ideal e pedra mágica do casal, além de um resumo sobre o match e as principais características de cada um. Para tornar a experiência ainda mais incrível, os resultados foram gerados por ilustrações da influencer @nanaths, que também ativou a campanha em seu perfil.
+title3: ""
 container2:
   - type: AddImage
     image: ../../images/default-img.jpg
@@ -53,9 +53,13 @@ resultados:
     title: 62%
     text: ENGAGAMENTO COM A PLATAFORMA
   - type: texts
-    title: "10"
-    text: xxx
-    sub1: do zero a
-    sub2: "*Whatsapp não contabilizado"
+    title: +500 mil
+    text: LIKES DURANTE A AÇÃO* (instagram)
+    sub1: ""
+    sub2: ""
+  - type: texts
+    title: +175 mil
+    text: TOTAL DE USUÁRIOS* (emails)
+    sub2: "*Soma dos anos 2017 e 2018"
 status: Published
 ---
