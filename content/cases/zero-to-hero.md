@@ -3,11 +3,8 @@ template: CasePost
 date: 2020-07-01T16:57:19.454Z
 ClientTitle: 06. dudalina
 title: zero to hero
-HomeDescription: 5 anos de uma parceria de sucesso e resultados. Fomos
-  escolhidos para participar e criar o planejamento estratégico para a entrada
-  da marca no universo digital. A partir de 2010, passamos por várias "eras de
-  conteúdo" e mantivemos sempre os níveis de crescimento e engajamento dos
-  usuários com a marca.
+HomeDescription: "Fomos escolhidos para participar e criar o planejamento
+  estratégico para a entrada da marca no universo digital. "
 HomeImage: ../../images/torus-8-.jpg
 HomeImageMob: ../../images/carnaval-mob.png
 ProjetosTitle: CARNAVAL COM SORRISOS
