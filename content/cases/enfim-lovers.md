@@ -37,6 +37,7 @@ text2: >-
 
 
   Foram criadas 77 combinações com sugestão de date perfeito, viagem ideal e pedra mágica do casal, além de um resumo sobre o match e as principais características de cada um. Para tornar a experiência ainda mais incrível, os resultados foram gerados por ilustrações da influencer @nanaths, que também ativou a campanha em seu perfil.z
+title3: x
 container2:
   - type: AddImage
     image: ../../images/default-img.jpg
@@ -47,6 +48,7 @@ resultados:
   - type: texts
     title: 300 mil
     text: TOTAL DE TESTES*
+    sub: x
   - type: texts
     title: 62%
     text: ENGAGAMENTO COM A PLATAFORMA
