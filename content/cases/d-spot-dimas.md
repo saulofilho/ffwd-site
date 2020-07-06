@@ -1,6 +1,6 @@
 ---
 template: CasePost
-date: 2020-06-04T15:35:48.156Z
+date: 2020-07-03T15:35:48.156Z
 ClientTitle: 04. dimas
 title: d/spot dimas
 HomeDescription: Branding, conceito, design, tecnologia, conteúdo e performance.
