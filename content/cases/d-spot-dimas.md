@@ -52,5 +52,7 @@ resultados:
 
       A campanha teve grande alcance geolocalizado e conversão de leads acima do estimado. Além das vendas, o recall de marca foi altamente relevante, atrelando um design ousado para um segmento mais tradicional.
     image: ""
+resultadosimage: ../../images/default-img.jpg
+resultadosimagemob: ../../images/mail-correspondence-stationery-mockup-1.png
 status: Published
 ---
