@@ -1,6 +1,6 @@
 ---
 template: CasePost
-date: 2020-07-06T12:47:37.368Z
+date: 2020-07-04T12:47:37.368Z
 ClientTitle: 03. enfim
 title: enfim lovers
 HomeDescription: Como um app e uma ação interativa conquistaram mais de 100 mil
