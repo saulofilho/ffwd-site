@@ -59,5 +59,5 @@ resultados:
       teste text 2
 resultadosimage: ../../images/torus-8-.jpg
 resultadosimagemob: ../../images/torus-19-.jpg
-status: Published
+status: Draft
 ---
