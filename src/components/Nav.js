@@ -4,7 +4,6 @@ import { Link } from 'gatsby'
 import { X } from 'react-feather'
 import Logo from './Logo'
 import Headroom from 'react-headroom'
-
 import './Nav.css'
 
 export const Navigation = (props) => {
@@ -85,7 +84,9 @@ export const Navigation = (props) => {
       </Headroom>
       <div className="nav-links">
         <div className="nav-links-nav">
-          <img src={'/images/logo-black.png'} />
+          <Link to="/" onClick={() => handleMenuToggle()}>
+            <img src={'/images/logo-black.png'} />
+          </Link>
           <button
             className="Button-blank nav-btn"
             onClick={() => handleMenuToggle()}
@@ -107,16 +108,23 @@ export const Navigation = (props) => {
                 sobre
               </p>
               <div className="nav-group-links">
-                <NavLink to="/sobre/#mais-que-digital">
+                <NavLink 
+                  to="/sobre/#mais-que-digital" 
+                  onClick={() => handleMenuToggle()}
+                >
                   serviços
                 </NavLink>
-                <NavLink to="/sobre/#servicos" className="great-launches-font">
+                <NavLink 
+                  to="/sobre/#servicos" 
+                  className="great-launches-font"
+                  onClick={() => handleMenuToggle()}
+                >
                   great launches
                 </NavLink>
               </div>
             </button>
           </div>
-          <NavLink to="/projetos/">projetos</NavLink>
+          <NavLink to="/projetos/" onClick={() => handleMenuToggle()}>projetos</NavLink>
           <div
             className={`nav-group ${
               activeSubNavPessoas === true ? 'active' : ''
@@ -130,17 +138,20 @@ export const Navigation = (props) => {
                 pessoas
               </p>
               <div className="nav-group-links">
-                <NavLink to="/pessoas/#cultura">
+                <NavLink to="/pessoas/#pessoas" onClick={() => handleMenuToggle()}>
+                  pessoas
+                </NavLink>
+                <NavLink to="/pessoas/#cultura" onClick={() => handleMenuToggle()}>
                   cultura
                 </NavLink>
-                <NavLink to="/pessoas/#vagas">
+                <NavLink to="/pessoas/#vagas" onClick={() => handleMenuToggle()}>
                   vagas
                 </NavLink>
               </div>
             </button>
           </div>
-          <NavLink to="/blog/">blog</NavLink>
-          <NavLink to="/contato/">contato</NavLink>
+          <NavLink to="/blog/" onClick={() => handleMenuToggle()}>blog</NavLink>
+          <NavLink to="/contato/" onClick={() => handleMenuToggle()}>contato</NavLink>
           <div className="contact-menu-hamburger display-none-desk">
             <div className="contato-address-container">
               <div className="call-us">

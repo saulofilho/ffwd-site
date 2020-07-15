@@ -8,7 +8,7 @@ export default ({ location }) => (
       ?
       <img src={'/images/logo-white.png'} />
       :
-      <img src={'/images/logo-black.png'} />
+      <img src={'/images/logo-black.svg'} />
     }
   </>
 )

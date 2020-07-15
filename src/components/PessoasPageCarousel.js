@@ -6,6 +6,7 @@ import arrowDown from '../../static/images/ico-seta-down.png'
 import arrowUp from '../../static/images/arrow-up-blk.png'
 import arrowUpWht from '../../static/images/arrow-up-wht.png'
 import logo from '../../static/images/logo-white-vertical.png'
+import Headroom from 'react-headroom'
 
 const scrollToBottomWeAre = () => {
   document.querySelector('#the-people-behind').scrollIntoView({ behavior: 'smooth' });

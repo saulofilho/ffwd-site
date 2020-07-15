@@ -108,5 +108,24 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   }
 }
 
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions
+  const typeDefs = `
+  type MarkdownRemark implements Node @infer {
+    frontmatter: MarkdownRemarkFrontmatterContainer1!
+  }
+  type MarkdownRemarkFrontmatterContainer1 @infer {
+    youtube: String
+  }
+  type MarkdownRemark implements Node @infer {
+    frontmatter: MarkdownRemarkFrontmatterContainer2!
+  }
+  type MarkdownRemarkFrontmatterContainer2 @infer {
+    youtube: String
+  }
+`
+  createTypes(typeDefs)
+}
+
 // Random fix for https://github.com/gatsbyjs/gatsby/issues/5700
 module.exports.resolvableExtensions = () => ['.json']

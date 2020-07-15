@@ -84,17 +84,17 @@ export const CasePostTemplate = ({
                 <div
                   key={item + index}
                 >
-                  {item.imagemob === null ? <></> : 
+                  {item.imagemob &&
                     <div className="case-imgs display-none-desk">
                       <img src={item.imagemob} alt={item.alt} />
                     </div>
                   }
-                  {item.image === null ? <></> : 
+                  {item.image &&
                     <div className="case-imgs display-none-mob">
                       <img src={item.image} alt={item.alt} />
                     </div>
                   }
-                  {item.youtube === null ? <></> :
+                  {item.youtube &&
                     <Content className="case-yt" source={item.youtube} />
                   }
                 </div>
@@ -106,7 +106,7 @@ export const CasePostTemplate = ({
                   source={text2}
                 />
               </div>
-              {title3 === null ? <></> :
+              {title3 &&
                 <div className="case-texts-wrapper-title3 container">
                     <p className="case-title3">{title3}</p>
                 </div>
@@ -115,17 +115,17 @@ export const CasePostTemplate = ({
                 <div
                   key={item + index}
                 >
-                  {item.imagemob === null ? <></> : 
+                  {item.imagemob &&
                     <div className="case-imgs display-none-desk">
                       <img src={item.imagemob} alt={item.alt} />
                     </div>
                   }
-                  {item.image === null ? <></> : 
+                  {item.image &&
                     <div className="case-imgs display-none-mob">
                       <img src={item.image} alt={item.alt} />
                     </div>
                   }
-                  {item.youtube === null ? <></> :
+                  {item.youtube &&
                     <Content className="case-yt" source={item.youtube} />
                   }
                 </div>
@@ -139,19 +139,19 @@ export const CasePostTemplate = ({
                       className="resultados-item-wrapper"
                       key={item + index}
                     >
-                      {item.sub1 === null ? <></> : 
+                      {item.sub1 &&
                         <p className="resultados-case-sub1">{item.sub1}</p>
                       }
-                      {item.title === null ? <></> : 
+                      {item.title &&
                         <p className="resultados-case-title">{item.title}</p>
                       }
-                      {item.text === null ? <></> : 
+                      {item.text &&
                         <p className="resultados-case-text">{item.text}</p>
                       }
-                      {item.sub2 === null ? <></> : 
+                      {item.sub2 &&
                         <p className="resultados-case-sub2">{item.sub2}</p>
                       }
-                      {item.text2 === null ? <></> : 
+                      {item.text2 &&
                         <Content className="case-text" source={item.text2} />
                       }
                     </div>
@@ -159,12 +159,12 @@ export const CasePostTemplate = ({
               </div>
             </div>
             <div className="case-imgs display-none-mob">
-              {resultadosimage === null ? <></> : 
+              {resultadosimage &&
                 <img src={resultadosimage} alt="resultados" />
               }
             </div>
             <div className="case-imgs display-none-desk">
-            {resultadosimagemob === null ? <></> : 
+            {resultadosimagemob &&
               <img src={resultadosimagemob} alt="mob" />
             }
             </div>
