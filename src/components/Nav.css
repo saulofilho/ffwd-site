@@ -46,10 +46,14 @@
 }
 .nav-group .nav-group-links .NavLink {
   border-bottom:  0;
+  animation: Nav--Link 2s;
+  animation-fill-mode: both;
+}
+.nav-links-menu-hamburger {
+  animation: Nav--Link 2s;
+  animation-fill-mode: both;
 }
 .nav-active .NavLink {
-  animation: Nav--Link 0.3s ease-out;
-  animation-fill-mode: both;
   font-family: var(--font-primary);
   text-decoration: none;
   border-bottom: 1px solid #000;
@@ -120,16 +124,14 @@
 .NavLink.great-launches-font {
   width: max-content;
   position: relative;
-  animation: mymove 10s linear alternate infinite;
+  animation: mymove 7s linear alternate infinite;
 }
 @keyframes Nav--Link {
   from {
-    transform: translate(0rem, 1rem);
-    opacity: 0;
+    transform: translateX(50px)
   }
   to {
-    opacity: 1;
-    transform: translate(0, 0);
+    transform: translateX(0px);
   }
 }
 @keyframes mymove {

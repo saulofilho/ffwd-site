@@ -6,7 +6,7 @@ export default ({ location }) => (
       location.pathname.split('/')[1] === 'contato' ||
       location.pathname.split('/')[1] === 'vaga'
       ?
-      <img src={'/images/logo-white.png'} />
+      <img src={'/images/logo-wht-color.svg'} />
       :
       <img src={'/images/logo-black.svg'} />
     }

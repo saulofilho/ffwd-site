@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import 'swiper/css/swiper.css';
+import 'react-modal-video/scss/modal-video.scss';
 import Swiper from 'react-id-swiper';
 import './SobrePageCarousel.css';
 import arrowDown from '../../static/images/ico-seta-down.png'
 import arrowUp from '../../static/images/arrow-up-blk.png'
-import logo from '../../static/images/logo-white-vertical.png'
+import logo from '../../static/images/logo-mais-que-digital.svg'
+import ModalVideo from 'react-modal-video'
 
 const scrollToBottomMais = () => {
   document.querySelector('#experiencias').scrollIntoView({ behavior: 'smooth' });
@@ -14,7 +16,13 @@ const scrollToBottomServicos = () => {
   document.querySelector('#escala').scrollIntoView({ behavior: 'smooth' });
 }
 
+
+
 const SobrePageCarousel = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const openModal  = () => setIsOpen(true)
+
   const HorizontalSwiperParams = {
     hashNavigation: {
       watchState: true,
@@ -34,8 +42,10 @@ const SobrePageCarousel = () => {
       watchState: true,
     }
   }
+  
   return (
     <>
+      <ModalVideo channel='youtube' isOpen={isOpen} videoId='Q-If3ld6x-I' onClose={() => setIsOpen(false)} />
       <Swiper {...HorizontalSwiperParams}>
         <div data-hash="mais-que-digital">
           <Swiper {...VerticalSwiperParams}>
@@ -52,13 +62,13 @@ const SobrePageCarousel = () => {
                 Você pode pensar que somos uma agência de marketing digital.
                 Mas nós somos mais do que isso.
               </p>
-              <div className="default-btn container">
+              {/* <div className="default-btn container">
                 <button>
                   <a href="#make-great">
                     we make great launches
                   </a>
                 </button>
-              </div>
+              </div> */}
               <div className="anchor-down container display-none-mob">
               <button
                     onClick={() => {
@@ -99,11 +109,11 @@ const SobrePageCarousel = () => {
                     assista ao nosso manifesto.
                   </p>
                   <p className="default-text-title-sobre container display-none-mob">
-                    MAIS QUE COMUNICAÇÃO. EXPERIÊNCIAS.
+                    FFWD É  MAIS QUE DIGITAL
                   </p>
                 </div>
                 <div className="img-manifesto">
-                  <a href="https://youtu.be/Q-If3ld6x-I"></a>
+                  <button onClick={() => openModal()}></button>
                 </div>
               </div>
             </div>
@@ -214,7 +224,7 @@ const SobrePageCarousel = () => {
                 </p>
                 <div className="default-btn container">
                   <button>
-                    <a href="/projetos/">
+                    <a href="https://greatlaunches.ffwd.rocks">
                       Great Launches
                     </a>
                   </button>
@@ -239,7 +249,7 @@ const SobrePageCarousel = () => {
                     <p>
                       <strong>+55 48 3364 5570</strong>
                     </p>
-                    <p>go@ffwd.rocks</p>
+                    <p>go@ffwd.com.br</p>
                   </div>
                   <div className="endereco">
                     <div className="escritorio">
@@ -325,7 +335,47 @@ const SobrePageCarousel = () => {
                   </button>
               </div>
             </div>
-            <div className="escala" id="escala"></div>
+            {/* <div className="escala" id="escala"></div> */}
+            <div className="we-make-great container" id="escala">
+                <p className="default-text-title-sobre container">
+                  we make 
+                  <br/>
+                  great launches
+                </p>
+                <p className="default-text-about-sobre container display-none-desk">
+                  Nossa capacidade interdisciplinar 
+                  <br/>
+                  e abordagem digital first
+                  garantem 
+                  <br/>
+                  a criação de
+                  experiências que abrangem 
+                  <br/>
+                  todos os pontos de contato digitais
+                  e 
+                  <br/>
+                  físicos das marcas,
+                  gerando muito mais 
+                  <br/>
+                  impacto e valor para os consumidores.
+                </p>
+                <p className="default-text-about-sobre container display-none-mob">
+                  <strong>
+                    O Digital First provoca a deixar de lado o favoritismo 
+                    <br/>
+                    pelo que é tradicional. 
+                  </strong>
+                  <br/>
+                  <br/>
+                  É estar conectado com o mundo, com as mudanças. É colocar 
+                  <br/>
+                  os consumidores no centro das decisões. Propomos um novo 
+                  <br/>
+                  pensamento, uma nova forma de enxergar oportunidades, 
+                  <br/>
+                  de solucionar problemas, de conquistar o mundo.
+                </p>
+            </div>
             <div className="pilares-wrapper">
               <div className="pilares container">
                   <div className="pilares-div">
@@ -367,7 +417,7 @@ const SobrePageCarousel = () => {
                     <p className="pilares-title">
                       Experiência
                     </p>
-                    <p className="pilares-text">
+                    <p className="pilares-text pilar-third">
                     Ações integradas
                       <br />
                       Consultoria de Presença Digital
@@ -381,7 +431,7 @@ const SobrePageCarousel = () => {
                   </div>
               </div>
             </div>
-            <div className="we-make-great">
+            <div className="we-make-great container">
                 <p className="default-text-title-sobre container">
                   we make 
                   <br/>
@@ -431,7 +481,7 @@ const SobrePageCarousel = () => {
                 </p>
                 <div className="default-btn container">
                   <button>
-                    <a href="/projetos/">
+                    <a href="https://greatlaunches.ffwd.rocks">
                       Great Launches
                     </a>
                   </button>
@@ -456,7 +506,7 @@ const SobrePageCarousel = () => {
                     <p>
                       <strong>+55 48 3364 5570</strong>
                     </p>
-                    <p>go@ffwd.rocks</p>
+                    <p>go@ffwd.com.br</p>
                   </div>
                   <div className="endereco">
                     <div className="escritorio">

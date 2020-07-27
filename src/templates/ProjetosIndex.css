@@ -28,7 +28,7 @@
   grid-gap: 5px;
 }
 .nossos-clientes-logos img {
-  margin: 0 auto;
+  width: 80px;
 }
 
 /* desktop */
@@ -60,5 +60,10 @@
   .nossos-clientes h2 {
     font-size: 64px;
     padding-bottom: 10px;
+  }
+  .nossos-clientes-logos img {
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
   }
 }

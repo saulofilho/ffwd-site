@@ -10,9 +10,19 @@ const HeroSliderConfigs = {
     watchState: true,
   },
   pagination: {
-    el: '.swiper-pagination.swiper-pagination-home',
+    el: '.swiper-pagination-home',
     clickable: true,
-  }
+    renderBullet: function (index, className) {
+      return '<span class="' + className + '">' + (index + 1) + '</span>';
+    },
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+    renderNavigation: function (index, className) {
+      return '<span class="' + className + '">' + (index + 1) + '</span>';
+    },
+  },
 };
 
 const HomeCarousel = ({
@@ -48,12 +58,10 @@ const HomeCarousel = ({
                 <p className="default-text-about container">
                   {project.HomeDescription}
                 </p>
-                <div className="link-slug">
-                    <p className="default-text-header container">
+                <div className="link-slug container">
                   <a href={project.slug}>
                       clique para conferir o case
                   </a>
-                    </p>
                 </div>
               </div>
             </div>

@@ -5,7 +5,7 @@ import './PessoasPageCarousel.css';
 import arrowDown from '../../static/images/ico-seta-down.png'
 import arrowUp from '../../static/images/arrow-up-blk.png'
 import arrowUpWht from '../../static/images/arrow-up-wht.png'
-import logo from '../../static/images/logo-white-vertical.png'
+import logo from '../../static/images/logo-mais-que-digital.svg'
 import Headroom from 'react-headroom'
 
 const scrollToBottomWeAre = () => {
@@ -247,7 +247,7 @@ const PessoasPageCarousel = ({
                     <p>
                       <strong>+55 48 3364 5570</strong>
                     </p>
-                    <p>go@ffwd.rocks</p>
+                    <p>go@ffwd.com.br</p>
                   </div>
                   <div className="endereco">
                     <div className="escritorio">
@@ -573,10 +573,11 @@ const PessoasPageCarousel = ({
                 chegar a uma conclusão. Decisão tomada, caminho
                 que 
                 segue. Quando você cultiva um jardim é preciso tirar ervas
-                daninhas, mas as flores morrerão se tudo que você fizer 
+                daninhas,
+                <br/> mas as flores morrerão se tudo que você fizer 
                 for tirar
-                <br/>
-                ervas daninhas. Elas precisam de outros 
+                ervas daninhas. 
+                Elas precisam de outros 
                 cuidados.
                 Não foque em coisas pequenas.
               </p>
@@ -620,22 +621,18 @@ const PessoasPageCarousel = ({
               </h3>
               <p className="default-text-about container">
                 Entenda que todos os problemas que te cercam são da 
-                <br/>
                 sua
                 responsabilidades. A partir daí a solução é simples, 
                 <br/>
                 basta você
                 encontrar um caminho. Seja o exemplo. Tenha 
-                <br/>
                 iniciativa.
                 Caso aconteça algo a partir de uma decisão sua, 
                 <br/>
                 saiba que nossas
                 lideranças preferem dar perdão do que 
-                <br/>
                 dar permissão. Nunca vamos
                 mascarar resultados e 
-                <br/>
                 opiniões.
               </p>
               </div>
@@ -804,7 +801,7 @@ const PessoasPageCarousel = ({
                     <p>
                       <strong>+55 48 3364 5570</strong>
                     </p>
-                    <p>go@ffwd.rocks</p>
+                    <p>go@ffwd.com.br</p>
                   </div>
                   <div className="endereco">
                     <div className="escritorio">
@@ -915,7 +912,7 @@ const PessoasPageCarousel = ({
                     <p>
                       <strong>+55 48 3364 5570</strong>
                     </p>
-                    <p>go@ffwd.rocks</p>
+                    <p>go@ffwd.com.br</p>
                   </div>
                   <div className="endereco">
                     <div className="escritorio">

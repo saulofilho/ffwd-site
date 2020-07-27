@@ -110,7 +110,7 @@
   justify-content: center;
   align-items: center;
 }
-.img-manifesto a {
+.img-manifesto button {
   background-image: url(/images/play-mob.png);
   background-position: bottom;
   background-repeat: no-repeat;
@@ -252,6 +252,9 @@
   color: #FFFFFF;
   padding: 60px 0 0 65px;
   color: #ADADAD;
+}
+.pilar-third {
+  padding: 60px 0 0 55px;
 }
 .we-make-great {
   height: 640px !important;

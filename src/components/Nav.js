@@ -112,15 +112,21 @@ export const Navigation = (props) => {
                   to="/sobre/#mais-que-digital" 
                   onClick={() => handleMenuToggle()}
                 >
-                  serviços
+                  quem somos
                 </NavLink>
                 <NavLink 
-                  to="/sobre/#servicos" 
-                  className="great-launches-font"
+                  to="/sobre/#mais-que-digital" 
+                  onClick={() => handleMenuToggle()}
+                >
+                  serviços
+                </NavLink>
+                <a 
+                  href="https://greatlaunches.ffwd.rocks" 
+                  className="NavLink great-launches-font"
                   onClick={() => handleMenuToggle()}
                 >
                   great launches
-                </NavLink>
+                </a>
               </div>
             </button>
           </div>
@@ -162,7 +168,7 @@ export const Navigation = (props) => {
                   <br />
               +55 48 3364 5570
               <br />
-              go@ffwd.rocks
+              go@ffwd.com.br
             </p>
               </div>
               <div className="address">

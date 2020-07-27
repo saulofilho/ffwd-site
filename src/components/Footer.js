@@ -1,6 +1,6 @@
 import React from 'react'
 import './Footer.css'
-import logo from '../../static/images/logo-white-vertical.png'
+import logo from '../../static/images/logo-mais-que-digital.svg'
 
 export default () => (
     <footer>
@@ -13,7 +13,7 @@ export default () => (
             <p>
               <strong>+55 48 3364 5570</strong>
             </p>
-            <p>go@ffwd.rocks</p>
+            <p>go@ffwd.com.br</p>
           </div>
           <div className="endereco">
             <div className="escritorio">

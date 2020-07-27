@@ -44,7 +44,7 @@ export const ContactPageTemplate = () => (
             <br/>
             +55 48 3364 5570
             <br/>
-            go@ffwd.rocks
+            go@ffwd.com.br
           </p>
         </div>
         <div className="address">

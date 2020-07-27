@@ -92,7 +92,7 @@ h4 {
   letter-spacing: 0.04em;
   line-height: 16px;
   text-transform: uppercase;
-  padding: 180px 24px 0;
+  padding: 150px 24px 0;
   width: 100%;
 }
 .default-text-title {
@@ -186,11 +186,6 @@ blockquote {
   cursor: pointer;
   border-radius: var(--borderRadius);
 }
-.Button:hover,
-.Button:focus {
-  opacity: 0.95;
-  outline: none;
-}
 .Button[disabled] {
   opacity: 0.4;
   pointer-events: none;
@@ -208,9 +203,6 @@ blockquote {
 }
 button {
   cursor: pointer;
-}
-button:hover {
-  opacity: 0.5;
 }
 .default-btn button {
   font-family: var(--font-secondary);
