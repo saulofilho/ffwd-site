@@ -453,13 +453,14 @@ const PessoasPageCarousel = ({
                 independentes entre si.
               </h3>
               <p className="default-text-about container">
-                Queremos encontrar o propósito de cada indivíduo e 
-                <br/> conectar com
-                a FFWD. Nosso sonho é que cada um seja 
-                <br/> uma estrela em sua posição,
-                por isso as pessoas devem 
-                <br/>
-                amar o que fazem de maneira sincera.
+                Isto quer dizer que trabalhamos muito bem juntos, 
+                <br/> mas não ficamos 
+                imóveis se estivermos separados. 
+                <br/> Cada indivíduo é único, mas o 
+                coletivo é realizador. 
+                <br/> Pessoas independentes + visão compartilhada 
+                de 
+                <br/> objetivos = crescimento sustentável
               </p>
               </div>
             <div className="display-none-mob">
@@ -471,12 +472,11 @@ const PessoasPageCarousel = ({
                 independentes entre si.
               </h3>
               <p className="default-text-about container">
-                Queremos encontrar o propósito de cada indivíduo e conectar com
-                a FFWD. Nosso sonho é que cada um seja 
-                <br/>
-                uma estrela em sua posição,
-                por isso as pessoas devem 
-                amar o que fazem de maneira sincera.
+              Isto quer dizer que trabalhamos muito bem juntos, mas não ficamos 
+              imóveis se estivermos separados. 
+              <br/> Cada indivíduo é único, mas o 
+              coletivo é realizador. Pessoas independentes + visão compartilhada 
+              de objetivos = crescimento sustentável
               </p>
               </div>
               <div className="wrapper-img">
