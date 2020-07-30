@@ -289,13 +289,13 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  bottom: 15%;
+  bottom: 130px;
   left: 0;
 }
 .pessoas .swiper-pagination-pessoas::before {
   content: "";
   position: absolute;
-  width: 100%;
+  width: 15px;
   height: 100%;
   background: url(/images/line-blk.png);
   background-position: left;
@@ -306,7 +306,7 @@
 .pessoas .swiper-pagination-pessoas::after {
   content: "";
   position: absolute;
-  width: 100%;
+  width: 15px;
   height: 100%;
   background: url(/images/line-blk.png);
   background-position: right;
@@ -317,7 +317,7 @@
 .pessoas .swiper-pagination-pessoas .swiper-pagination-bullet::before {
   content: "";
   position: absolute;
-  width: 100%;
+  width: 6px;
   height: 100%;
   background: url(/images/line-left-wht-carousel.png);
   background-position: left;
@@ -329,7 +329,7 @@
 .pessoas .swiper-pagination-pessoas .swiper-pagination-bullet::after {
   content: "";
   position: absolute;
-  width: 100%;
+  width: 6px;
   height: 100%;
   background: url(/images/line-right-wht-carousel.png);
   background-position: right;
@@ -708,7 +708,7 @@
   .pessoas .swiper-pagination-pessoas .swiper-pagination-bullet::before {
     content: "";
     position: absolute;
-    width: 100%;
+    width: 6px;
     height: 100%;
     background: url(/images/car-arrow-left.png);
     background-position: left;
@@ -720,7 +720,7 @@
   .pessoas .swiper-pagination-pessoas .swiper-pagination-bullet::after {
     content: "";
     position: absolute;
-    width: 100%;
+    width: 6px;
     height: 100%;
     background: url(/images/car-arrow-right.png);
     background-position: right;
@@ -730,7 +730,7 @@
     bottom: 0;
   }
   .pessoas .swiper-pagination-pessoas {
-    background: transparent;
+    background: #fff;
     bottom: 10%;
   }
   .pessoas .swiper-pagination-pessoas .swiper-pagination-bullet-active {

@@ -69,17 +69,13 @@ export default ({ children, meta, title, location }) => {
               {...meta}
               {...data.settingsYaml}
             />
-
-            {/* header */}
-            <Nav subNav={subNav} />
-
+            {location.pathname.split('/')[1] === 'pessoas' ||
+              location.pathname.split('/')[1] === 'sobre' ? <></> : <Nav subNav={subNav} /> }
             <Fragment>{children}</Fragment>
-            
-            {/* footer */}
-            {/* {location.pathname === '/' ? <></> : <Footer /> } */}
             {location.pathname === '/' || 
               location.pathname.split('/')[1] === 'pessoas' || 
               location.pathname.split('/')[1] === 'sobre' ? <></> : <Footer /> }
+            {/* {location.pathname === '/' ? <></> : <Footer /> } */}
           </Fragment>
         )
       }}

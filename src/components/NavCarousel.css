@@ -1,21 +1,22 @@
-.navbar {
+.navbar-car {
   background: transparent;
   width: 100%;
   top: 0;
   z-index: 9;
   transition: top 0.3s;
+  position: fixed;
 }
 .headroom-wrapper {
   height: auto !important;
 }
-.navbar .Logo {
+.navbar-car .Logo {
   z-index: 1;
 }
 .nav-active {
   width: 100%;
   height: 100%;
 }
-.nav-active .navbar {
+.nav-active .navbar-car {
   display: none;
 }
 .nav-wrapper {
@@ -67,8 +68,6 @@
   flex-flow: column;
   padding: 8px 24px;
   width: 100%;
-  width: max-content;
-  position: relative;
 }
 .nav-links {
   display: none;
@@ -123,30 +122,11 @@
 .nav-group.active button p {
   padding-bottom: 12px;
 }
-.NavLink.great-launches-font {
-  width: max-content !important;
-  position: relative;
-  animation: mymove 5s linear alternate infinite !important;
-  animation-fill-mode: both;
-}
-@keyframes Nav--Link {
-  from {
-    transform: translateX(50%)
-  }
-  to {
-    transform: translateX(0px);
-  }
-}
-@keyframes mymove {
-  from {
-    transform: translateX(50%)
-  }
-  to {
-    transform: translateX(-100%);
-  }
-}
+
 
 /* desktop */
+
+
 
 @media (min-width: 720px) {
   .NavLink.great-launches-font {
@@ -155,12 +135,13 @@
     animation: unset;
   }
 }
+
 @media (min-width: 1024px) {
   .nav-wrapper {
     padding: 60px 0 0 0;
   }
   .nav-active .NavLink {
-    border-bottom: none !important;
+    border-bottom: none;
     padding: 12px 129px;
   }
   .nav-links-nav {
@@ -182,10 +163,5 @@
   }
   .nav-group.active button p {
     padding-bottom: 12px;
-  }
-  .NavLink.great-launches-font {
-    width: 100% !important;
-    position: relative;
-    animation: Nav--Link 2s !important;
   }
 }

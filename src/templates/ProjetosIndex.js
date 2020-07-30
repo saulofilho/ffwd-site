@@ -32,9 +32,11 @@ const scrollToBottom = () => {
 }
 
 export const ProjetosIndexTemplate = ({
-  cases = [],
-  contentType
-}) => (
+  cases = []
+}) => { 
+  
+  return (
+  
     <Location>
       {({ location }) => {
         return (
@@ -113,8 +115,8 @@ export const ProjetosIndexTemplate = ({
       }}
     </Location>
   )
+}
 
-// Export Default ProjetosIndex for front-end
 const ProjetosIndex = ({ data: { page, cases }, location }) => (
   <Layout
     location={location}

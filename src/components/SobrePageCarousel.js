@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react'; 
 import 'swiper/css/swiper.css';
 import 'react-modal-video/scss/modal-video.scss';
 import Swiper from 'react-id-swiper';
@@ -7,21 +7,11 @@ import arrowDown from '../../static/images/ico-seta-down.png'
 import arrowUp from '../../static/images/arrow-up-blk.png'
 import logo from '../../static/images/logo-mais-que-digital.svg'
 import ModalVideo from 'react-modal-video'
-
-const scrollToBottomMais = () => {
-  document.querySelector('#experiencias').scrollIntoView({ behavior: 'smooth' });
-}
-
-const scrollToBottomServicos = () => {
-  document.querySelector('#escala').scrollIntoView({ behavior: 'smooth' });
-}
-
-
+import NavCarousel from './NavCarousel'
 
 const SobrePageCarousel = () => {
   const [isOpen, setIsOpen] = useState(false);
-
-  const openModal  = () => setIsOpen(true)
+  const openModal  = () => setIsOpen(true);
 
   const HorizontalSwiperParams = {
     hashNavigation: {
@@ -40,15 +30,35 @@ const SobrePageCarousel = () => {
     slidesPerView: 'auto',
     hashNavigation: {
       watchState: true,
+    },
+    on: {
+      setTranslate: 
+      function (e) {
+        if (window.pageYOffset <= e) {
+          document.querySelector(".navbar-car").style.top = "0";
+        } else { 
+          document.querySelector(".navbar-car").style.top = "-600px";
+        }
+        window.pageYOffset = e;
+      },
     }
   }
   
+  const scrollToBottomMais = () => {
+    document.querySelector('#experiencias').scrollIntoView({ behavior: 'smooth' });
+  }
+
+  const scrollToBottomServicos = () => {
+    document.querySelector('#escala').scrollIntoView({ behavior: 'smooth' });
+  }
+
   return (
     <>
       <ModalVideo channel='youtube' isOpen={isOpen} videoId='Q-If3ld6x-I' onClose={() => setIsOpen(false)} />
+      <NavCarousel></NavCarousel>
       <Swiper {...HorizontalSwiperParams}>
-        <div data-hash="mais-que-digital">
-          <Swiper {...VerticalSwiperParams}>
+        <div data-hash="mais-que-digital" className="teste">
+          <Swiper {...VerticalSwiperParams} >
             <div className="mais-que-digital" data-hash="mais-que-digital-top">
               <p className="default-text-header container">
                 nós somos

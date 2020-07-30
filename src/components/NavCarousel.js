@@ -3,8 +3,7 @@ import { Location } from '@reach/router'
 import { Link } from 'gatsby'
 import { X } from 'react-feather'
 import Logo from './Logo'
-import Headroom from 'react-headroom'
-import './Nav.css'
+import './NavCarousel.css'
 
 export const Navigation = (props) => {
   const [active, setActive] = useState(false);
@@ -42,15 +41,7 @@ export const Navigation = (props) => {
 
   return (
     <nav className={`${active ? 'nav-active' : ''}`}>
-      <Headroom
-      parent={() => document }
-      style={{
-        position: "fixed",
-        background: "transparent",
-        zIndex: 9
-      }} 
-      >
-      <div className="navbar">
+      <div className="navbar-car">
         <div className="nav-wrapper container">
           <Link to="/" onClick={() => handleLinkClick()}>
             <Logo {...props} />
@@ -82,7 +73,6 @@ export const Navigation = (props) => {
           }
         </div>
       </div>
-      </Headroom>
       <div className="nav-links">
         <div className="nav-links-nav">
           <Link to="/" onClick={() => handleMenuToggle()}>

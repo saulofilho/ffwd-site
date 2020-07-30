@@ -1,35 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 import 'swiper/css/swiper.css';
 import Swiper from 'react-id-swiper';
 import './HomeCarousel.css';
 
-const HeroSliderConfigs = {
-  slidesPerView: 1,
-  loop: true,
-  hashNavigation: {
-    watchState: true,
-  },
-  pagination: {
-    el: '.swiper-pagination-home',
-    clickable: true,
-    renderBullet: function (index, className) {
-      return `<span class="dot swiper-pagination-bullet">${index}</span>`;
-    },
-  },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-};
-
 const HomeCarousel = ({
   filteredPosts,
+  destaquesSize = 5,
 }) => {
+
+  const [x, setX] = useState(document.querySelector(".swiper-pagination-home"))
+
+  const HeroSliderConfigs = {
+    slidesPerView: 1,
+    loop: true,
+    mousewheel: true,
+    hashNavigation: {
+      watchState: true,
+    },
+    pagination: {
+      el: '.swiper-pagination-home',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-nextx',
+      prevEl: '.swiper-button-prevx',
+    },
+  };
 
   return (
     <>
       <Swiper {...HeroSliderConfigs}>
-        {filteredPosts.map(project => (
+        {filteredPosts.slice(0, destaquesSize).map(project => (
           <div className="home-slide" key={project.slug} data-hash={project.title.replace(/\s/g, "")}>
               <div
                 className="home-slide-image"

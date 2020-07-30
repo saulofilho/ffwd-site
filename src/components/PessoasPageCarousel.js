@@ -6,19 +6,7 @@ import arrowDown from '../../static/images/ico-seta-down.png'
 import arrowUp from '../../static/images/arrow-up-blk.png'
 import arrowUpWht from '../../static/images/arrow-up-wht.png'
 import logo from '../../static/images/logo-mais-que-digital.svg'
-import Headroom from 'react-headroom'
-
-const scrollToBottomWeAre = () => {
-  document.querySelector('#the-people-behind').scrollIntoView({ behavior: 'smooth' });
-}
-
-const scrollToBottomOurCulture = () => {
-  document.querySelector('#wrapper-cultura-imgs').scrollIntoView({ behavior: 'smooth' });
-}
-
-const scrollToBottomVagas = () => {
-  document.querySelector('#vagas-index').scrollIntoView({ behavior: 'smooth' });
-}
+import NavCarousel from './NavCarousel'
 
 const PessoasPageCarousel = ({
   posts,
@@ -40,11 +28,35 @@ const PessoasPageCarousel = ({
     slidesPerView: 'auto',
     hashNavigation: {
       watchState: true,
+    },
+    on: {
+      setTranslate: 
+      function (e) {
+        if (window.pageYOffset <= e) {
+          document.querySelector(".navbar-car").style.top = "0";
+        } else { 
+          document.querySelector(".navbar-car").style.top = "-600px";
+        }
+        window.pageYOffset = e;
+      },
     }
   };
 
+  const scrollToBottomWeAre = () => {
+    document.querySelector('#the-people-behind').scrollIntoView({ behavior: 'smooth' });
+  }
+  
+  const scrollToBottomOurCulture = () => {
+    document.querySelector('#wrapper-cultura-imgs').scrollIntoView({ behavior: 'smooth' });
+  }
+  
+  const scrollToBottomVagas = () => {
+    document.querySelector('#vagas-index').scrollIntoView({ behavior: 'smooth' });
+  }
+
   return (
     <>
+      <NavCarousel></NavCarousel>
       <Swiper {...HorizontalSwiperParams}>
         <div data-hash="pessoas">
           <Swiper {...VerticalSwiperParams}>
