@@ -8,8 +8,6 @@ const HomeCarousel = ({
   destaquesSize = 5,
 }) => {
 
-  const [x, setX] = useState(document.querySelector(".swiper-pagination-home"))
-
   const HeroSliderConfigs = {
     slidesPerView: 1,
     loop: true,
