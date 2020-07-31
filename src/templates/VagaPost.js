@@ -51,7 +51,7 @@ export const VagaPostTemplate = ({
             </div>
             <div className="default-btn apply-btn">
               <button>
-                <a target='_blank' href={link}>
+                <a href={link}>
                   Apply
                 </a>
               </button>

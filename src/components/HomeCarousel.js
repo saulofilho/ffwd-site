@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect  } from 'react';
 import 'swiper/css/swiper.css';
 import Swiper from 'react-id-swiper';
 import './HomeCarousel.css';
@@ -20,10 +20,19 @@ const HomeCarousel = ({
       clickable: true,
     },
     navigation: {
-      nextEl: '.swiper-button-nextx',
-      prevEl: '.swiper-button-prevx',
+      nextEl: '.swiper-button-next-home',
+      prevEl: '.swiper-button-prev-home',
     },
   };
+
+  useEffect(() => {
+    const queryPagination = document.querySelector('.swiper-pagination-home')
+    const queryBtnPrev = document.querySelector('.swiper-button-prev-home')
+    const queryBtnNext = document.querySelector('.swiper-button-next-home')
+    const appendPaginationPrev = queryPagination.appendChild(queryBtnPrev)
+    const appendPaginationNext = queryPagination.appendChild(queryBtnNext)
+  
+  }, [])
 
   return (
     <>

@@ -308,7 +308,7 @@
   background-size: auto;
   right: -30px;
 }
-.sobre-section .swiper-pagination-sobre .swiper-pagination-bullet::before {
+.swiper-button-prev-sobre {
   content: "";
   position: absolute;
   width: 6px;
@@ -319,8 +319,9 @@
   background-size: auto;
   left: 10px;
   bottom: 0;
+  cursor: pointer;
 }
-.sobre-section .swiper-pagination-sobre .swiper-pagination-bullet::after {
+.swiper-button-next-sobre {
   content: "";
   position: absolute;
   width: 6px;
@@ -331,6 +332,7 @@
   background-size: auto;
   right: 10px;
   bottom: 0;
+  cursor: pointer;
 }
 .sobre-section .swiper-pagination-sobre .swiper-pagination-bullet {
   background: #fff;
@@ -481,7 +483,7 @@
   .make-great-launches button {
     margin: 0;
   }
-  .sobre-section .swiper-pagination-sobre .swiper-pagination-bullet::before {
+  .swiper-button-prev-sobre {
     content: "";
     position: absolute;
     width: 6px;
@@ -493,7 +495,7 @@
     left: 10px;
     bottom: 0;
   }
-  .sobre-section .swiper-pagination-sobre .swiper-pagination-bullet::after {
+  .swiper-button-next-sobre {
     content: "";
     position: absolute;
     width: 6px;

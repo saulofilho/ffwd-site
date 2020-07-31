@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import 'swiper/css/swiper.css';
 import Swiper from 'react-id-swiper';
 import './PessoasPageCarousel.css';
@@ -18,7 +18,11 @@ const PessoasPageCarousel = ({
     pagination: {
       el: '.swiper-pagination.swiper-pagination-pessoas',
       clickable: true
-    }
+    },
+    navigation: {
+      nextEl: '.swiper-button-next-pessoas',
+      prevEl: '.swiper-button-prev-pessoas',
+    },
   };
   const VerticalSwiperParams = {
     autoHeight: true,
@@ -41,6 +45,15 @@ const PessoasPageCarousel = ({
       },
     }
   };
+
+  useEffect(() => {
+    const queryPagination = document.querySelector('.swiper-pagination-pessoas')
+    const queryBtnPrev = document.querySelector('.swiper-button-prev-pessoas')
+    const queryBtnNext = document.querySelector('.swiper-button-next-pessoas')
+    const appendPaginationPrev = queryPagination.appendChild(queryBtnPrev)
+    const appendPaginationNext = queryPagination.appendChild(queryBtnNext)
+  
+  }, [])
 
   const scrollToBottomWeAre = () => {
     document.querySelector('#the-people-behind').scrollIntoView({ behavior: 'smooth' });

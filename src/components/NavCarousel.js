@@ -76,7 +76,7 @@ export const Navigation = (props) => {
       <div className="nav-links">
         <div className="nav-links-nav">
           <Link to="/" onClick={() => handleMenuToggle()}>
-            <img src={'/images/logo-black.png'} />
+            <img src={'/images/logo-black.png'} alt="logo da ffwd" />
           </Link>
           <button
             className="Button-blank nav-btn"

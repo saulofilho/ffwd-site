@@ -1,11 +1,12 @@
-<h1 align="center">
-    <img alt="Santa Contabilidade" src="https://i0.wp.com/santacontabilidade.com.br/wp-content/uploads/2019/10/Santa-Contabilidade-Digital.jpg" />
-    <br>
-</h1>
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a0ce48f2-9753-47dd-a5d0-0553b1a5cab5/deploy-status)](https://app.netlify.com/sites/ffwd-site/deploys)
 
-<h4 align="center">
-  Página de Materiais.
-</h4>
+<div align="center">
+    <img 
+      style="width: 300px; padding: 80px 0" 
+      alt="FFWD log" 
+      src="./static/images/logo-black.svg" 
+    />
+</div>
 
 <p align="center">
   <a href="#floppy_disk-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -19,9 +20,7 @@ This project was developed with the following technologies:
 -  [Gatsby](https://www.gatsbyjs.org/)
 -  [React](https://reactjs.org/)
 -  [Netlify CMS](https://www.netlifycms.org/)
--  [Prismjs](https://prismjs.com/)
--  [react-feather](https://github.com/feathericons/react-feather#readme)
--  [react-search-field](https://github.com/nutboltu/react-search-field#readme)
+-  [Swiper](https://swiperjs.com/)
 -  [VS Code][vc] with [EditorConfig][vceditconfig] and [ESLint][vceslint]
 
 ## :wrench: How To Use
@@ -30,10 +29,10 @@ To clone and run this application, you'll need [Git](https://git-scm.com), [Node
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/saulofilho/pagina-de-materiais
+$ git clone https://github.com/saulofilho/ffwd-site
 
 # Go into the repository
-$ cd pagina-de-materiais
+$ cd ffwd
 
 # Install dependencies
 $ yarn install
@@ -41,8 +40,6 @@ $ yarn install
 # Run the app
 $ yarn start
 ```
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/71312769-dc26-4abf-8f24-87509844771c/deploy-status)](https://app.netlify.com/sites/pagina-de-materiais/deploys)
 
 [nodejs]: https://nodejs.org/
 [yarn]: https://yarnpkg.com/

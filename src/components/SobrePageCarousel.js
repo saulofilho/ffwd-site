@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react'; 
+import React, { useState, useEffect } from 'react'; 
 import 'swiper/css/swiper.css';
 import 'react-modal-video/scss/modal-video.scss';
 import Swiper from 'react-id-swiper';
@@ -20,7 +20,11 @@ const SobrePageCarousel = () => {
     pagination: {
       el: '.swiper-pagination.swiper-pagination-sobre',
       clickable: true
-    }
+    },
+    navigation: {
+      nextEl: '.swiper-button-next-sobre',
+      prevEl: '.swiper-button-prev-sobre',
+    },
   };
   const VerticalSwiperParams = {
     autoHeight: true,
@@ -43,6 +47,15 @@ const SobrePageCarousel = () => {
       },
     }
   }
+
+  useEffect(() => {
+    const queryPagination = document.querySelector('.swiper-pagination-sobre')
+    const queryBtnPrev = document.querySelector('.swiper-button-prev-sobre')
+    const queryBtnNext = document.querySelector('.swiper-button-next-sobre')
+    const appendPaginationPrev = queryPagination.appendChild(queryBtnPrev) 
+    const appendPaginationNext = queryPagination.appendChild(queryBtnNext)
+  
+  }, [])
   
   const scrollToBottomMais = () => {
     document.querySelector('#experiencias').scrollIntoView({ behavior: 'smooth' });

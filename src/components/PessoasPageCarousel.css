@@ -314,7 +314,7 @@
   background-size: auto;
   right: -30px;
 }
-.pessoas .swiper-pagination-pessoas .swiper-pagination-bullet::before {
+.swiper-button-prev-pessoas {
   content: "";
   position: absolute;
   width: 6px;
@@ -325,8 +325,9 @@
   background-size: auto;
   left: 10px;
   bottom: 0;
+  cursor: pointer;
 }
-.pessoas .swiper-pagination-pessoas .swiper-pagination-bullet::after {
+.swiper-button-next-pessoas {
   content: "";
   position: absolute;
   width: 6px;
@@ -337,6 +338,7 @@
   background-size: auto;
   right: 10px;
   bottom: 0;
+  cursor: pointer;
 }
 .pessoas .swiper-pagination-pessoas .swiper-pagination-bullet {
   background: #fff;
@@ -705,7 +707,7 @@
     color: #fff;
     padding: 24px 170px 24px 24px;
   }
-  .pessoas .swiper-pagination-pessoas .swiper-pagination-bullet::before {
+  .swiper-button-prev-pessoas {
     content: "";
     position: absolute;
     width: 6px;
@@ -717,7 +719,7 @@
     left: 10px;
     bottom: 0;
   }
-  .pessoas .swiper-pagination-pessoas .swiper-pagination-bullet::after {
+  .swiper-button-next-pessoas {
     content: "";
     position: absolute;
     width: 6px;
