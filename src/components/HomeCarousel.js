@@ -2,6 +2,7 @@ import React, { useEffect  } from 'react';
 import 'swiper/css/swiper.css';
 import Swiper from 'react-id-swiper';
 import './HomeCarousel.css';
+import NavCarousel from './NavCarousel'
 
 const HomeCarousel = ({
   filteredPosts,
@@ -31,11 +32,11 @@ const HomeCarousel = ({
     const queryBtnNext = document.querySelector('.swiper-button-next-home')
     const appendPaginationPrev = queryPagination.appendChild(queryBtnPrev)
     const appendPaginationNext = queryPagination.appendChild(queryBtnNext)
-  
   }, [])
 
   return (
     <>
+      <NavCarousel></NavCarousel>
       <Swiper {...HeroSliderConfigs}>
         {filteredPosts.slice(0, destaquesSize).map(project => (
           <div className="home-slide" key={project.slug} data-hash={project.title.replace(/\s/g, "")}>

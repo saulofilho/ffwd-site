@@ -54,7 +54,6 @@ const SobrePageCarousel = () => {
     const queryBtnNext = document.querySelector('.swiper-button-next-sobre')
     const appendPaginationPrev = queryPagination.appendChild(queryBtnPrev) 
     const appendPaginationNext = queryPagination.appendChild(queryBtnNext)
-  
   }, [])
   
   const scrollToBottomMais = () => {
