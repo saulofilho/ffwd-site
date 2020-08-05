@@ -38,8 +38,10 @@ const PessoasPageCarousel = ({
       function (e) {
         if (window.pageYOffset <= e) {
           document.querySelector(".navbar-car").style.top = "0";
-        } else { 
+        } else if (window.pageYOffset = e) { 
           document.querySelector(".navbar-car").style.top = "-600px";
+        } else {
+          document.querySelector(".navbar-car").style.top = "0";
         }
         window.pageYOffset = e;
       },
