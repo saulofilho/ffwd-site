@@ -24,7 +24,7 @@ text1: O Sol já estava em sucesso desde quando a Enfim Lovers foi ao ar e – p
   seu amor/crush!
 container1:
   - type: AddImage
-    image: ../../images/default-img.jpg
+    image: ../../images/x.gif
     imagemob: ../../images/image9-1.png
     alt: sf
 title2: proposta
